@@ -9,11 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var OngoingButton: UIButton!
+    @IBOutlet weak var UpcomingButton: UIButton!
+    @IBOutlet weak var PastButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        OngoingButton.layer.cornerRadius = 25
+        UpcomingButton.layer.cornerRadius = 25
+        PastButton.layer.cornerRadius = 25
     }
 
+    
+    
+    
 
 }
 

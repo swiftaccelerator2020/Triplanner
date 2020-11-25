@@ -98,6 +98,11 @@
                             <constraint firstItem="qRp-f2-zHV" firstAttribute="top" secondItem="ESc-Ec-z9Q" secondAttribute="bottom" constant="8" symbolic="YES" id="zCM-dW-7ad"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="OngoingButton" destination="LD8-DJ-fU6" id="paH-Ak-4hy"/>
+                        <outlet property="PastButton" destination="qRp-f2-zHV" id="slR-hJ-9z0"/>
+                        <outlet property="UpcomingButton" destination="ESc-Ec-z9Q" id="yWK-eu-42e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
