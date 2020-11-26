@@ -3,6 +3,7 @@
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,7 +47,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="PL8-t9-6Xo" kind="presentation" modalPresentationStyle="fullScreen" id="SCR-tM-e0l"/>
+                                    <segue destination="8Lv-WO-Cfy" kind="presentation" modalPresentationStyle="fullScreen" id="SCR-tM-e0l"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ESc-Ec-z9Q">
@@ -111,7 +112,7 @@
             </objects>
             <point key="canvasLocation" x="209" y="75"/>
         </scene>
-        <!--Overview Table View Controller-->
+        <!--Trip Overview-->
         <scene sceneID="kra-bb-8Ae">
             <objects>
                 <tableViewController id="PL8-t9-6Xo" customClass="OverviewTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
@@ -127,8 +128,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yed-if-X5k">
-                                            <rect key="frame" x="20" y="11.999999999999998" width="71.333333333333329" height="20.333333333333332"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yed-if-X5k">
+                                            <rect key="frame" x="20" y="11.999999999999998" width="33" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -150,14 +151,44 @@
                             <outlet property="delegate" destination="PL8-t9-6Xo" id="bBp-pK-xlQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="PB9-Kz-q9B"/>
+                    <navigationItem key="navigationItem" title="Trip Overview" leftItemsSupplementBackButton="YES" id="csB-KZ-wys">
+                        <barButtonItem key="backBarButtonItem" title="&lt;" id="acX-GW-8VM"/>
+                        <barButtonItem key="leftBarButtonItem" style="done" id="0Yy-mp-iiy">
+                            <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="gCV-bv-brp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ee3-qi-xWV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="75"/>
+            <point key="canvasLocation" x="1867" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q8V-cO-Whn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Lv-WO-Cfy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="center" id="PDS-E2-ZIF">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PL8-t9-6Xo" kind="relationship" relationship="rootViewController" id="Avo-Cq-qcV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRa-zN-YT6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="75"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

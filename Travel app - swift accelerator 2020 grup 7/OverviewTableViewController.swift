@@ -9,6 +9,22 @@ import UIKit
 
 class OverviewTableViewController: UITableViewController {
 
+    var overviewItems = [
+            "Location",
+            "Date",
+            "Budget",
+            "Itinerary",
+            "Packing List"
+        ]
+    
+    var overviewItemDetails = [
+        "London, England",
+        "19/6/19 to 25/6/19",
+        "$5000",
+        "-",
+        "-"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,7 +32,13 @@ class OverviewTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-         self.navigationItem.rightBarButtonItem = self.editButtonItem
+         //self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        // in your viewDidLoad or viewWillAppear
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "Something Else", style: .plain, target: nil, action: nil)
+
+        
     }
 
     // MARK: - Table view data source
@@ -28,7 +50,7 @@ class OverviewTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return overviewItems.count
     }
 
     
@@ -36,20 +58,23 @@ class OverviewTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "overviewCell", for: indexPath)
 
         // Configure the cell...
-
+        cell.textLabel?.text = overviewItems[indexPath.row]
+        cell.detailTextLabel?.text = overviewItemDetails[indexPath.row]
+        
+        
         return cell
     }
     
 
-    
+    /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    
+    */
 
-    
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -59,22 +84,22 @@ class OverviewTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
+    */
 
-    
+    /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
     }
-    
+    */
 
-    
+    /*
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    
+    */
 
     
     // MARK: - Navigation
@@ -83,6 +108,7 @@ class OverviewTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
     }
     
 
