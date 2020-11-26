@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E3BB99B256FCDAC006FCD12 /* OverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3BB99A256FCDAC006FCD12 /* OverviewTableViewController.swift */; };
 		AFACB231256CAA0B00EACAFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB230256CAA0B00EACAFF /* AppDelegate.swift */; };
 		AFACB233256CAA0B00EACAFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */; };
 		AFACB235256CAA0B00EACAFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB234256CAA0B00EACAFF /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E3BB99A256FCDAC006FCD12 /* OverviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTableViewController.swift; sourceTree = "<group>"; };
 		AFACB22D256CAA0B00EACAFF /* Travel app - swift accelerator 2020 grup 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel app - swift accelerator 2020 grup 7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFACB230256CAA0B00EACAFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				AFACB239256CAA0E00EACAFF /* Assets.xcassets */,
 				AFACB23B256CAA0E00EACAFF /* LaunchScreen.storyboard */,
 				AFACB23E256CAA0E00EACAFF /* Info.plist */,
+				7E3BB99A256FCDAC006FCD12 /* OverviewTableViewController.swift */,
 			);
 			path = "Travel app - swift accelerator 2020 grup 7";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				AFACB235256CAA0B00EACAFF /* ViewController.swift in Sources */,
 				AFACB231256CAA0B00EACAFF /* AppDelegate.swift in Sources */,
+				7E3BB99B256FCDAC006FCD12 /* OverviewTableViewController.swift in Sources */,
 				AFACB233256CAA0B00EACAFF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +441,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MM5V3Z3JKS;
 				INFOPLIST_FILE = "Travel app - swift accelerator 2020 grup 7/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,6 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MM5V3Z3JKS;
 				INFOPLIST_FILE = "Travel app - swift accelerator 2020 grup 7/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
