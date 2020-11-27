@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7e1-aL-Zyg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="80U-ac-pxO">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -201,11 +201,15 @@
                         <viewLayoutGuide key="safeArea" id="LIc-34-jAR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notes" selectedImage="note.text" catalog="system" id="aOm-UU-zHf"/>
+                    <navigationItem key="navigationItem" title="Notes" id="Ksf-St-0NW">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="cuO-aW-u8q">
+                            <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gle-zR-Y82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2764" y="-717"/>
+            <point key="canvasLocation" x="3663.0841121495323" y="-717.27861771058315"/>
         </scene>
         <!--Events-->
         <scene sceneID="Ht3-9C-iUR">
@@ -230,13 +234,17 @@
                             <outlet property="delegate" destination="ehh-o5-X9l" id="LLo-0G-dO7"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Events" selectedImage="calendar" catalog="system" id="qcl-zx-WKC"/>
+                    <navigationItem key="navigationItem" title="Events" id="5ou-Bj-e5Q">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="IRg-oi-Ye5">
+                            <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LG3-g5-stc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2764" y="-1379"/>
+            <point key="canvasLocation" x="3663.0841121495323" y="-1379.4816414686827"/>
         </scene>
-        <!--Itinerary Table View Controller-->
+        <!--Itinerary-->
         <scene sceneID="rE9-1f-jGy">
             <objects>
                 <tableViewController id="xQk-Bu-vx6" customClass="ItineraryTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
@@ -245,7 +253,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="itinCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itinCell" textLabel="K0u-wK-Fkm" detailTextLabel="GXw-9o-d7b" style="IBUITableViewCellStyleSubtitle" id="DQQ-aK-UCe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="itineraryCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itinCell" textLabel="K0u-wK-Fkm" detailTextLabel="GXw-9o-d7b" style="IBUITableViewCellStyleSubtitle" id="DQQ-aK-UCe">
                                 <rect key="frame" x="0.0" y="28" width="428" height="55.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DQQ-aK-UCe" id="0Ya-OT-eiC">
@@ -275,7 +283,7 @@
                             <outlet property="delegate" destination="xQk-Bu-vx6" id="I3X-kF-v0n"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="UQn-gc-Lwe"/>
+                    <navigationItem key="navigationItem" title="Itinerary" id="UQn-gc-Lwe"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBv-ic-eYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -291,8 +299,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="TsG-Z8-g2h" kind="relationship" relationship="viewControllers" id="arg-Ut-Exq"/>
-                        <segue destination="ehh-o5-X9l" kind="relationship" relationship="viewControllers" id="Ddr-P1-fJb"/>
+                        <segue destination="VSI-ms-gmN" kind="relationship" relationship="viewControllers" id="arg-Ut-Exq"/>
+                        <segue destination="QAh-9J-5Ws" kind="relationship" relationship="viewControllers" id="Ddr-P1-fJb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4tm-2x-5Bz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -317,10 +325,52 @@
             </objects>
             <point key="canvasLocation" x="137" y="-1022"/>
         </scene>
+        <!--Notes-->
+        <scene sceneID="nyV-fu-gGX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VSI-ms-gmN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notes" selectedImage="note.text" catalog="system" id="aOm-UU-zHf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bw8-dC-zyC">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TsG-Z8-g2h" kind="relationship" relationship="rootViewController" id="El1-Ym-tUc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G3p-p6-E77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2763.0841121495328" y="-717.27861771058315"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="ld6-ef-E7V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QAh-9J-5Ws" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Events" selectedImage="calendar" catalog="system" id="qcl-zx-WKC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QkG-EH-4wL">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ehh-o5-X9l" kind="relationship" relationship="rootViewController" id="hS2-ss-F9m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lc4-d2-bdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2763.0841121495328" y="-1379.4816414686827"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gCV-bv-brp"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="note.text" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
