@@ -8,7 +8,7 @@
 import UIKit
 
 class ItineraryTableViewController: UITableViewController {
-    let schedule = ["Jan 3, 2020", "Mar 27, 2020"]
+    let schedule = ["Feb 3, 2020", "Mar 27, 2020"]
     var interval: Int = 0
   
     override func viewDidLoad() {
@@ -35,7 +35,7 @@ class ItineraryTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "itinCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itineraryCell", for: indexPath)
         cell.textLabel?.text = "Day \(String(indexPath.row+1))"
         cell.detailTextLabel?.text = generateDate(schedule: self.schedule, dayNumber: indexPath.row)
         // Configure the cell...
