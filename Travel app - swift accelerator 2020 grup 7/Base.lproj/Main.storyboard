@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ooB-w0-dZB">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My Trips-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,23 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZQ-kM-xqP">
-                                <rect key="frame" x="30" y="69" width="170" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="Kk3-oF-XYn"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="My Trips">
-                                        <attributes>
-                                            <font key="NSFont" size="37" name="Helvetica-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LD8-DJ-fU6">
-                                <rect key="frame" x="20" y="129" width="388" height="246"/>
+                                <rect key="frame" x="20" y="157" width="388" height="236.66666666666663"/>
                                 <color key="backgroundColor" red="0.63593298200000004" green="0.47557097669999998" blue="0.67757552860000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -51,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ESc-Ec-z9Q">
-                                <rect key="frame" x="20" y="383" width="388" height="246"/>
+                                <rect key="frame" x="20" y="401.66666666666669" width="388" height="236.66666666666669"/>
                                 <color key="backgroundColor" red="0.50793325899999997" green="0.49575215579999998" blue="0.66903758049999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -66,7 +51,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qRp-f2-zHV">
-                                <rect key="frame" x="20" y="637" width="388" height="246"/>
+                                <rect key="frame" x="20" y="646.33333333333337" width="388" height="236.66666666666663"/>
                                 <color key="backgroundColor" red="0.3872542679" green="0.36504414680000002" blue="0.6321851611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -86,14 +71,12 @@
                         <constraints>
                             <constraint firstItem="qRp-f2-zHV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="28h-kA-GH3"/>
                             <constraint firstItem="qRp-f2-zHV" firstAttribute="height" secondItem="LD8-DJ-fU6" secondAttribute="height" id="5Lw-wn-GBT"/>
+                            <constraint firstItem="LD8-DJ-fU6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="7qG-V1-1Ki"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LD8-DJ-fU6" secondAttribute="trailing" constant="20" id="7x3-z3-zbo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ESc-Ec-z9Q" secondAttribute="trailing" constant="20" id="8UT-Ah-14F"/>
-                            <constraint firstItem="jZQ-kM-xqP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="CGL-7z-gYG"/>
                             <constraint firstItem="ESc-Ec-z9Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LRO-Rd-6oQ"/>
                             <constraint firstItem="ESc-Ec-z9Q" firstAttribute="width" secondItem="LD8-DJ-fU6" secondAttribute="width" id="UOS-WU-lwK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qRp-f2-zHV" secondAttribute="trailing" constant="20" id="USa-J8-82B"/>
-                            <constraint firstItem="jZQ-kM-xqP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="c4s-V2-vCF"/>
-                            <constraint firstItem="LD8-DJ-fU6" firstAttribute="top" secondItem="jZQ-kM-xqP" secondAttribute="bottom" constant="17" id="ewc-PX-hOe"/>
                             <constraint firstItem="ESc-Ec-z9Q" firstAttribute="top" secondItem="LD8-DJ-fU6" secondAttribute="bottom" constant="8" symbolic="YES" id="gKn-18-3OC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qRp-f2-zHV" secondAttribute="bottom" constant="9" id="o1f-Dk-2bD"/>
                             <constraint firstItem="ESc-Ec-z9Q" firstAttribute="height" secondItem="LD8-DJ-fU6" secondAttribute="height" id="wpR-r6-xd1"/>
@@ -102,6 +85,7 @@
                             <constraint firstItem="qRp-f2-zHV" firstAttribute="top" secondItem="ESc-Ec-z9Q" secondAttribute="bottom" constant="8" symbolic="YES" id="zCM-dW-7ad"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="My Trips" id="7eS-rm-Ve5"/>
                     <connections>
                         <outlet property="OngoingButton" destination="LD8-DJ-fU6" id="paH-Ak-4hy"/>
                         <outlet property="PastButton" destination="qRp-f2-zHV" id="slR-hJ-9z0"/>
@@ -110,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="209" y="75"/>
+            <point key="canvasLocation" x="1108.8785046728972" y="74.514038876889856"/>
         </scene>
         <!--Trip Overview-->
         <scene sceneID="kra-bb-8Ae">
@@ -156,14 +140,14 @@
                         <barButtonItem key="leftBarButtonItem" style="done" id="0Yy-mp-iiy">
                             <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="gCV-bv-brp"/>
+                                <segue destination="ooB-w0-dZB" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="gCV-bv-brp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ee3-qi-xWV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1867" y="75"/>
+            <point key="canvasLocation" x="2765.8878504672894" y="74.514038876889856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q8V-cO-Whn">
@@ -184,7 +168,28 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRa-zN-YT6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015" y="75"/>
+            <point key="canvasLocation" x="1914.9532710280373" y="74.514038876889856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VBt-PD-duK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ooB-w0-dZB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ghP-xf-DZk">
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="37"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pHi-ab-i5J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4i-64-HbO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208.87850467289718" y="74.514038876889856"/>
         </scene>
     </scenes>
     <resources>
