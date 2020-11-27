@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ItinTableViewController: UITableViewController {
+class ItineraryTableViewController: UITableViewController {
     let schedule = ["Jan 3, 2020", "Mar 27, 2020"]
     var interval: Int = 0
   

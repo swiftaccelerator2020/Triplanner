@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ItinNotesViewController: UIViewController {
+class ItineraryNotesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

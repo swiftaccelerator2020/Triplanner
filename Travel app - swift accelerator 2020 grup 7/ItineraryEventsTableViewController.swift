@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ItinEventsTableViewController: UITableViewController {
+class ItineraryEventsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
