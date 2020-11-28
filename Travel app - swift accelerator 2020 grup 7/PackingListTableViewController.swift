@@ -50,6 +50,10 @@ class PackingListTableViewController: UITableViewController {
         performSegue(withIdentifier: "showDetail", sender: self)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
     /*
     // Override to support conditional editing of the table view.

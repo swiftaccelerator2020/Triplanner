@@ -236,7 +236,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Packing List" id="AuU-9p-Zug"/>
                     <connections>
-                        <segue destination="Rga-nN-5f3" kind="show" identifier="showDetail" id="kqV-6B-0wh"/>
+                        <segue destination="Rga-nN-5f3" kind="presentation" identifier="showDetail" modalPresentationStyle="fullScreen" id="kqV-6B-0wh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95b-5t-poC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -265,6 +265,9 @@
                                                     <rect key="frame" x="20" y="0.0" width="388" height="43.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textFieldUpdated:" destination="oav-sS-Ai6" eventType="editingChanged" id="qBZ-nZ-Un9"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -289,6 +292,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jnJ-9N-jZ6">
                                                     <rect key="frame" x="20" y="6" width="49" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="switchToggled:" destination="oav-sS-Ai6" eventType="valueChanged" id="icE-xD-k9W"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -301,7 +307,18 @@
                             <outlet property="delegate" destination="oav-sS-Ai6" id="Nvl-Ng-O4t"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="l12-N3-vLq"/>
+                    <navigationItem key="navigationItem" id="l12-N3-vLq">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ZeT-Du-P4Z">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="oav-sS-Ai6" id="9p7-U7-g6M"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="QxB-04-2vR">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="oav-sS-Ai6" id="bWM-2n-e3z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="doneSwitch" destination="jnJ-9N-jZ6" id="oAO-Ce-whB"/>
                         <outlet property="nameTextField" destination="eGy-SJ-w9Y" id="YQq-Jd-lvD"/>
@@ -500,7 +517,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gCV-bv-brp"/>
+        <segue reference="pHi-ab-i5J"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>

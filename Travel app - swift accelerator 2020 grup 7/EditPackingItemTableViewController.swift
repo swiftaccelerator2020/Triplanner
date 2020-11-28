@@ -19,5 +19,20 @@ class EditPackingItemTableViewController: UITableViewController {
         doneSwitch.isOn = PackingItem.done
     }
 
+    @IBAction func textFieldUpdated(_ sender: UITextField) {
+        PackingItem.name =  sender.text ?? ""
+    }
+    
+    @IBAction func switchToggled(_ sender: UISwitch) {
+        PackingItem.done = sender.isOn
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
 }
