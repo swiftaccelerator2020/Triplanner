@@ -42,11 +42,12 @@ class PackingListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "packingListItem", for: indexPath)
         
         cell.textLabel?.text = PackingItem[indexPath.row].name
-        if PackingItem[indexPath.row].done {
+        /*if PackingItem[indexPath.row].done {
         cell.accessoryType = .checkmark
         } else {
             cell.accessoryType = .none
-        }
+        }*/
+        cell.accessoryType = PackingItem[indexPath.row].done ? .checkmark : .none
 
         return cell
     }
