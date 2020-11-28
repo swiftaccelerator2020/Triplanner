@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PackingItem {
+struct packingItem {
     var name: String
     var done = false
 }

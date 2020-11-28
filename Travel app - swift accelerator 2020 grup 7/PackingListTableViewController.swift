@@ -9,6 +9,12 @@ import UIKit
 
 class PackingListTableViewController: UITableViewController {
 
+    var PackingItem = [
+        packingItem(name: "clothes"),
+        packingItem(name: "more clothes")
+    ]
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,19 +29,19 @@ class PackingListTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return PackingItem.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "packingListItem", for: indexPath)
-
-        // Configure the cell...
+        
+        cell.textLabel?.text = PackingItem[indexPath.row].name
 
         return cell
     }
