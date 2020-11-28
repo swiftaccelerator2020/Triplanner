@@ -4,7 +4,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var OngoingButton: UIButton!
     @IBOutlet weak var UpcomingButton: UIButton!
