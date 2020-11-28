@@ -234,7 +234,13 @@
                             <outlet property="delegate" destination="vkL-IT-nB3" id="1vu-6a-6jo"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Packing List" id="AuU-9p-Zug"/>
+                    <navigationItem key="navigationItem" title="Packing List" id="AuU-9p-Zug">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="59q-bd-lFw">
+                            <connections>
+                                <action selector="plusButtonTapped:" destination="vkL-IT-nB3" id="aDB-Iu-Usg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Rga-nN-5f3" kind="presentation" identifier="showDetail" modalPresentationStyle="fullScreen" id="kqV-6B-0wh"/>
                     </connections>
@@ -524,6 +530,7 @@
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="note.text" catalog="system" width="128" height="106"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

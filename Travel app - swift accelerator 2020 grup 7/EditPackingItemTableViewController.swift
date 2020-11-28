@@ -10,13 +10,20 @@ import UIKit
 class EditPackingItemTableViewController: UITableViewController {
 
     var PackingItem: packingItem!
+    var newPackingItem = false
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var doneSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTextField.text = PackingItem.name
-        doneSwitch.isOn = PackingItem.done
+        if PackingItem != nil {
+            nameTextField.text = PackingItem.name
+            doneSwitch.isOn = PackingItem.done
+        } else {
+            PackingItem = packingItem(name: "")
+        }
+        //stopped vid at 4:41, done for the day
     }
 
     @IBAction func textFieldUpdated(_ sender: UITextField) {

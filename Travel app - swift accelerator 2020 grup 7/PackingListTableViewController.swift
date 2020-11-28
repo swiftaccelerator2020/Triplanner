@@ -101,10 +101,19 @@ class PackingListTableViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             let nav = segue.destination as! UINavigationController
             let dest = nav.viewControllers.first as! EditPackingItemTableViewController
+            
+            if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
             dest.PackingItem = PackingItem[tableView.indexPathForSelectedRow!.row]
-        }
+            } else {
+                dest.newPackingItem = true
+            }
         
     }
     
-
+}
+    
+    @IBAction func plusButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "showDetail", sender: self)
+    }
+    
 }
