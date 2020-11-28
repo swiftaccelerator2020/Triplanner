@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct packingItem {
+class packingItem {
     var name: String
     var done = false
+    
+    init(name: String) {
+        self.name = name
+    }
 }
  
