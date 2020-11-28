@@ -220,7 +220,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NzE-tP-xbD">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="packingListItem" id="NzE-tP-xbD">
                                 <rect key="frame" x="0.0" y="28" width="428" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NzE-tP-xbD" id="gUh-N4-dfz">
@@ -255,34 +255,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fES-5d-0dK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3897" y="95"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="fOW-bN-JEI">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6xk-EF-D4x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tableViewController id="7ss-SY-unD" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="t34-Cd-27t">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="packingListItem" id="MdE-gI-rIi">
-                                <rect key="frame" x="0.0" y="28" width="428" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MdE-gI-rIi" id="hBp-TT-f8Z">
-                                    <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="7ss-SY-unD" id="lpl-ud-l8K"/>
-                            <outlet property="delegate" destination="7ss-SY-unD" id="enf-sO-2tt"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-            </objects>
-            <point key="canvasLocation" x="5497" y="95"/>
         </scene>
         <!--Events-->
         <scene sceneID="Ht3-9C-iUR">

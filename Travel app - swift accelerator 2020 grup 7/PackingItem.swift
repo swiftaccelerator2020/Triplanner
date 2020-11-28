@@ -9,5 +9,5 @@ import Foundation
 
 struct PackingItem {
     var name: String
-    var done: false
+    var done = false
 }
