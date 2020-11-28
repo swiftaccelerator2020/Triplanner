@@ -22,7 +22,7 @@ class PackingListTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -42,6 +42,11 @@ class PackingListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "packingListItem", for: indexPath)
         
         cell.textLabel?.text = PackingItem[indexPath.row].name
+        if PackingItem[indexPath.row].done {
+        cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
 
         return cell
     }
@@ -63,24 +68,27 @@ class PackingListTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            PackingItem.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
-    /*
+    
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        let packingitem = PackingItem.remove(at: fromIndexPath.row)
+        PackingItem.insert(packingitem, at: to.row)
+        tableView.reloadData()
     }
-    */
+    
 
     /*
     // Override to support conditional rearranging of the table view.
@@ -114,6 +122,18 @@ class PackingListTableViewController: UITableViewController {
     
     @IBAction func plusButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "showDetail", sender: self)
+    }
+    
+    @IBAction func unwindToPackingItems(segue: UIStoryboardSegue) {
+        if segue.identifier == "unwindFromDetail" {
+            let source = segue.source as! EditPackingItemTableViewController
+            if source.newPackingItem {
+                PackingItem.append(source.PackingItem)
+            }
+        }
+
+        
+      
     }
     
 }

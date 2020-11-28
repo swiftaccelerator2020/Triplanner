@@ -23,7 +23,6 @@ class EditPackingItemTableViewController: UITableViewController {
         } else {
             PackingItem = packingItem(name: "")
         }
-        //stopped vid at 4:41, done for the day
     }
 
     @IBAction func textFieldUpdated(_ sender: UITextField) {
@@ -38,8 +37,6 @@ class EditPackingItemTableViewController: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func saveButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+
     
 }
