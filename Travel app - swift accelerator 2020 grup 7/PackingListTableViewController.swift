@@ -10,10 +10,12 @@ import UIKit
 class PackingListTableViewController: UITableViewController {
 
     var PackingItem = [
-        packingItem(name: "clothes"),
-        packingItem(name: "more clothes")
+        packingItem(name: ""),
+        packingItem(name: "")
     ]
 
+    //Todo -- packingItem
+    //todos -- PackingItem
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,7 +113,7 @@ class PackingListTableViewController: UITableViewController {
             let nav = segue.destination as! UINavigationController
             let dest = nav.viewControllers.first as! EditPackingItemTableViewController
             
-            if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
+            if tableView.indexPathForSelectedRow != nil {
             dest.PackingItem = PackingItem[tableView.indexPathForSelectedRow!.row]
             } else {
                 dest.newPackingItem = true
@@ -133,7 +135,6 @@ class PackingListTableViewController: UITableViewController {
             }
         }
 
-        
       
     }
     

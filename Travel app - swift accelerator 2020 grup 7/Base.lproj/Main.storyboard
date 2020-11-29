@@ -260,7 +260,7 @@
                         <sections>
                             <tableViewSection headerTitle="Item Name" id="Ixa-Jc-2lp">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="43.666667938232422" id="caJ-h9-9rO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="unwindFromDetail" rowHeight="43.666667938232422" id="caJ-h9-9rO">
                                         <rect key="frame" x="0.0" y="28" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="caJ-h9-9rO" id="Z8i-fd-vVW">
@@ -321,7 +321,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="QxB-04-2vR">
                             <connections>
-                                <segue destination="hVv-oS-fzS" kind="unwind" identifier="unwindFromDetail" unwindAction="unwindToPackingItemsWithSender:" id="nQn-Ka-KX1"/>
+                                <segue destination="hVv-oS-fzS" kind="unwind" identifier="unwindFromDetail" unwindAction="unwindToPackingItemsWithSegue:" id="weJ-tX-6U0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
