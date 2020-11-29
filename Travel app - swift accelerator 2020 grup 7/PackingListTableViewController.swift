@@ -10,12 +10,8 @@ import UIKit
 class PackingListTableViewController: UITableViewController {
 
     var PackingItem = [
-        packingItem(name: ""),
         packingItem(name: "")
     ]
-
-    //Todo -- packingItem
-    //todos -- PackingItem
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +32,7 @@ class PackingListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return PackingItem.count
+        return PackingItem.count 
     }
 
     
