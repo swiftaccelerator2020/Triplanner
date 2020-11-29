@@ -10,8 +10,9 @@ import UIKit
 class PackingListTableViewController: UITableViewController {
 
     var PackingItem = [
-        packingItem(name: "")
+        packingItem(name: "Add or remove the things you wish to pack for your trip!")
     ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
