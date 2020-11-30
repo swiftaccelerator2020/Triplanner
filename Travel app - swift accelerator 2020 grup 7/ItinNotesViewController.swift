@@ -11,6 +11,7 @@ class ItinNotesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Notes"
 
         // Do any additional setup after loading the view.
     }
@@ -25,5 +26,6 @@ class ItinNotesViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }

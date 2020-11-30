@@ -10,6 +10,8 @@ import UIKit
 class ItinTableViewController: UITableViewController {
     let schedule = ["Jan 3, 2020", "Mar 27, 2020"]
     var interval: Int = 0
+    var daysDictionary: Dictionary<Int, Any> = [:]
+    
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,9 @@ class ItinTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        print("daysDictionary VDA:", daysDictionary)
     }
 
     // MARK: - Table view data source
@@ -78,15 +83,22 @@ class ItinTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+            if segue.identifier == "showDayDetail"{
+                if let dest = segue.destination as? ItinEventsTableViewController{
+                    print("segue showDayDetail performed")
+                    let indexPath = tableView.indexPathForSelectedRow!
+                    dest.dayNo = indexPath.row
+                    print("dayNo:", indexPath.row)
+                    print("Not nil true")
+                    dest.events = daysDictionary[indexPath.row] as? Array<DayEvent> ?? []
+                    print("daysDictionary:", daysDictionary[indexPath.row]!)
+                    }
+            }
+        }
 
     
     func getDateInterval(shedule: [String]) -> Int{
@@ -112,5 +124,10 @@ class ItinTableViewController: UITableViewController {
         print("day:", day)
         
         return day
+    }
+    
+    @IBAction func unwindToItinTableViewController(_ unwindSegue: UIStoryboardSegue) {
+        let sourceViewController = unwindSegue.source
+        // Use data from the view controller which initiated the unwind segue
     }
 }
