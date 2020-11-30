@@ -7,25 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A3C494125720E67001DC149 /* PackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C494025720E67001DC149 /* PackTableViewController.swift */; };
+		3A3C494625720EB6001DC149 /* Pack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C494525720EB6001DC149 /* Pack.swift */; };
+		3A3C494B257211F8001DC149 /* EditPackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C494A257211F8001DC149 /* EditPackTableViewController.swift */; };
 		7E3BB99B256FCDAC006FCD12 /* OverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3BB99A256FCDAC006FCD12 /* OverviewTableViewController.swift */; };
-		7E6A37AB25723C6B00547549 /* PackingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A37AA25723C6B00547549 /* PackingListTableViewController.swift */; };
-		7E6A37B625723CDF00547549 /* PackingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A37B525723CDF00547549 /* PackingItem.swift */; };
-		7E6A37EE257258F200547549 /* EditPackingItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A37ED257258F200547549 /* EditPackingItemTableViewController.swift */; };
-		7E7392C12573C05E00EFFCFF /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7392C02573C05E00EFFCFF /* BudgetViewController.swift */; };
-		AF83206325709AF600487326 /* ItineraryEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83206225709AF600487326 /* ItineraryEventsTableViewController.swift */; };
-		AF83206825709B3600487326 /* ItineraryNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83206725709B3600487326 /* ItineraryNotesViewController.swift */; };
-		AF83206D25709B9900487326 /* ItineraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83206C25709B9900487326 /* ItineraryTableViewController.swift */; };
-		AF8320782571EE0100487326 /* ItinEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8320772571EE0100487326 /* ItinEventViewController.swift */; };
-		AF8320832573778500487326 /* ItinDayEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8320822573778500487326 /* ItinDayEvents.swift */; };
-		AF83208825739C3000487326 /* ItinEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83208725739C3000487326 /* ItinEditTableViewController.swift */; };
+		AF83206325709AF600487326 /* ItinEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83206225709AF600487326 /* ItinEventsTableViewController.swift */; };
+		AF83206825709B3600487326 /* ItinNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83206725709B3600487326 /* ItinNotesViewController.swift */; };
+		AF83206D25709B9900487326 /* ItinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83206C25709B9900487326 /* ItinTableViewController.swift */; };
 		AFACB231256CAA0B00EACAFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB230256CAA0B00EACAFF /* AppDelegate.swift */; };
 		AFACB233256CAA0B00EACAFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */; };
-		AFACB235256CAA0B00EACAFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB234256CAA0B00EACAFF /* HomeViewController.swift */; };
+		AFACB235256CAA0B00EACAFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB234256CAA0B00EACAFF /* ViewController.swift */; };
+		AFACB238256CAA0B00EACAFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFACB236256CAA0B00EACAFF /* Main.storyboard */; };
 		AFACB23A256CAA0E00EACAFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFACB239256CAA0E00EACAFF /* Assets.xcassets */; };
 		AFACB23D256CAA0E00EACAFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFACB23B256CAA0E00EACAFF /* LaunchScreen.storyboard */; };
 		AFACB248256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB247256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7Tests.swift */; };
 		AFACB253256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB252256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7UITests.swift */; };
-		AFC916632574D881003F10EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC916612574D881003F10EC /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,21 +42,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A3C494025720E67001DC149 /* PackTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackTableViewController.swift; sourceTree = "<group>"; };
+		3A3C494525720EB6001DC149 /* Pack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pack.swift; sourceTree = "<group>"; };
+		3A3C494A257211F8001DC149 /* EditPackTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPackTableViewController.swift; sourceTree = "<group>"; };
 		7E3BB99A256FCDAC006FCD12 /* OverviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTableViewController.swift; sourceTree = "<group>"; };
-		7E6A37AA25723C6B00547549 /* PackingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingListTableViewController.swift; sourceTree = "<group>"; };
-		7E6A37B525723CDF00547549 /* PackingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItem.swift; sourceTree = "<group>"; };
-		7E6A37ED257258F200547549 /* EditPackingItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPackingItemTableViewController.swift; sourceTree = "<group>"; };
-		7E7392C02573C05E00EFFCFF /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
-		AF83206225709AF600487326 /* ItineraryEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryEventsTableViewController.swift; sourceTree = "<group>"; };
-		AF83206725709B3600487326 /* ItineraryNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryNotesViewController.swift; sourceTree = "<group>"; };
-		AF83206C25709B9900487326 /* ItineraryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryTableViewController.swift; sourceTree = "<group>"; };
-		AF8320772571EE0100487326 /* ItinEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinEventViewController.swift; sourceTree = "<group>"; };
-		AF8320822573778500487326 /* ItinDayEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinDayEvents.swift; sourceTree = "<group>"; };
-		AF83208725739C3000487326 /* ItinEditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinEditTableViewController.swift; sourceTree = "<group>"; };
+		AF83206225709AF600487326 /* ItinEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinEventsTableViewController.swift; sourceTree = "<group>"; };
+		AF83206725709B3600487326 /* ItinNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinNotesViewController.swift; sourceTree = "<group>"; };
+		AF83206C25709B9900487326 /* ItinTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinTableViewController.swift; sourceTree = "<group>"; };
 		AFACB22D256CAA0B00EACAFF /* Travel app - swift accelerator 2020 grup 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel app - swift accelerator 2020 grup 7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFACB230256CAA0B00EACAFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AFACB234256CAA0B00EACAFF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AFACB234256CAA0B00EACAFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFACB237256CAA0B00EACAFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFACB239256CAA0E00EACAFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFACB23C256CAA0E00EACAFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFACB23E256CAA0E00EACAFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,7 +63,6 @@
 		AFACB24E256CAA0E00EACAFF /* Travel app - swift accelerator 2020 grup 7UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Travel app - swift accelerator 2020 grup 7UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFACB252256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Travel_app___swift_accelerator_2020_grup_7UITests.swift"; sourceTree = "<group>"; };
 		AFACB254256CAA0E00EACAFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFC916622574D881003F10EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,21 +113,17 @@
 		AFACB22F256CAA0B00EACAFF /* Travel app - swift accelerator 2020 grup 7 */ = {
 			isa = PBXGroup;
 			children = (
-				AFC916612574D881003F10EC /* Main.storyboard */,
 				AFACB230256CAA0B00EACAFF /* AppDelegate.swift */,
 				AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */,
-				AF8320822573778500487326 /* ItinDayEvents.swift */,
-				AF8320772571EE0100487326 /* ItinEventViewController.swift */,
-				AF83208725739C3000487326 /* ItinEditTableViewController.swift */,
-				AFACB234256CAA0B00EACAFF /* HomeViewController.swift */,
+				AFACB234256CAA0B00EACAFF /* ViewController.swift */,
 				7E3BB99A256FCDAC006FCD12 /* OverviewTableViewController.swift */,
-				AF83206225709AF600487326 /* ItineraryEventsTableViewController.swift */,
-				AF83206C25709B9900487326 /* ItineraryTableViewController.swift */,
-				AF83206725709B3600487326 /* ItineraryNotesViewController.swift */,
-				7E6A37ED257258F200547549 /* EditPackingItemTableViewController.swift */,
-				7E6A37B525723CDF00547549 /* PackingItem.swift */,
-				7E6A37AA25723C6B00547549 /* PackingListTableViewController.swift */,
-				7E7392C02573C05E00EFFCFF /* BudgetViewController.swift */,
+				AF83206C25709B9900487326 /* ItinTableViewController.swift */,
+				AF83206225709AF600487326 /* ItinEventsTableViewController.swift */,
+				AF83206725709B3600487326 /* ItinNotesViewController.swift */,
+				AFACB236256CAA0B00EACAFF /* Main.storyboard */,
+				3A3C494A257211F8001DC149 /* EditPackTableViewController.swift */,
+				3A3C494525720EB6001DC149 /* Pack.swift */,
+				3A3C494025720E67001DC149 /* PackTableViewController.swift */,
 				AFACB239256CAA0E00EACAFF /* Assets.xcassets */,
 				AFACB23B256CAA0E00EACAFF /* LaunchScreen.storyboard */,
 				AFACB23E256CAA0E00EACAFF /* Info.plist */,
@@ -264,9 +252,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFC916632574D881003F10EC /* Main.storyboard in Resources */,
 				AFACB23D256CAA0E00EACAFF /* LaunchScreen.storyboard in Resources */,
 				AFACB23A256CAA0E00EACAFF /* Assets.xcassets in Resources */,
+				AFACB238256CAA0B00EACAFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,24 +279,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFACB235256CAA0B00EACAFF /* HomeViewController.swift in Sources */,
+				AF83206825709B3600487326 /* ItinNotesViewController.swift in Sources */,
+				AFACB235256CAA0B00EACAFF /* ViewController.swift in Sources */,
+				3A3C494B257211F8001DC149 /* EditPackTableViewController.swift in Sources */,
 				AFACB231256CAA0B00EACAFF /* AppDelegate.swift in Sources */,
 				7E3BB99B256FCDAC006FCD12 /* OverviewTableViewController.swift in Sources */,
-				AF83206D25709B9900487326 /* ItineraryTableViewController.swift in Sources */,
-				AF8320782571EE0100487326 /* ItinEventViewController.swift in Sources */,
-				AF8320832573778500487326 /* ItinDayEvents.swift in Sources */,
-				AF83208825739C3000487326 /* ItinEditTableViewController.swift in Sources */,
-				7E6A37EE257258F200547549 /* EditPackingItemTableViewController.swift in Sources */,
-				7E6A37AB25723C6B00547549 /* PackingListTableViewController.swift in Sources */,
-				AF83206825709B3600487326 /* ItineraryNotesViewController.swift in Sources */,
-				7E6A37B625723CDF00547549 /* PackingItem.swift in Sources */,
-				AFACB235256CAA0B00EACAFF /* HomeViewController.swift in Sources */,
-				7E7392C12573C05E00EFFCFF /* BudgetViewController.swift in Sources */,
-				AFACB231256CAA0B00EACAFF /* AppDelegate.swift in Sources */,
-				7E3BB99B256FCDAC006FCD12 /* OverviewTableViewController.swift in Sources */,
-				AF83206D25709B9900487326 /* ItineraryTableViewController.swift in Sources */,
+				AF83206D25709B9900487326 /* ItinTableViewController.swift in Sources */,
+				3A3C494625720EB6001DC149 /* Pack.swift in Sources */,
 				AFACB233256CAA0B00EACAFF /* SceneDelegate.swift in Sources */,
-				AF83206325709AF600487326 /* ItineraryEventsTableViewController.swift in Sources */,
+				3A3C494125720E67001DC149 /* PackTableViewController.swift in Sources */,
+				AF83206325709AF600487326 /* ItinEventsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,20 +324,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AFACB236256CAA0B00EACAFF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFACB237256CAA0B00EACAFF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		AFACB23B256CAA0E00EACAFF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AFACB23C256CAA0E00EACAFF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		AFC916612574D881003F10EC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AFC916622574D881003F10EC /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -487,6 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM5V3Z3JKS;
 				INFOPLIST_FILE = "Travel app - swift accelerator 2020 grup 7/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,6 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM5V3Z3JKS;
 				INFOPLIST_FILE = "Travel app - swift accelerator 2020 grup 7/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

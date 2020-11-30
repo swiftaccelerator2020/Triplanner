@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZQ-kM-xqP">
+                                <rect key="frame" x="30" y="69" width="170" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="Kk3-oF-XYn"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="My Trips">
+                                        <attributes>
+                                            <font key="NSFont" size="37" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LD8-DJ-fU6">
+                                <rect key="frame" x="20" y="129" width="388" height="246"/>
+                                <color key="backgroundColor" red="0.63593298200000004" green="0.47557097669999998" blue="0.67757552860000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Ongoing Trip">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="32" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ESc-Ec-z9Q">
+                                <rect key="frame" x="20" y="383" width="388" height="246"/>
+                                <color key="backgroundColor" red="0.50793325899999997" green="0.49575215579999998" blue="0.66903758049999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Upcoming Trips">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="32" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qRp-f2-zHV">
+                                <rect key="frame" x="20" y="637" width="388" height="246"/>
+                                <color key="backgroundColor" red="0.3872542679" green="0.36504414680000002" blue="0.6321851611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Past trips">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="32" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qRp-f2-zHV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="28h-kA-GH3"/>
+                            <constraint firstItem="qRp-f2-zHV" firstAttribute="height" secondItem="LD8-DJ-fU6" secondAttribute="height" id="5Lw-wn-GBT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LD8-DJ-fU6" secondAttribute="trailing" constant="20" id="7x3-z3-zbo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ESc-Ec-z9Q" secondAttribute="trailing" constant="20" id="8UT-Ah-14F"/>
+                            <constraint firstItem="jZQ-kM-xqP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="CGL-7z-gYG"/>
+                            <constraint firstItem="ESc-Ec-z9Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LRO-Rd-6oQ"/>
+                            <constraint firstItem="ESc-Ec-z9Q" firstAttribute="width" secondItem="LD8-DJ-fU6" secondAttribute="width" id="UOS-WU-lwK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qRp-f2-zHV" secondAttribute="trailing" constant="20" id="USa-J8-82B"/>
+                            <constraint firstItem="jZQ-kM-xqP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="c4s-V2-vCF"/>
+                            <constraint firstItem="LD8-DJ-fU6" firstAttribute="top" secondItem="jZQ-kM-xqP" secondAttribute="bottom" constant="17" id="ewc-PX-hOe"/>
+                            <constraint firstItem="ESc-Ec-z9Q" firstAttribute="top" secondItem="LD8-DJ-fU6" secondAttribute="bottom" constant="8" symbolic="YES" id="gKn-18-3OC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qRp-f2-zHV" secondAttribute="bottom" constant="9" id="o1f-Dk-2bD"/>
+                            <constraint firstItem="ESc-Ec-z9Q" firstAttribute="height" secondItem="LD8-DJ-fU6" secondAttribute="height" id="wpR-r6-xd1"/>
+                            <constraint firstItem="LD8-DJ-fU6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xVm-Ub-Xun"/>
+                            <constraint firstItem="qRp-f2-zHV" firstAttribute="width" secondItem="LD8-DJ-fU6" secondAttribute="width" id="xyc-iv-IFP"/>
+                            <constraint firstItem="qRp-f2-zHV" firstAttribute="top" secondItem="ESc-Ec-z9Q" secondAttribute="bottom" constant="8" symbolic="YES" id="zCM-dW-7ad"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="OngoingButton" destination="LD8-DJ-fU6" id="paH-Ak-4hy"/>
+                        <outlet property="PastButton" destination="qRp-f2-zHV" id="slR-hJ-9z0"/>
+                        <outlet property="UpcomingButton" destination="ESc-Ec-z9Q" id="yWK-eu-42e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
