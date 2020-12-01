@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oIt-E2-qJO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7e1-aL-Zyg">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -190,29 +190,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4i-64-HbO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="208.87850467289718" y="74.514038876889856"/>
-        </scene>
-        <!--Day, Date-->
-        <scene sceneID="zMY-9W-5e0">
-            <objects>
-                <viewController id="TsG-Z8-g2h" customClass="ItineraryNotesViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="90P-e6-fVO">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="LIc-34-jAR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Day, Date" id="Ksf-St-0NW">
-                        <barButtonItem key="leftBarButtonItem" style="done" id="cuO-aW-u8q">
-                            <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
-                            <connections>
-                                <segue destination="xQk-Bu-vx6" kind="presentation" modalPresentationStyle="fullScreen" id="5Nc-5u-IWW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gle-zR-Y82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3663.0841121495323" y="-717.27861771058315"/>
         </scene>
         <!--Packing List-->
         <scene sceneID="34t-mT-LoP">
@@ -891,6 +868,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="QAh-9J-5Ws" kind="presentation" modalPresentationStyle="fullScreen" id="uLH-dw-Zl2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -902,25 +882,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBv-ic-eYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1037" y="-1022"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="BP8-aO-GUR">
-            <objects>
-                <tabBarController id="80U-ac-pxO" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vfL-sm-CqL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="VSI-ms-gmN" kind="relationship" relationship="viewControllers" id="arg-Ut-Exq"/>
-                        <segue destination="QAh-9J-5Ws" kind="relationship" relationship="viewControllers" id="Ddr-P1-fJb"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4tm-2x-5Bz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1879" y="-1019"/>
+            <point key="canvasLocation" x="209" y="1151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zeN-Pt-rgA">
@@ -938,26 +900,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCB-Cr-nSL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="-1022"/>
-        </scene>
-        <!--Notes-->
-        <scene sceneID="nyV-fu-gGX">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VSI-ms-gmN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notes" selectedImage="note.text" catalog="system" id="aOm-UU-zHf"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bw8-dC-zyC">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="TsG-Z8-g2h" kind="relationship" relationship="rootViewController" id="El1-Ym-tUc"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G3p-p6-E77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2763.0841121495328" y="-717.27861771058315"/>
+            <point key="canvasLocation" x="-562" y="1153"/>
         </scene>
         <!--Events-->
         <scene sceneID="ld6-ef-E7V">
@@ -976,7 +919,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lc4-d2-bdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2763.0841121495328" y="-1379.4816414686827"/>
+            <point key="canvasLocation" x="1036" y="1153"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s4E-hg-ROr">
@@ -1018,13 +961,11 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="gCV-bv-brp"/>
-        <segue reference="aMY-n1-25b"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
-        <image name="note.text" catalog="system" width="128" height="106"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
