@@ -9,6 +9,7 @@ import UIKit
 
 class ItineraryEventsTableViewController: UITableViewController {
     var events: Array<DayEvent> = [DayEvent(destination: "Bali", timeStart: "16:00", timeEnd: "17:00", date: "Jan 5, 2020", notes:"Bali")]
+    var eventNo: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,7 @@ class ItineraryEventsTableViewController: UITableViewController {
         cell.textLabel?.text = events[indexPath.row].destination
         let text = "\(events[indexPath.row].timeStart) - \(events[indexPath.row].timeEnd)"
         cell.detailTextLabel?.text = text
+        eventNo = indexPath.row
 
         // Configure the cell...
 
@@ -79,14 +81,36 @@ class ItineraryEventsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "eventsToEventDetail"{
+            if let dest = segue.destination as? ItinEventViewController{
+                dest.eventNo = eventNo
+                dest.event = events[eventNo]
+            }
+        }
+        if segue.identifier == "eventsToNewEvent"{
+            if let dest = segue.destination as? ItinEventViewController{
+                dest.isAnExistingEvent = false
+        }
     }
-    */
+    }
+    
+    
+    @IBAction func backToItinEventsTableViewController (with segue: UIStoryboardSegue){
+        if let source = segue.source as? ItinEventViewController{
+            if source.isAnExistingEvent == true{
+                events[eventNo] = source.event
+
+                tableView.reloadData()
+            }else{
+                events.append(source.event)
+                tableView.reloadData()
+            }
+        }
+    }
 
 }

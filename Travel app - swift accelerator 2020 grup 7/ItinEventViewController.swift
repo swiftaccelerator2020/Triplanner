@@ -10,6 +10,8 @@ import UIKit
 class ItinEventViewController: UIViewController {
     
     var event: DayEvent!
+    var isAnExistingEvent = true
+    var eventNo: Int = 0
 
     @IBOutlet weak var startTimeTextField: UITextField!
     @IBOutlet weak var endTimeTextField: UITextField!
@@ -20,11 +22,13 @@ class ItinEventViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         if event != nil{
+            isAnExistingEvent = true
             startTimeTextField.text = event.timeStart
             endTimeTextField.text = event.timeEnd
             eventNoteView.text = event.notes
         }else{
             print("event is not here!")
+            isAnExistingEvent = false
         }
     }
     
@@ -39,33 +43,25 @@ class ItinEventViewController: UIViewController {
     }
     */
     
-    @IBAction func cancel(_ unwindSegue: UIStoryboardSegue){
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "eventToEditViewController"{
-            if let dest = segue.destination as? ItinEditTableViewController{
-            dest.event = event
+        if segue.identifier == "eventToEventsTable"{
+                print("eventToEventsTable segue performed")
+            }
+        if segue.identifier == "unwindSave"{
+            switch isAnExistingEvent {
+            case true:
+                if let dest = segue.destination as? ItineraryEventsTableViewController{
+                    event.timeStart = startTimeTextField.text ?? ""
+                    event.timeEnd = endTimeTextField.text ?? ""
+                    event.notes = eventNoteView.text ?? "Notes!"
+                    print("event:",event)
+                        }
+            default:
+                event = DayEvent(destination:"", timeStart: startTimeTextField.text ?? "", timeEnd: endTimeTextField.text ?? "", date: "", notes: eventNoteView.text ?? "Notes")
+            }
             }
             
         }
-//        if segue.identifier == "unwindToItinEventsTableViewController"{
-//            if let dest = segue.destination as? ItinEventsTableViewController{
-//                dest.daysDictionary[event.date] = event
-//            }
-//        }
-    }
-    
-    
-    
-
-    @IBAction func saveButtonPressed(_ sender: Any) {
-        event.notes = eventNoteView.text
-        print(eventNoteView.text)
-        
-    }
-
 
     
 }
