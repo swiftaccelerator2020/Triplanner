@@ -7,9 +7,12 @@
 
 import UIKit
 
-class ItineraryTableViewController: UITableViewController {
+class ItinTableViewController: UITableViewController {
+    var dayNo: Int = 0
     let schedule = ["Feb 3, 2020", "Mar 27, 2020"]
     var interval: Int = 0
+    var dayDictionary: Dictionary<Int, Array<DayEvent>> = [:]
+    var tempEvent: Array<DayEvent> = []
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,11 @@ class ItineraryTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        dayDictionary[dayNo] = tempEvent
+        print("vda", dayDictionary)
     }
 
     // MARK: - Table view data source
@@ -42,6 +50,30 @@ class ItineraryTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        dayNo = indexPath.row
+        print("dayNo selected:", dayNo)
+//        func prepare(for segue: UIStoryboardSegue,
+//                     sender: Any?){
+//            print("not true")
+//            if segue.identifier == "dayToEvents"{
+//            }
+//        }
+    }
+    
+    //MARK: PLEASE HELP ME LOOK AT THIS! THE THE PART AFTER "IF LET" WILL NEVER EXECUTE, as if the destination of the segue is not ItinEventsTableViewController, but it is...
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "dayToEvents"{
+            print("segue performing")
+        if let dest = segue.destination as? ItinEventsTableViewController{
+            print("segue working")
+            dest.events = dayDictionary[dayNo]!
+        }
+    }
+    }
+    
+   
 
     /*
     // Override to support conditional editing of the table view.
@@ -78,15 +110,11 @@ class ItineraryTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
     
     func getDateInterval(shedule: [String]) -> Int{
@@ -112,5 +140,9 @@ class ItineraryTableViewController: UITableViewController {
         print("day:", day)
         
         return day
+    }
+    
+    @IBAction func backToItineraryTableViewController(with segue: UIStoryboardSegue){
+        
     }
 }

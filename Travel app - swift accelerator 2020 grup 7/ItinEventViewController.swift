@@ -50,7 +50,7 @@ class ItinEventViewController: UIViewController {
         if segue.identifier == "unwindSave"{
             switch isAnExistingEvent {
             case true:
-                if let dest = segue.destination as? ItineraryEventsTableViewController{
+                if let dest = segue.destination as? ItinEventsTableViewController{
                     event.timeStart = startTimeTextField.text ?? ""
                     event.timeEnd = endTimeTextField.text ?? ""
                     event.notes = eventNoteView.text ?? "Notes!"

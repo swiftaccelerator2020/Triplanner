@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ooB-w0-dZB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7e1-aL-Zyg">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -522,10 +522,10 @@
             </objects>
             <point key="canvasLocation" x="3897" y="95"/>
         </scene>
-        <!--Itinerary Events Table View Controller-->
+        <!--Itin Events Table View Controller-->
         <scene sceneID="Ht3-9C-iUR">
             <objects>
-                <tableViewController id="ehh-o5-X9l" customClass="ItineraryEventsTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ehh-o5-X9l" customClass="ItinEventsTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RTE-Dc-e8V">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -566,7 +566,7 @@
                     <navigationItem key="navigationItem" id="4zV-7o-sKH">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="lGp-12-lkp">
                             <connections>
-                                <segue destination="aXL-kk-OyQ" kind="unwind" identifier="eventsToDateTableView" unwindAction="unwindToItinTableViewController:" id="GF3-4i-E5u"/>
+                                <segue destination="aXL-kk-OyQ" kind="unwind" identifier="backToItineraryTableViewController" unwindAction="backToItineraryTableViewControllerWith:" id="54B-KQ-SQP"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Am6-Tg-JPa">
@@ -586,7 +586,7 @@
             <objects>
                 <viewController id="8D9-0X-1rg" customClass="ItinEventViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wPK-kY-Mbe">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aww-5V-JVH">
@@ -602,7 +602,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L3c-Hh-XpO">
-                                <rect key="frame" x="42" y="121" width="344" height="192"/>
+                                <rect key="frame" x="42" y="165" width="344" height="192"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="192" id="6wZ-RL-cTS"/>
                                 </constraints>
@@ -839,7 +839,7 @@
         <!--Itinerary-->
         <scene sceneID="rE9-1f-jGy">
             <objects>
-                <tableViewController id="xQk-Bu-vx6" customClass="ItineraryTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="xQk-Bu-vx6" customClass="ItinTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uD5-zT-ScV">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -869,7 +869,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="QAh-9J-5Ws" kind="presentation" modalPresentationStyle="fullScreen" id="uLH-dw-Zl2"/>
+                                    <segue destination="QAh-9J-5Ws" kind="presentation" identifier="dayToEvents" modalPresentationStyle="fullScreen" id="eHN-di-Lqi"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -960,8 +960,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gCV-bv-brp"/>
-        <segue reference="9rE-uh-DcW"/>
+        <segue reference="Avo-Cq-qcV"/>
+        <segue reference="rzI-jV-ngr"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>

@@ -7,12 +7,14 @@
 
 import UIKit
 
-class ItineraryEventsTableViewController: UITableViewController {
+class ItinEventsTableViewController: UITableViewController {
+    var dayNo: Int = 0
     var events: Array<DayEvent> = [DayEvent(destination: "Bali", timeStart: "16:00", timeEnd: "17:00", date: "Jan 5, 2020", notes:"Bali")]
     var eventNo: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("dayNo:", dayNo)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -97,6 +99,12 @@ class ItineraryEventsTableViewController: UITableViewController {
                 dest.isAnExistingEvent = false
         }
     }
+        if segue.identifier == "backToItineraryTableViewController"{
+            if let dest = segue.destination as? ItinTableViewController{
+                dest.dayDictionary[dayNo] = events
+            }
+            
+        }
     }
     
     
