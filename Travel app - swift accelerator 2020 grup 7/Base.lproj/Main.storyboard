@@ -868,9 +868,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="QAh-9J-5Ws" kind="presentation" identifier="dayToEvents" modalPresentationStyle="fullScreen" id="eHN-di-Lqi"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -879,6 +876,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Itinerary" id="UQn-gc-Lwe"/>
+                    <connections>
+                        <segue destination="QAh-9J-5Ws" kind="presentation" identifier="dayToEvents" modalPresentationStyle="fullScreen" id="JKh-Lz-ZPS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBv-ic-eYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -960,7 +960,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Avo-Cq-qcV"/>
+        <segue reference="pHi-ab-i5J"/>
         <segue reference="rzI-jV-ngr"/>
     </inferredMetricsTieBreakers>
     <resources>

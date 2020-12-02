@@ -54,6 +54,7 @@ class ItinTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dayNo = indexPath.row
         print("dayNo selected:", self.dayNo)
+        performSegue(withIdentifier: "dayToEvents", sender: tableView.cellForRow(at: indexPath))
 //        func prepare(for segue: UIStoryboardSegue,
 //                     sender: Any?){
 //            print("not true")
@@ -62,7 +63,6 @@ class ItinTableViewController: UITableViewController {
 //        }
     }
     
-    //MARK: PLEASE HELP ME LOOK AT THIS! THE THE PART AFTER "IF LET" WILL NEVER EXECUTE, as if the destination of the segue is not ItinEventsTableViewController, but it is...
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "dayToEvents"{
             print("segue performing")
@@ -83,7 +83,7 @@ class ItinTableViewController: UITableViewController {
             //this won't work either
     }
     }
-    
+
    
 
     /*
