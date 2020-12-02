@@ -9,7 +9,7 @@ import UIKit
 
 class ItinTableViewController: UITableViewController {
     var dayNo: Int = 0
-    let schedule = ["Feb 3, 2020", "Mar 27, 2020"]
+    let schedule = ["Mar 22, 2020", "Mar 27, 2020"]
     var interval: Int = 0
     var dayDictionary: Dictionary<Int, Array<DayEvent>> = [:]
     var tempEvent: Array<DayEvent> = []
@@ -26,7 +26,7 @@ class ItinTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        dayDictionary[dayNo] = tempEvent
+//        dayDictionary[dayNo] = tempEvent
         print("vda", dayDictionary)
     }
 
@@ -53,7 +53,7 @@ class ItinTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dayNo = indexPath.row
-        print("dayNo selected:", dayNo)
+        print("dayNo selected:", self.dayNo)
 //        func prepare(for segue: UIStoryboardSegue,
 //                     sender: Any?){
 //            print("not true")
@@ -66,10 +66,21 @@ class ItinTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "dayToEvents"{
             print("segue performing")
-        if let dest = segue.destination as? ItinEventsTableViewController{
-            print("segue working")
-            dest.events = dayDictionary[dayNo]!
-        }
+            let destinationNavigationController = segue.destination as? UINavigationController
+            let dest = destinationNavigationController?.topViewController as? ItinEventsTableViewController
+            switch dayDictionary[dayNo] {
+            case nil:
+                print("day events nil")
+                dest?.dayNo = self.dayNo
+                print("dayNo about to pass", self.dayNo)
+            default:
+                dest?.events = dayDictionary[dayNo]!
+                dest?.dayNo = self.dayNo
+                print("dayNo about to pass", self.dayNo)
+            }
+            print("dest?.events",dest?.events)
+            //let vc = segue.destination as! ItinEventsTableViewController
+            //this won't work either
     }
     }
     

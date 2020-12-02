@@ -102,8 +102,8 @@ class ItinEventsTableViewController: UITableViewController {
         if segue.identifier == "backToItineraryTableViewController"{
             if let dest = segue.destination as? ItinTableViewController{
                 dest.dayDictionary[dayNo] = events
+//                dest.tempEvents = events
             }
-            
         }
     }
     
