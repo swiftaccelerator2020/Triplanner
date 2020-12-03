@@ -9,10 +9,23 @@ import UIKit
 
 class BudgetViewController: UIViewController {
 
+    @IBOutlet weak var foodButton: UIButton!
+    @IBOutlet weak var accomodationButton: UIButton!
+    @IBOutlet weak var shoppingButton: UIButton!
+    @IBOutlet weak var travelButton: UIButton!
+    @IBOutlet weak var otherButton: UIButton!
+    
+    @IBOutlet weak var addSpendingButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        foodButton.layer.cornerRadius = 25
+        accomodationButton.layer.cornerRadius = 25
+        shoppingButton.layer.cornerRadius = 25
+        travelButton.layer.cornerRadius = 25
+        otherButton.layer.cornerRadius = 25
+        addSpendingButton.layer.cornerRadius = 15
+        
     }
     
     class budgetInfoItem {
