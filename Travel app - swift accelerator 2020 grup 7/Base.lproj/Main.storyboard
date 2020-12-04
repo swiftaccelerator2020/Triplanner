@@ -325,9 +325,6 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
-                                        <connections>
-                                            <segue destination="ag0-lZ-3N6" kind="presentation" modalPresentationStyle="fullScreen" id="4gV-PB-g3u"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="knb-lC-wTk" userLabel="Accomodation">
                                         <rect key="frame" x="0.0" y="104.66666666666669" width="335" height="90"/>
@@ -343,9 +340,6 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
-                                        <connections>
-                                            <segue destination="Scf-PJ-85E" kind="presentation" modalPresentationStyle="fullScreen" id="Bhi-OF-GQT"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uck-IT-FhW" userLabel="Shopping">
                                         <rect key="frame" x="0.0" y="209.66666666666669" width="335" height="89.666666666666686"/>
@@ -379,9 +373,6 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
-                                        <connections>
-                                            <segue destination="Iaj-MB-Huv" kind="presentation" modalPresentationStyle="fullScreen" id="rg7-9h-KZt"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GRu-Jg-Kp6" userLabel="Other">
                                         <rect key="frame" x="0.0" y="419.33333333333337" width="335" height="89.666666666666686"/>
@@ -397,9 +388,6 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
-                                        <connections>
-                                            <segue destination="Fc7-qp-Et4" kind="presentation" modalPresentationStyle="fullScreen" id="giB-Oa-1GG"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -461,45 +449,10 @@
             </objects>
             <point key="canvasLocation" x="5828" y="1218"/>
         </scene>
-        <!--Food-->
-        <scene sceneID="JtJ-0Q-VUQ">
-            <objects>
-                <tableViewController id="mbZ-1d-lxK" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uUa-al-XPv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hY3-rh-NvN">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hY3-rh-NvN" id="q0M-6n-5n0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="mbZ-1d-lxK" id="v0U-bg-f0X"/>
-                            <outlet property="delegate" destination="mbZ-1d-lxK" id="XNq-rB-lkB"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Food" id="46s-bX-v94">
-                        <barButtonItem key="leftBarButtonItem" style="done" id="KGf-Ph-BFY">
-                            <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
-                            <connections>
-                                <segue destination="B4D-IW-gQn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ExE-af-mHF"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BKy-0q-Kzu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7918" y="328"/>
-        </scene>
         <!--Shopping-->
         <scene sceneID="e94-79-jQV">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9gn-ny-tdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="L0t-8y-Orz" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kGS-pB-aup">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -529,117 +482,13 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9gn-ny-tdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7918" y="1042"/>
-        </scene>
-        <!--Other-->
-        <scene sceneID="YEM-i9-dWN">
-            <objects>
-                <tableViewController id="9kw-sJ-VDU" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kh7-0q-QP5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CJX-aw-5U5">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CJX-aw-5U5" id="ktq-pw-VcJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="9kw-sJ-VDU" id="6wE-L3-IgT"/>
-                            <outlet property="delegate" destination="9kw-sJ-VDU" id="S2j-Th-DJu"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Other" id="LIu-X3-SUQ">
-                        <barButtonItem key="leftBarButtonItem" style="done" id="ndT-Z3-Lnc">
-                            <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
-                            <connections>
-                                <segue destination="B4D-IW-gQn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="VVC-hq-oZH"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rNs-eQ-9ch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="9826" y="1783"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="2my-ss-lsI">
-            <objects>
-                <navigationController id="Fc7-qp-Et4" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eSu-FB-z4Y">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="9kw-sJ-VDU" kind="relationship" relationship="rootViewController" id="GF8-Pi-fSV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="meF-G8-t9V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8905" y="1783"/>
-        </scene>
-        <!--Travel-->
-        <scene sceneID="gOa-Hb-Ti0">
-            <objects>
-                <tableViewController id="K2U-hV-TeI" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BO8-VG-omp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="thM-8t-dp0">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="thM-8t-dp0" id="7xh-7w-x0E">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="K2U-hV-TeI" id="rDg-UA-nyN"/>
-                            <outlet property="delegate" destination="K2U-hV-TeI" id="xY9-D3-U2U"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Travel" id="op0-yp-ZOM">
-                        <barButtonItem key="leftBarButtonItem" style="done" id="OeM-8V-aYf">
-                            <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
-                            <connections>
-                                <segue destination="B4D-IW-gQn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="QOz-fJ-ahn"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nuR-iI-Mkb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="9825" y="1042"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="AMk-YD-0Ii">
-            <objects>
-                <navigationController id="Iaj-MB-Huv" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3vV-hN-kQj">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="K2U-hV-TeI" kind="relationship" relationship="rootViewController" id="9bo-0d-MyP"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Cv-Xx-lWA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8905" y="1042"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zu3-4p-Eso">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qat-Rw-IIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="9Dy-jb-usU" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GTe-Lc-ssO">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -649,77 +498,8 @@
                         <segue destination="L0t-8y-Orz" kind="relationship" relationship="rootViewController" id="XFR-33-eSZ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qat-Rw-IIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7065" y="1042"/>
-        </scene>
-        <!--Accomodation-->
-        <scene sceneID="bbW-pc-97f">
-            <objects>
-                <tableViewController id="V1M-0l-nrg" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zkf-Z6-ZRR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6tY-Rz-uq9">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6tY-Rz-uq9" id="q8d-oU-bFi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="V1M-0l-nrg" id="aTI-Zk-uhZ"/>
-                            <outlet property="delegate" destination="V1M-0l-nrg" id="IS7-kb-kXR"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Accomodation" id="wWj-Lj-Q7n">
-                        <barButtonItem key="leftBarButtonItem" style="done" id="395-DW-6Yv">
-                            <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
-                            <connections>
-                                <segue destination="B4D-IW-gQn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="UWa-au-Ncu"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ois-L7-E3M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="9825" y="327"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="mNk-w1-iLs">
-            <objects>
-                <navigationController id="Scf-PJ-85E" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8hU-bh-jne">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="V1M-0l-nrg" kind="relationship" relationship="rootViewController" id="tuJ-s3-RSA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u8m-XH-2hz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8905" y="327"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="tyU-Fq-K4Y">
-            <objects>
-                <navigationController id="ag0-lZ-3N6" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e6l-oG-Oud">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="mbZ-1d-lxK" kind="relationship" relationship="rootViewController" id="76J-s6-vD3"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ptD-Sq-Qrf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7066" y="328"/>
         </scene>
         <!--Edit Packing Item Table View Controller-->
         <scene sceneID="Bli-bn-suI">
@@ -1263,8 +1043,9 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="pHi-ab-i5J"/>
+        <segue reference="XFR-33-eSZ"/>
         <segue reference="9rE-uh-DcW"/>
-        <segue reference="VVC-hq-oZH"/>
+        <segue reference="xR5-Nx-R1O"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
