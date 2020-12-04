@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E3BB99B256FCDAC006FCD12 /* OverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3BB99A256FCDAC006FCD12 /* OverviewTableViewController.swift */; };
+		7E5DF8F32579E40700B42C9B /* BudgetCatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5DF8F22579E40700B42C9B /* BudgetCatTableViewController.swift */; };
 		7E6A37AB25723C6B00547549 /* PackingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A37AA25723C6B00547549 /* PackingListTableViewController.swift */; };
 		7E6A37B625723CDF00547549 /* PackingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A37B525723CDF00547549 /* PackingItem.swift */; };
 		7E6A37EE257258F200547549 /* EditPackingItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A37ED257258F200547549 /* EditPackingItemTableViewController.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		7E3BB99A256FCDAC006FCD12 /* OverviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTableViewController.swift; sourceTree = "<group>"; };
+		7E5DF8F22579E40700B42C9B /* BudgetCatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCatTableViewController.swift; sourceTree = "<group>"; };
 		7E6A37AA25723C6B00547549 /* PackingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingListTableViewController.swift; sourceTree = "<group>"; };
 		7E6A37B525723CDF00547549 /* PackingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItem.swift; sourceTree = "<group>"; };
 		7E6A37ED257258F200547549 /* EditPackingItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPackingItemTableViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				7E6A37B525723CDF00547549 /* PackingItem.swift */,
 				7E6A37AA25723C6B00547549 /* PackingListTableViewController.swift */,
 				7E7392C02573C05E00EFFCFF /* BudgetViewController.swift */,
+				7E5DF8F22579E40700B42C9B /* BudgetCatTableViewController.swift */,
 				AFACB239256CAA0E00EACAFF /* Assets.xcassets */,
 				AFACB23B256CAA0E00EACAFF /* LaunchScreen.storyboard */,
 				AFACB23E256CAA0E00EACAFF /* Info.plist */,
@@ -297,6 +300,7 @@
 				AF83208825739C3000487326 /* ItinEditTableViewController.swift in Sources */,
 				7E6A37EE257258F200547549 /* EditPackingItemTableViewController.swift in Sources */,
 				7E6A37AB25723C6B00547549 /* PackingListTableViewController.swift in Sources */,
+				7E5DF8F32579E40700B42C9B /* BudgetCatTableViewController.swift in Sources */,
 				7E6A37B625723CDF00547549 /* PackingItem.swift in Sources */,
 				AFACB235256CAA0B00EACAFF /* HomeViewController.swift in Sources */,
 				7E7392C12573C05E00EFFCFF /* BudgetViewController.swift in Sources */,
