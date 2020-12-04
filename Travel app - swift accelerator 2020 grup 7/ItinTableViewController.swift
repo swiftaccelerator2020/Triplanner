@@ -7,7 +7,11 @@
 
 import UIKit
 
-class ItinTableViewController: UITableViewController {
+class ItinTableViewController:
+    UITableViewController {
+    
+    var delegate: DataDelegate?
+    
     var dayNo: Int = 0
     let schedule = ["Mar 22, 2020", "Mar 27, 2020"]
     var interval: Int = 0
@@ -18,6 +22,9 @@ class ItinTableViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "Itinerary"
         interval = getDateInterval(shedule: self.schedule)
+        
+        delegate?.printTextOnButton(titleString: "my delegate is not working")
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -55,12 +62,6 @@ class ItinTableViewController: UITableViewController {
         dayNo = indexPath.row
         print("dayNo selected:", self.dayNo)
         performSegue(withIdentifier: "dayToEvents", sender: tableView.cellForRow(at: indexPath))
-//        func prepare(for segue: UIStoryboardSegue,
-//                     sender: Any?){
-//            print("not true")
-//            if segue.identifier == "dayToEvents"{
-//            }
-//        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

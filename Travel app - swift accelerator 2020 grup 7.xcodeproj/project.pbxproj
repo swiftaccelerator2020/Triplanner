@@ -18,6 +18,8 @@
 		AF8320782571EE0100487326 /* ItinEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8320772571EE0100487326 /* ItinEventViewController.swift */; };
 		AF8320832573778500487326 /* ItinDayEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8320822573778500487326 /* ItinDayEvents.swift */; };
 		AF83208825739C3000487326 /* ItinEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83208725739C3000487326 /* ItinEditTableViewController.swift */; };
+		AF9599172579FBCF002EE58A /* TripOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9599162579FBCF002EE58A /* TripOverviewViewController.swift */; };
+		AF95991C257A0287002EE58A /* DelegateTestingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95991B257A0287002EE58A /* DelegateTestingTableViewController.swift */; };
 		AFACB231256CAA0B00EACAFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB230256CAA0B00EACAFF /* AppDelegate.swift */; };
 		AFACB233256CAA0B00EACAFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */; };
 		AFACB235256CAA0B00EACAFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB234256CAA0B00EACAFF /* HomeViewController.swift */; };
@@ -57,6 +59,8 @@
 		AF8320772571EE0100487326 /* ItinEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinEventViewController.swift; sourceTree = "<group>"; };
 		AF8320822573778500487326 /* ItinDayEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinDayEvents.swift; sourceTree = "<group>"; };
 		AF83208725739C3000487326 /* ItinEditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinEditTableViewController.swift; sourceTree = "<group>"; };
+		AF9599162579FBCF002EE58A /* TripOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripOverviewViewController.swift; sourceTree = "<group>"; };
+		AF95991B257A0287002EE58A /* DelegateTestingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateTestingTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		AFACB22D256CAA0B00EACAFF /* Travel app - swift accelerator 2020 grup 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel app - swift accelerator 2020 grup 7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFACB230256CAA0B00EACAFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,7 +125,9 @@
 		AFACB22F256CAA0B00EACAFF /* Travel app - swift accelerator 2020 grup 7 */ = {
 			isa = PBXGroup;
 			children = (
+				AF95991B257A0287002EE58A /* DelegateTestingTableViewController.swift */,
 				AFC916612574D881003F10EC /* Main.storyboard */,
+				AF9599162579FBCF002EE58A /* TripOverviewViewController.swift */,
 				AFACB230256CAA0B00EACAFF /* AppDelegate.swift */,
 				AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */,
 				AFACB234256CAA0B00EACAFF /* HomeViewController.swift */,
@@ -306,7 +312,9 @@
 				7E7392C12573C05E00EFFCFF /* BudgetViewController.swift in Sources */,
 				AFACB231256CAA0B00EACAFF /* AppDelegate.swift in Sources */,
 				7E3BB99B256FCDAC006FCD12 /* OverviewTableViewController.swift in Sources */,
+				AF95991C257A0287002EE58A /* DelegateTestingTableViewController.swift in Sources */,
 				AF83206D25709B9900487326 /* ItinTableViewController.swift in Sources */,
+				AF9599172579FBCF002EE58A /* TripOverviewViewController.swift in Sources */,
 				AFACB233256CAA0B00EACAFF /* SceneDelegate.swift in Sources */,
 				AF83206325709AF600487326 /* ItinEventsTableViewController.swift in Sources */,
 			);

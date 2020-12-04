@@ -1,20 +1,20 @@
 //
-//  ItinTableViewController.swift
+//  DelegateTestingTableViewController.swift
 //  Travel app - swift accelerator 2020 grup 7
 //
-//  Created by Yu Youyou on 27/11/20.
+//  Created by Yu Youyou on 4/12/20.
 //
 
 import UIKit
 
-class ItinEventsTableViewController: UITableViewController {
-    var dayNo: Int = 0
-    var events: Array<DayEvent> = [DayEvent(destination: "Bali", timeStart: "16:00", timeEnd: "17:00", date: "Jan 5, 2020", notes:"")]
-    var eventNo: Int = 0
+class DelegateTestingTableViewController: UITableViewController {
+    
+    var delegate: DataDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("dayNo:", dayNo)
+        print("going to run delegate")
+        delegate?.printTextOnButton(titleString: "This is testing")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -27,26 +27,23 @@ class ItinEventsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return events.count
+        return 0
     }
 
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "itinEventCell", for: indexPath)
-        cell.textLabel?.text = events[indexPath.row].destination
-        let text = "\(events[indexPath.row].timeStart) - \(events[indexPath.row].timeEnd)"
-        cell.detailTextLabel?.text = text
-        eventNo = indexPath.row
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
 
         return cell
     }
-
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -83,42 +80,14 @@ class ItinEventsTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "eventsToEventDetail"{
-            if let dest = segue.destination as? ItinEventViewController{
-                dest.eventNo = eventNo
-                dest.event = events[eventNo]
-            }
-        }
-        if segue.identifier == "eventsToNewEvent"{
-            if let dest = segue.destination as? ItinEventViewController{
-                dest.isAnExistingEvent = false
-        }
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-        if segue.identifier == "backToItineraryTableViewController"{
-            if let dest = segue.destination as? ItinTableViewController{
-                dest.dayDictionary[dayNo] = events
-//                dest.tempEvents = events
-            }
-        }
-    }
-    
-    
-    @IBAction func backToItinEventsTableViewController (with segue: UIStoryboardSegue){
-        if let source = segue.source as? ItinEventViewController{
-            if source.isAnExistingEvent == true{
-                events[eventNo] = source.event
-
-                tableView.reloadData()
-            }else{
-                events.append(source.event)
-                tableView.reloadData()
-            }
-        }
-    }
+    */
 
 }
