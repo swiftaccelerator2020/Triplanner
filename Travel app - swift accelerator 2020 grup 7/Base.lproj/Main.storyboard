@@ -325,6 +325,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <segue destination="9Dy-jb-usU" kind="presentation" modalPresentationStyle="fullScreen" id="NkC-N2-2CM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="knb-lC-wTk" userLabel="Accomodation">
                                         <rect key="frame" x="0.0" y="104.66666666666669" width="335" height="90"/>
@@ -340,6 +343,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <segue destination="9Dy-jb-usU" kind="presentation" modalPresentationStyle="fullScreen" id="RgN-4F-5BY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uck-IT-FhW" userLabel="Shopping">
                                         <rect key="frame" x="0.0" y="209.66666666666669" width="335" height="89.666666666666686"/>
@@ -373,6 +379,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <segue destination="9Dy-jb-usU" kind="presentation" modalPresentationStyle="fullScreen" id="nAW-aR-8pe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GRu-Jg-Kp6" userLabel="Other">
                                         <rect key="frame" x="0.0" y="419.33333333333337" width="335" height="89.666666666666686"/>
@@ -388,6 +397,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <segue destination="9Dy-jb-usU" kind="presentation" modalPresentationStyle="fullScreen" id="7WP-ZI-Diq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -449,10 +461,9 @@
             </objects>
             <point key="canvasLocation" x="5828" y="1218"/>
         </scene>
-        <!--Shopping-->
+        <!--Table View Controller-->
         <scene sceneID="e94-79-jQV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9gn-ny-tdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="L0t-8y-Orz" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kGS-pB-aup">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -473,7 +484,7 @@
                             <outlet property="delegate" destination="L0t-8y-Orz" id="5TE-Ea-LXd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Shopping" id="o9Y-Dz-9LP">
+                    <navigationItem key="navigationItem" id="o9Y-Dz-9LP">
                         <barButtonItem key="leftBarButtonItem" style="done" id="gTn-tB-dbb">
                             <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
                             <connections>
@@ -482,13 +493,13 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9gn-ny-tdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7918" y="1042"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zu3-4p-Eso">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qat-Rw-IIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="9Dy-jb-usU" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GTe-Lc-ssO">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -498,6 +509,7 @@
                         <segue destination="L0t-8y-Orz" kind="relationship" relationship="rootViewController" id="XFR-33-eSZ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qat-Rw-IIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7065" y="1042"/>
         </scene>
@@ -1043,8 +1055,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="pHi-ab-i5J"/>
-        <segue reference="XFR-33-eSZ"/>
         <segue reference="9rE-uh-DcW"/>
+        <segue reference="7WP-ZI-Diq"/>
         <segue reference="xR5-Nx-R1O"/>
     </inferredMetricsTieBreakers>
     <resources>
