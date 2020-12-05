@@ -11,6 +11,7 @@ class ItinEventsTableViewController: UITableViewController {
     var dayNo: Int = 0
     var events: Array<DayEvent> = [DayEvent(destination: "Bali", timeStart: "16:00", timeEnd: "17:00", date: "Jan 5, 2020", notes:"")]
     var eventNo: Int = 0
+    var delegate: DataDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,8 +116,13 @@ class ItinEventsTableViewController: UITableViewController {
 
                 tableView.reloadData()
             }else{
-                events.append(source.event)
-                tableView.reloadData()
+                switch source.event {
+                case nil:
+                    print("adding event cancelled")
+                default:
+                    events.append(source.event)
+                    tableView.reloadData()
+                }
             }
         }
     }

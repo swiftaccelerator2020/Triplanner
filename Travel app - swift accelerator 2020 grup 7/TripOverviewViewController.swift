@@ -12,16 +12,21 @@ protocol DataDelegate {
 }
 
 class TripOverviewViewController: UIViewController, DataDelegate {
-    @IBOutlet weak var itinButtonLabel: UIButton!
+    @IBOutlet weak var ItinButtonOutlet: UIButton!
+    
+    @IBOutlet weak var itinOverviewLabel: UILabel!
+    
+    var itinOverviewText: String = "itinOverviewText"
     
     func printTextOnButton(titleString: String){
         print("working")
         print(titleString)
+        itinOverviewLabel.text = titleString
 //        itinButtonLabel.setTitle(titleString, for: .normal)
     }
     
     override func viewDidLoad() {
-        itinButtonLabel.setTitle("Itinerary", for: .normal)
+        ItinButtonOutlet.setTitle("New Itinerary", for: .normal)
         super.viewDidLoad()
     }
     
@@ -45,6 +50,13 @@ class TripOverviewViewController: UIViewController, DataDelegate {
     */
 
     @IBAction func itinButton(_ sender: Any) {
+    }
+    
+    @IBAction func backToOverviewViewController(with segue: UIStoryboardSegue){
+        if let source = segue.source as? ItinEventViewController{
+            print("backToOverviewViewController segue result:", source.event)
+            
+        }
     }
 }
 

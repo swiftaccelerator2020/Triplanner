@@ -36,18 +36,16 @@ class ItinEventViewController: UIViewController {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "backToOverviewViewController"{
+            if let dest = segue.destination as? TripOverviewViewController{
+                dest.itinOverviewLabel.text = event.destination
+            }
+        }
+        
+        
         if segue.identifier == "eventToEventsTable"{
                 print("eventToEventsTable segue performed")
             }
