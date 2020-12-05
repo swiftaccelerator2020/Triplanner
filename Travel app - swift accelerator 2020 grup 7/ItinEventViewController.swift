@@ -12,6 +12,7 @@ class ItinEventViewController: UIViewController {
     var event: DayEvent!
     var isAnExistingEvent = true
     var eventNo: Int = 0
+    var isSeguedFromOverview = false
 
     @IBOutlet weak var destinationTextField: UITextField!
     @IBOutlet weak var startTimeTextField: UITextField!
@@ -38,13 +39,6 @@ class ItinEventViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "backToOverviewViewController"{
-            if let dest = segue.destination as? TripOverviewViewController{
-                dest.itinOverviewLabel.text = event.destination
-            }
-        }
-        
         
         if segue.identifier == "eventToEventsTable"{
                 print("eventToEventsTable segue performed")

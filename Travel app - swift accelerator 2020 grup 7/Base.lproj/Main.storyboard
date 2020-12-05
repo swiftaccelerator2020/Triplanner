@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7e1-aL-Zyg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZXM-39-g3k">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -147,7 +147,15 @@
                                 <state key="normal" title="NewItinerary"/>
                                 <connections>
                                     <action selector="itinButton:" destination="QSK-vV-qtH" eventType="touchUpInside" id="47d-V8-7sn"/>
-                                    <segue destination="8D9-0X-1rg" kind="presentation" id="Efb-Ot-7g8"/>
+                                    <segue destination="8D9-0X-1rg" kind="presentation" identifier="overViewToItinEvent" id="Efb-Ot-7g8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmo-Jo-RHU">
+                                <rect key="frame" x="40" y="503" width="175" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="itinerary"/>
+                                <connections>
+                                    <segue destination="7e1-aL-Zyg" kind="presentation" modalPresentationStyle="fullScreen" id="vRj-Qb-i9G"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -162,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgr-0G-NbY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2136.8000000000002" y="308.86699507389164"/>
+            <point key="canvasLocation" x="-1610" y="737"/>
         </scene>
         <!--Trip Overview-->
         <scene sceneID="kra-bb-8Ae">
@@ -1060,12 +1068,19 @@
                             <outlet property="delegate" destination="xQk-Bu-vx6" id="I3X-kF-v0n"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Itinerary" id="UQn-gc-Lwe"/>
+                    <navigationItem key="navigationItem" title="Itinerary" id="UQn-gc-Lwe">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="Z8n-2n-GYV">
+                            <connections>
+                                <segue destination="bh3-6N-4ii" kind="unwind" unwindAction="backToOverviewViewControllerWith:" id="w7z-O6-iU0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="QAh-9J-5Ws" kind="presentation" identifier="dayToEvents" modalPresentationStyle="fullScreen" id="JKh-Lz-ZPS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBv-ic-eYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="bh3-6N-4ii" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="209" y="1151"/>
         </scene>

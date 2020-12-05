@@ -13,10 +13,10 @@ protocol DataDelegate {
 
 class TripOverviewViewController: UIViewController, DataDelegate {
     @IBOutlet weak var ItinButtonOutlet: UIButton!
-    
     @IBOutlet weak var itinOverviewLabel: UILabel!
-    
     var itinOverviewText: String = "itinOverviewText"
+    var newlyCreatedEvent: DayEvent? = nil
+    var itinEvents: Array<DayEvent> = []
     
     func printTextOnButton(titleString: String){
         print("working")
@@ -28,6 +28,9 @@ class TripOverviewViewController: UIViewController, DataDelegate {
     override func viewDidLoad() {
         ItinButtonOutlet.setTitle("New Itinerary", for: .normal)
         super.viewDidLoad()
+        if itinEvents .isEmpty == false{
+            itinOverviewLabel.text = itinEvents[0].destination
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,6 +38,11 @@ class TripOverviewViewController: UIViewController, DataDelegate {
             if let vc = navigationVC.topViewController as? ItinTableViewController{
         vc.delegate = self
             }
+        }
+        
+        if let dest = segue.destination as? ItinEventViewController{
+            dest.isSeguedFromOverview = true
+            
         }
     }
     
@@ -51,13 +59,22 @@ class TripOverviewViewController: UIViewController, DataDelegate {
 
     @IBAction func itinButton(_ sender: Any) {
     }
-    
-    @IBAction func backToOverviewViewController(with segue: UIStoryboardSegue){
+        
+    @IBAction func backToItinEventsTableViewController (with segue: UIStoryboardSegue){
         if let source = segue.source as? ItinEventViewController{
             print("backToOverviewViewController segue result:", source.event)
-            
-        }
+            switch source.event {
+            case nil:
+                print("source.event is nil")
+            default:
+                newlyCreatedEvent = source.event
+            }
+            if itinEvents.isEmpty != true{
+                itinOverviewLabel.text = "\(itinEvents[0].destination),\(itinEvents[0].date)"
+            }
+            print("itinEvents:", itinEvents)
     }
 }
 
 
+}
