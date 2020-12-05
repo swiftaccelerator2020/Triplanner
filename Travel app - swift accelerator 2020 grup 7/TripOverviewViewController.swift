@@ -23,12 +23,14 @@ class TripOverviewViewController: UIViewController, DataDelegate {
     override func viewDidLoad() {
         itinButtonLabel.setTitle("Itinerary", for: .normal)
         super.viewDidLoad()
-        let vc = DelegateTestingTableViewController()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navigationVC = segue.destination as? UINavigationController{
+            if let vc = navigationVC.topViewController as? ItinTableViewController{
         vc.delegate = self
-        
-        
-
-        // Do any additional setup after loading the view.
+            }
+        }
     }
     
 

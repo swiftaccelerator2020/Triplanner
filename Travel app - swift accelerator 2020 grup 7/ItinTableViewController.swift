@@ -22,8 +22,7 @@ class ItinTableViewController:
         super.viewDidLoad()
         self.title = "Itinerary"
         interval = getDateInterval(shedule: self.schedule)
-        
-        delegate?.printTextOnButton(titleString: "my delegate is not working")
+        delegate?.printTextOnButton(titleString: "my delegate is working")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

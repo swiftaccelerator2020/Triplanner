@@ -107,7 +107,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="itinButton:" destination="QSK-vV-qtH" eventType="touchUpInside" id="47d-V8-7sn"/>
-                                    <segue destination="C7M-TQ-tyD" kind="presentation" id="KUP-f6-dWl"/>
+                                    <segue destination="7e1-aL-Zyg" kind="presentation" id="fNo-v1-Aqi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -120,35 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgr-0G-NbY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="497"/>
-        </scene>
-        <!--Delegate Testing Table View Controller-->
-        <scene sceneID="Fsx-D2-SrR">
-            <objects>
-                <tableViewController id="C7M-TQ-tyD" customClass="DelegateTestingTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gaC-kl-EAi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FF2-4b-kC2">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FF2-4b-kC2" id="HSe-hj-yNh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="C7M-TQ-tyD" id="eCl-6x-rZt"/>
-                            <outlet property="delegate" destination="C7M-TQ-tyD" id="7q9-ec-4Ln"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aKd-uv-rou" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1961" y="497"/>
+            <point key="canvasLocation" x="1110" y="451"/>
         </scene>
         <!--Trip Overview-->
         <scene sceneID="kra-bb-8Ae">
@@ -1006,7 +978,7 @@
             <objects>
                 <tableViewController id="xQk-Bu-vx6" customClass="ItinTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uD5-zT-ScV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -1055,7 +1027,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7e1-aL-Zyg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Apz-aU-NY6">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
