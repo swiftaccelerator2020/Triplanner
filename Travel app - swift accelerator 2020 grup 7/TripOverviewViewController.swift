@@ -41,7 +41,6 @@ class TripOverviewViewController: UIViewController, DataDelegate {
         }
         
         if let dest = segue.destination as? ItinEventViewController{
-            dest.isSeguedFromOverview = true
             
         }
     }
