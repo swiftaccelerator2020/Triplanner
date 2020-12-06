@@ -74,7 +74,7 @@ class ItinEventViewController: UIViewController {
         toolBar.setItems([doneButton], animated: true)
         
         //assign toolbar
-        startTimeTextField.inputAccessoryView = toolBar
+        dateTextField.inputAccessoryView = toolBar
         
         //assign date picker
         dateTextField.inputView = datePicker
