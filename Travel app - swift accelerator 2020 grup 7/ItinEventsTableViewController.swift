@@ -23,6 +23,10 @@ class ItinEventsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("vdavda", events, eventNo)
+    }
 
     // MARK: - Table view data source
 
@@ -41,7 +45,6 @@ class ItinEventsTableViewController: UITableViewController {
         cell.textLabel?.text = events[indexPath.row].destination
         let text = "\(events[indexPath.row].timeStart) - \(events[indexPath.row].timeEnd)"
         cell.detailTextLabel?.text = text
-        eventNo = indexPath.row
 
         // Configure the cell...
 
@@ -90,9 +93,12 @@ class ItinEventsTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "eventsToEventDetail"{
+            eventNo = tableView.indexPathForSelectedRow!.row
+            print("current index path", eventNo)
             if let dest = segue.destination as? ItinEventViewController{
                 dest.eventNo = eventNo
                 dest.event = events[eventNo]
+                print("event about to pass:", events, eventNo)
             }
         }
         if segue.identifier == "eventsToNewEvent"{

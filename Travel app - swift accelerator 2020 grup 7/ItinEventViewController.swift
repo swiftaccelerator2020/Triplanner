@@ -24,6 +24,8 @@ class ItinEventViewController: UIViewController {
         super.viewDidLoad()
         eventNoteView.backgroundColor = .init(red: 0, green: 0, blue: 1, alpha: 0.1)
         eventNoteView.text = "Notes"
+        
+        print("go to hell", eventNo, event)
 
         // Do any additional setup after loading the view.
         if event != nil{
