@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="76h-IX-RFd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZXM-39-g3k">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -513,6 +513,9 @@
                     <navigationItem key="navigationItem" title="Budget" id="vE4-QP-8Ig">
                         <barButtonItem key="leftBarButtonItem" style="done" id="w6u-ut-MrQ">
                             <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
+                            <connections>
+                                <segue destination="QSK-vV-qtH" kind="presentation" modalPresentationStyle="fullScreen" id="CmY-a2-17o"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+ Spending" id="Hm3-Nh-X0l"/>
                     </navigationItem>
@@ -526,7 +529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8kc-x1-Ss7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-438" y="2250"/>
+            <point key="canvasLocation" x="-78" y="2016"/>
         </scene>
         <!--Spendings-->
         <scene sceneID="e94-79-jQV">
@@ -563,7 +566,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gn-ny-tdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1322" y="2250"/>
+            <point key="canvasLocation" x="1682" y="2016"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zu3-4p-Eso">
@@ -579,7 +582,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qat-Rw-IIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="498" y="2250"/>
+            <point key="canvasLocation" x="858" y="2016"/>
         </scene>
         <!--Edit Packing Item Table View Controller-->
         <scene sceneID="Bli-bn-suI">
@@ -1143,7 +1146,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIX-0T-Pk5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1298" y="2249"/>
+            <point key="canvasLocation" x="-937" y="2014"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T3c-hl-7w9">
@@ -1166,9 +1169,9 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Efb-Ot-7g8"/>
-        <segue reference="CIV-VY-UOx"/>
+        <segue reference="NkC-N2-2CM"/>
         <segue reference="atP-26-Z7i"/>
-        <segue reference="YtK-WU-t4c"/>
+        <segue reference="CmY-a2-17o"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
