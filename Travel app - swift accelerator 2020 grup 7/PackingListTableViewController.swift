@@ -127,6 +127,34 @@ class PackingListTableViewController: UITableViewController {
     
     @IBAction func plusButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "showDetail", sender: self)
+        
+        var alert = UIAlertController(title: "Hello", message: nil, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        alert.addTextField(configurationHandler: {UITextField in UITextField.placeholder = "New item to pack:"})
+        
+        //    alert.addTextField(configurationHandler: { textField in
+        //        textField.placeholder = "Input your name here..."
+        //    })
+        
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: {action in
+            
+            if let PackingListAlertItem = alert.textFields?.first?.text {
+                print("new item: \(PackingListAlertItem)")
+            }
+        }))
+
+    //
+    //    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+    //
+    //        if let name = alert.textFields?.first?.text {
+    //            print("Your name: \(name)")
+    //        }
+    //    }))
+    //
+        self.present(alert, animated: true)
+    //    self.present(alert, animated: true)
     }
     
     @IBAction func unwindToPackingItems(segue: UIStoryboardSegue) {
