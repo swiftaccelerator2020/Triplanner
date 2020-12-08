@@ -9,7 +9,7 @@ import UIKit
 
 class ItinEventsTableViewController: UITableViewController {
     var dayNo: Int = 0
-    var events: Array<DayEvent> = [DayEvent(destination: "Anne Frank Museum", timeStart: "16:00", timeEnd: "17:00", date: "Jan 5, 2020", notes:"")]
+    var events: Array<DayEvent> = [DayEvent(destination: "add in the day's events!", timeStart: "swipe left to delete an event", timeEnd: "enjoy!!", date: "", notes:"")]
     var eventNo: Int = 0
     var anotherEventNoForPassingDate: Int = 0
     var delegate: DataDelegate?
