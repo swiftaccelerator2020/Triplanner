@@ -7,17 +7,17 @@ import UIKit
 class HomeViewController: UIViewController {
     let someGitTesting: String = "gitTestingTwo"
 
-    @IBOutlet weak var OngoingButton: UIButton!
-    @IBOutlet weak var UpcomingButton: UIButton!
-    @IBOutlet weak var PastButton: UIButton!
+//    @IBOutlet weak var OngoingButton: UIButton!
+//    @IBOutlet weak var UpcomingButton: UIButton!
+//    @IBOutlet weak var PastButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //adds the corner radius curve
-        OngoingButton.layer.cornerRadius = 25
-        UpcomingButton.layer.cornerRadius = 25
-        PastButton.layer.cornerRadius = 25
+//        OngoingButton.layer.cornerRadius = 25
+//        UpcomingButton.layer.cornerRadius = 25
+//        PastButton.layer.cornerRadius = 25
     }
 
     
