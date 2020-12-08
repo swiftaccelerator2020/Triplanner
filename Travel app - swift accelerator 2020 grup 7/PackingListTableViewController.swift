@@ -55,7 +55,7 @@ class PackingListTableViewController: UITableViewController {
         } else {
             cell.accessoryType = .none
         }*/
-        cell.accessoryType = PackingItem[indexPath.row].done ? .checkmark : .none
+        //cell.accessoryType = PackingItem[indexPath.row].done ? .checkmark : .none
 
         return cell
     }
