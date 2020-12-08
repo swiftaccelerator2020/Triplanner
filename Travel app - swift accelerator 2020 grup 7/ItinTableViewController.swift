@@ -17,12 +17,12 @@ class ItinTableViewController:
     var interval: Int = 0
     var dayDictionary: Dictionary<Int, Array<DayEvent>> = [:]
     var tempEvent: Array<DayEvent> = []
-  
+    var itinOverviewList: Array<String> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Itinerary"
         interval = getDateInterval(shedule: self.schedule)
-        delegate?.printTextOnButton(titleString: "my delegate is working")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -32,8 +32,15 @@ class ItinTableViewController:
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        dayDictionary[dayNo] = tempEvent
         print("vda", dayDictionary)
+        for i in dayDictionary{
+            print("i.value:", i.value[0].destination, i.value[0].date)
+            itinOverviewList.append( "\(i.value[0].destination), \(i.value[0].date)")
+            
+        }
+        if itinOverviewList != []{
+        delegate?.printTextOnButton(titleString: itinOverviewList[0])
+        }
     }
 
     // MARK: - Table view data source

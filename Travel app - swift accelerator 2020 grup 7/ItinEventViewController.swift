@@ -34,6 +34,7 @@ class ItinEventViewController: UIViewController {
             startTimeTextField.text = event.timeStart
             endTimeTextField.text = event.timeEnd
             eventNoteView.text = event.notes
+            dateTextField.text = event.date
         }else{
             print("event is not here!")
             isAnExistingEvent = false
@@ -57,6 +58,7 @@ class ItinEventViewController: UIViewController {
                     event.timeStart = startTimeTextField.text ?? ""
                     event.timeEnd = endTimeTextField.text ?? ""
                     event.notes = eventNoteView.text ?? "Notes!"
+                    event.date = dateTextField.text ?? ""
                     print("event:",event)
                         }
             default:

@@ -74,6 +74,10 @@ class TripOverviewViewController: UIViewController, DataDelegate {
             print("itinEvents:", itinEvents)
     }
 }
+    
+    @IBAction func backToOverViewController(with segue: UIStoryboardSegue){
+        
+    }
 
 
 }
