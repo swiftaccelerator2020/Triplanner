@@ -8,6 +8,7 @@
 import Foundation
 
 class packingItem {
+    
     var name: String
     var done = false
     

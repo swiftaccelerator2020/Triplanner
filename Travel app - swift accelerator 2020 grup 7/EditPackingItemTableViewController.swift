@@ -13,13 +13,11 @@ class EditPackingItemTableViewController: UITableViewController {
     var newPackingItem = false
     
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var doneSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if PackingItem != nil {
             nameTextField.text = PackingItem.name
-            doneSwitch.isOn = PackingItem.done
         } else {
             PackingItem = packingItem(name: "")
         }
@@ -28,12 +26,13 @@ class EditPackingItemTableViewController: UITableViewController {
     @IBAction func textFieldUpdated(_ sender: UITextField) {
         PackingItem.name =  sender.text ?? ""
     }
-    
-    @IBAction func switchToggled(_ sender: UISwitch) {
-        PackingItem.done = sender.isOn
-    }
+
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     

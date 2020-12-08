@@ -273,7 +273,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" reuseIdentifier="packingListItem" id="NzE-tP-xbD">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" reuseIdentifier="packingListItem" id="NzE-tP-xbD" customClass="PackingListTableViewCell" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="45.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NzE-tP-xbD" id="gUh-N4-dfz">
@@ -288,6 +288,9 @@
                                             </constraints>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" image="circle"/>
+                                            <connections>
+                                                <action selector="circleButtonPressed:" destination="NzE-tP-xbD" eventType="touchUpInside" id="Acf-fx-kdV"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -296,6 +299,9 @@
                                         <constraint firstAttribute="bottom" secondItem="47v-MW-oOF" secondAttribute="bottom" constant="10" id="JX7-fB-RdL"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="circleButton" destination="47v-MW-oOF" id="FAe-QN-SgU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -640,27 +646,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Packed?" id="8KW-mi-0eu">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aLd-HT-ms8">
-                                        <rect key="frame" x="0.0" y="127.66666793823242" width="375" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aLd-HT-ms8" id="O6f-Fn-M4R">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jnJ-9N-jZ6">
-                                                    <rect key="frame" x="20" y="6" width="49" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <connections>
-                                                        <action selector="switchToggled:" destination="oav-sS-Ai6" eventType="valueChanged" id="icE-xD-k9W"/>
-                                                    </connections>
-                                                </switch>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="oav-sS-Ai6" id="NgE-lD-cCK"/>
@@ -675,12 +660,12 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="QxB-04-2vR">
                             <connections>
+                                <action selector="saveButtonTapped:" destination="oav-sS-Ai6" id="Vul-eq-dfp"/>
                                 <segue destination="hVv-oS-fzS" kind="unwind" identifier="unwindFromDetail" unwindAction="unwindToPackingItemsWithSegue:" id="weJ-tX-6U0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="doneSwitch" destination="jnJ-9N-jZ6" id="oAO-Ce-whB"/>
                         <outlet property="nameTextField" destination="eGy-SJ-w9Y" id="YQq-Jd-lvD"/>
                     </connections>
                 </tableViewController>

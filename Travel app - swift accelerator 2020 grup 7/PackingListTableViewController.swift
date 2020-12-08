@@ -9,9 +9,12 @@ import UIKit
 
 class PackingListTableViewController: UITableViewController {
 
+   
+    
     var PackingItem = [
         packingItem(name: "Add in the things you wish to pack!")
     ]
+   
     
     
     override func viewDidLoad() {
@@ -38,7 +41,7 @@ class PackingListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "packingListItem", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "packingListItem", for: indexPath) as! PackingListTableViewCell
         
         cell.textLabel?.text = PackingItem[indexPath.row].name
         /*if PackingItem[indexPath.row].done {
