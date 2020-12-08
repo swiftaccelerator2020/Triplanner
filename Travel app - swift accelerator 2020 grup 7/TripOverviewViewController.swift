@@ -12,35 +12,40 @@ protocol DataDelegate {
 }
 
 class TripOverviewViewController: UIViewController, DataDelegate {
+    
     func printTextOnButton(titleDict: Dictionary<Int, Any>) {
         print("working")
         print("titleDict:", titleDict)
        itinOverviewLabel.text = "replace with titledict string"
     }
-    
-    @IBOutlet weak var ItinButtonOutlet: UIButton!
+  //MARK: Itinerary overview variables
+    @IBOutlet weak var newItineraryItem: UIButton!
     @IBOutlet weak var itinOverviewLabel: UILabel!
+    @IBOutlet weak var itinOverviewLabel2: UILabel!
     @IBOutlet weak var overviewStartDatePicker: UIDatePicker!
     @IBOutlet weak var overviewEndDatePicker: UIDatePicker!
     
 
     var itinOverviewText: String = "itinOverviewText"
     var newlyCreatedEvent: DayEvent? = nil
-    var itinEvents: Array<DayEvent> = []
+    var newItinEvents: Array<DayEvent> = []
     var dateStorageList: Array<String> = ["start", "end"]
     
     
+//MARK: Packing list overview variables
+//MARK: Budget overview variables
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if itinEvents .isEmpty == false{
-            itinOverviewLabel.text = itinEvents[0].destination
-        }
+//        if itinEvents .isEmpty == false{
+//            itinOverviewLabel.text = itinEvents[0].destination
+//        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navigationVC = segue.destination as? UINavigationController{
             if let vc = navigationVC.topViewController as? ItinTableViewController{
-        vc.delegate = self
+                vc.delegate = self
                 let formatter = DateFormatter()
                 formatter.dateFormat = "MM dd, yyyy"
                 let start = formatter.string(from: overviewStartDatePicker.date)
@@ -48,16 +53,21 @@ class TripOverviewViewController: UIViewController, DataDelegate {
                 dateStorageList[0] = start
                 dateStorageList[1] = end
                 vc.schedule = dateStorageList
+
+                for i in newItinEvents{
+//                    if ((vc.dayDictionary[0]?.isEmpty == false)){
+//                        vc.dayDictionary[0]?.append(i)
+//                    }else{
+//                        vc.dayDictionary[0]
+//                    }
+                    vc.dayDictionary[0] = [i]
+                    print("vc.dayDictionary",vc.dayDictionary,i)
+                }
             }
             
         }
-//        for i in dayDictionary{
-//            print("i.value:", i.value[0].destination, i.value[0].date)
-//            itinOverviewList.append( "\(i.value[0].destination), \(i.value[0].date)")
-//
-//        }
-        
         if let dest = segue.destination as? ItinEventViewController{
+            dest.creatingItemFromOverview = true
             
         }
     }
@@ -74,21 +84,25 @@ class TripOverviewViewController: UIViewController, DataDelegate {
     */
 
     @IBAction func itinButton(_ sender: Any) {
+    
     }
         
     @IBAction func backToItinEventsTableViewController (with segue: UIStoryboardSegue){
         if let source = segue.source as? ItinEventViewController{
+            if segue.identifier == "unwindSave"{
             print("backToOverviewViewController segue result:", source.event)
-            switch source.event {
-            case nil:
-                print("source.event is nil")
-            default:
-                newlyCreatedEvent = source.event
+            newItinEvents.append(source.event)
             }
-            if itinEvents.isEmpty != true{
-                itinOverviewLabel.text = "\(itinEvents[0].destination),\(itinEvents[0].date)"
-            }
-            print("itinEvents:", itinEvents)
+//            switch source.event {
+//            case nil:
+//                print("source.event is nil")
+//            default:
+//                newlyCreatedEvent = source.event
+//            }
+//            if newItinEvents.isEmpty != true{
+//                itinOverviewLabel.text = "\(newItinEvents[0].destination),\(newItinEvents[0].date)"
+//            }
+            print("itinEvents:", newItinEvents)
     }
 }
     

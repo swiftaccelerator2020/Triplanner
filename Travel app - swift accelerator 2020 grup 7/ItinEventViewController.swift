@@ -16,6 +16,7 @@ class ItinEventViewController: UIViewController {
     var date: String = ""
     let formatter = DateFormatter()
     var dateArray: Array<Any> = []
+    var creatingItemFromOverview: Bool = false
 
     @IBOutlet weak var destinationTextField: UITextField!
     @IBOutlet weak var startTimeTextField: UITextField!
@@ -41,9 +42,11 @@ class ItinEventViewController: UIViewController {
         }else{
             print("event is not here!")
             isAnExistingEvent = false
+            if creatingItemFromOverview == false{
             guard let defaultDate = formatter.date(from: dateArray[eventNo] as? String ?? "") else { return }
             print("dateArray:", dateArray, eventNo)
             dateDatePicker.setDate(defaultDate, animated: true)
+            }
         }
         
         
@@ -68,7 +71,7 @@ class ItinEventViewController: UIViewController {
                     print("event:",event)
                         }
             default:
-                event = DayEvent(destination:destinationTextField.text ?? "", timeStart: startTimeTextField.text ?? "", timeEnd: endTimeTextField.text ?? "", date: formatter.string(from: dateDatePicker.date) ?? "", notes: eventNoteView.text ?? "Notes")
+                event = DayEvent(destination:destinationTextField.text ?? "", timeStart: startTimeTextField.text ?? "", timeEnd: endTimeTextField.text ?? "", date: formatter.string(from: dateDatePicker.date), notes: eventNoteView.text ?? "Notes")
             }
             }
             
