@@ -9,15 +9,16 @@ import UIKit
 
 class PackingListTableViewCell: UITableViewCell {
 
-
     
-    @IBOutlet weak var circleImage: UIImageView!
+    @IBOutlet weak var circleButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
+    @IBAction func circleButtonPressed(_ sender: Any) {
+    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

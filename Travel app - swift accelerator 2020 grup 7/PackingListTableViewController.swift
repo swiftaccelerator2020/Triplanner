@@ -27,7 +27,7 @@ class PackingListTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
+       // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -44,6 +44,7 @@ class PackingListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "packingListItem", for: indexPath) as! PackingListTableViewCell
         
         cell.textLabel?.text = PackingItem[indexPath.row].name
+       
         
         /*if PackingItem[indexPath.row].done {
         cell.accessoryType = .checkmark
