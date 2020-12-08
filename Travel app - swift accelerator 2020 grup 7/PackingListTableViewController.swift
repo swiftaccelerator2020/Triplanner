@@ -44,6 +44,12 @@ class PackingListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "packingListItem", for: indexPath) as! PackingListTableViewCell
         
         cell.textLabel?.text = PackingItem[indexPath.row].name
+        
+        if PackingItem[indexPath.row].checked {
+            cell.circleButton.setBackgroundImage("checkmark.circle", for: UIControl.State.normal)
+        } else {
+            cell.circleButton.setBackgroundImage("circle", for: UIControl.State.normal)
+        }
         /*if PackingItem[indexPath.row].done {
         cell.accessoryType = .checkmark
         } else {
