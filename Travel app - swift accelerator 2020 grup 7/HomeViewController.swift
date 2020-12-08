@@ -5,7 +5,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    let someGitTesting: String = "hello"
+    let someGitTesting: String = "gitTestingTwo"
 
     @IBOutlet weak var OngoingButton: UIButton!
     @IBOutlet weak var UpcomingButton: UIButton!
