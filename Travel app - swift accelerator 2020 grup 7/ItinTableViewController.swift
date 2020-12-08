@@ -13,7 +13,7 @@ class ItinTableViewController:
     var delegate: DataDelegate?
     
     var dayNo: Int = 0
-    let schedule = ["Mar 22, 2020", "Mar 27, 2020"]
+    var schedule = ["Mar 22, 2020", "Mar 27, 2020"]
     var interval: Int = 0
     var dayDictionary: Dictionary<Int, Array<DayEvent>> = [:]
     var tempEvent: Array<DayEvent> = []
@@ -33,14 +33,8 @@ class ItinTableViewController:
     
     override func viewDidAppear(_ animated: Bool) {
         print("vda", dayDictionary)
-        for i in dayDictionary{
-            print("i.value:", i.value[0].destination, i.value[0].date)
-            itinOverviewList.append( "\(i.value[0].destination), \(i.value[0].date)")
-            
-        }
-        if itinOverviewList != []{
-        delegate?.printTextOnButton(titleString: itinOverviewList[0])
-        }
+        delegate?.printTextOnButton(titleDict: dayDictionary)
+        
     }
 
     // MARK: - Table view data source
@@ -85,7 +79,6 @@ class ItinTableViewController:
                 dest?.dayNo = self.dayNo
                 print("dayNo about to pass", self.dayNo)
             }
-            print("dest?.events",dest?.events)
             //let vc = segue.destination as! ItinEventsTableViewController
             //this won't work either
     }
