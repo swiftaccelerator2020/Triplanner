@@ -298,27 +298,23 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="45.333332061767578"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47v-MW-oOF">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="iZ8-Lz-AGV">
                                             <rect key="frame" x="340" y="9.9999999999999982" width="25" height="25.333333333333329"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="25" id="1AM-Pu-jmW"/>
-                                                <constraint firstAttribute="width" constant="25" id="7WK-jl-c6V"/>
-                                            </constraints>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" image="circle"/>
-                                            <connections>
-                                                <action selector="circleButtonPressed:" destination="NzE-tP-xbD" eventType="touchUpInside" id="Acf-fx-kdV"/>
-                                            </connections>
-                                        </button>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="s1o-SQ-3fF"/>
+                                                <constraint firstAttribute="height" constant="25" id="sVZ-ee-aLY"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="47v-MW-oOF" secondAttribute="trailing" constant="10" id="Aui-HE-EUP"/>
-                                        <constraint firstItem="47v-MW-oOF" firstAttribute="top" secondItem="gUh-N4-dfz" secondAttribute="top" constant="10" id="FYH-t6-ciD"/>
-                                        <constraint firstAttribute="bottom" secondItem="47v-MW-oOF" secondAttribute="bottom" constant="10" id="JX7-fB-RdL"/>
+                                        <constraint firstAttribute="bottom" secondItem="iZ8-Lz-AGV" secondAttribute="bottom" constant="10" id="TSp-N3-Vc9"/>
+                                        <constraint firstAttribute="trailing" secondItem="iZ8-Lz-AGV" secondAttribute="trailing" constant="10" id="Yib-VZ-Ron"/>
+                                        <constraint firstItem="iZ8-Lz-AGV" firstAttribute="top" secondItem="gUh-N4-dfz" secondAttribute="top" constant="10" id="w22-Sw-Xrx"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="circleButton" destination="47v-MW-oOF" id="FAe-QN-SgU"/>
+                                    <outlet property="circleImage" destination="iZ8-Lz-AGV" id="UAm-Du-Hxk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

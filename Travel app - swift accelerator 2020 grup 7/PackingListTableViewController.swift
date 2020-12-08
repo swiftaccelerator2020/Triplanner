@@ -45,11 +45,6 @@ class PackingListTableViewController: UITableViewController {
         
         cell.textLabel?.text = PackingItem[indexPath.row].name
         
-        if PackingItem[indexPath.row].checked {
-            cell.circleButton.setBackgroundImage("checkmark.circle", for: UIControl.State.normal)
-        } else {
-            cell.circleButton.setBackgroundImage("circle", for: UIControl.State.normal)
-        }
         /*if PackingItem[indexPath.row].done {
         cell.accessoryType = .checkmark
         } else {
