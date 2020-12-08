@@ -19,10 +19,13 @@ class ItinTableViewController:
     var tempEvent: Array<DayEvent> = []
     var itinOverviewList: Array<String> = []
     
+    var dateArray: Array<Any> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Itinerary"
         interval = getDateInterval(shedule: self.schedule)
+        dateArray = []
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -53,6 +56,7 @@ class ItinTableViewController:
         let cell = tableView.dequeueReusableCell(withIdentifier: "itineraryCell", for: indexPath)
         cell.textLabel?.text = "Day \(String(indexPath.row+1))"
         cell.detailTextLabel?.text = generateDate(schedule: self.schedule, dayNumber: indexPath.row)
+        self.dateArray.append(cell.detailTextLabel?.text)
         // Configure the cell...
 
         return cell
@@ -69,6 +73,7 @@ class ItinTableViewController:
             print("segue performing")
             let destinationNavigationController = segue.destination as? UINavigationController
             let dest = destinationNavigationController?.topViewController as? ItinEventsTableViewController
+            dest?.dateArray = dateArray
             switch dayDictionary[dayNo] {
             case nil:
                 print("day events nil")

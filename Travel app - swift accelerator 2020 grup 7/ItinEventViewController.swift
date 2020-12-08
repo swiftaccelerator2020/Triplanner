@@ -13,18 +13,21 @@ class ItinEventViewController: UIViewController {
     var isAnExistingEvent = true
     var eventNo: Int = 0
     let datePicker = UIDatePicker()
+    var date: String = ""
+    let formatter = DateFormatter()
+    var dateArray: Array<Any> = []
 
     @IBOutlet weak var destinationTextField: UITextField!
     @IBOutlet weak var startTimeTextField: UITextField!
     @IBOutlet weak var endTimeTextField: UITextField!
     @IBOutlet weak var eventNoteView: UITextView!
-    @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var dateDatePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         eventNoteView.backgroundColor = .init(red: 0, green: 0, blue: 1, alpha: 0.1)
         eventNoteView.text = "Notes"
+        formatter.dateFormat = "MM dd, yyyy"
 
         // Do any additional setup after loading the view.
         if event != nil{
@@ -33,13 +36,14 @@ class ItinEventViewController: UIViewController {
             startTimeTextField.text = event.timeStart
             endTimeTextField.text = event.timeEnd
             eventNoteView.text = event.notes
-            let formatter2 = DateFormatter()
-            formatter2.dateFormat = "MM dd, yyyy"
-            guard let datedate = formatter2.date(from: event.date) else { return }
+            guard let datedate = formatter.date(from: event.date) else { return }
             dateDatePicker.setDate(datedate, animated: true)
         }else{
             print("event is not here!")
             isAnExistingEvent = false
+            guard let defaultDate = formatter.date(from: dateArray[eventNo] as? String ?? "") else { return }
+            print("dateArray:", dateArray)
+            dateDatePicker.setDate(defaultDate, animated: true)
         }
         
         
@@ -60,11 +64,11 @@ class ItinEventViewController: UIViewController {
                     event.timeStart = startTimeTextField.text ?? ""
                     event.timeEnd = endTimeTextField.text ?? ""
                     event.notes = eventNoteView.text ?? "Notes!"
-                    event.date = dateTextField.text ?? ""
+                    event.date = formatter.string(from: dateDatePicker.date)
                     print("event:",event)
                         }
             default:
-                event = DayEvent(destination:destinationTextField.text ?? "", timeStart: startTimeTextField.text ?? "", timeEnd: endTimeTextField.text ?? "", date: "", notes: eventNoteView.text ?? "Notes")
+                event = DayEvent(destination:destinationTextField.text ?? "", timeStart: startTimeTextField.text ?? "", timeEnd: endTimeTextField.text ?? "", date: formatter.string(from: dateDatePicker.date) ?? "", notes: eventNoteView.text ?? "Notes")
             }
             }
             

@@ -708,7 +708,7 @@
             </objects>
             <point key="canvasLocation" x="4068" y="111.57635467980296"/>
         </scene>
-        <!--Itin Events Table View Controller-->
+        <!--Title-->
         <scene sceneID="Ht3-9C-iUR">
             <objects>
                 <tableViewController id="ehh-o5-X9l" customClass="ItinEventsTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
@@ -750,7 +750,7 @@
                             <outlet property="delegate" destination="ehh-o5-X9l" id="LLo-0G-dO7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="4zV-7o-sKH">
+                    <navigationItem key="navigationItem" title="Title" id="4zV-7o-sKH">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="lGp-12-lkp">
                             <connections>
                                 <segue destination="aXL-kk-OyQ" kind="unwind" identifier="backToItineraryTableViewController" unwindAction="backToItineraryTableViewControllerWith:" id="54B-KQ-SQP"/>
