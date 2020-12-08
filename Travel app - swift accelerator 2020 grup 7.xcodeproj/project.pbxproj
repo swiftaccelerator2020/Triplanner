@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A9C318F257F496500512AD1 /* PackingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C318E257F496500512AD1 /* PackingListTableViewCell.swift */; };
 		7E3BB99B256FCDAC006FCD12 /* OverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3BB99A256FCDAC006FCD12 /* OverviewTableViewController.swift */; };
 		7E5DF8F32579E40700B42C9B /* BudgetCatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5DF8F22579E40700B42C9B /* BudgetCatTableViewController.swift */; };
 		7E6A37AB25723C6B00547549 /* PackingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A37AA25723C6B00547549 /* PackingListTableViewController.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A9C318E257F496500512AD1 /* PackingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingListTableViewCell.swift; sourceTree = "<group>"; };
 		7E3BB99A256FCDAC006FCD12 /* OverviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTableViewController.swift; sourceTree = "<group>"; };
 		7E5DF8F22579E40700B42C9B /* BudgetCatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCatTableViewController.swift; sourceTree = "<group>"; };
 		7E6A37AA25723C6B00547549 /* PackingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingListTableViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				AF83208725739C3000487326 /* ItinEditTableViewController.swift */,
 				AF83206225709AF600487326 /* ItinEventsTableViewController.swift */,
 				AF83206C25709B9900487326 /* ItinTableViewController.swift */,
+				3A9C318E257F496500512AD1 /* PackingListTableViewCell.swift */,
 				7E6A37ED257258F200547549 /* EditPackingItemTableViewController.swift */,
 				7E6A37B525723CDF00547549 /* PackingItem.swift */,
 				7E6A37AA25723C6B00547549 /* PackingListTableViewController.swift */,
@@ -303,6 +306,7 @@
 				AF83208825739C3000487326 /* ItinEditTableViewController.swift in Sources */,
 				7E6A37EE257258F200547549 /* EditPackingItemTableViewController.swift in Sources */,
 				7E6A37AB25723C6B00547549 /* PackingListTableViewController.swift in Sources */,
+				3A9C318F257F496500512AD1 /* PackingListTableViewCell.swift in Sources */,
 				7E5DF8F32579E40700B42C9B /* BudgetCatTableViewController.swift in Sources */,
 				7E6A37B625723CDF00547549 /* PackingItem.swift in Sources */,
 				AFACB235256CAA0B00EACAFF /* HomeViewController.swift in Sources */,

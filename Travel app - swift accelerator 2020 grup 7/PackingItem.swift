@@ -8,8 +8,9 @@
 import Foundation
 
 class packingItem {
+    
     var name: String
-    var done = false
+    var checked = false
     
     init(name: String) {
         self.name = name

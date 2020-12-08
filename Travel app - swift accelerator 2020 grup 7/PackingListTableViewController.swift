@@ -9,9 +9,12 @@ import UIKit
 
 class PackingListTableViewController: UITableViewController {
 
+   
+    
     var PackingItem = [
         packingItem(name: "Add in the things you wish to pack!")
     ]
+   
     
     
     override func viewDidLoad() {
@@ -24,7 +27,7 @@ class PackingListTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
+       // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -38,15 +41,17 @@ class PackingListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "packingListItem", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "packingListItem", for: indexPath) as! PackingListTableViewCell
         
         cell.textLabel?.text = PackingItem[indexPath.row].name
+       
+        
         /*if PackingItem[indexPath.row].done {
         cell.accessoryType = .checkmark
         } else {
             cell.accessoryType = .none
         }*/
-        cell.accessoryType = PackingItem[indexPath.row].done ? .checkmark : .none
+        //cell.accessoryType = PackingItem[indexPath.row].done ? .checkmark : .none
 
         return cell
     }
