@@ -15,7 +15,7 @@ class BudgetViewController: UIViewController {
     @IBOutlet weak var travelButton: UIButton!
     @IBOutlet weak var otherButton: UIButton!
     
-    @IBOutlet weak var addSpendingButton: UIButton!
+   // @IBOutlet weak var addSpendingButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,6 @@ class BudgetViewController: UIViewController {
         shoppingButton.layer.cornerRadius = 25
         travelButton.layer.cornerRadius = 25
         otherButton.layer.cornerRadius = 25
-        addSpendingButton.layer.cornerRadius = 15
         
     }
     
