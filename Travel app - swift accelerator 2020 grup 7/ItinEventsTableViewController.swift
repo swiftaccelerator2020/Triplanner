@@ -11,6 +11,7 @@ class ItinEventsTableViewController: UITableViewController {
     var dayNo: Int = 0
     var events: Array<DayEvent> = [DayEvent(destination: "Anne Frank Museum", timeStart: "16:00", timeEnd: "17:00", date: "Jan 5, 2020", notes:"")]
     var eventNo: Int = 0
+    var anotherEventNoForPassingDate: Int = 0
     var delegate: DataDelegate?
     var dateArray: Array<Any> = []
 
@@ -110,6 +111,7 @@ class ItinEventsTableViewController: UITableViewController {
             if let dest = segue.destination as? ItinEventViewController{
                 dest.isAnExistingEvent = false
                 dest.dateArray = self.dateArray
+                dest.eventNo = anotherEventNoForPassingDate
         }
     }
         if segue.identifier == "backToItineraryTableViewController"{

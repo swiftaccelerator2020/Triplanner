@@ -42,7 +42,7 @@ class ItinEventViewController: UIViewController {
             print("event is not here!")
             isAnExistingEvent = false
             guard let defaultDate = formatter.date(from: dateArray[eventNo] as? String ?? "") else { return }
-            print("dateArray:", dateArray)
+            print("dateArray:", dateArray, eventNo)
             dateDatePicker.setDate(defaultDate, animated: true)
         }
         

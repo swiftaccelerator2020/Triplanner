@@ -74,6 +74,7 @@ class ItinTableViewController:
             let destinationNavigationController = segue.destination as? UINavigationController
             let dest = destinationNavigationController?.topViewController as? ItinEventsTableViewController
             dest?.dateArray = dateArray
+            dest?.anotherEventNoForPassingDate = dayNo
             switch dayDictionary[dayNo] {
             case nil:
                 print("day events nil")
