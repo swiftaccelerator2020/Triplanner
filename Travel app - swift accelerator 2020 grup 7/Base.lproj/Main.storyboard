@@ -80,8 +80,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="Z2X-mR-mVl">
-                                <rect key="frame" x="113" y="64" width="242" height="134"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Z2X-mR-mVl">
+                                <rect key="frame" x="113" y="64" width="242" height="162"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Y2-eC-gP5">
                                         <rect key="frame" x="0.0" y="0.0" width="230" height="34"/>
@@ -92,10 +92,10 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="3mu-Vj-3y5">
-                                        <rect key="frame" x="0.0" y="38" width="242" height="50"/>
+                                        <rect key="frame" x="0.0" y="52" width="242" height="50"/>
                                     </datePicker>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="jWE-Yl-VQc">
-                                        <rect key="frame" x="0.0" y="84" width="242" height="50"/>
+                                        <rect key="frame" x="0.0" y="112" width="242" height="50"/>
                                     </datePicker>
                                 </subviews>
                             </stackView>
