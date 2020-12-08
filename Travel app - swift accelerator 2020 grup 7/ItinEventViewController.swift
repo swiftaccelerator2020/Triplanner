@@ -29,6 +29,8 @@ class ItinEventViewController: UIViewController {
         eventNoteView.backgroundColor = .init(red: 0, green: 0, blue: 1, alpha: 0.1)
         eventNoteView.text = "Notes"
         formatter.dateFormat = "MM dd, yyyy"
+        
+        eventNoteView.layer.cornerRadius = 10
 
         // Do any additional setup after loading the view.
         if event != nil{
