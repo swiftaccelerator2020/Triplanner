@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z0W-v4-c9B">
-                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="804"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="trip" id="UfP-kv-HqM">
@@ -189,7 +189,7 @@
                     <navigationItem key="navigationItem" title="Trip Overview" id="cwZ-ul-Zx6">
                         <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="HS3-sb-PV9">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="MoM-E6-Lxw"/>
+                                <segue destination="ooB-w0-dZB" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="1ik-bz-7Ju"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -345,7 +345,7 @@
                     <navigationItem key="navigationItem" title="Packing List" id="AuU-9p-Zug">
                         <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="xun-GP-6aJ">
                             <connections>
-                                <segue destination="ZXM-39-g3k" kind="presentation" modalPresentationStyle="fullScreen" id="HO6-b9-p6e"/>
+                                <segue destination="ZXM-39-g3k" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="HO6-b9-p6e"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="59q-bd-lFw">
@@ -562,7 +562,7 @@
                         <barButtonItem key="leftBarButtonItem" style="done" id="w6u-ut-MrQ">
                             <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
                             <connections>
-                                <segue destination="ZXM-39-g3k" kind="presentation" modalPresentationStyle="fullScreen" id="DVO-0P-gv0"/>
+                                <segue destination="ZXM-39-g3k" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="DVO-0P-gv0"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+ Spending" id="Hm3-Nh-X0l"/>
@@ -607,7 +607,7 @@
                         <barButtonItem key="leftBarButtonItem" style="done" id="gTn-tB-dbb">
                             <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
                             <connections>
-                                <segue destination="oIt-E2-qJO" kind="presentation" modalPresentationStyle="fullScreen" id="ZMg-Ks-tWx"/>
+                                <segue destination="oIt-E2-qJO" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ZMg-Ks-tWx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1216,11 +1216,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HO6-b9-p6e"/>
+        <segue reference="DVO-0P-gv0"/>
         <segue reference="ZMg-Ks-tWx"/>
         <segue reference="Efb-Ot-7g8"/>
         <segue reference="NkC-N2-2CM"/>
-        <segue reference="MoM-E6-Lxw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
