@@ -19,13 +19,12 @@ class ItinEventViewController: UIViewController {
     @IBOutlet weak var endTimeTextField: UITextField!
     @IBOutlet weak var eventNoteView: UITextView!
     @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var dateDatePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         eventNoteView.backgroundColor = .init(red: 0, green: 0, blue: 1, alpha: 0.1)
         eventNoteView.text = "Notes"
-        
-        print("go to hell", eventNo, event)
 
         // Do any additional setup after loading the view.
         if event != nil{
@@ -34,14 +33,17 @@ class ItinEventViewController: UIViewController {
             startTimeTextField.text = event.timeStart
             endTimeTextField.text = event.timeEnd
             eventNoteView.text = event.notes
-            dateTextField.text = event.date
+            let formatter2 = DateFormatter()
+            formatter2.dateFormat = "MM dd, yyyy"
+            guard let datedate = formatter2.date(from: event.date) else { return }
+            dateDatePicker.setDate(datedate, animated: true)
         }else{
             print("event is not here!")
             isAnExistingEvent = false
         }
         
         
-        createDatePicker()
+//        createDatePicker()
     }
     
     
@@ -68,48 +70,48 @@ class ItinEventViewController: UIViewController {
             
         }
     
-    func createDatePicker(){
-        //tool bar
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        
-        //bar button
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonPressed))
-        toolBar.setItems([doneButton], animated: true)
-        
-        //assign toolbar
-        dateTextField.inputAccessoryView = toolBar
-        
-        //assign date picker
-        dateTextField.inputView = datePicker
-        
-        //date picker mode
-        datePicker.datePickerMode = .date
-        dateTextField.textAlignment = .center
-    }
+//    func createDatePicker(){
+//        //tool bar
+//        let toolBar = UIToolbar()
+//        toolBar.sizeToFit()
+//
+//        //bar button
+//        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonPressed))
+//        toolBar.setItems([doneButton], animated: true)
+//
+//        //assign toolbar
+//        dateTextField.inputAccessoryView = toolBar
+//
+//        //assign date picker
+//        dateTextField.inputView = datePicker
+//
+//        //date picker mode
+//        datePicker.datePickerMode = .date
+//        dateTextField.textAlignment = .center
+//    }
     
-    @objc func doneButtonPressed(){
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        
-        dateTextField.text = formatter.string(from: datePicker.date)
-        let str = formatter.string(from: datePicker.date)
-        print("strstr:", str)
-        
-        self.view.endEditing(true)
-        print("dateTextField.text:",dateTextField.text ?? "")
-        
-        let formatter2 = DateFormatter()
-        formatter2.dateFormat = "MM dd, yyyy"
-        let date1 = formatter2.date(from: "Mar 20, 2020")!
-        let date2 = formatter2.date(from: "Mar 27, 2020")!
-        print(date2.timeIntervalSince(date1)/(24.0*60.0*60.0))
-        
-        
-        
-        
-    }
+//    @objc func doneButtonPressed(){
+//        let formatter = DateFormatter()
+//        formatter.dateStyle = .medium
+//        formatter.timeStyle = .none
+//
+//        dateTextField.text = formatter.string(from: datePicker.date)
+//        let str = formatter.string(from: datePicker.date)
+//        print("strstr:", str)
+//
+//        self.view.endEditing(true)
+//        print("dateTextField.text:",dateTextField.text ?? "")
+//
+//        let formatter2 = DateFormatter()
+//        formatter2.dateFormat = "MM dd, yyyy"
+//        let date1 = formatter2.date(from: "Mar 20, 2020")!
+//        let date2 = formatter2.date(from: "Mar 27, 2020")!
+//        print(date2.timeIntervalSince(date1)/(24.0*60.0*60.0))
+//
+//
+//
+//
+//    }
 
 
     
