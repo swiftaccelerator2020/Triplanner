@@ -27,7 +27,7 @@ class PackingListTableViewCell: UITableViewCell {
         } else {
             circleButton.setImage(UIImage(named: "checkmark.circle"), for: .normal)
         }
-        
+         
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
