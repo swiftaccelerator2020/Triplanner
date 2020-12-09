@@ -743,7 +743,11 @@
                                 <action selector="cancelButtonTapped:" destination="Vb8-iI-wjc" id="r3u-Y4-jZr"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="ca3-Zi-g9e"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="ca3-Zi-g9e">
+                            <connections>
+                                <action selector="saveButton:" destination="Vb8-iI-wjc" id="d5X-zR-Za3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="spendingCategoryTextField" destination="0zC-C0-k8B" id="L72-Wb-VF5"/>

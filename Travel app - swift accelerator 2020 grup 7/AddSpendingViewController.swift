@@ -34,6 +34,9 @@ class AddSpendingViewController: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func saveButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
     
