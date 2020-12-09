@@ -115,7 +115,6 @@
                                                 <rect key="frame" x="67.666666666666657" y="0.0" width="121.66666666666666" height="22"/>
                                                 <state key="normal" title="NewItinerary" image="plus.circle" catalog="system"/>
                                                 <connections>
-                                                    <action selector="itinButton:" destination="QSK-vV-qtH" eventType="touchUpInside" id="47d-V8-7sn"/>
                                                     <segue destination="8D9-0X-1rg" kind="presentation" identifier="overViewToItinEvent" id="Efb-Ot-7g8"/>
                                                 </connections>
                                             </button>
@@ -204,7 +203,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="itinOverviewLabel" destination="k2K-ac-Zqd" id="0eo-WL-7xs"/>
-                        <outlet property="newItineraryItem" destination="g4M-w7-Zfh" id="vNj-wp-5RO"/>
+                        <outlet property="newItineraryItem" destination="g4M-w7-Zfh" id="F2Z-EX-cIr"/>
                         <outlet property="overviewEndDatePicker" destination="jWE-Yl-VQc" id="Bfr-n6-dR4"/>
                         <outlet property="overviewStartDatePicker" destination="3mu-Vj-3y5" id="Vyp-24-Ark"/>
                         <outlet property="packingListCheckCircle" destination="uma-p5-jm2" id="hzh-nF-c5b"/>
