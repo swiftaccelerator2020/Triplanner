@@ -9,6 +9,12 @@ import UIKit
 
 class AddSpendingViewController: UITableViewController {
 
+    @IBOutlet weak var spendingNameTextField: UITextField!
+    
+    @IBOutlet weak var spendingCostTextField: UITextField!
+    
+    @IBOutlet weak var spendingCategoryTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
