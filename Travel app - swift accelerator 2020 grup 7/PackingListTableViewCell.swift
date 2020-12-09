@@ -14,6 +14,7 @@ class PackingListTableViewCell: UITableViewCell {
     @IBOutlet weak var circleButton: UIButton!
     
     var isChecked = false
+    weak var PackingListvc: PackingListTableViewController?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +26,8 @@ class PackingListTableViewCell: UITableViewCell {
         
         if isChecked {
             circleButton.setImage(UIImage(named: "checkmark.circle"), for: .normal)
-            delegate?.identify(isChecked: isChecked)
+            PackingListvc?.isChecked = true
+            print(PackingListvc?.isChecked)
             print("isChecked",isChecked)
         } else {
             circleButton.setImage(UIImage(named: "circle"), for: .normal)

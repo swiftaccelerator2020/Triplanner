@@ -9,6 +9,7 @@ import UIKit
 
 class PackingListTableViewController: UITableViewController {
     var delegate: PackingListDataDelegate?
+    var isChecked: Bool = false
 
    
     
@@ -28,9 +29,10 @@ class PackingListTableViewController: UITableViewController {
         //self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        delegate?.printPackingListItem(titleArray: packingItems, checked: false)
-        print(packingItems[0].checked)
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        delegate?.printPackingListItem(titleArray: packingItems, isChecked: isChecked)
+        print("what is checked", isChecked)
     }
 
        // MARK: - Table view data source
@@ -48,8 +50,13 @@ class PackingListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "packingListItem", for: indexPath) as! PackingListTableViewCell
-        
+        cell.PackingListvc = self
         cell.textLabel?.text = packingItems[indexPath.row].name
+        if packingItems[indexPath.row].checked{
+            cell.circleButton.setImage(UIImage(named: "checkmark.circle"), for: .normal)
+        }else{
+            cell.circleButton.setImage(UIImage(named: "circle"), for: .normal)
+        }
        
         
         /*if PackingItem[indexPath.row].done {

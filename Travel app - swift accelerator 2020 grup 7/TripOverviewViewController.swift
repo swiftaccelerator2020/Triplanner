@@ -12,32 +12,31 @@ protocol ItinDataDelegate {
 }
 
 protocol PackingListDataDelegate {
-    func printPackingListItem(titleArray: Array<packingItem>, checked: Bool)
+    func printPackingListItem(titleArray: Array<packingItem>, isChecked: Bool)
 }
 
 protocol PackingListCheckedDelegate {
     func identify(isChecked: Bool)
 }
 
-class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingListDataDelegate, PackingListCheckedDelegate {
-    
-    func identify(isChecked: Bool) {
-        if isChecked{
-            self.packingListCheckCircle.isHidden = false
-        }else{
-            self.packingListCheckCircle.isHidden = true
-        }
-    }
-    
-    func printPackingListItem(titleArray: Array<packingItem>, checked: Bool) {
+class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingListDataDelegate{
+    func printPackingListItem(titleArray: Array<packingItem>, isChecked: Bool) {
         print("delegate titleArray:", titleArray)
-        packingListOverviewLabel.text = (titleArray[0]).name
-//        if checked{
-//            packingListCheckCircle.isHidden = false
-//        }else{
-//            packingListCheckCircle.isHidden = true
-//        }
+        if titleArray.isEmpty == false{
+            packingListOverviewLabel.text = (titleArray[0]).name
+        }else{
+            packingListOverviewLabel.text = "Packing List Preview!"
+        }
+        packingItemsStorateList = titleArray
+                if isChecked{
+                    packingListCheckCircle.isHidden = false
+                }else{
+                    packingListCheckCircle.isHidden = true
+                }
     }
+    
+    
+
     
     func printItinEvent(titleDict: Dictionary<Int, Any>) {
         print("delegate titleDict:", titleDict)
@@ -69,7 +68,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     //MARK: Packing list overview variables
     @IBOutlet weak var packingListOverviewLabel: UILabel!
     @IBOutlet weak var packingListCheckCircle: UIButton!
-    var storedPackingItems: Array<packingItem> = []
+    var packingItemsStorateList: Array<packingItem> = []
     
     
     
@@ -116,20 +115,17 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         if let navigationVC2 = segue.destination as? UINavigationController{
             if let vc = navigationVC2.topViewController as? PackingListTableViewController{
                 vc.delegate = self
+                vc.packingItems = self.packingItemsStorateList
             }
         }
     }
     
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
+
+
 
 
         
