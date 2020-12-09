@@ -313,15 +313,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" reuseIdentifier="packingListItem" rowHeight="44" id="NzE-tP-xbD" customClass="PackingListTableViewCell" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="428" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" reuseIdentifier="packingListItem" id="NzE-tP-xbD" customClass="PackingListTableViewCell" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="428" height="50.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NzE-tP-xbD" id="gUh-N4-dfz">
-                                    <rect key="frame" x="0.0" y="0.0" width="428" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="50.333332061767578"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ow-PS-kTI">
-                                            <rect key="frame" x="362" y="0.0" width="66" height="44"/>
+                                            <rect key="frame" x="362" y="0.0" width="66" height="50.333333333333336"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="Gd5-gM-KY9"/>
+                                                <constraint firstAttribute="width" constant="66" id="SE5-ea-SJ2"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal">
@@ -576,7 +580,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+ Spending" id="Hm3-Nh-X0l">
                             <connections>
-                                <segue destination="Vb8-iI-wjc" kind="show" id="Hh4-Dq-Rge"/>
+                                <segue destination="fdx-GQ-ORf" kind="show" id="Hh4-Dq-Rge"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -645,7 +649,7 @@
             </objects>
             <point key="canvasLocation" x="858" y="2016"/>
         </scene>
-        <!--Add Spending View Controller-->
+        <!--Add Spending-->
         <scene sceneID="h4v-Ce-7tF">
             <objects>
                 <tableViewController id="Vb8-iI-wjc" customClass="AddSpendingViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
@@ -741,7 +745,18 @@
                             <outlet property="delegate" destination="Vb8-iI-wjc" id="kLf-1Q-vJe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="RF4-B7-J4P"/>
+                    <navigationItem key="navigationItem" title="Add Spending" id="RF4-B7-J4P">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="WN6-bX-ptS">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="Vb8-iI-wjc" id="r3u-Y4-jZr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="ca3-Zi-g9e">
+                            <connections>
+                                <action selector="saveButton:" destination="Vb8-iI-wjc" id="d5X-zR-Za3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="spendingCategoryTextField" destination="0zC-C0-k8B" id="L72-Wb-VF5"/>
                         <outlet property="spendingCostTextField" destination="YzW-c5-W2l" id="aHM-rq-lgY"/>
@@ -750,7 +765,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdN-QK-d2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="402" y="2739"/>
+            <point key="canvasLocation" x="3473.8317757009345" y="2334.5572354211663"/>
         </scene>
         <!--Edit Packing Item Table View Controller-->
         <scene sceneID="Bli-bn-suI">
@@ -1336,6 +1351,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbP-mZ-9ye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2409" y="737"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AS9-sM-1SZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fdx-GQ-ORf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="yM2-Kt-IKT"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NjQ-fi-xAD">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vb8-iI-wjc" kind="relationship" relationship="rootViewController" id="QPR-fu-AXU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJa-dK-ani" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2573.8317757009345" y="2334.5572354211663"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

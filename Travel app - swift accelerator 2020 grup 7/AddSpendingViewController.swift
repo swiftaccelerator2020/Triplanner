@@ -30,7 +30,16 @@ class AddSpendingViewController: UITableViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 
+    @IBAction func saveButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
