@@ -128,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				AFC916612574D881003F10EC /* Main.storyboard */,
-				BB3DE9BE25807C1700248131 /* AddSpendingViewController.swift */,
 				AFACB230256CAA0B00EACAFF /* AppDelegate.swift */,
 				AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */,
 				AFACB234256CAA0B00EACAFF /* HomeViewController.swift */,
@@ -143,6 +142,7 @@
 				7E6A37ED257258F200547549 /* EditPackingItemTableViewController.swift */,
 				7E6A37B525723CDF00547549 /* PackingItem.swift */,
 				7E6A37AA25723C6B00547549 /* PackingListTableViewController.swift */,
+				BB3DE9BE25807C1700248131 /* AddSpendingViewController.swift */,
 				7E7392C02573C05E00EFFCFF /* BudgetViewController.swift */,
 				7E5DF8F22579E40700B42C9B /* BudgetCatTableViewController.swift */,
 				AFACB239256CAA0E00EACAFF /* Assets.xcassets */,
