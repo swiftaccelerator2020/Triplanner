@@ -24,10 +24,11 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         print("delegate titleArray:", titleArray)
         if titleArray.isEmpty == false{
             packingListOverviewLabel.text = (titleArray[0]).name
+            packingListCheckCircle.isHidden = false
             if titleArray[0].checked{
-                        packingListCheckCircle.isHidden = false
+                packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
                     }else{
-                        packingListCheckCircle.isHidden = true
+                        packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
                     }
         }else{
             packingListOverviewLabel.text = "Packing List Preview!"
@@ -168,5 +169,20 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         return interval
     }
 
-
+    @IBAction func checkCircle1Tapped(_ sender: Any) {
+        for i in packingItemsStorateList{
+            if packingListOverviewLabel.text == i.name{
+                if i.checked{
+                    i.checked = false
+                    packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
+                }else{
+                    i.checked = true
+                    packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
+                }
+                
+                
+            }
+        }
+    }
+    
 }

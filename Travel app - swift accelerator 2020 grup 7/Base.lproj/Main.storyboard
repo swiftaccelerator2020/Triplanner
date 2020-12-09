@@ -177,6 +177,9 @@
                                 <rect key="frame" x="334" y="512" width="67" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="checkmark.circle"/>
+                                <connections>
+                                    <action selector="checkCircle1Tapped:" destination="QSK-vV-qtH" eventType="touchUpInside" id="VM1-Gt-rox"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XON-X7-oLZ"/>
@@ -204,7 +207,7 @@
                         <outlet property="newItineraryItem" destination="g4M-w7-Zfh" id="vNj-wp-5RO"/>
                         <outlet property="overviewEndDatePicker" destination="jWE-Yl-VQc" id="Bfr-n6-dR4"/>
                         <outlet property="overviewStartDatePicker" destination="3mu-Vj-3y5" id="Vyp-24-Ark"/>
-                        <outlet property="packingListCheckCircle" destination="uma-p5-jm2" id="eKG-Rq-X0e"/>
+                        <outlet property="packingListCheckCircle" destination="uma-p5-jm2" id="hzh-nF-c5b"/>
                         <outlet property="packingListOverviewLabel" destination="vG7-P9-HFP" id="XO5-I8-57m"/>
                     </connections>
                 </viewController>
