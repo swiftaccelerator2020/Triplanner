@@ -12,7 +12,7 @@ class PackingListTableViewController: UITableViewController {
 
    
     
-    var PackingItem = [
+    var packingItems = [
         packingItem(name: "Add in the things you wish to pack!")
     ]
    
@@ -29,7 +29,8 @@ class PackingListTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        delegate?.printPackingListItem(titleArray: PackingItem)
+        delegate?.printPackingListItem(titleArray: packingItems, checked: false)
+        print(packingItems[0].checked)
     }
 
        // MARK: - Table view data source
@@ -41,14 +42,14 @@ class PackingListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return PackingItem.count 
+        return packingItems.count 
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "packingListItem", for: indexPath) as! PackingListTableViewCell
         
-        cell.textLabel?.text = PackingItem[indexPath.row].name
+        cell.textLabel?.text = packingItems[indexPath.row].name
        
         
         /*if PackingItem[indexPath.row].done {
@@ -83,7 +84,7 @@ class PackingListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            PackingItem.remove(at: indexPath.row)
+            packingItems.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -94,8 +95,8 @@ class PackingListTableViewController: UITableViewController {
     
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        let packingitem = PackingItem.remove(at: fromIndexPath.row)
-        PackingItem.insert(packingitem, at: to.row)
+        let packingitem = packingItems.remove(at: fromIndexPath.row)
+        packingItems.insert(packingitem, at: to.row)
         tableView.reloadData()
     }
     
@@ -121,7 +122,7 @@ class PackingListTableViewController: UITableViewController {
             let dest = nav.viewControllers.first as! EditPackingItemTableViewController
             
             if tableView.indexPathForSelectedRow != nil {
-            dest.PackingItem = PackingItem[tableView.indexPathForSelectedRow!.row]
+            dest.PackingItem = packingItems[tableView.indexPathForSelectedRow!.row]
             } else {
                 dest.newPackingItem = true
             }
@@ -166,7 +167,7 @@ class PackingListTableViewController: UITableViewController {
         if segue.identifier == "unwindFromDetail" {
             let source = segue.source as! EditPackingItemTableViewController
             if source.newPackingItem {
-                PackingItem.append(source.PackingItem)
+                packingItems.append(source.PackingItem)
             }
         }
 

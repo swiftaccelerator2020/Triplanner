@@ -12,26 +12,38 @@ protocol ItinDataDelegate {
 }
 
 protocol PackingListDataDelegate {
-    func printPackingListItem(titleArray: Array<packingItem>)
+    func printPackingListItem(titleArray: Array<packingItem>, checked: Bool)
 }
 
-class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingListDataDelegate {
+protocol PackingListCheckedDelegate {
+    func identify(isChecked: Bool)
+}
+
+class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingListDataDelegate, PackingListCheckedDelegate {
     
-    func printPackingListItem(titleArray: Array<packingItem>) {
-        print("delegate titleArray:", titleArray)
-        packingListOverviewLabel.text = (titleArray[0]).name
-        if titleArray[0].checked == true{
-            packingListCheckCircle.isHidden = false
+    func identify(isChecked: Bool) {
+        if isChecked{
+            self.packingListCheckCircle.isHidden = false
         }else{
-            packingListCheckCircle.isHidden = true
+            self.packingListCheckCircle.isHidden = true
         }
     }
     
+    func printPackingListItem(titleArray: Array<packingItem>, checked: Bool) {
+        print("delegate titleArray:", titleArray)
+        packingListOverviewLabel.text = (titleArray[0]).name
+//        if checked{
+//            packingListCheckCircle.isHidden = false
+//        }else{
+//            packingListCheckCircle.isHidden = true
+//        }
+    }
     
     func printItinEvent(titleDict: Dictionary<Int, Any>) {
         print("delegate titleDict:", titleDict)
         for (_, value) in titleDict{
             print("value", value)
+            if (value as! Array<DayEvent>).isEmpty == false{
             switch (value as! Array<DayEvent>)[0] {
             case nil:
                 itinOverviewLabel.text = "You have no trip at the moment! Create some"
@@ -40,6 +52,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 itinOverviewLabel.text = (value as!Array<DayEvent>)[0].destination
             }
         }
+    }
     }
   //MARK: Itinerary overview variables
     @IBOutlet weak var newItineraryItem: UIButton!
@@ -51,12 +64,12 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     var itinOverviewText: String = "itinOverviewText"
     var storedItinEvents: Array<DayEvent> = []
     var dateStorageList: Array<String> = ["start", "end"]
-    var permantStorageList: Array<DayEvent> = []
     
     
     //MARK: Packing list overview variables
     @IBOutlet weak var packingListOverviewLabel: UILabel!
     @IBOutlet weak var packingListCheckCircle: UIButton!
+    var storedPackingItems: Array<packingItem> = []
     
     
     
@@ -65,6 +78,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        packingListCheckCircle.isHidden = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -117,9 +131,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     }
     */
 
-    @IBAction func itinButton(_ sender: Any) {
-    
-    }
+
         
     @IBAction func backToItinEventsTableViewController (with segue: UIStoryboardSegue){
         if let source = segue.source as? ItinEventViewController{

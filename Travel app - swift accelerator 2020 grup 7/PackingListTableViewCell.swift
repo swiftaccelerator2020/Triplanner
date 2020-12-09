@@ -8,6 +8,7 @@
 import UIKit
 
 class PackingListTableViewCell: UITableViewCell {
+    var delegate: PackingListCheckedDelegate?
 
     
     @IBOutlet weak var circleButton: UIButton!
@@ -23,9 +24,11 @@ class PackingListTableViewCell: UITableViewCell {
         isChecked.toggle()
         
         if isChecked {
-            circleButton.setImage(UIImage(named: "circle"), for: .normal)
-        } else {
             circleButton.setImage(UIImage(named: "checkmark.circle"), for: .normal)
+            delegate?.identify(isChecked: isChecked)
+            print("isChecked",isChecked)
+        } else {
+            circleButton.setImage(UIImage(named: "circle"), for: .normal)
         }
          
     }

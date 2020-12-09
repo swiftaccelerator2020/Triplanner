@@ -6,11 +6,11 @@
 //
 
 import Foundation
-class DayEvent: Codable, Equatable{
-    static func == (lhs: DayEvent, rhs: DayEvent) -> Bool {
-        return true
-    }
-    
+struct DayEvent: Codable, Equatable{
+//    static func == (lhs: DayEvent, rhs: DayEvent) -> Bool {
+//        return true
+//    }
+//
     
     var destination: String
     var timeStart: String
@@ -18,14 +18,14 @@ class DayEvent: Codable, Equatable{
     var date: String
     var notes: String
     
-    init(destination: String, timeStart: String, timeEnd: String, date: String, notes: String) {
-        self.destination = destination
-        self.date = date
-        self.timeStart = timeStart
-        self.timeEnd = timeEnd
-        self.date = date
-        self.notes = notes
-    }
+//    init(destination: String, timeStart: String, timeEnd: String, date: String, notes: String) {
+//        self.destination = destination
+//        self.date = date
+//        self.timeStart = timeStart
+//        self.timeEnd = timeEnd
+//        self.date = date
+//        self.notes = notes
+//    }
 
     
     static func getArchiveURL() -> URL {
