@@ -12,14 +12,23 @@ class PackingListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var circleButton: UIButton!
     
+    var isChecked = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
     @IBAction func circleButtonPressed(_ sender: Any) {
+        isChecked.toggle()
+        
+        if isChecked {
+            circleButton.setImage(UIImage(named: "circle"), for: .normal)
+        } else {
+            circleButton.setImage(UIImage(named: "checkmark.circle"), for: .normal)
+        }
+        
     }
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
