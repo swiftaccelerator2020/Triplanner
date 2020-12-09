@@ -745,9 +745,7 @@
                             <outlet property="delegate" destination="Vb8-iI-wjc" id="kLf-1Q-vJe"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="Nts-jJ-VIB"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add Spending" id="RF4-B7-J4P">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="WN6-bX-ptS">
                             <connections>
