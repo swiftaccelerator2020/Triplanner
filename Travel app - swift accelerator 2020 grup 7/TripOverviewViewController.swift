@@ -14,9 +14,17 @@ protocol DataDelegate {
 class TripOverviewViewController: UIViewController, DataDelegate {
     
     func printTextOnButton(titleDict: Dictionary<Int, Any>) {
-//        print("working")
-//        print("titleDict:", titleDict)
-       itinOverviewLabel.text = "replace with titledict string"
+        print("delegate titleDict:", titleDict)
+        for (key, value) in titleDict{
+            print("value", value)
+            switch (value as! Array<DayEvent>)[0] {
+            case nil:
+                itinOverviewLabel.text = "You have no trip at the moment! Create some"
+                itinOverviewLabel2.text = ""
+            default:
+                itinOverviewLabel.text = (value as!Array<DayEvent>)[0].destination
+            }
+        }
     }
   //MARK: Itinerary overview variables
     @IBOutlet weak var newItineraryItem: UIButton!
@@ -93,6 +101,7 @@ class TripOverviewViewController: UIViewController, DataDelegate {
             if segue.identifier == "unwindSave"{
             print("backToOverviewViewController segue result:", source.event)
             storedItinEvents.append(source.event)
+                itinOverviewLabel.text = source.event.destination
             }
             print("newitinEvents:", storedItinEvents)
     }
