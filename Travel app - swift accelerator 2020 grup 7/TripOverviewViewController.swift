@@ -14,8 +14,8 @@ protocol DataDelegate {
 class TripOverviewViewController: UIViewController, DataDelegate {
     
     func printTextOnButton(titleDict: Dictionary<Int, Any>) {
-        print("working")
-        print("titleDict:", titleDict)
+//        print("working")
+//        print("titleDict:", titleDict)
        itinOverviewLabel.text = "replace with titledict string"
     }
   //MARK: Itinerary overview variables
@@ -27,7 +27,7 @@ class TripOverviewViewController: UIViewController, DataDelegate {
     
 
     var itinOverviewText: String = "itinOverviewText"
-    var newItinEvents: Array<DayEvent> = []
+    var storedItinEvents: Array<DayEvent> = []
     var dateStorageList: Array<String> = ["start", "end"]
     var permantStorageList: Array<DayEvent> = []
     
@@ -37,9 +37,6 @@ class TripOverviewViewController: UIViewController, DataDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if itinEvents .isEmpty == false{
-//            itinOverviewLabel.text = itinEvents[0].destination
-//        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,19 +51,20 @@ class TripOverviewViewController: UIViewController, DataDelegate {
                 dateStorageList[1] = end
                 vc.schedule = dateStorageList
 
-                for i in newItinEvents{
+                for i in storedItinEvents{
                     if i.date != ""{
                     print("iiiii", i)
                     let interval = getDateInterval(startDate: start, date: i.date)
-                    if vc.dayDictionary.isEmpty{
+                        if ((vc.dayDictionary[interval]?.isEmpty) == nil){
                     vc.dayDictionary[interval] = [i]
-                    print("vc.dayDictionary",vc.dayDictionary,i)
+                    print("vc.dayDictionary",vc.dayDictionary)
                     }else{
                         vc.dayDictionary[interval]?.append(i)
+                        print("vc.dayDictionary else",vc.dayDictionary)
                     }
                 }
             }
-            }
+        }
             
         }
         if let dest = segue.destination as? ItinEventViewController{
@@ -94,9 +92,9 @@ class TripOverviewViewController: UIViewController, DataDelegate {
         if let source = segue.source as? ItinEventViewController{
             if segue.identifier == "unwindSave"{
             print("backToOverviewViewController segue result:", source.event)
-            newItinEvents.append(source.event)
+            storedItinEvents.append(source.event)
             }
-            print("newitinEvents:", newItinEvents)
+            print("newitinEvents:", storedItinEvents)
     }
 }
     
@@ -104,15 +102,15 @@ class TripOverviewViewController: UIViewController, DataDelegate {
         if let source = segue.source as? ItinTableViewController{
             for (_, value) in source.dayDictionary{
                 for i in value{
-                   let isContained =  newItinEvents.contains(i)
+                   let isContained =  storedItinEvents.contains(i)
                     if isContained == true{
                         //
                     }else{
-                        newItinEvents.append(i)
+                        storedItinEvents.append(i)
                     }
                 }
             }
-            print("list passed:", newItinEvents)
+            print("list passed:", storedItinEvents)
         }
         
     }
