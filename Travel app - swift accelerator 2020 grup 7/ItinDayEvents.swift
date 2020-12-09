@@ -6,21 +6,27 @@
 //
 
 import Foundation
-struct DayEvent: Codable, Equatable{
+class DayEvent: Codable, Equatable{
+    static func == (lhs: DayEvent, rhs: DayEvent) -> Bool {
+        return true
+    }
+    
     
     var destination: String
     var timeStart: String
     var timeEnd: String
     var date: String
     var notes: String
-
-
-static func loadSampleData() -> [DayEvent]{
-    let dayEvents = [
-        DayEvent(destination: "Bali", timeStart: "16:00", timeEnd: "17:00", date: "Jan 5, 2020", notes:"Bali")]
     
-    return dayEvents
-}
+    init(destination: String, timeStart: String, timeEnd: String, date: String, notes: String) {
+        self.destination = destination
+        self.date = date
+        self.timeStart = timeStart
+        self.timeEnd = timeEnd
+        self.date = date
+        self.notes = notes
+    }
+
     
     static func getArchiveURL() -> URL {
         let plistName = "dayEvents"

@@ -10,7 +10,7 @@ import UIKit
 class ItinTableViewController:
     UITableViewController {
     
-    var delegate: DataDelegate?
+    var delegate: ItinDataDelegate?
     
     var dayNo: Int = 0
     var schedule = ["Mar 22, 2020", "Mar 27, 2020"]
@@ -35,7 +35,7 @@ class ItinTableViewController:
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        delegate?.printTextOnButton(titleDict: dayDictionary)
+        delegate?.printItinEvent(titleDict: dayDictionary)
         
     }
 

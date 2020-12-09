@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17700" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZXM-39-g3k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZXM-39-g3k">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -158,13 +158,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trips!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vG7-P9-HFP">
-                                <rect key="frame" x="20" y="452" width="388" height="20.333333333333329"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szO-6c-E7v">
                                 <rect key="frame" x="135" y="465" width="206" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -172,6 +165,18 @@
                                 <connections>
                                     <segue destination="76h-IX-RFd" kind="presentation" modalPresentationStyle="fullScreen" id="V3D-iR-acR"/>
                                 </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Packing list item!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vG7-P9-HFP">
+                                <rect key="frame" x="14" y="513" width="388" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uma-p5-jm2">
+                                <rect key="frame" x="334" y="512" width="67" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="checkmark.circle"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XON-X7-oLZ"/>
@@ -199,6 +204,8 @@
                         <outlet property="newItineraryItem" destination="g4M-w7-Zfh" id="vNj-wp-5RO"/>
                         <outlet property="overviewEndDatePicker" destination="jWE-Yl-VQc" id="Bfr-n6-dR4"/>
                         <outlet property="overviewStartDatePicker" destination="3mu-Vj-3y5" id="Vyp-24-Ark"/>
+                        <outlet property="packingListCheckCircle" destination="uma-p5-jm2" id="eKG-Rq-X0e"/>
+                        <outlet property="packingListOverviewLabel" destination="vG7-P9-HFP" id="XO5-I8-57m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgr-0G-NbY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -346,7 +353,7 @@
                     <navigationItem key="navigationItem" title="Packing List" id="AuU-9p-Zug">
                         <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="xun-GP-6aJ">
                             <connections>
-                                <segue destination="ZXM-39-g3k" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="HO6-b9-p6e"/>
+                                <segue destination="6GX-a6-lqB" kind="unwind" unwindAction="backToOverViewControllerWith:" id="6eb-aH-Q2o"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="59q-bd-lFw">
@@ -360,6 +367,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95b-5t-poC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6GX-a6-lqB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2198.130841121495" y="146.43628509719224"/>
         </scene>
@@ -1331,13 +1339,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DVO-0P-gv0"/>
         <segue reference="PNi-Vg-4gm"/>
         <segue reference="Efb-Ot-7g8"/>
         <segue reference="NkC-N2-2CM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="checkmark.circle" width="13" height="13"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>

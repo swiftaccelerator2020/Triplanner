@@ -7,15 +7,30 @@
 
 import UIKit
 
-protocol DataDelegate {
-    func printTextOnButton(titleDict: Dictionary<Int, Any>)
+protocol ItinDataDelegate {
+    func printItinEvent(titleDict: Dictionary<Int, Any>)
 }
 
-class TripOverviewViewController: UIViewController, DataDelegate {
+protocol PackingListDataDelegate {
+    func printPackingListItem(titleArray: Array<packingItem>)
+}
+
+class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingListDataDelegate {
     
-    func printTextOnButton(titleDict: Dictionary<Int, Any>) {
+    func printPackingListItem(titleArray: Array<packingItem>) {
+        print("delegate titleArray:", titleArray)
+        packingListOverviewLabel.text = (titleArray[0]).name
+        if titleArray[0].checked == true{
+            packingListCheckCircle.isHidden = false
+        }else{
+            packingListCheckCircle.isHidden = true
+        }
+    }
+    
+    
+    func printItinEvent(titleDict: Dictionary<Int, Any>) {
         print("delegate titleDict:", titleDict)
-        for (key, value) in titleDict{
+        for (_, value) in titleDict{
             print("value", value)
             switch (value as! Array<DayEvent>)[0] {
             case nil:
@@ -33,14 +48,19 @@ class TripOverviewViewController: UIViewController, DataDelegate {
     @IBOutlet weak var overviewStartDatePicker: UIDatePicker!
     @IBOutlet weak var overviewEndDatePicker: UIDatePicker!
     
-
     var itinOverviewText: String = "itinOverviewText"
     var storedItinEvents: Array<DayEvent> = []
     var dateStorageList: Array<String> = ["start", "end"]
     var permantStorageList: Array<DayEvent> = []
     
     
-//MARK: Packing list overview variables
+    //MARK: Packing list overview variables
+    @IBOutlet weak var packingListOverviewLabel: UILabel!
+    @IBOutlet weak var packingListCheckCircle: UIButton!
+    
+    
+    
+
 //MARK: Budget overview variables
     
     override func viewDidLoad() {
@@ -78,6 +98,11 @@ class TripOverviewViewController: UIViewController, DataDelegate {
         if let dest = segue.destination as? ItinEventViewController{
             dest.creatingItemFromOverview = true
             
+        }
+        if let navigationVC2 = segue.destination as? UINavigationController{
+            if let vc = navigationVC2.topViewController as? PackingListTableViewController{
+                vc.delegate = self
+            }
         }
     }
     

@@ -8,6 +8,7 @@
 import UIKit
 
 class PackingListTableViewController: UITableViewController {
+    var delegate: PackingListDataDelegate?
 
    
     
@@ -25,6 +26,10 @@ class PackingListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         //self.navigationItem.leftBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        delegate?.printPackingListItem(titleArray: PackingItem)
     }
 
        // MARK: - Table view data source

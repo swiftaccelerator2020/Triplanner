@@ -17,7 +17,7 @@ class ItinEventViewController: UIViewController {
     let formatter = DateFormatter()
     var dateArray: Array<Any> = []
     var creatingItemFromOverview: Bool = false
-    var delegate: DataDelegate?
+    var delegate: ItinDataDelegate?
 
     @IBOutlet weak var destinationTextField: UITextField!
     @IBOutlet weak var startTimeTextField: UITextField!

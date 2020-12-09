@@ -12,7 +12,7 @@ class ItinEventsTableViewController: UITableViewController {
     var events: Array<DayEvent> = [DayEvent(destination: "add in the day's events!", timeStart: "swipe left to delete an event", timeEnd: "enjoy!!", date: "", notes:"")]
     var eventNo: Int = 0
     var anotherEventNoForPassingDate: Int = 0
-    var delegate: DataDelegate?
+    var delegate: ItinDataDelegate?
     var dateArray: Array<Any> = []
 
     override func viewDidLoad() {
