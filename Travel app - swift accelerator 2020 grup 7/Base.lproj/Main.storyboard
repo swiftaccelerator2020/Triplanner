@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17700" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZXM-39-g3k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZXM-39-g3k">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -306,30 +306,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" reuseIdentifier="packingListItem" id="NzE-tP-xbD" customClass="PackingListTableViewCell" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="428" height="45.333332061767578"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" reuseIdentifier="packingListItem" rowHeight="44" id="NzE-tP-xbD" customClass="PackingListTableViewCell" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NzE-tP-xbD" id="gUh-N4-dfz">
-                                    <rect key="frame" x="0.0" y="0.0" width="428" height="45.333332061767578"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ow-PS-kTI">
-                                            <rect key="frame" x="393" y="9.9999999999999982" width="25" height="25.333333333333329"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="25" id="Gmd-U5-sRK"/>
-                                                <constraint firstAttribute="height" constant="25" id="wI1-p7-eMJ"/>
-                                            </constraints>
+                                            <rect key="frame" x="362" y="0.0" width="66" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" image="circle"/>
+                                            <state key="normal">
+                                                <imageReference key="image" image="circle" symbolScale="large"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                            </state>
                                             <connections>
                                                 <action selector="circleButtonPressed:" destination="NzE-tP-xbD" eventType="touchUpInside" id="36Q-8G-Lwa"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="4Ow-PS-kTI" firstAttribute="top" secondItem="gUh-N4-dfz" secondAttribute="top" constant="10" id="IYr-eV-5S6"/>
-                                        <constraint firstAttribute="bottom" secondItem="4Ow-PS-kTI" secondAttribute="bottom" constant="10" id="Tva-F5-17g"/>
-                                        <constraint firstAttribute="trailing" secondItem="4Ow-PS-kTI" secondAttribute="trailing" constant="10" id="XW8-AM-VjD"/>
+                                        <constraint firstAttribute="bottom" secondItem="4Ow-PS-kTI" secondAttribute="bottom" id="33k-3W-3cZ"/>
+                                        <constraint firstItem="4Ow-PS-kTI" firstAttribute="top" secondItem="gUh-N4-dfz" secondAttribute="top" id="Amy-zK-tdj"/>
+                                        <constraint firstAttribute="trailing" secondItem="4Ow-PS-kTI" secondAttribute="trailing" id="QnM-cl-LtU"/>
+                                        <constraint firstItem="4Ow-PS-kTI" firstAttribute="leading" secondItem="gUh-N4-dfz" secondAttribute="leading" constant="362" id="Weh-AF-U3w"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -360,7 +361,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95b-5t-poC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2200.934579439252" y="146.43628509719224"/>
+            <point key="canvasLocation" x="2198.130841121495" y="146.43628509719224"/>
         </scene>
         <!--Budget-->
         <scene sceneID="wXZ-Dl-wc1">
@@ -1170,6 +1171,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fzf-YB-kbf">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="oav-sS-Ai6" kind="relationship" relationship="rootViewController" id="jQx-yK-M85"/>
                     </connections>
