@@ -28,6 +28,7 @@
 		AFACB248256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB247256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7Tests.swift */; };
 		AFACB253256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB252256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7UITests.swift */; };
 		AFC916632574D881003F10EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC916612574D881003F10EC /* Main.storyboard */; };
+		BB3DE9BF25807C1700248131 /* AddSpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3DE9BE25807C1700248131 /* AddSpendingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		AFACB252256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Travel_app___swift_accelerator_2020_grup_7UITests.swift"; sourceTree = "<group>"; };
 		AFACB254256CAA0E00EACAFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFC916622574D881003F10EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BB3DE9BE25807C1700248131 /* AddSpendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpendingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				AFC916612574D881003F10EC /* Main.storyboard */,
+				BB3DE9BE25807C1700248131 /* AddSpendingViewController.swift */,
 				AFACB230256CAA0B00EACAFF /* AppDelegate.swift */,
 				AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */,
 				AFACB234256CAA0B00EACAFF /* HomeViewController.swift */,
@@ -306,6 +309,7 @@
 				AF83208825739C3000487326 /* ItinEditTableViewController.swift in Sources */,
 				7E6A37EE257258F200547549 /* EditPackingItemTableViewController.swift in Sources */,
 				7E6A37AB25723C6B00547549 /* PackingListTableViewController.swift in Sources */,
+				BB3DE9BF25807C1700248131 /* AddSpendingViewController.swift in Sources */,
 				3A9C318F257F496500512AD1 /* PackingListTableViewCell.swift in Sources */,
 				7E5DF8F32579E40700B42C9B /* BudgetCatTableViewController.swift in Sources */,
 				7E6A37B625723CDF00547549 /* PackingItem.swift in Sources */,
