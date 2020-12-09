@@ -26,10 +26,17 @@ class PackingListTableViewCell: UITableViewCell {
         
         if isChecked {
             circleButton.setImage(UIImage(named: "checkmark.circle"), for: .normal)
-            PackingListvc?.isChecked = true
-            print(PackingListvc?.isChecked)
-            print("isChecked",isChecked)
+            for i in PackingListvc?.packingItems as! Array<packingItem>{
+                if i.name == self.textLabel?.text{
+                    i.checked = true
+                }
+            }
         } else {
+            for i in PackingListvc?.packingItems as! Array<packingItem>{
+                if i.name == self.textLabel?.text{
+                    i.checked = false
+                }
+            }
             circleButton.setImage(UIImage(named: "circle"), for: .normal)
         }
          

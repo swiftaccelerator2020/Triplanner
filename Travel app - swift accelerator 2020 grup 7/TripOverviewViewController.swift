@@ -24,15 +24,15 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         print("delegate titleArray:", titleArray)
         if titleArray.isEmpty == false{
             packingListOverviewLabel.text = (titleArray[0]).name
+            if titleArray[0].checked{
+                        packingListCheckCircle.isHidden = false
+                    }else{
+                        packingListCheckCircle.isHidden = true
+                    }
         }else{
             packingListOverviewLabel.text = "Packing List Preview!"
         }
         packingItemsStorateList = titleArray
-                if isChecked{
-                    packingListCheckCircle.isHidden = false
-                }else{
-                    packingListCheckCircle.isHidden = true
-                }
     }
     
     
