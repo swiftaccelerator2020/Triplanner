@@ -27,9 +27,9 @@ class TripOverviewViewController: UIViewController, DataDelegate {
     
 
     var itinOverviewText: String = "itinOverviewText"
-    var newlyCreatedEvent: DayEvent? = nil
     var newItinEvents: Array<DayEvent> = []
     var dateStorageList: Array<String> = ["start", "end"]
+    var permantStorageList: Array<DayEvent> = []
     
     
 //MARK: Packing list overview variables
@@ -55,14 +55,17 @@ class TripOverviewViewController: UIViewController, DataDelegate {
                 vc.schedule = dateStorageList
 
                 for i in newItinEvents{
-//                    if ((vc.dayDictionary[0]?.isEmpty == false)){
-//                        vc.dayDictionary[0]?.append(i)
-//                    }else{
-//                        vc.dayDictionary[0]
-//                    }
-                    vc.dayDictionary[0] = [i]
+                    if i.date != ""{
+                    print("iiiii", i)
+                    let interval = getDateInterval(startDate: start, date: i.date)
+                    if vc.dayDictionary.isEmpty{
+                    vc.dayDictionary[interval] = [i]
                     print("vc.dayDictionary",vc.dayDictionary,i)
+                    }else{
+                        vc.dayDictionary[interval]?.append(i)
+                    }
                 }
+            }
             }
             
         }
@@ -93,21 +96,36 @@ class TripOverviewViewController: UIViewController, DataDelegate {
             print("backToOverviewViewController segue result:", source.event)
             newItinEvents.append(source.event)
             }
-//            switch source.event {
-//            case nil:
-//                print("source.event is nil")
-//            default:
-//                newlyCreatedEvent = source.event
-//            }
-//            if newItinEvents.isEmpty != true{
-//                itinOverviewLabel.text = "\(newItinEvents[0].destination),\(newItinEvents[0].date)"
-//            }
-            print("itinEvents:", newItinEvents)
+            print("newitinEvents:", newItinEvents)
     }
 }
     
     @IBAction func backToOverViewController(with segue: UIStoryboardSegue){
+        if let source = segue.source as? ItinTableViewController{
+            for (_, value) in source.dayDictionary{
+                for i in value{
+                   let isContained =  newItinEvents.contains(i)
+                    if isContained == true{
+                        //
+                    }else{
+                        newItinEvents.append(i)
+                    }
+                }
+            }
+            print("list passed:", newItinEvents)
+        }
         
+    }
+    
+    func getDateInterval(startDate: String, date: String) -> Int{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM dd, yyyy"
+        let dateStart = formatter.date(from: startDate)!
+        let dateEndTemp = formatter.date(from: date)!
+        let dateEnd = dateEndTemp.addingTimeInterval(TimeInterval(60 * 60 * 24))
+        let interval = Int( dateEnd.timeIntervalSince(dateStart)/(24.0*60.0*60.0)) - 1
+        print("interval:", interval)
+        return interval
     }
 
 

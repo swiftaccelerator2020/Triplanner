@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct DayEvent: Codable {
+struct DayEvent: Codable, Equatable{
     
     var destination: String
     var timeStart: String

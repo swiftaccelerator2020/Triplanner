@@ -1216,8 +1216,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="YtK-WU-t4c"/>
         <segue reference="DVO-0P-gv0"/>
-        <segue reference="ZMg-Ks-tWx"/>
+        <segue reference="PNi-Vg-4gm"/>
         <segue reference="Efb-Ot-7g8"/>
         <segue reference="NkC-N2-2CM"/>
     </inferredMetricsTieBreakers>
