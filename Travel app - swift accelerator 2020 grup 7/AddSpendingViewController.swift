@@ -15,6 +15,15 @@ class AddSpendingViewController: UITableViewController {
     
     @IBOutlet weak var spendingCategoryTextField: UITextField!
     
+    @IBAction func spendingNameTextfieldUpdated(_ sender: Any) {
+        
+    }
+    @IBAction func spendingCostTextfieldUpdated(_ sender: Any) {
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
