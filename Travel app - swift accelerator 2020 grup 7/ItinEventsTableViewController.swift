@@ -17,7 +17,6 @@ class ItinEventsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("dayNo:", dayNo)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -27,9 +26,7 @@ class ItinEventsTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("vdavda", events, eventNo)
         events.sort{$0.timeStart < $1.timeStart}
-        print("events:", events)
     }
 
     // MARK: - Table view data source
@@ -99,12 +96,10 @@ class ItinEventsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "eventsToEventDetail"{
             eventNo = tableView.indexPathForSelectedRow!.row
-            print("current index path", eventNo)
             if let dest = segue.destination as? ItinEventViewController{
                 dest.eventNo = eventNo
                 dest.event = events[eventNo]
                 dest.dateArray = self.dateArray
-                print("event about to pass:", events, eventNo)
             }
         }
         if segue.identifier == "eventsToNewEvent"{
@@ -130,10 +125,7 @@ class ItinEventsTableViewController: UITableViewController {
 
                 tableView.reloadData()
             }else{
-                switch source.event {
-                case nil:
-                    print("adding event cancelled")
-                default:
+                if source.event != nil {
                     events.append(source.event)
                     tableView.reloadData()
                 }

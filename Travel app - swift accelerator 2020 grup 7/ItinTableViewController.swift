@@ -35,7 +35,6 @@ class ItinTableViewController:
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("vda", dayDictionary)
         delegate?.printTextOnButton(titleDict: dayDictionary)
         
     }
@@ -64,29 +63,22 @@ class ItinTableViewController:
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dayNo = indexPath.row
-        print("dayNo selected:", self.dayNo)
         performSegue(withIdentifier: "dayToEvents", sender: tableView.cellForRow(at: indexPath))
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "dayToEvents"{
-            print("segue performing")
             let destinationNavigationController = segue.destination as? UINavigationController
             let dest = destinationNavigationController?.topViewController as? ItinEventsTableViewController
             dest?.dateArray = dateArray
             dest?.anotherEventNoForPassingDate = dayNo
             switch dayDictionary[dayNo] {
             case nil:
-                print("day events nil")
                 dest?.dayNo = self.dayNo
-                print("dayNo about to pass", self.dayNo)
             default:
                 dest?.events = dayDictionary[dayNo]!
                 dest?.dayNo = self.dayNo
-                print("dayNo about to pass", self.dayNo)
             }
-            //let vc = segue.destination as! ItinEventsTableViewController
-            //this won't work either
     }
     }
 
@@ -141,7 +133,7 @@ class ItinTableViewController:
         let dateEndTemp = formatter.date(from: schedule[1])!
         let dateEnd = dateEndTemp.addingTimeInterval(TimeInterval(60 * 60 * 24))
         let interval = Int( dateEnd.timeIntervalSince(dateStart)/(24.0*60.0*60.0))
-        print("interval:", interval)
+        print("old interval:", interval)
         return interval
     }
     
@@ -154,7 +146,6 @@ class ItinTableViewController:
         formatter2.dateStyle = .medium
         formatter2.timeStyle = .none
         let day = formatter2.string(from: dateMiddle)
-        print("day:", day)
         
         return day
     }
