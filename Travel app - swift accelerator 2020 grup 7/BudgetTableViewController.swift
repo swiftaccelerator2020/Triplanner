@@ -9,11 +9,13 @@ import UIKit
 
 class BudgetTableViewController: UITableViewController {
     
-    var spendingItemsArray: Array<BudgetItem> = [BudgetItem(name: "coke", cost: 11, category: "Food", notes: "Coke or diet coke! That is a question.")]
+    var spendingItemsArray: Array<BudgetItem> = []
+    var spendingItemsDict: Dictionary<String, Array<BudgetItem>> = [:]
     var currentSpendingNo: Int = 0
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "to be replaced by category"
     }
 
     // MARK: - Table view data source
@@ -55,6 +57,10 @@ class BudgetTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
+    }
 
     /*
     // Override to support rearranging the table view.
@@ -89,11 +95,21 @@ class BudgetTableViewController: UITableViewController {
             }
             
         }
+        
+        if segue.destination is BudgetViewController{
+            for i in self.spendingItemsArray{
+                if self.spendingItemsDict[i.category] == nil{
+                    spendingItemsDict[i.category] = [i]
+                }else{
+                    spendingItemsDict[i.category]?.append(i)
+                }
+            }
+            print("subview dict", spendingItemsDict)
+        }
     }
     
     
-    
-    @ IBAction func backToBudgetTableViewController(with segue: UIStoryboardSegue){
+    @IBAction func backToBudgetTableViewController(with segue: UIStoryboardSegue){
         
         if segue.identifier == "unwindSave"{
             if let source = segue.source as? AddSpendingViewController{

@@ -7,16 +7,16 @@
 
 import Foundation
 
-class BudgetItem{
+struct BudgetItem {
     var name: String = ""
     var cost: Int
     var notes: String
     var category: String
-    
-    init(name: String, cost: Int, category: String, notes: String) {
-        self.name = name
-        self.cost = cost
-        self.category = category
-        self.notes = notes
-    }
+//
+//    init(name: String, cost: Int, category: String, notes: String) {
+//        self.name = name
+//        self.cost = cost
+//        self.category = category
+//        self.notes = notes
+//    }
 }

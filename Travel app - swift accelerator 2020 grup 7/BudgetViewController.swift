@@ -23,7 +23,8 @@ class BudgetViewController: UIViewController {
     var total: Int? = 0
     var spent: Int? = 0
     var left: Int? = 0
-    var amountStorage: Dictionary<String, Int> = [:]
+    var budgetItemsArray: Array<BudgetItem> = []
+    var budgetItemsDict: Dictionary<String, Array<BudgetItem>> = [:]
     
     @IBOutlet var tapGestureRecognizer: UITapGestureRecognizer!
     
@@ -75,5 +76,43 @@ class BudgetViewController: UIViewController {
 //        amountSpentTextField.text = String(spent ?? 0)
     }
     
-
+    
+    
+    @IBAction func backToBudgetViewController(with segue: UIStoryboardSegue){
+        print("segue.source", segue.source)
+        if let source = segue.source as? BudgetTableViewController{
+            if  source.spendingItemsDict.isEmpty == false{
+                for (key,value) in source.spendingItemsDict{
+                    self.budgetItemsDict[key] = value
+                }
+            }
+        }
+        print("received dict", self.budgetItemsDict)
+}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if budgetItemsDict.isEmpty == false{
+            if let navigationVC = segue.destination as? UINavigationController{
+                
+            }
+        }
+//        if budgetItemsArray.isEmpty == false{
+//        print("current array:", budgetItemsArray)
+//        if let navigationVC = segue.destination as? UINavigationController{
+//            var tempArray: Array<BudgetItem> = []
+//            for i in ["foodSpending", "accomodationSpending", "shoppingSpending", "travelSpending", "otherSpending"]{
+//                if segue.identifier! == i{
+//                    for item in self.budgetItemsArray{
+//                        if item.category.dropFirst(1) == i.dropFirst(1).dropLast(8){
+//                            tempArray.append(item)
+//                            if let dest = navigationVC.topViewController as? BudgetTableViewController{
+//                                dest.spendingItemsArray = tempArray
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+    }
 }

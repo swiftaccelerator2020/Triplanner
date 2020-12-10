@@ -75,7 +75,7 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
             self.budgetItem?.notes = spendingNotesTextView.text ?? ""
             
             }else{
-                self.budgetItem = BudgetItem(name: spendingNameTextField.text ?? "", cost: Int(spendingCostTextField.text ?? "") ?? 0, category: categoryLabel.text ?? "Other", notes: spendingNotesTextView.text ?? "")
+                self.budgetItem = BudgetItem(name: spendingNameTextField.text ?? "", cost: Int(spendingCostTextField.text ?? "") ?? 0, notes: spendingNotesTextView.text ?? "", category: categoryLabel.text ?? "Other")
             
         }
     }
