@@ -10,6 +10,7 @@ import UIKit
 class ItinEventsTableViewController: UITableViewController {
     var dayNo: Int = 0
     var events: Array<DayEvent> = [DayEvent(destination: "add in the day's events!", timeStart: "swipe left to delete an event", timeEnd: "enjoy!!", date: "", notes:"")]
+    var eventsDict: Dictionary<Int,Array<DayEvent>> = [:]
     var eventNo: Int = 0
     var anotherEventNoForPassingDate: Int = 0
     var delegate: ItinDataDelegate?
@@ -21,11 +22,13 @@ class ItinEventsTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+//        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewDidAppear(_ animated: Bool) {
+    }
+    
+    override func viewWillLayoutSubviews() {
         events.sort{$0.timeStart < $1.timeStart}
     }
 
@@ -65,7 +68,6 @@ class ItinEventsTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
             events.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
@@ -112,7 +114,7 @@ class ItinEventsTableViewController: UITableViewController {
         if segue.identifier == "backToItineraryTableViewController"{
             if let dest = segue.destination as? ItinTableViewController{
                 dest.dayDictionary[dayNo] = events
-//                dest.tempEvents = events
+                print("newest testing", events)
             }
         }
     }
