@@ -14,6 +14,7 @@ class AddSpendingViewController: UITableViewController {
     @IBOutlet weak var spendingCostTextField: UITextField!
     
     @IBOutlet weak var spendingCategoryTextField: UITextField!
+    @IBOutlet var spendingNotesTextView: UITextView!
     
     @IBAction func spendingNameTextfieldUpdated(_ sender: Any) {
         
@@ -21,6 +22,7 @@ class AddSpendingViewController: UITableViewController {
     @IBAction func spendingCostTextfieldUpdated(_ sender: Any) {
         
     }
+    @IBOutlet var spendingNotesTextViewUpdated: UITextView!
     
     
     
