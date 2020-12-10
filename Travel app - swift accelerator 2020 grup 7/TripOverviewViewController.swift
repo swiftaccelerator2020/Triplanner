@@ -54,6 +54,11 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         }
     }
     }
+    
+    //MARK: general overview variables
+    var start: String = ""
+    var end: String = ""
+    
   //MARK: Itinerary overview variables
     @IBOutlet weak var newItineraryItem: UIButton!
     @IBOutlet weak var itinOverviewLabel: UILabel!
@@ -62,7 +67,8 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     @IBOutlet weak var overviewEndDatePicker: UIDatePicker!
     
     var itinOverviewText: String = "itinOverviewText"
-    var storedItinEvents: Array<DayEvent> = []
+//    var storedItinEvents: Array<DayEvent> = []
+    var itinEventsDict: Dictionary<String, Array<DayEvent>> = [:]
     var dateStorageList: Array<String> = ["start", "end"]
     
     
@@ -89,13 +95,14 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 vc.delegate = self
                 let formatter = DateFormatter()
                 formatter.dateFormat = "MM dd, yyyy"
-                let start = formatter.string(from: overviewStartDatePicker.date)
-                let end = formatter.string(from: overviewEndDatePicker.date)
+                self.start = formatter.string(from: overviewStartDatePicker.date)
+                self.end = formatter.string(from: overviewEndDatePicker.date)
                 dateStorageList[0] = start
                 dateStorageList[1] = end
                 vc.schedule = dateStorageList
-
-                for i in storedItinEvents{
+                
+                for (_,value) in itinEventsDict{
+                for i in value{
                     if i.date != ""{
                     print("iiiii", i)
                     let interval = getDateInterval(startDate: start, date: i.date)
@@ -109,6 +116,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 }
             }
         }
+            }
             
         }
         if let dest = segue.destination as? ItinEventViewController{
@@ -143,27 +151,38 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         if let source = segue.source as? ItinEventViewController{
             if segue.identifier == "unwindSave"{
             print("backToOverviewViewController segue result:", source.event)
-            storedItinEvents.append(source.event)
+                if itinEventsDict[source.event.date] == []{
+                    itinEventsDict[source.event.date]? = [source.event]
+                }else{
+                itinEventsDict[source.event.date]?.append(source.event)
+                }
                 itinOverviewLabel.text = source.event.destination
             }
-            print("newitinEvents:", storedItinEvents)
+            print("newitinEvents:", itinEventsDict)
     }
 }
     
     @IBAction func backToOverViewController(with segue: UIStoryboardSegue){
         if let source = segue.source as? ItinTableViewController{
-            for (_, value) in source.dayDictionary{
-                for i in value{
-                   let isContained =  storedItinEvents.contains(i)
-                    if isContained == true{
-                        //
-                    }else{
-                        storedItinEvents.append(i)
+
+            for (key, value) in source.dayDictionary{
+                if value.isEmpty == false{
+//                    let isContained =  itinEventsDict.keys.contains(value[0].date)
+                    self.itinEventsDict[value[0].date] = value
+                }else{
+                    
+                    for i in source.dateArray{
+                        var intervalForDeleting = getDateInterval(startDate: self.start, date: i)
+                        if intervalForDeleting == key{
+                        self.itinEventsDict[i] = []
+                            print("intervalForDeleting", intervalForDeleting)
+                        }
+                        }
                     }
+                    
                 }
             }
-            print("list passed:", storedItinEvents)
-        }
+            print("list passed:", itinEventsDict)
         
         if let source = segue.source as? BudgetViewController{
             self.budgetItemsStorageDict = source.budgetItemsDict

@@ -115,6 +115,7 @@ class ItinEventsTableViewController: UITableViewController {
             if let dest = segue.destination as? ItinTableViewController{
                 dest.dayDictionary[dayNo] = events
                 print("newest testing", events)
+                print("dest.dayDictionary", dest.dayDictionary)
             }
         }
     }

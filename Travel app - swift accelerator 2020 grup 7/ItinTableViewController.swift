@@ -18,20 +18,13 @@ class ItinTableViewController:
     var dayDictionary: Dictionary<Int, Array<DayEvent>> = [:]
     var tempEvent: Array<DayEvent> = []
     var itinOverviewList: Array<String> = []
-    
-    var dateArray: Array<Any> = []
+    var dateArray: Array<String> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Itinerary"
         interval = getDateInterval(shedule: self.schedule)
         dateArray = []
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,7 +48,7 @@ class ItinTableViewController:
         let cell = tableView.dequeueReusableCell(withIdentifier: "itineraryCell", for: indexPath)
         cell.textLabel?.text = "Day \(String(indexPath.row+1))"
         cell.detailTextLabel?.text = generateDate(schedule: self.schedule, dayNumber: indexPath.row)
-        self.dateArray.append(cell.detailTextLabel?.text)
+        self.dateArray.append(cell.detailTextLabel?.text ?? "")
         // Configure the cell...
 
         return cell
@@ -74,6 +67,7 @@ class ItinTableViewController:
             dest?.anotherEventNoForPassingDate = dayNo
             switch dayDictionary[dayNo] {
             case nil:
+                dest?.events = []
                 dest?.dayNo = self.dayNo
             default:
                 dest?.events = dayDictionary[dayNo]!

@@ -18,7 +18,6 @@
 		AF83206D25709B9900487326 /* ItinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83206C25709B9900487326 /* ItinTableViewController.swift */; };
 		AF8320782571EE0100487326 /* ItinEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8320772571EE0100487326 /* ItinEventViewController.swift */; };
 		AF8320832573778500487326 /* ItinDayEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8320822573778500487326 /* ItinDayEvents.swift */; };
-		AF83208825739C3000487326 /* ItinEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83208725739C3000487326 /* ItinEditTableViewController.swift */; };
 		AF9599172579FBCF002EE58A /* TripOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9599162579FBCF002EE58A /* TripOverviewViewController.swift */; };
 		AFACB231256CAA0B00EACAFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB230256CAA0B00EACAFF /* AppDelegate.swift */; };
 		AFACB233256CAA0B00EACAFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */; };
@@ -60,7 +59,6 @@
 		AF83206C25709B9900487326 /* ItinTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinTableViewController.swift; sourceTree = "<group>"; };
 		AF8320772571EE0100487326 /* ItinEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinEventViewController.swift; sourceTree = "<group>"; };
 		AF8320822573778500487326 /* ItinDayEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinDayEvents.swift; sourceTree = "<group>"; };
-		AF83208725739C3000487326 /* ItinEditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinEditTableViewController.swift; sourceTree = "<group>"; };
 		AF9599162579FBCF002EE58A /* TripOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripOverviewViewController.swift; sourceTree = "<group>"; };
 		AFACB22D256CAA0B00EACAFF /* Travel app - swift accelerator 2020 grup 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel app - swift accelerator 2020 grup 7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFACB230256CAA0B00EACAFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,11 +130,10 @@
 				AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */,
 				AFACB234256CAA0B00EACAFF /* HomeViewController.swift */,
 				AF9599162579FBCF002EE58A /* TripOverviewViewController.swift */,
-				AF8320822573778500487326 /* ItinDayEvents.swift */,
-				AF8320772571EE0100487326 /* ItinEventViewController.swift */,
 				AF83206225709AF600487326 /* ItinEventsTableViewController.swift */,
 				AF83206C25709B9900487326 /* ItinTableViewController.swift */,
-				AF83208725739C3000487326 /* ItinEditTableViewController.swift */,
+				AF8320772571EE0100487326 /* ItinEventViewController.swift */,
+				AF8320822573778500487326 /* ItinDayEvents.swift */,
 				7E6A37AA25723C6B00547549 /* PackingListTableViewController.swift */,
 				3A9C318E257F496500512AD1 /* PackingListTableViewCell.swift */,
 				7E6A37ED257258F200547549 /* EditPackingItemTableViewController.swift */,
@@ -305,7 +302,6 @@
 				AF83206D25709B9900487326 /* ItinTableViewController.swift in Sources */,
 				AF8320782571EE0100487326 /* ItinEventViewController.swift in Sources */,
 				AF8320832573778500487326 /* ItinDayEvents.swift in Sources */,
-				AF83208825739C3000487326 /* ItinEditTableViewController.swift in Sources */,
 				7E6A37EE257258F200547549 /* EditPackingItemTableViewController.swift in Sources */,
 				7E6A37AB25723C6B00547549 /* PackingListTableViewController.swift in Sources */,
 				BB3DE9BF25807C1700248131 /* AddSpendingViewController.swift in Sources */,

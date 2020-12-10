@@ -51,9 +51,6 @@ class ItinEventViewController: UIViewController {
             dateDatePicker.setDate(defaultDate, animated: true)
             }
         }
-        
-        
-//        createDatePicker()
     }
     
     
