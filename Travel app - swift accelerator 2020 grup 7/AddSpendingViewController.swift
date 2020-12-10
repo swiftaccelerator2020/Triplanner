@@ -8,7 +8,8 @@
 import UIKit
 
 class AddSpendingViewController: UITableViewController {
-
+    var budgetItem: BudgetItem?
+    var isExistingItem: Bool = false
     @IBOutlet weak var spendingNameTextField: UITextField!
     
     @IBOutlet weak var spendingCostTextField: UITextField!
@@ -28,17 +29,33 @@ class AddSpendingViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if isExistingItem == true{
+            spendingNameTextField.text = budgetItem?.name
+            spendingCostTextField.text = "\(String(budgetItem?.cost ?? 0))"
+            spendingCategoryTextField.text = budgetItem?.category
+            spendingNotesTextView.text = budgetItem?.notes
+        }
     }
     
-    @IBAction func cancelButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "unwindSave"{
+        if self.isExistingItem == true{
+        self.budgetItem?.name = spendingNameTextField.text ?? ""
+            self.budgetItem?.cost = Int(spendingCostTextField.text ?? "") ?? 0
+            self.budgetItem?.category = spendingCategoryTextField.text ?? ""
+            self.budgetItem?.notes = spendingNotesTextView.text ?? ""
+            
+            print("existing:", self.budgetItem?.name)
+            }else{
+            self.budgetItem = BudgetItem(name: spendingNameTextField.text ?? "", cost: Int(spendingCostTextField.text ?? "") ?? 0, category: spendingCategoryTextField.text ?? "", notes: spendingNotesTextView.text ?? "")
+            
+            print("new:", self.budgetItem?.name)
+        }
     }
+}
 
-    @IBAction func saveButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+    
     
     
     

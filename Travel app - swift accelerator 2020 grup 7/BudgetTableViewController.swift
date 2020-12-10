@@ -7,39 +7,35 @@
 
 import UIKit
 
-class BudgetCatTableViewController: UITableViewController {
+class BudgetTableViewController: UITableViewController {
+    
+    var spendingItemsArray: Array<BudgetItem> = [BudgetItem(name: "coke", cost: 11, category: "Food", notes: "Coke or diet coke! That is a question.")]
+    var currentSpendingNo: Int = 0
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return spendingItemsArray.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "budgetCell", for: indexPath)
+        cell.textLabel?.text = "\(String(spendingItemsArray[indexPath.row].cost))"
+        cell.detailTextLabel?.text = spendingItemsArray[indexPath.row].name
 
-        // Configure the cell...
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -49,7 +45,7 @@ class BudgetCatTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -59,7 +55,6 @@ class BudgetCatTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
 
     /*
     // Override to support rearranging the table view.
@@ -76,19 +71,43 @@ class BudgetCatTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        if let navigationVC = segue.destination as? UINavigationController{
+            if let dest = navigationVC.topViewController as? AddSpendingViewController{
+                if segue.identifier == "showSpendingDetail"{
+                    dest.budgetItem = self.spendingItemsArray[tableView.indexPathForSelectedRow!.row]
+                    self.currentSpendingNo = tableView.indexPathForSelectedRow!.row
+                    dest.isExistingItem = true
                 }
+                if segue.identifier == "catagoryAddNewSpending"{
+                    dest.isExistingItem = false
+                    
+                }
+            }
+            
+        }
+    }
+    
+    
+    
+    @ IBAction func backToBudgetTableViewController(with segue: UIStoryboardSegue){
+        
+        if segue.identifier == "unwindSave"{
+            if let source = segue.source as? AddSpendingViewController{
+                if source.isExistingItem == true{
+                    self.spendingItemsArray[currentSpendingNo] = source.budgetItem!
+                    
+                }else{
+                    self.spendingItemsArray.append( source.budgetItem!)
+                    print(spendingItemsArray)
+                }
+            }
+            tableView.reloadData()
+        }
+    }
     }
     
 

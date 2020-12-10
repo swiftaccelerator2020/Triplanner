@@ -25,6 +25,7 @@ class BudgetViewController: UIViewController {
     var left: Int? = 0
     var amountStorage: Dictionary<String, Int> = [:]
     
+    @IBOutlet var tapGestureRecognizer: UITapGestureRecognizer!
     
     
     // @IBOutlet weak var addSpendingButton: UIButton!
@@ -38,6 +39,15 @@ class BudgetViewController: UIViewController {
         otherButton.layer.cornerRadius = 25
         
     }
+    
+    
+    @IBAction func screenTapped(_ sender: Any) {
+        print("tapped")
+        }
+    
+    
+    
+    
     @IBAction func totalBudgetEdited(_ sender: Any) {
 //        editIndicator1 = true
 //        total = Int(totalBudgetTextField.text ?? "0")
@@ -46,13 +56,17 @@ class BudgetViewController: UIViewController {
         
     }
     
-    @IBAction func amountSpentEdited(_ sender: Any) {
-//        editIndicator2 = true
+ 
+
+
+
+
+    //        editIndicator2 = true
 //        spent = Int(amountSpentTextField.text ?? "0")
 //        left = total ?? 0 - spent!
 //        amountLeftTextField.text = String(left ?? 0)
         
-    }
+
     
     @IBAction func amountLeftEdited(_ sender: Any) {    
 //        editIndicator3 = true
