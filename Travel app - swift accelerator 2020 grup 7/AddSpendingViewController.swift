@@ -19,16 +19,22 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         categories[row]
     }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.categoryLabel.text = categories[row]
+    }
     
     var budgetItem: BudgetItem?
     var isExistingItem: Bool = false
     var categories: Array<String> = ["Food", "Accomodation", "Shopping", "Travel", "Other"]
+    var setToPickerView: Bool = false
     
     @IBOutlet weak var spendingNameTextField: UITextField!
     @IBOutlet weak var spendingCostTextField: UITextField!
     @IBOutlet var spendingNotesTextView: UITextView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var categoryPickerView: UIPickerView!
+    @IBOutlet weak var categoryPickerViewButton: UIButton!
+    
     
     @IBAction func spendingNameTextfieldUpdated(_ sender: Any) {
 
@@ -44,12 +50,15 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         super.viewDidLoad()
         self.categoryPickerView.delegate = self
         self.categoryPickerView.dataSource = self
+        self.categoryPickerView.isHidden = true
 
         if isExistingItem == true{
             spendingNameTextField.text = budgetItem?.name
             spendingCostTextField.text = "\(String(budgetItem?.cost ?? 0))"
-//           "not now" = budgetItem?.category
+            categoryLabel.text = budgetItem?.category
             spendingNotesTextView.text = budgetItem?.notes
+        }else{
+            categoryLabel.text = "Food"
         }
     
         
@@ -62,14 +71,12 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         if self.isExistingItem == true{
         self.budgetItem?.name = spendingNameTextField.text ?? ""
             self.budgetItem?.cost = Int(spendingCostTextField.text ?? "") ?? 0
-            self.budgetItem?.category = "not now"
+            self.budgetItem?.category = categoryLabel.text ?? "Other"
             self.budgetItem?.notes = spendingNotesTextView.text ?? ""
             
-            print("existing:", self.budgetItem?.name)
             }else{
-            self.budgetItem = BudgetItem(name: spendingNameTextField.text ?? "", cost: Int(spendingCostTextField.text ?? "") ?? 0, category: "not now", notes: spendingNotesTextView.text ?? "")
+                self.budgetItem = BudgetItem(name: spendingNameTextField.text ?? "", cost: Int(spendingCostTextField.text ?? "") ?? 0, category: categoryLabel.text ?? "Other", notes: spendingNotesTextView.text ?? "")
             
-            print("new:", self.budgetItem?.name)
         }
     }
 }
@@ -78,6 +85,24 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
     
 
     @IBAction func enableAndDisablePickerView(_ sender: Any) {
+        setToPickerView.toggle()
+        switch categoryPickerView.isHidden {
+        case true:
+            categoryPickerView.isHidden = false
+            categoryLabel.isHidden = true
+            categoryPickerViewButton.setImage(UIImage(named: ""), for: .normal)
+           categoryPickerViewButton.setTitle("Done", for: .normal)
+            categoryPickerViewButton.setTitleColor(UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0), for: .normal)
+
+
+        case false:
+            categoryPickerView.isHidden = true
+            categoryLabel.isHidden = false
+            categoryPickerViewButton.setImage(UIImage(named: ""), for: .normal)
+           categoryPickerViewButton.setTitle("Edit", for: .normal)
+            categoryPickerViewButton.setTitleColor(UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0), for: .normal)
+        }
+        
     }
     
 }
