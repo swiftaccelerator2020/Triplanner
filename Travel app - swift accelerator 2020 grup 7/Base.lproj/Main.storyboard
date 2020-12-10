@@ -643,15 +643,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="428" height="55.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fth-0b-ad2">
-                                            <rect key="frame" x="20" y="8.9999999999999982" width="33" height="20.333333333333332"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Amount spent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fth-0b-ad2">
+                                            <rect key="frame" x="20" y="8.9999999999999982" width="107" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="udm-BB-Unq">
-                                            <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="udm-BB-Unq">
+                                            <rect key="frame" x="20" y="31.333333333333332" width="33" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -823,9 +823,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Notes" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-uv-VPl">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Notes" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-uv-VPl">
                                                     <rect key="frame" x="20" y="11" width="388" height="380"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -834,8 +833,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Szj-JZ-qpm" firstAttribute="leading" secondItem="Ls7-WX-qKK" secondAttribute="leading" constant="10" id="4Xt-3l-DGj"/>
+                                                <constraint firstItem="g9h-uv-VPl" firstAttribute="leading" secondItem="Ls7-WX-qKK" secondAttribute="leadingMargin" constant="10" id="Fme-ja-DiN"/>
+                                                <constraint firstItem="g9h-uv-VPl" firstAttribute="trailing" secondItem="Ls7-WX-qKK" secondAttribute="trailingMargin" constant="10" id="OXM-1z-PEl"/>
                                                 <constraint firstItem="Szj-JZ-qpm" firstAttribute="top" secondItem="Ls7-WX-qKK" secondAttribute="top" id="axH-Pv-YVo"/>
                                                 <constraint firstAttribute="bottom" secondItem="Szj-JZ-qpm" secondAttribute="bottom" id="doH-8L-gXS"/>
+                                                <constraint firstItem="g9h-uv-VPl" firstAttribute="top" secondItem="Ls7-WX-qKK" secondAttribute="topMargin" constant="10" id="ek6-E5-G7M"/>
+                                                <constraint firstItem="g9h-uv-VPl" firstAttribute="bottom" secondItem="Ls7-WX-qKK" secondAttribute="bottomMargin" constant="10" id="gc3-VS-oAb"/>
                                                 <constraint firstAttribute="trailing" secondItem="Szj-JZ-qpm" secondAttribute="trailing" constant="10" id="qHs-a1-DzL"/>
                                             </constraints>
                                         </tableViewCellContentView>
