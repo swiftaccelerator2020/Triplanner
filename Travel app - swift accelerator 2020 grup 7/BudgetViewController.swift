@@ -25,6 +25,11 @@ class BudgetViewController: UIViewController {
     var left: Int? = 0
     var budgetItemsArray: Array<BudgetItem> = []
     var budgetItemsDict: Dictionary<String, Array<BudgetItem>> = [:]
+    let categories: Array<String> = ["Food", "Accomodation", "Shopping", "Travel", "Other"]
+    var itemOutOfCategory: Bool = false
+    var calculatingDict: Dictionary<String, Int> = [:]
+    
+    
     
     @IBOutlet var tapGestureRecognizer: UITapGestureRecognizer!
     
@@ -90,29 +95,69 @@ class BudgetViewController: UIViewController {
         print("received dict", self.budgetItemsDict)
 }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if budgetItemsDict.isEmpty == false{
-            if let navigationVC = segue.destination as? UINavigationController{
+    @IBAction func backToBudgetTableViewController(with segue: UIStoryboardSegue){
+        if let source = segue.source as? AddSpendingViewController{
+            if segue.identifier == "unwindSave"{
+                var newlyCreatedItem = self.budgetItemsDict[source.budgetItem?.category ?? "Other"]
+                if newlyCreatedItem != nil{
+                newlyCreatedItem?.append(source.budgetItem!)
+                self.budgetItemsDict[source.budgetItem?.category ?? "Other"] = newlyCreatedItem
+                print(self.budgetItemsDict)
+                }else{
+                    self.budgetItemsDict[source.budgetItem?.category ?? "Other"] = [source.budgetItem!]
+                }
+                
+                print("newly created item", newlyCreatedItem)
                 
             }
         }
-//        if budgetItemsArray.isEmpty == false{
-//        print("current array:", budgetItemsArray)
-//        if let navigationVC = segue.destination as? UINavigationController{
-//            var tempArray: Array<BudgetItem> = []
-//            for i in ["foodSpending", "accomodationSpending", "shoppingSpending", "travelSpending", "otherSpending"]{
-//                if segue.identifier! == i{
-//                    for item in self.budgetItemsArray{
-//                        if item.category.dropFirst(1) == i.dropFirst(1).dropLast(8){
-//                            tempArray.append(item)
-//                            if let dest = navigationVC.topViewController as? BudgetTableViewController{
-//                                dest.spendingItemsArray = tempArray
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+            if let navigationVC = segue.destination as? UINavigationController{
+                if let dest = navigationVC.topViewController as? BudgetTableViewController{
+                    let viewTitle = returnName(string: segue.identifier!)
+                    dest.viewTitle = viewTitle
+                    print("viewTitle", viewTitle)
+                    if budgetItemsDict.isEmpty == false{
+                    for i in categories{
+                        let name =  returnName(string: segue.identifier!)
+                        if i == name{
+                            dest.spendingItemsArray = self.budgetItemsDict[i] ?? []
+                        }
+                    }
+                    
+            
+                        
+                        
+            }
+                
+            }
+                
+            }
+        }
+    
+    
+    
+    func returnName(string: String) -> String{
+        var result: String = ""
+        let categories: Array<String> = ["Food", "Accomodation", "Shopping", "Travel", "Other"]
+        switch string {
+        case "foodSpending":
+            result = "Food"
+        case "shoppingSpending":
+            result = "Shopping"
+        case "accomodationSpending":
+            result = "Accomodation"
+        case "travelSpending":
+            result = "Travel"
+        default:
+            result = "Other"
+        }
+        return result
+        
     }
 }

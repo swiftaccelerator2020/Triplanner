@@ -75,6 +75,8 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
 
 //MARK: Budget overview variables
+    var budgetItemsStorageDict: Dictionary<String, Array<BudgetItem>> = [:]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,6 +121,13 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 vc.packingItems = self.packingItemsStorateList
             }
         }
+        
+        if let navigationVC3 = segue.destination as? UINavigationController{
+            if let dest = navigationVC3.topViewController as? BudgetViewController{
+                dest.budgetItemsDict = self.budgetItemsStorageDict
+            }
+            
+        }
     }
     
 
@@ -154,6 +163,10 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 }
             }
             print("list passed:", storedItinEvents)
+        }
+        
+        if let source = segue.source as? BudgetViewController{
+            self.budgetItemsStorageDict = source.budgetItemsDict
         }
         
     }
