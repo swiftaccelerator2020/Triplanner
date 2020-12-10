@@ -14,8 +14,20 @@ class BudgetViewController: UIViewController {
     @IBOutlet weak var shoppingButton: UIButton!
     @IBOutlet weak var travelButton: UIButton!
     @IBOutlet weak var otherButton: UIButton!
+    @IBOutlet weak var totalBudgetTextField: UITextField!
+    @IBOutlet weak var amountSpentTextField: UITextField!
+    @IBOutlet weak var amountLeftTextField: UITextField!
+    var editIndicator1: Bool = false
+    var editIndicator2: Bool = false
+    var editIndicator3: Bool = false
+    var total: Int? = 0
+    var spent: Int? = 0
+    var left: Int? = 0
+    var amountStorage: Dictionary<String, Int> = [:]
     
-   // @IBOutlet weak var addSpendingButton: UIButton!
+    
+    
+    // @IBOutlet weak var addSpendingButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,32 +38,28 @@ class BudgetViewController: UIViewController {
         otherButton.layer.cornerRadius = 25
         
     }
-    
-    class budgetInfoItem {
-        var name: String
+    @IBAction func totalBudgetEdited(_ sender: Any) {
+//        editIndicator1 = true
+//        total = Int(totalBudgetTextField.text ?? "0")
+//        left = total ?? 0 - spent!
+//        amountLeftTextField.text = String(left ?? 0)
         
-        init(name: String) {
-            self.name = name
-        }
     }
     
-    var BudgetInfoItem = [
-        budgetInfoItem(name: "Total Budget: "),
-        budgetInfoItem(name: "Amount Spent: "),
-        budgetInfoItem(name: "Amount Left: ")
-    ]
-    
-    
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func amountSpentEdited(_ sender: Any) {
+//        editIndicator2 = true
+//        spent = Int(amountSpentTextField.text ?? "0")
+//        left = total ?? 0 - spent!
+//        amountLeftTextField.text = String(left ?? 0)
+        
     }
-    */
+    
+    @IBAction func amountLeftEdited(_ sender: Any) {    
+//        editIndicator3 = true
+//        left = Int(amountLeftTextField.text ?? "0")
+//        spent = total ?? 0 - left!
+//        amountSpentTextField.text = String(spent ?? 0)
+    }
+    
 
 }
