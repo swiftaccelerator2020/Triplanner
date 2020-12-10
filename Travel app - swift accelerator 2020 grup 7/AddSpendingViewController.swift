@@ -7,18 +7,31 @@
 
 import UIKit
 
-class AddSpendingViewController: UITableViewController {
+class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        categories.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        categories[row]
+    }
+    
     var budgetItem: BudgetItem?
     var isExistingItem: Bool = false
+    var categories: Array<String> = ["Food", "Accomodation", "Shopping", "Travel", "Other"]
+    
     @IBOutlet weak var spendingNameTextField: UITextField!
-    
     @IBOutlet weak var spendingCostTextField: UITextField!
-    
-    @IBOutlet weak var spendingCategoryTextField: UITextField!
     @IBOutlet var spendingNotesTextView: UITextView!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var categoryPickerView: UIPickerView!
     
     @IBAction func spendingNameTextfieldUpdated(_ sender: Any) {
-        
+
     }
     @IBAction func spendingCostTextfieldUpdated(_ sender: Any) {
         
@@ -29,12 +42,18 @@ class AddSpendingViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.categoryPickerView.delegate = self
+        self.categoryPickerView.dataSource = self
+
         if isExistingItem == true{
             spendingNameTextField.text = budgetItem?.name
             spendingCostTextField.text = "\(String(budgetItem?.cost ?? 0))"
-            spendingCategoryTextField.text = budgetItem?.category
+//           "not now" = budgetItem?.category
             spendingNotesTextView.text = budgetItem?.notes
         }
+    
+        
+        
     }
     
     
@@ -43,12 +62,12 @@ class AddSpendingViewController: UITableViewController {
         if self.isExistingItem == true{
         self.budgetItem?.name = spendingNameTextField.text ?? ""
             self.budgetItem?.cost = Int(spendingCostTextField.text ?? "") ?? 0
-            self.budgetItem?.category = spendingCategoryTextField.text ?? ""
+            self.budgetItem?.category = "not now"
             self.budgetItem?.notes = spendingNotesTextView.text ?? ""
             
             print("existing:", self.budgetItem?.name)
             }else{
-            self.budgetItem = BudgetItem(name: spendingNameTextField.text ?? "", cost: Int(spendingCostTextField.text ?? "") ?? 0, category: spendingCategoryTextField.text ?? "", notes: spendingNotesTextView.text ?? "")
+            self.budgetItem = BudgetItem(name: spendingNameTextField.text ?? "", cost: Int(spendingCostTextField.text ?? "") ?? 0, category: "not now", notes: spendingNotesTextView.text ?? "")
             
             print("new:", self.budgetItem?.name)
         }
@@ -57,16 +76,8 @@ class AddSpendingViewController: UITableViewController {
 
     
     
-    
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func enableAndDisablePickerView(_ sender: Any) {
     }
-    */
-
+    
 }
