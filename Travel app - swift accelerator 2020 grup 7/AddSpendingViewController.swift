@@ -106,4 +106,16 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         
     }
     
+    
+    @IBAction func spendingNameEditingEnd(_ sender: Any) {
+        spendingNameTextField.resignFirstResponder()
+    }
+    
+    @IBAction func screenTapped(_ sender: Any) {
+        spendingCostTextField.resignFirstResponder()
+    }
+    
+   
+    
 }
+

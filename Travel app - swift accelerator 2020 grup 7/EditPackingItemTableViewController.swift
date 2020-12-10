@@ -37,5 +37,8 @@ class EditPackingItemTableViewController: UITableViewController {
     }
     
 
+    @IBAction func packingItemEditingEnded(_ sender: Any) {
+        nameTextField.resignFirstResponder()
+    }
     
 }
