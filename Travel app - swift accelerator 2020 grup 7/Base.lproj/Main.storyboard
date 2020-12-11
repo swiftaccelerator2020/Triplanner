@@ -499,7 +499,7 @@
                                     <constraint firstAttribute="width" constant="120" id="nTM-YN-EQq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                 <connections>
                                     <action selector="totalBudgetFinishedEditing:" destination="B4D-IW-gQn" eventType="editingDidEnd" id="NX7-tv-8yZ"/>
                                 </connections>

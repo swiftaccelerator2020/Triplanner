@@ -10,7 +10,6 @@ import UIKit
 class BudgetViewController: UIViewController, UITextFieldDelegate {
     
     
-    
 
     @IBOutlet weak var foodButton: UIButton!
     @IBOutlet weak var accomodationButton: UIButton!
@@ -52,7 +51,9 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         
         self.totalBudgetTextField.text = String(total ?? 0.0)
         
-        
+        //--- add UIToolBar on keyboard and Done button on UIToolBar ---//
+                self.addDoneButtonOnKeyboard()
+        self.totalBudgetTextField.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -277,6 +278,47 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         }
         return categorizedSpending
     }
+    
+    
+    func addDoneButtonOnKeyboard()
+      {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        doneToolbar.barStyle = UIBarStyle.default
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.doneButtonAction))
+        
+        var items = [UIBarButtonItem]()
+        items.append(flexSpace)
+        items.append(done)
+        
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        self.totalBudgetTextField.inputAccessoryView = doneToolbar
+        
+      }
+      
+      @objc func doneButtonAction()
+      {
+        self.totalBudgetTextField.resignFirstResponder()
+      }
+    
 }
 
 
+//extension UITextField {
+//func addDoneButtonOnKeyBoardWithControl() {
+//    let keyboardToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
+//keyboardToolbar.sizeToFit()
+//keyboardToolbar.barStyle = .default
+//let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+//let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.endEditing(_:)))
+//keyboardToolbar.items = [flexBarButton, doneBarButton]
+//self.inputAccessoryView = keyboardToolbar
+//}
+//
+//
+//
+//}
