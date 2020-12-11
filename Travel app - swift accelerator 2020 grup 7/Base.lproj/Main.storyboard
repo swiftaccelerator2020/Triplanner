@@ -434,6 +434,7 @@
                                             </attributedString>
                                         </state>
                                         <connections>
+                                            <action selector="foodButtonPressed:" destination="B4D-IW-gQn" eventType="touchUpInside" id="ate-cB-8Cp"/>
                                             <segue destination="9Dy-jb-usU" kind="presentation" identifier="foodSpending" destinationCreationSelector="food:" modalPresentationStyle="fullScreen" id="NkC-N2-2CM"/>
                                         </connections>
                                     </button>
