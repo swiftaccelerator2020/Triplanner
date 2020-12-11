@@ -19,9 +19,19 @@ protocol PackingListCheckedDelegate {
     func identify(isChecked: Bool)
 }
 
-class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingListDataDelegate{
+protocol BudgetDataDelegate {
+    func calculateBudget(string1: String, string2: String)
+}
+
+class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingListDataDelegate, BudgetDataDelegate{
+    
+    func calculateBudget(string1: String, string2: String) {
+        budgetOverviewLabel.text = "\(string1)\n\(string2)"
+        print("delegate working")
+    }
+    
+    
    
-    @IBOutlet weak var locationTextField: UITextField!
     
     func printPackingListItem(titleArray: Array<packingItem>, isChecked: Bool) {
         print("delegate titleArray:", titleArray)
@@ -61,6 +71,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     //MARK: general overview variables
     var start: String = ""
     var end: String = ""
+    @IBOutlet weak var locationTextField: UITextField!
     
   //MARK: Itinerary overview variables
     @IBOutlet weak var newItineraryItem: UIButton!
@@ -96,27 +107,27 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navigationVC = segue.destination as? UINavigationController{
-            if let vc = navigationVC.topViewController as? ItinTableViewController{
-                vc.delegate = self
+            if let dest = navigationVC.topViewController as? ItinTableViewController{
+                dest.delegate = self
                 let formatter = DateFormatter()
                 formatter.dateFormat = "MM dd, yyyy"
                 self.start = formatter.string(from: overviewStartDatePicker.date)
                 self.end = formatter.string(from: overviewEndDatePicker.date)
                 dateStorageList[0] = start
                 dateStorageList[1] = end
-                vc.schedule = dateStorageList
+                dest.schedule = dateStorageList
                 
                 for (_,value) in itinEventsDict{
                 for i in value{
                     if i.date != ""{
                     print("iiiii", i)
                     let interval = getDateInterval(startDate: start, date: i.date)
-                        if ((vc.dayDictionary[interval]?.isEmpty) == nil){
-                    vc.dayDictionary[interval] = [i]
-                    print("vc.dayDictionary",vc.dayDictionary)
+                        if ((dest.dayDictionary[interval]?.isEmpty) == nil){
+                    dest.dayDictionary[interval] = [i]
+                    print("vc.dayDictionary",dest.dayDictionary)
                     }else{
-                        vc.dayDictionary[interval]?.append(i)
-                        print("vc.dayDictionary else",vc.dayDictionary)
+                        dest.dayDictionary[interval]?.append(i)
+                        print("vc.dayDictionary else",dest.dayDictionary)
                     }
                 }
             }
@@ -129,9 +140,9 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
             
         }
         if let navigationVC2 = segue.destination as? UINavigationController{
-            if let vc = navigationVC2.topViewController as? PackingListTableViewController{
-                vc.delegate = self
-                vc.packingItems = self.packingItemsStorateList
+            if let dest = navigationVC2.topViewController as? PackingListTableViewController{
+                dest.delegate = self
+                dest.packingItems = self.packingItemsStorateList
             }
         }
         
@@ -139,6 +150,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
             if let dest = navigationVC3.topViewController as? BudgetViewController{
                 dest.budgetItemsDict = self.budgetItemsStorageDict
                 dest.total = self.budgetTotal
+                dest.delegate = self
             }
             
         }
