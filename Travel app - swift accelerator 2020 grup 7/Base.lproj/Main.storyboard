@@ -17,15 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z0W-v4-c9B">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="z0W-v4-c9B">
                                 <rect key="frame" x="0.0" y="88" width="428" height="804"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="trip" id="UfP-kv-HqM">
-                                        <rect key="frame" x="0.0" y="28" width="428" height="43.666667938232422"/>
+                                        <rect key="frame" x="20" y="55.333332061767578" width="388" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UfP-kv-HqM" id="IDw-ZZ-uTF">
-                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -353,20 +352,19 @@
         <scene sceneID="34t-mT-LoP">
             <objects>
                 <tableViewController id="vkL-IT-nB3" customClass="PackingListTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3So-ij-v8r">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="3So-ij-v8r">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" reuseIdentifier="packingListItem" id="NzE-tP-xbD" customClass="PackingListTableViewCell" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="428" height="50.333332061767578"/>
+                                <rect key="frame" x="20" y="55.333332061767578" width="388" height="50.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NzE-tP-xbD" id="gUh-N4-dfz">
-                                    <rect key="frame" x="0.0" y="0.0" width="428" height="50.333332061767578"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="388" height="50.333332061767578"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ow-PS-kTI">
-                                            <rect key="frame" x="362" y="0.0" width="66" height="50.333333333333336"/>
+                                            <rect key="frame" x="350" y="0.0" width="38" height="50.333333333333336"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="Gd5-gM-KY9"/>
                                                 <constraint firstAttribute="width" constant="66" id="SE5-ea-SJ2"/>
@@ -386,7 +384,7 @@
                                         <constraint firstAttribute="bottom" secondItem="4Ow-PS-kTI" secondAttribute="bottom" id="33k-3W-3cZ"/>
                                         <constraint firstItem="4Ow-PS-kTI" firstAttribute="top" secondItem="gUh-N4-dfz" secondAttribute="top" id="Amy-zK-tdj"/>
                                         <constraint firstAttribute="trailing" secondItem="4Ow-PS-kTI" secondAttribute="trailing" id="QnM-cl-LtU"/>
-                                        <constraint firstItem="4Ow-PS-kTI" firstAttribute="leading" secondItem="gUh-N4-dfz" secondAttribute="leading" constant="362" id="Weh-AF-U3w"/>
+                                        <constraint firstItem="4Ow-PS-kTI" firstAttribute="leading" secondItem="gUh-N4-dfz" secondAttribute="leading" constant="350" id="Weh-AF-U3w"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

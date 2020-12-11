@@ -8,6 +8,9 @@
 import UIKit
 
 class BudgetViewController: UIViewController, UITextFieldDelegate {
+    
+    
+    
 
     @IBOutlet weak var foodButton: UIButton!
     @IBOutlet weak var accomodationButton: UIButton!
@@ -181,6 +184,8 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
             }
                 
             }
+        
+        
         
         if let dest = segue.destination as? TripOverviewViewController{
             let string1 = "total budget $\(total!), spent $\(spendingAddedUp), \(spendingAddedUp/(total ?? 1.0)*100)% of total"
