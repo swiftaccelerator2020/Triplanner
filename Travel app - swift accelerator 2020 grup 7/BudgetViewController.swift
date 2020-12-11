@@ -85,9 +85,9 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     @IBAction func totalBudgetFinishedEditing(_ sender: Any) {
         print("total budget done editing")
         total = Double(totalBudgetTextField.text ?? "")
-        print(total)
-        left = (total! - spent!)
-        amountLeftTextField.text = String(total! - spent!)
+        print(total as Any)
+        left = (total ?? 0.0 - spent!)
+//        amountLeftTextField.text = String(total! - spent!)
 //        if total == nil{
 //            totalBudgetTextField.text = "0.0"
 //        }else{
@@ -307,18 +307,3 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     
 }
 
-
-//extension UITextField {
-//func addDoneButtonOnKeyBoardWithControl() {
-//    let keyboardToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
-//keyboardToolbar.sizeToFit()
-//keyboardToolbar.barStyle = .default
-//let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-//let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.endEditing(_:)))
-//keyboardToolbar.items = [flexBarButton, doneBarButton]
-//self.inputAccessoryView = keyboardToolbar
-//}
-//
-//
-//
-//}

@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="147" y="91"/>
+            <point key="canvasLocation" x="287" y="105"/>
         </scene>
         <!--Trip Overview-->
         <scene sceneID="Pcs-eH-cXz">
@@ -274,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgr-0G-NbY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1610.7476635514017" y="736.06911447084235"/>
+            <point key="canvasLocation" x="681" y="944"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VBt-PD-duK">
@@ -295,7 +295,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4i-64-HbO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-562" y="92"/>
+            <point key="canvasLocation" x="-421" y="106"/>
         </scene>
         <!--Packing List-->
         <scene sceneID="34t-mT-LoP">
@@ -503,7 +503,7 @@
                                     <constraint firstAttribute="width" constant="120" id="nTM-YN-EQq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                 <connections>
                                     <action selector="totalBudgetFinishedEditing:" destination="B4D-IW-gQn" eventType="editingDidEnd" id="NX7-tv-8yZ"/>
                                 </connections>
@@ -607,7 +607,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-78.504672897196258" y="2015.7667386609073"/>
+            <point key="canvasLocation" x="831" y="1862"/>
         </scene>
         <!--Spendings-->
         <scene sceneID="e94-79-jQV">
@@ -668,7 +668,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gn-ny-tdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="WTh-UA-Loo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1680.8411214953271" y="2015.7667386609073"/>
+            <point key="canvasLocation" x="2591" y="1862"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zu3-4p-Eso">
@@ -684,14 +684,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qat-Rw-IIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858" y="2016"/>
+            <point key="canvasLocation" x="1768" y="1862"/>
         </scene>
         <!--Add Spending-->
         <scene sceneID="h4v-Ce-7tF">
             <objects>
                 <tableViewController id="Vb8-iI-wjc" customClass="AddSpendingViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0ap-IX-Jnq">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <sections>
                             <tableViewSection headerTitle="Name" id="qO6-bb-mY9">
@@ -864,7 +864,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdN-QK-d2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="BpJ-ii-8D7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3473.8317757009345" y="2333.9092872570195"/>
+            <point key="canvasLocation" x="4203" y="1843"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Xjd-pI-ufi">
@@ -879,7 +879,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="du1-0s-eUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4176" y="2348"/>
+            <point key="canvasLocation" x="5134" y="1862"/>
         </scene>
         <!--Edit Packing Item Table View Controller-->
         <scene sceneID="Bli-bn-suI">
@@ -1061,7 +1061,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LG3-g5-stc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="aXL-kk-OyQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1943" y="1153"/>
+            <point key="canvasLocation" x="4448" y="1019"/>
         </scene>
         <!--Title-->
         <scene sceneID="Nji-5f-k1F">
@@ -1208,7 +1208,7 @@
                 <exit id="MHv-tC-Hjb" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovc-s8-1uU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2762.4000000000001" y="944.33497536945822"/>
+            <point key="canvasLocation" x="5347" y="1019"/>
         </scene>
         <!--New Trip-->
         <scene sceneID="GDs-dR-Fwm">
@@ -1228,7 +1228,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLT-Jq-jyz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="428" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -1258,7 +1258,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="DpK-EA-N7y">
-                                                    <rect key="frame" x="0.0" y="-59" width="388" height="162"/>
+                                                    <rect key="frame" x="-1" y="-59" width="389" height="162"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 </datePicker>
                                             </subviews>
@@ -1287,7 +1287,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="1Pz-gY-Gso">
-                                                    <rect key="frame" x="0.0" y="-59" width="388" height="162"/>
+                                                    <rect key="frame" x="-1" y="-59" width="389" height="162"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 </datePicker>
                                             </subviews>
@@ -1329,7 +1329,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIv-ar-91B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="hWD-Qh-b9O" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1943" y="91"/>
+            <point key="canvasLocation" x="2085" y="105"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WFb-TL-cs8">
@@ -1345,7 +1345,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47k-0O-fHJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="91"/>
+            <point key="canvasLocation" x="1178" y="105"/>
         </scene>
         <!--Itinerary-->
         <scene sceneID="rE9-1f-jGy">
@@ -1399,7 +1399,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBv-ic-eYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="bh3-6N-4ii" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="209" y="1151"/>
+            <point key="canvasLocation" x="2714" y="1017"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zeN-Pt-rgA">
@@ -1417,7 +1417,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCB-Cr-nSL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-562" y="1153"/>
+            <point key="canvasLocation" x="1943" y="1019"/>
         </scene>
         <!--Events-->
         <scene sceneID="ld6-ef-E7V">
@@ -1436,7 +1436,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lc4-d2-bdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="1153"/>
+            <point key="canvasLocation" x="3541" y="1019"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s4E-hg-ROr">
@@ -1476,7 +1476,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIX-0T-Pk5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-937" y="2014"/>
+            <point key="canvasLocation" x="-28" y="1860"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T3c-hl-7w9">
@@ -1494,7 +1494,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbP-mZ-9ye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2409" y="737"/>
+            <point key="canvasLocation" x="-118" y="944"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AS9-sM-1SZ">
@@ -1503,7 +1503,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="yM2-Kt-IKT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NjQ-fi-xAD">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1513,13 +1513,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TJa-dK-ani" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2573.8317757009345" y="2334.5572354211663"/>
+            <point key="canvasLocation" x="3395" y="1843"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Njr-Wn-zfu"/>
+        <segue reference="Hh4-Dq-Rge"/>
         <segue reference="Efb-Ot-7g8"/>
-        <segue reference="NkC-N2-2CM"/>
+        <segue reference="nAW-aR-8pe"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
