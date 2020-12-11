@@ -14,7 +14,7 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-         self.navigationItem.rightBarButtonItem = self.editButtonItem
+//         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -30,7 +30,7 @@ class HomeTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = trips[indexPath.row].destination
         cell.detailTextLabel?.text = "\(trips[indexPath.row].startDate) - \(trips[indexPath.row].endDate)"
 
@@ -85,5 +85,15 @@ class HomeTableViewController: UITableViewController {
             }
         }
     }
+    
+    @IBAction func backFromNewTrip(for segue: UIStoryboardSegue){
+        if let source = segue.source as? NewTripTableViewController{
+            trips.append(source.trip)
+            tableView.reloadData()
+        }
+        
+    }
+    
+    
 
 }
