@@ -85,6 +85,8 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
 
 //MARK: Budget overview variables
     var budgetItemsStorageDict: Dictionary<String, Array<BudgetItem>> = [:]
+    var budgetTotal: Double = 0.0
+    @IBOutlet weak var budgetOverviewLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -136,6 +138,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         if let navigationVC3 = segue.destination as? UINavigationController{
             if let dest = navigationVC3.topViewController as? BudgetViewController{
                 dest.budgetItemsDict = self.budgetItemsStorageDict
+                dest.total = self.budgetTotal
             }
             
         }
@@ -189,6 +192,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         
         if let source = segue.source as? BudgetViewController{
             self.budgetItemsStorageDict = source.budgetItemsDict
+            self.budgetTotal = source.total!
         }
         
     }

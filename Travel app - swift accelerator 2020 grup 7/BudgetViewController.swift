@@ -47,6 +47,8 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         self.amountSpentTextField.delegate = self
         self.amountLeftTextField.delegate = self
         
+        self.totalBudgetTextField.text = String(total ?? 0.0)
+        
         
     }
     
