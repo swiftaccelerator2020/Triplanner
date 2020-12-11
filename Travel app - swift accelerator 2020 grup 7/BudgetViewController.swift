@@ -21,9 +21,9 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     var editIndicator1: Bool = false
     var editIndicator2: Bool = false
     var editIndicator3: Bool = false
-    var total: Float? = 0.0
-    var spent: Float? = 0.0
-    var left: Float? = 0.0
+    var total: Double? = 0.0
+    var spent: Double? = 0.0
+    var left: Double? = 0.0
     var budgetItemsDict: Dictionary<String, Array<BudgetItem>> = [:]
     let categories: Array<String> = ["Food", "Accomodation", "Shopping", "Travel", "Other"]
     var itemOutOfCategory: Bool = false
@@ -51,12 +51,20 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        print("vdavdavda")
+        var spendingAddedUp = 0.0
         for i in categories{
-            generateCategorizedSpending(category: i)
-        }
-        
-        
-        
+            spendingAddedUp += generateCategorizedSpending(category: i)
+            
+        print(spendingAddedUp)
+        amountSpentTextField.text = String(spendingAddedUp)
+        spent = spendingAddedUp
+            amountLeftTextField.text = String(total! - spendingAddedUp)
+           // String(total ?? 0.0 - (spent ?? 0.0))
+            
+            
+            //MARK: The problem is view did appear
+    }
     }
     
     
@@ -69,45 +77,48 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     
  
 
-//MARK: Logic to be cleared later
+
     @IBAction func totalBudgetFinishedEditing(_ sender: Any) {
         print("total budget done editing")
-        total = Float(totalBudgetTextField.text ?? "")
-        if total == nil{
-            totalBudgetTextField.text = "0.0"
-        }else{
-            if amountLeftTextField.text != ""{
-            left = total ?? 0.0 - (spent ?? 0.0)
-            amountLeftTextField.text = String(left!)
-            }
-        }
+        total = Double(totalBudgetTextField.text ?? "")
+        print(total)
+        left = (total! - spent!)
+        amountLeftTextField.text = String(total! - spent!)
+//        if total == nil{
+//            totalBudgetTextField.text = "0.0"
+//        }else{
+//            if amountLeftTextField.text != ""{
+//            left = total ?? 0.0 - (spent ?? 0.0)
+//            amountLeftTextField.text = String(left!)
+//            }
+//        }
     }
     
     
     
     @IBAction func amountSpentFinishedEditing(_ sender: Any) {
-         spent =  Float(amountSpentTextField.text ?? "")
-        if spent == nil{
-
-        }else{
-            left = total ?? 0.0 - (spent ?? 0.0)
-            print("left:",left)
-            amountLeftTextField.text = String(left!)
-        }
+//         spent =  Double(amountSpentTextField.text ?? "")
+//        if spent == nil{
+//
+//        }else{
+//            left = total ?? 0.0 - (spent ?? 0.0)
+//            print("left:",left)
+//            amountLeftTextField.text = String(left!)
+//        }
         
     }
     
     
 
     @IBAction func amountLeftFinishedEditing(_ sender: Any) {
-        print("amountLeftFinishedEditing")
-        left = Float(amountLeftTextField.text ?? "")
-        if left == nil{
-
-        }else{
-            spent = total ?? 0.0 - (left ?? 0.0)
-            amountSpentTextField.text = String(spent!)
-        }
+//        print("amountLeftFinishedEditing")
+//        left = Double(amountLeftTextField.text ?? "")
+//        if left == nil{
+//
+//        }else{
+//            spent = total ?? 0.0 - (left ?? 0.0)
+//            amountSpentTextField.text = String(spent!)
+//        }
     }
     
 
@@ -214,19 +225,7 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-//    @IBAction func totalBudgetEditingEnd(_ sender: Any) {
-//        totalBudgetTextField.resignFirstResponder()
-//    }
-//
-//
-//    @IBAction func amountSpentEditingEnd(_ sender: Any) {
-//        amountSpentTextField.resignFirstResponder()
-//    }
-//
-//
-//    @IBAction func amountLeftEditingEnd(_ sender: Any) {
-//        amountLeftTextField.resignFirstResponder()
-//    }
+    
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
@@ -237,7 +236,8 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    func generateCategorizedSpending(category: String){
+    func generateCategorizedSpending(category: String) -> Double{
+        var categorizedSpending = 0.0
         if self.budgetItemsDict[category] != nil{
             var tSpending = 0.0
             for i in (self.budgetItemsDict[category]!){
@@ -251,7 +251,9 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         returnButtonName(string: category).setAttributedTitle(foodAttributedTitle, for: .normal)
         returnButtonName(string: category).titleLabel?.font = UIFont(name: "system", size: 4)
             foodButton.titleLabel?.textAlignment = .left
+            categorizedSpending = tSpending
         }
+        return categorizedSpending
     }
 }
 

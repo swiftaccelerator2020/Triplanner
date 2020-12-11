@@ -607,7 +607,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+ Spending" id="Hm3-Nh-X0l">
                             <connections>
-                                <segue destination="fdx-GQ-ORf" kind="show" identifier="addNewSpending" id="Hh4-Dq-Rge"/>
+                                <segue destination="fdx-GQ-ORf" kind="presentation" identifier="addNewSpending" modalPresentationStyle="fullScreen" id="Hh4-Dq-Rge"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
