@@ -23,6 +23,20 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         self.categoryLabel.text = categories[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = (view as? UILabel)
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            pickerLabel?.font = UIFont(name: "System", size: 17)
+            pickerLabel?.textAlignment = .center
+        }
+        pickerLabel?.text = categories[row]
+        pickerLabel?.textColor = UIColor.blue
+
+        return pickerLabel!
+    }
+    
+    
     var budgetItem: BudgetItem?
     var isExistingItem: Bool = false
     var categories: Array<String> = ["Food", "Accomodation", "Shopping", "Travel", "Other"]

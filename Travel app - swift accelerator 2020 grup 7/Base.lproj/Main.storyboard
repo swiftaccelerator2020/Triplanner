@@ -798,7 +798,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cupertino" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYR-0r-TkY">
-                                                    <rect key="frame" x="78" y="3" width="227" height="39"/>
+                                                    <rect key="frame" x="77" y="3" width="227" height="39"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -809,12 +809,12 @@
                                                 <constraint firstItem="chE-w1-5Ux" firstAttribute="leading" secondItem="zQH-16-9cg" secondAttribute="leadingMargin" constant="-1" id="JM7-3o-qRH"/>
                                                 <constraint firstItem="chE-w1-5Ux" firstAttribute="top" secondItem="zQH-16-9cg" secondAttribute="topMargin" constant="-70" id="MYZ-wx-CjF"/>
                                                 <constraint firstItem="chE-w1-5Ux" firstAttribute="centerY" secondItem="AYR-0r-TkY" secondAttribute="centerY" id="QjU-pI-jPH"/>
-                                                <constraint firstItem="AYR-0r-TkY" firstAttribute="leading" secondItem="zQH-16-9cg" secondAttribute="leadingMargin" constant="58" id="RAt-dm-qGs"/>
+                                                <constraint firstItem="AYR-0r-TkY" firstAttribute="leading" secondItem="zQH-16-9cg" secondAttribute="leadingMargin" constant="57" id="RAt-dm-qGs"/>
                                                 <constraint firstItem="AYR-0r-TkY" firstAttribute="top" secondItem="zQH-16-9cg" secondAttribute="topMargin" constant="-8" id="Z9I-2l-8pp"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="chE-w1-5Ux" secondAttribute="trailing" constant="53" id="ZJK-ID-YJC"/>
                                                 <constraint firstItem="chE-w1-5Ux" firstAttribute="centerY" secondItem="zQH-16-9cg" secondAttribute="centerY" id="fwW-xh-aqu"/>
                                                 <constraint firstItem="AYR-0r-TkY" firstAttribute="centerY" secondItem="6P1-5H-CWU" secondAttribute="centerY" id="o2g-2l-sxk"/>
-                                                <constraint firstItem="6P1-5H-CWU" firstAttribute="leading" secondItem="AYR-0r-TkY" secondAttribute="trailing" constant="44" id="tbr-qg-b7l"/>
+                                                <constraint firstItem="6P1-5H-CWU" firstAttribute="leading" secondItem="AYR-0r-TkY" secondAttribute="trailing" constant="45" id="tbr-qg-b7l"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
