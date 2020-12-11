@@ -160,4 +160,22 @@ class BudgetViewController: UIViewController {
         return result
         
     }
+    
+    
+    @IBAction func totalBudgetEditingEnd(_ sender: Any) {
+        totalBudgetTextField.resignFirstResponder()
+    }
+    
+    
+    @IBAction func amountSpentEditingEnd(_ sender: Any) {
+        amountSpentTextField.resignFirstResponder()
+    }
+    
+    
+    @IBAction func amountLeftEditingEnd(_ sender: Any) {
+        amountLeftTextField.resignFirstResponder()
+    }
+    
+    
+    
 }

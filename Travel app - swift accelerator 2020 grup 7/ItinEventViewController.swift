@@ -121,5 +121,21 @@ class ItinEventViewController: UIViewController {
 //    }
 
 
+    @IBAction func destinationEditingEnd(_ sender: Any) {
+        destinationTextField.resignFirstResponder()
+    }
+    
+    
+    @IBAction func startTimeEditingEnd(_ sender: Any) {
+        startTimeTextField.resignFirstResponder()
+    }
+    
+    
+    @IBAction func endTimeEditingEnd(_ sender: Any) {
+        endTimeTextField.resignFirstResponder()
+    }
+    
+    
+    
     
 }

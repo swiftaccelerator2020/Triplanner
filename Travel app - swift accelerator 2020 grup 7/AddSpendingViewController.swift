@@ -61,7 +61,8 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
             categoryLabel.text = "Food"
         }
     
-        
+        //--- add UIToolBar on keyboard and Done button on UIToolBar ---//
+                self.addDoneButtonOnKeyboard()
         
     }
     
@@ -106,4 +107,48 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         
     }
     
+    
+    @IBAction func spendingNameEditingEnd(_ sender: Any) {
+        spendingNameTextField.resignFirstResponder()
+    }
+    
+    func addDoneButtonOnKeyboard()
+      {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        doneToolbar.barStyle = UIBarStyle.default
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: Selector(("doneButtonAction")))
+        
+        var items = [UIBarButtonItem]()
+        items.append(flexSpace)
+        items.append(done)
+        
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        self.spendingCostTextField.inputAccessoryView = doneToolbar
+        
+      }
+      
+      func doneButtonAction()
+      {
+        self.spendingCostTextField.resignFirstResponder()
+      }
+    
+        
+    
+}
+
+extension UITextField {
+func addDoneButtonOnKeyBoardWithControl() {
+    let keyboardToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
+keyboardToolbar.sizeToFit()
+keyboardToolbar.barStyle = .default
+let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.endEditing(_:)))
+keyboardToolbar.items = [flexBarButton, doneBarButton]
+self.inputAccessoryView = keyboardToolbar
+}
 }
