@@ -8,25 +8,7 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
-    
-    let someGitTesting: String = "gitTestingTwo"
 
-    class tripLocation {
-        
-        var location: String
-        var date1: String
-        var date2: String
-        
-        init(location: String, date1: String, date2: String) {
-            self.location = location
-            self.date1 = date1
-            self.date2 = date2
-        }
-    }
-    
-    var tripLocations = [
-        tripLocation(location: "London", date1: "MM-DD-YYYY", date2: "MM-DD-YYYY")
-    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +29,7 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return tripLocations.count
+        return 0
     }
 
     /*
