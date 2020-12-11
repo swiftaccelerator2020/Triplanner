@@ -794,11 +794,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="chE-w1-5Ux">
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chE-w1-5Ux">
                                                     <rect key="frame" x="19" y="-59" width="336" height="162"/>
                                                 </pickerView>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6P1-5H-CWU">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6P1-5H-CWU">
                                                     <rect key="frame" x="349" y="5" width="59" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="59" id="sLq-5J-4VH"/>
+                                                    </constraints>
                                                     <state key="normal" title="Edit">
                                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -806,19 +809,24 @@
                                                         <action selector="enableAndDisablePickerView:" destination="Vb8-iI-wjc" eventType="touchUpInside" id="SCC-fW-tuO"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Cupertino" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYR-0r-TkY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cupertino" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYR-0r-TkY">
                                                     <rect key="frame" x="78" y="3" width="227" height="39"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="AYR-0r-TkY" firstAttribute="bottom" secondItem="zQH-16-9cg" secondAttribute="bottomMargin" id="AhM-mZ-71E"/>
-                                                <constraint firstAttribute="bottom" secondItem="6P1-5H-CWU" secondAttribute="bottom" constant="5" id="NCI-6v-WGN"/>
-                                                <constraint firstItem="AYR-0r-TkY" firstAttribute="centerY" secondItem="chE-w1-5Ux" secondAttribute="centerY" id="p17-6G-oiw"/>
-                                                <constraint firstAttribute="trailing" secondItem="6P1-5H-CWU" secondAttribute="trailing" constant="20" symbolic="YES" id="sIU-cs-ZIr"/>
-                                                <constraint firstItem="6P1-5H-CWU" firstAttribute="top" secondItem="zQH-16-9cg" secondAttribute="top" constant="5" id="sgh-6c-hNe"/>
+                                                <constraint firstItem="6P1-5H-CWU" firstAttribute="trailing" secondItem="zQH-16-9cg" secondAttribute="trailingMargin" id="BXx-YG-1hI"/>
+                                                <constraint firstItem="chE-w1-5Ux" firstAttribute="leading" secondItem="zQH-16-9cg" secondAttribute="leadingMargin" constant="-1" id="JM7-3o-qRH"/>
+                                                <constraint firstItem="chE-w1-5Ux" firstAttribute="top" secondItem="zQH-16-9cg" secondAttribute="topMargin" constant="-70" id="MYZ-wx-CjF"/>
+                                                <constraint firstItem="chE-w1-5Ux" firstAttribute="centerY" secondItem="AYR-0r-TkY" secondAttribute="centerY" id="QjU-pI-jPH"/>
+                                                <constraint firstItem="AYR-0r-TkY" firstAttribute="leading" secondItem="zQH-16-9cg" secondAttribute="leadingMargin" constant="58" id="RAt-dm-qGs"/>
+                                                <constraint firstItem="AYR-0r-TkY" firstAttribute="top" secondItem="zQH-16-9cg" secondAttribute="topMargin" constant="-8" id="Z9I-2l-8pp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="chE-w1-5Ux" secondAttribute="trailing" constant="53" id="ZJK-ID-YJC"/>
+                                                <constraint firstItem="chE-w1-5Ux" firstAttribute="centerY" secondItem="zQH-16-9cg" secondAttribute="centerY" id="fwW-xh-aqu"/>
+                                                <constraint firstItem="AYR-0r-TkY" firstAttribute="centerY" secondItem="6P1-5H-CWU" secondAttribute="centerY" id="o2g-2l-sxk"/>
+                                                <constraint firstItem="6P1-5H-CWU" firstAttribute="leading" secondItem="AYR-0r-TkY" secondAttribute="trailing" constant="44" id="tbr-qg-b7l"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
