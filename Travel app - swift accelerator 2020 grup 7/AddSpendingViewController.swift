@@ -119,7 +119,7 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         
-        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: Selector(("doneButtonAction")))
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.doneButtonAction))
         
         var items = [UIBarButtonItem]()
         items.append(flexSpace)
@@ -132,7 +132,7 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         
       }
       
-      func doneButtonAction()
+      @objc func doneButtonAction()
       {
         self.spendingCostTextField.resignFirstResponder()
       }
