@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditPackingItemTableViewController: UITableViewController {
+class EditPackingItemTableViewController: UITableViewController, UITextViewDelegate {
 
     var PackingItem: packingItem!
     var newPackingItem = false
@@ -20,11 +20,36 @@ class EditPackingItemTableViewController: UITableViewController {
         super.viewDidLoad()
         if PackingItem != nil {
             nameTextField.text = PackingItem.name
+            notesTextView.text = PackingItem?.note
         } else {
-            PackingItem = packingItem(name: "")
+            PackingItem = packingItem(name: "", note: notesTextView.text ?? "")
+            notesTextView.delegate = self
         }
     }
-
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+            if(text == "\n") {
+                notesTextView.resignFirstResponder()
+                return false
+            }
+            return true
+        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "unwindFromDetail"{
+        if self.newPackingItem == true{
+        self.PackingItem?.name = nameTextField.text ?? ""
+        self.PackingItem?.note = notesTextView.text ?? ""
+            
+            } else {
+                self.PackingItem = packingItem(name: nameTextField.text ?? "", note: notesTextView.text ?? "")
+                print("created item here", self.PackingItem)
+            
+        }
+    }
+}
+    
+    
     @IBAction func textFieldUpdated(_ sender: UITextField) {
         PackingItem.name =  sender.text ?? ""
     }
@@ -39,10 +64,10 @@ class EditPackingItemTableViewController: UITableViewController {
     @IBAction func saveButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
 
     @IBAction func packingItemEditingEnded(_ sender: Any) {
         nameTextField.resignFirstResponder()
+        notesTextView.resignFirstResponder()
     }
     
 }

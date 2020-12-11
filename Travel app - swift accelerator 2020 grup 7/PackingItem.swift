@@ -11,9 +11,11 @@ class packingItem {
     
     var name: String
     var checked = false
+    var note: String
     
-    init(name: String) {
+    init(name: String, note: String) {
         self.name = name
+        self.note = note
     }
 }
  

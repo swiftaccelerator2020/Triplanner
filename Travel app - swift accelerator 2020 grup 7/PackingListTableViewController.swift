@@ -14,7 +14,7 @@ class PackingListTableViewController: UITableViewController {
    
     
     var packingItems = [
-        packingItem(name: "Add in the things you wish to pack!")
+        packingItem(name: "Add in the things you wish to pack!", note: "")
     ]
    
     
