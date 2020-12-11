@@ -139,7 +139,15 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         self.spendingCostTextField.resignFirstResponder()
       }
     
-        
+    //trying to make the textview dismissible
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+            if(text == "\n") {
+                spendingNotesTextView.resignFirstResponder()
+                return false
+            }
+            return true
+        }
+    
     
 }
 
@@ -154,14 +162,6 @@ keyboardToolbar.items = [flexBarButton, doneBarButton]
 self.inputAccessoryView = keyboardToolbar
 }
     
-    //trying to make the textview dismissible
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-            if(text == "\n") {
-                textView.resignFirstResponder()
-                return false
-            }
-            return true
-        }
-    
+ 
     
 }
