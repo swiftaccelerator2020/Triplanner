@@ -25,6 +25,8 @@ class EditPackingItemTableViewController: UITableViewController, UITextViewDeleg
             PackingItem = packingItem(name: "", note: notesTextView.text ?? "")
             notesTextView.delegate = self
         }
+        //trying to make textview dismissible
+        notesTextView.delegate = self
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -68,5 +70,15 @@ class EditPackingItemTableViewController: UITableViewController, UITextViewDeleg
         nameTextField.resignFirstResponder()
         notesTextView.resignFirstResponder()
     }
+ 
+    //trying to make the textview dismissible
+    func textView(_textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+            if(text == "\n") {
+                notesTextView.resignFirstResponder()
+                return false
+            }
+            return true
+        }
+    
     
 }

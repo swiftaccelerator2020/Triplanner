@@ -10,7 +10,6 @@ import UIKit
 class BudgetViewController: UIViewController, UITextFieldDelegate {
     
     
-    
 
     @IBOutlet weak var foodButton: UIButton!
     @IBOutlet weak var accomodationButton: UIButton!
@@ -52,7 +51,9 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         
         self.totalBudgetTextField.text = String(total ?? 0.0)
         
-        
+        //--- add UIToolBar on keyboard and Done button on UIToolBar ---//
+                self.addDoneButtonOnKeyboard()
+        self.totalBudgetTextField.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -84,9 +85,9 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     @IBAction func totalBudgetFinishedEditing(_ sender: Any) {
         print("total budget done editing")
         total = Double(totalBudgetTextField.text ?? "")
-        print(total)
-        left = (total! - spent!)
-        amountLeftTextField.text = String(total! - spent!)
+        print(total as Any)
+        left = (total ?? 0.0 - spent!)
+//        amountLeftTextField.text = String(total! - spent!)
 //        if total == nil{
 //            totalBudgetTextField.text = "0.0"
 //        }else{
@@ -277,6 +278,32 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         }
         return categorizedSpending
     }
+    
+    
+    func addDoneButtonOnKeyboard()
+      {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        doneToolbar.barStyle = UIBarStyle.default
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.doneButtonAction))
+        
+        var items = [UIBarButtonItem]()
+        items.append(flexSpace)
+        items.append(done)
+        
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        self.totalBudgetTextField.inputAccessoryView = doneToolbar
+        
+      }
+      
+      @objc func doneButtonAction()
+      {
+        self.totalBudgetTextField.resignFirstResponder()
+      }
+    
 }
-
 
