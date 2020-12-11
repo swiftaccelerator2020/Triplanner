@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UITextViewDelegate {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
@@ -64,6 +64,8 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         //--- add UIToolBar on keyboard and Done button on UIToolBar ---//
                 self.addDoneButtonOnKeyboard()
         self.spendingCostTextField.delegate = self
+        //trying to make textview dismissible
+        spendingNotesTextView.delegate = self
     }
     
     
@@ -151,4 +153,15 @@ let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, ac
 keyboardToolbar.items = [flexBarButton, doneBarButton]
 self.inputAccessoryView = keyboardToolbar
 }
+    
+    //trying to make the textview dismissible
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+            if(text == "\n") {
+                textView.resignFirstResponder()
+                return false
+            }
+            return true
+        }
+    
+    
 }

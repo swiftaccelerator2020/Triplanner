@@ -554,16 +554,16 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWK-wi-Jdl">
-                                <rect key="frame" x="188" y="108" width="73.666666666666686" height="22"/>
-                                <state key="normal" title="Button" image="dollarsign.circle" catalog="system"/>
+                                <rect key="frame" x="188" y="108" width="19.666666666666657" height="22"/>
+                                <state key="normal" image="dollarsign.circle" catalog="system"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwk-AC-VZp">
-                                <rect key="frame" x="188" y="150" width="73.666666666666686" height="22"/>
-                                <state key="normal" title="Button" image="dollarsign.circle" catalog="system"/>
+                                <rect key="frame" x="188" y="150" width="19.666666666666657" height="22"/>
+                                <state key="normal" image="dollarsign.circle" catalog="system"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiQ-Eo-ab2">
-                                <rect key="frame" x="188" y="192" width="73.666666666666686" height="22"/>
-                                <state key="normal" title="Button" image="dollarsign.circle" catalog="system"/>
+                                <rect key="frame" x="188" y="192" width="19.666666666666657" height="22"/>
+                                <state key="normal" image="dollarsign.circle" catalog="system"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A7c-7P-y38"/>
