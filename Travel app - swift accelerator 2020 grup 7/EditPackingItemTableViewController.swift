@@ -14,6 +14,8 @@ class EditPackingItemTableViewController: UITableViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     
+    @IBOutlet weak var notesTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if PackingItem != nil {
@@ -26,7 +28,9 @@ class EditPackingItemTableViewController: UITableViewController {
     @IBAction func textFieldUpdated(_ sender: UITextField) {
         PackingItem.name =  sender.text ?? ""
     }
-
+    
+    @IBOutlet weak var notesTextFieldUpdated: UITextView!
+    
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ItinEventViewController: UIViewController {
+class ItinEventViewController: UIViewController, UITextViewDelegate {
     
     var event: DayEvent!
     var isAnExistingEvent = true
@@ -51,6 +51,9 @@ class ItinEventViewController: UIViewController {
             dateDatePicker.setDate(defaultDate, animated: true)
             }
         }
+        
+        //trying to make textview dismissible
+        eventNoteView.delegate = self
     }
     
     
@@ -136,6 +139,14 @@ class ItinEventViewController: UIViewController {
     }
     
     
+    //trying to make the textview dismissible
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+            if(text == "\n") {
+                eventNoteView.resignFirstResponder()
+                return false
+            }
+            return true
+        }
     
     
 }
