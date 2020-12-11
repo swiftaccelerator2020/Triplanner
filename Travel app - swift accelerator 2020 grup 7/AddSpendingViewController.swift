@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UITextViewDelegate {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
@@ -22,6 +22,20 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.categoryLabel.text = categories[row]
     }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = (view as? UILabel)
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            pickerLabel?.font = UIFont(name: "System", size: 17)
+            pickerLabel?.textAlignment = .center
+        }
+        pickerLabel?.text = categories[row]
+        pickerLabel?.textColor = UIColor.blue
+
+        return pickerLabel!
+    }
+    
     
     var budgetItem: BudgetItem?
     var isExistingItem: Bool = false
@@ -64,6 +78,8 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         //--- add UIToolBar on keyboard and Done button on UIToolBar ---//
                 self.addDoneButtonOnKeyboard()
         self.spendingCostTextField.delegate = self
+        //trying to make textview dismissible
+        spendingNotesTextView.delegate = self
     }
     
     
@@ -119,7 +135,7 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         
-        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: Selector(("doneButtonAction")))
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.doneButtonAction))
         
         var items = [UIBarButtonItem]()
         items.append(flexSpace)
@@ -132,12 +148,20 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         
       }
       
-      func doneButtonAction()
+      @objc func doneButtonAction()
       {
         self.spendingCostTextField.resignFirstResponder()
       }
     
-        
+    //trying to make the textview dismissible
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+            if(text == "\n") {
+                spendingNotesTextView.resignFirstResponder()
+                return false
+            }
+            return true
+        }
+    
     
 }
 
@@ -151,4 +175,7 @@ let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, ac
 keyboardToolbar.items = [flexBarButton, doneBarButton]
 self.inputAccessoryView = keyboardToolbar
 }
+    
+ 
+    
 }
