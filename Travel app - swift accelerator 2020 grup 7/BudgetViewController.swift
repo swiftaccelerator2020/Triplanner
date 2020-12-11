@@ -51,21 +51,12 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if self.budgetItemsDict["Food"] != nil{
-            let foodAttributedTitle = NSAttributedString(string: "Food spending: \n \(self.budgetItemsDict["Food"]![0].name): \(self.budgetItemsDict["Food"]![0].cost)", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
-        foodButton.setAttributedTitle(foodAttributedTitle, for: .normal)
-        foodButton.titleLabel?.font = UIFont(name: "system", size: 2)
-            foodButton.titleLabel?.textAlignment = .left
+        for i in categories{
+            generateCategorizedSpending(category: i)
         }
-
-        print("foodButton.titleLabel",foodButton.titleLabel)
         
-//        for (key,value) in budgetItemsDict{
-//            print(budgetItemsDict)
-//            foodButton.setTitle("My food", for: .normal)
-//
-//
-//        }
+        
+        
     }
     
     
@@ -201,6 +192,24 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    func returnButtonName(string: String) -> UIButton{
+        var result: UIButton!
+        switch string {
+        case "Food":
+            result = foodButton
+        case "Accomodation":
+            result = accomodationButton
+        case "Shopping":
+            result = shoppingButton
+        case "Travel":
+            result = travelButton
+        default:
+            result = otherButton
+        }
+        return result
+    
+    }
+    
     @IBAction func foodButtonPressed(_ sender: UIButton) {
         
     }
@@ -226,4 +235,24 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+    
+    
+    func generateCategorizedSpending(category: String){
+        if self.budgetItemsDict[category] != nil{
+            var tSpending = 0.0
+            for i in (self.budgetItemsDict[category]!){
+                tSpending += Double(i.cost)
+            }
+            let randomChoice = self.budgetItemsDict[category]?.randomElement()
+            
+            let foodAttributedTitle = NSAttributedString(string: "\(category): $\(tSpending)", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+//            \n\(randomChoice!.name): $\(randomChoice!.cost)"
+            
+        returnButtonName(string: category).setAttributedTitle(foodAttributedTitle, for: .normal)
+        returnButtonName(string: category).titleLabel?.font = UIFont(name: "system", size: 4)
+            foodButton.titleLabel?.textAlignment = .left
+        }
+    }
 }
+
+
