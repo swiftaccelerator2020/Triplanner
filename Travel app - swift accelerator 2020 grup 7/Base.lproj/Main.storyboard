@@ -134,20 +134,20 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packing List:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdL-eL-vYd">
-                                <rect key="frame" x="20" y="499" width="120" height="24"/>
+                                <rect key="frame" x="20" y="554" width="120" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szO-6c-E7v">
-                                <rect key="frame" x="190" y="499" width="218" height="22"/>
+                                <rect key="frame" x="190" y="554" width="218" height="22"/>
                                 <state key="normal" image="chevron.right" catalog="system"/>
                                 <connections>
                                     <segue destination="76h-IX-RFd" kind="presentation" modalPresentationStyle="fullScreen" id="V3D-iR-acR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packing list item!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vG7-P9-HFP">
-                                <rect key="frame" x="20" y="533" width="128.66666666666666" height="20.333333333333371"/>
+                                <rect key="frame" x="20" y="588" width="128.66666666666666" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -165,17 +165,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uma-p5-jm2">
-                                <rect key="frame" x="395" y="531" width="13" height="24"/>
+                                <rect key="frame" x="395" y="586" width="13" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" image="checkmark.circle"/>
                                 <connections>
                                     <action selector="checkCircle1Tapped:" destination="QSK-vV-qtH" eventType="touchUpInside" id="VM1-Gt-rox"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vny-LJ-8so">
-                                <rect key="frame" x="20" y="399" width="388" height="80"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vny-LJ-8so">
+                                <rect key="frame" x="20" y="399" width="388" height="135"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="UNY-hT-Lky"/>
+                                    <constraint firstAttribute="height" constant="135" id="UNY-hT-Lky"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>

@@ -18,16 +18,16 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var totalBudgetTextField: UITextField!
     @IBOutlet weak var amountSpentTextField: UITextField!
     @IBOutlet weak var amountLeftTextField: UITextField!
-    var editIndicator1: Bool = false
-    var editIndicator2: Bool = false
-    var editIndicator3: Bool = false
+
     var total: Double? = 0.0
     var spent: Double? = 0.0
     var left: Double? = 0.0
     var budgetItemsDict: Dictionary<String, Array<BudgetItem>> = [:]
     let categories: Array<String> = ["Food", "Accomodation", "Shopping", "Travel", "Other"]
     var itemOutOfCategory: Bool = false
-    var calculatingDict: Dictionary<String, Int> = [:]
+    var calculatingDict: Dictionary<String, Double> = [:]
+    var spendingAddedUp = 0.0
+    var delegate: BudgetDataDelegate?
     
     
     
@@ -53,19 +53,17 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("vdavdavda")
-        var spendingAddedUp = 0.0
+        spendingAddedUp = 0.0
         for i in categories{
-            spendingAddedUp += generateCategorizedSpending(category: i)
+            var tempCategorizedBudget = 0.0
+            tempCategorizedBudget += generateCategorizedSpending(category: i)
+            spendingAddedUp += tempCategorizedBudget
+            calculatingDict[i] = tempCategorizedBudget
             
         print(spendingAddedUp)
         amountSpentTextField.text = String(spendingAddedUp)
         spent = spendingAddedUp
-            amountLeftTextField.text = String(total! - spendingAddedUp)
-           // String(total ?? 0.0 - (spent ?? 0.0))
-            
-            
-            //MARK: The problem is view did appear
+        amountLeftTextField.text = String(total! - spendingAddedUp)
     }
     }
     
@@ -183,6 +181,23 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
             }
                 
             }
+        
+        if let dest = segue.destination as? TripOverviewViewController{
+            let string1 = "total budget $\(total!), spent $\(spendingAddedUp), \(spendingAddedUp/(total ?? 1.0)*100)% of total"
+            //MARK: the percentage needs rounding up
+            
+            var string2 = ""
+            for (key,value) in self.calculatingDict{
+                let percentage = (value/total!) * 100
+                let tempString = "\(percentage)% of total   $\(value)  \(key) spent\n"
+                string2.append(tempString)
+            }
+            //MARK: the percentage here needs rounding up too
+            
+            print("string1, string2", string1, string2)
+            delegate?.calculateBudget(string1: string1, string2: string2)
+            
+        }
         }
     
     
