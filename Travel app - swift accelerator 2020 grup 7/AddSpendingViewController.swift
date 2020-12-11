@@ -58,9 +58,12 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
     }
     @IBOutlet var spendingNotesTextViewUpdated: UITextView!
     
+   
     
     
     override func viewDidLoad() {
+
+        
         super.viewDidLoad()
         self.categoryPickerView.delegate = self
         self.categoryPickerView.dataSource = self
