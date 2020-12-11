@@ -14,7 +14,7 @@ class PackingListTableViewController: UITableViewController {
    
     
     var packingItems = [
-        packingItem(name: "Add in the things you wish to pack!")
+        packingItem(name: "Add in the things you wish to pack!", note: "")
     ]
    
     
@@ -44,7 +44,7 @@ class PackingListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return packingItems.count 
+        return packingItems.count
     }
 
     
