@@ -511,53 +511,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="27G-Yw-Hu2">
-                                <rect key="frame" x="238" y="101" width="120" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="689-nJ-ro2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="totalBudgetFinishedEditing:" destination="B4D-IW-gQn" eventType="editingDidEnd" id="NX7-tv-8yZ"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dPD-iV-A0I">
-                                <rect key="frame" x="238" y="143" width="120" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="rjn-5O-TPJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="amountSpentFinishedEditing:" destination="B4D-IW-gQn" eventType="editingDidEnd" id="uYo-uo-iXH"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwd-Za-9Zl">
-                                <rect key="frame" x="238" y="185" width="120" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="Tmg-GK-eHB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="amountLeftFinishedEditing:" destination="B4D-IW-gQn" eventType="editingDidEnd" id="6EK-1m-9LX"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWK-wi-Jdl">
-                                <rect key="frame" x="213" y="108" width="20" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="jfS-bX-M8D"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="dollarsign.circle" catalog="system"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwk-AC-VZp">
-                                <rect key="frame" x="213" y="149" width="20" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="hWM-AP-6F9"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="dollarsign.circle" catalog="system"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount Left:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amH-YE-D38">
                                 <rect key="frame" x="20.000000000000007" y="192" width="122.66666666666669" height="20"/>
                                 <constraints>
@@ -567,12 +520,49 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiQ-Eo-ab2">
-                                <rect key="frame" x="213" y="191" width="20" height="22"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="27G-Yw-Hu2">
+                                <rect key="frame" x="213" y="101" width="120" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="N83-aa-05O"/>
-                                    <constraint firstAttribute="width" constant="20" id="O6k-Xe-qE4"/>
+                                    <constraint firstAttribute="width" constant="120" id="nTM-YN-EQq"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="totalBudgetFinishedEditing:" destination="B4D-IW-gQn" eventType="editingDidEnd" id="NX7-tv-8yZ"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dPD-iV-A0I">
+                                <rect key="frame" x="213" y="143" width="120" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="3GT-BA-NWx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="amountSpentFinishedEditing:" destination="B4D-IW-gQn" eventType="editingDidEnd" id="uYo-uo-iXH"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwd-Za-9Zl">
+                                <rect key="frame" x="213" y="185" width="120" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="76x-aY-2IT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="amountLeftFinishedEditing:" destination="B4D-IW-gQn" eventType="editingDidEnd" id="6EK-1m-9LX"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWK-wi-Jdl">
+                                <rect key="frame" x="188" y="108" width="73.666666666666686" height="22"/>
+                                <state key="normal" title="Button" image="dollarsign.circle" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwk-AC-VZp">
+                                <rect key="frame" x="188" y="150" width="73.666666666666686" height="22"/>
+                                <state key="normal" title="Button" image="dollarsign.circle" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiQ-Eo-ab2">
+                                <rect key="frame" x="188" y="192" width="73.666666666666686" height="22"/>
                                 <state key="normal" title="Button" image="dollarsign.circle" catalog="system"/>
                             </button>
                         </subviews>
@@ -580,30 +570,28 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="xwd-Za-9Zl" firstAttribute="baseline" secondItem="amH-YE-D38" secondAttribute="baseline" id="0aV-Jn-IDn"/>
                             <constraint firstItem="wgr-bl-7m2" firstAttribute="leading" secondItem="A7c-7P-y38" secondAttribute="leading" constant="20" id="2xb-yg-DQk"/>
                             <constraint firstItem="amH-YE-D38" firstAttribute="top" secondItem="B71-qd-IkG" secondAttribute="bottom" constant="22" id="3Kf-we-Qvi"/>
+                            <constraint firstItem="uiQ-Eo-ab2" firstAttribute="top" secondItem="jwk-AC-VZp" secondAttribute="bottom" constant="20" id="3fk-DF-qY9"/>
                             <constraint firstItem="B71-qd-IkG" firstAttribute="leading" secondItem="A7c-7P-y38" secondAttribute="leading" constant="20" id="4gc-6w-nb2"/>
-                            <constraint firstItem="jwk-AC-VZp" firstAttribute="top" secondItem="DWK-wi-Jdl" secondAttribute="bottom" constant="19" id="7OE-Hd-SbH"/>
                             <constraint firstItem="wgr-bl-7m2" firstAttribute="top" secondItem="A7c-7P-y38" secondAttribute="top" constant="20" id="7pP-Vp-DNH"/>
-                            <constraint firstItem="jwk-AC-VZp" firstAttribute="centerY" secondItem="B71-qd-IkG" secondAttribute="centerY" id="B8g-yl-5be"/>
                             <constraint firstItem="B71-qd-IkG" firstAttribute="top" secondItem="wgr-bl-7m2" secondAttribute="bottom" constant="22" id="DSw-CY-QPh"/>
-                            <constraint firstItem="xwd-Za-9Zl" firstAttribute="top" secondItem="dPD-iV-A0I" secondAttribute="bottom" constant="8" symbolic="YES" id="Pho-TA-28z"/>
-                            <constraint firstItem="A7c-7P-y38" firstAttribute="trailing" secondItem="dPD-iV-A0I" secondAttribute="trailing" constant="70" id="R9P-jm-EYb"/>
+                            <constraint firstItem="dPD-iV-A0I" firstAttribute="top" secondItem="27G-Yw-Hu2" secondAttribute="bottom" constant="8" symbolic="YES" id="EV6-G6-gez"/>
+                            <constraint firstItem="xwd-Za-9Zl" firstAttribute="top" secondItem="dPD-iV-A0I" secondAttribute="bottom" constant="8" symbolic="YES" id="FU9-K0-dbx"/>
+                            <constraint firstItem="DWK-wi-Jdl" firstAttribute="top" secondItem="A7c-7P-y38" secondAttribute="top" constant="20" id="P76-YK-AjC"/>
                             <constraint firstItem="WYR-kv-Reg" firstAttribute="leading" secondItem="A7c-7P-y38" secondAttribute="leading" constant="20" id="SJI-Yb-cxh"/>
-                            <constraint firstItem="27G-Yw-Hu2" firstAttribute="leading" secondItem="DWK-wi-Jdl" secondAttribute="trailing" constant="5" id="ScN-rJ-r4I"/>
+                            <constraint firstItem="dPD-iV-A0I" firstAttribute="leading" secondItem="B71-qd-IkG" secondAttribute="trailing" constant="51.670000000000002" id="Uv1-Hf-dVO"/>
+                            <constraint firstItem="27G-Yw-Hu2" firstAttribute="top" secondItem="A7c-7P-y38" secondAttribute="top" constant="13" id="ajD-e4-qvP"/>
+                            <constraint firstItem="27G-Yw-Hu2" firstAttribute="leading" secondItem="wgr-bl-7m2" secondAttribute="trailing" constant="68" id="b3n-Sw-ghe"/>
+                            <constraint firstItem="jwk-AC-VZp" firstAttribute="top" secondItem="DWK-wi-Jdl" secondAttribute="bottom" constant="20" id="d1j-Uo-4v4"/>
                             <constraint firstItem="A7c-7P-y38" firstAttribute="trailing" secondItem="WYR-kv-Reg" secondAttribute="trailing" constant="20" id="efY-Ln-IU3"/>
+                            <constraint firstItem="DWK-wi-Jdl" firstAttribute="leading" secondItem="wgr-bl-7m2" secondAttribute="trailing" constant="43" id="gFd-kQ-lSa"/>
                             <constraint firstItem="A7c-7P-y38" firstAttribute="bottom" secondItem="WYR-kv-Reg" secondAttribute="bottom" constant="20" id="i3O-A3-J8v"/>
-                            <constraint firstItem="dPD-iV-A0I" firstAttribute="leading" secondItem="jwk-AC-VZp" secondAttribute="trailing" constant="5" id="iu9-BK-R72"/>
-                            <constraint firstItem="uiQ-Eo-ab2" firstAttribute="centerY" secondItem="xwd-Za-9Zl" secondAttribute="centerY" id="jkc-wi-BTo"/>
-                            <constraint firstItem="27G-Yw-Hu2" firstAttribute="top" secondItem="A7c-7P-y38" secondAttribute="top" constant="13" id="oy0-tN-HDp"/>
-                            <constraint firstItem="DWK-wi-Jdl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wgr-bl-7m2" secondAttribute="trailing" constant="8" symbolic="YES" id="p9r-q2-h9m"/>
-                            <constraint firstItem="xwd-Za-9Zl" firstAttribute="leading" secondItem="uiQ-Eo-ab2" secondAttribute="trailing" constant="5" id="rps-gD-76S"/>
-                            <constraint firstItem="jwk-AC-VZp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="B71-qd-IkG" secondAttribute="trailing" constant="8" symbolic="YES" id="sDH-Gp-yj5"/>
-                            <constraint firstItem="A7c-7P-y38" firstAttribute="trailing" secondItem="27G-Yw-Hu2" secondAttribute="trailing" constant="70" id="twV-kP-Ds9"/>
+                            <constraint firstItem="uiQ-Eo-ab2" firstAttribute="leading" secondItem="amH-YE-D38" secondAttribute="trailing" constant="45.329999999999998" id="pHr-z4-91y"/>
+                            <constraint firstItem="xwd-Za-9Zl" firstAttribute="leading" secondItem="amH-YE-D38" secondAttribute="trailing" constant="70.329999999999998" id="tBb-ej-nOb"/>
                             <constraint firstItem="amH-YE-D38" firstAttribute="leading" secondItem="A7c-7P-y38" secondAttribute="leading" constant="20" id="uk6-uQ-Qgx"/>
                             <constraint firstItem="WYR-kv-Reg" firstAttribute="top" secondItem="amH-YE-D38" secondAttribute="bottom" constant="25" id="yhC-B3-xEf"/>
-                            <constraint firstItem="A7c-7P-y38" firstAttribute="trailing" secondItem="xwd-Za-9Zl" secondAttribute="trailing" constant="70" id="yo0-wQ-nsv"/>
+                            <constraint firstItem="jwk-AC-VZp" firstAttribute="leading" secondItem="B71-qd-IkG" secondAttribute="trailing" constant="26.670000000000002" id="zap-T5-SIJ"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="nN6-rz-GEL" appends="YES" id="tfZ-Uf-sm0"/>
@@ -846,7 +834,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-uv-VPl">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-uv-VPl">
                                                     <rect key="frame" x="20" y="11" width="388" height="380"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <color key="textColor" systemColor="labelColor"/>
