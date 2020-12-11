@@ -51,12 +51,21 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        for (key,value) in budgetItemsDict{
-            print(budgetItemsDict)
-            foodButton.setTitle("My food", for: .normal)
-            
-            
+        if self.budgetItemsDict["Food"] != nil{
+            let foodAttributedTitle = NSAttributedString(string: "Food spending: \n \(self.budgetItemsDict["Food"]![0].name): \(self.budgetItemsDict["Food"]![0].cost)", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        foodButton.setAttributedTitle(foodAttributedTitle, for: .normal)
+        foodButton.titleLabel?.font = UIFont(name: "system", size: 2)
+            foodButton.titleLabel?.textAlignment = .left
         }
+
+        print("foodButton.titleLabel",foodButton.titleLabel)
+        
+//        for (key,value) in budgetItemsDict{
+//            print(budgetItemsDict)
+//            foodButton.setTitle("My food", for: .normal)
+//
+//
+//        }
     }
     
     
@@ -193,11 +202,7 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func foodButtonPressed(_ sender: UIButton) {
-        let attributedTitle = sender.attributedTitle(for: .normal)
-        print("attr", attributedTitle)
-             attributedTitle?.setValue("buttonName", forKey: "string")
-             sender.setAttributedTitle(attributedTitle, for: .normal)
-        print("foodButton.titleLabel",foodButton.titleLabel)
+        
     }
     
 //    @IBAction func totalBudgetEditingEnd(_ sender: Any) {

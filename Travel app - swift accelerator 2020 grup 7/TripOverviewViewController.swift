@@ -154,9 +154,9 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         if let source = segue.source as? ItinEventViewController{
             if segue.identifier == "unwindSave"{
             print("backToOverviewViewController segue result:", source.event)
-                if itinEventsDict[source.event.date] == []{
-                    itinEventsDict[source.event.date]? = [source.event]
-                }else{
+                if itinEventsDict[source.event.date] == nil{
+                    itinEventsDict[source.event.date] = [source.event]
+               }else{
                 itinEventsDict[source.event.date]?.append(source.event)
                 }
                 itinOverviewLabel.text = source.event.destination
