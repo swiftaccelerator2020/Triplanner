@@ -1005,6 +1005,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="eGy-SJ-w9Y" id="YQq-Jd-lvD"/>
+                        <outlet property="notesTextFieldUpdated" destination="jRO-bI-bdA" id="IlI-38-tK9"/>
+                        <outlet property="notesTextView" destination="jRO-bI-bdA" id="gkM-Ta-wVZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sOl-au-qtX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
