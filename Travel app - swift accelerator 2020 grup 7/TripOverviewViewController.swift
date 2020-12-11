@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 protocol ItinDataDelegate {
     func printItinEvent(titleDict: Dictionary<Int, Any>)
 }
@@ -20,6 +22,9 @@ protocol PackingListCheckedDelegate {
 }
 
 class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingListDataDelegate{
+   
+    @IBOutlet weak var locationTextField: UITextField!
+    
     func printPackingListItem(titleArray: Array<packingItem>, isChecked: Bool) {
         print("delegate titleArray:", titleArray)
         if titleArray.isEmpty == false{
@@ -54,6 +59,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         }
     }
     }
+    
   //MARK: Itinerary overview variables
     @IBOutlet weak var newItineraryItem: UIButton!
     @IBOutlet weak var itinOverviewLabel: UILabel!
@@ -196,6 +202,30 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 
             }
         }
+    }
+    
+    class TextFieldWithReturn: UITextField, UITextFieldDelegate
+    {
+
+        required init?(coder aDecoder: NSCoder)
+        {
+            super.init(coder: aDecoder)
+            self.delegate = self
+        }
+
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool
+        {
+            textField.resignFirstResponder()
+            return true
+        }
+
+    }
+    
+
+    
+    
+    @IBAction func locationEditingEnd(_ sender: Any) {
+        locationTextField.resignFirstResponder()
     }
     
 }

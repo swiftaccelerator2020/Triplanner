@@ -111,11 +111,7 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         spendingNameTextField.resignFirstResponder()
     }
     
-    @IBAction func screenTapped(_ sender: Any) {
-        spendingCostTextField.resignFirstResponder()
-    }
-    
-   
+ 
     
 }
 

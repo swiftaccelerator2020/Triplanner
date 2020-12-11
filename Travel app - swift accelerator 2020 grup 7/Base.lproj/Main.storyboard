@@ -89,7 +89,11 @@
                                             <constraint firstAttribute="width" constant="230" id="NjF-bq-u0n"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="locationEditingEnd:" destination="QSK-vV-qtH" eventType="editingDidEndOnExit" id="FMg-yG-YZu"/>
+                                            <outlet property="delegate" destination="BI3-6z-lZ6" id="G8o-dq-7zs"/>
+                                        </connections>
                                     </textField>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="3mu-Vj-3y5">
                                         <rect key="frame" x="0.0" y="52" width="242" height="50"/>
@@ -212,6 +216,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="itinOverviewLabel" destination="k2K-ac-Zqd" id="0eo-WL-7xs"/>
+                        <outlet property="locationTextField" destination="6Y2-eC-gP5" id="QoG-3z-kgQ"/>
                         <outlet property="newItineraryItem" destination="g4M-w7-Zfh" id="F2Z-EX-cIr"/>
                         <outlet property="overviewEndDatePicker" destination="jWE-Yl-VQc" id="Bfr-n6-dR4"/>
                         <outlet property="overviewStartDatePicker" destination="3mu-Vj-3y5" id="Vyp-24-Ark"/>
@@ -512,7 +517,10 @@
                                     <constraint firstAttribute="width" constant="120" id="689-nJ-ro2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="totalBudgetEditingEnd:" destination="B4D-IW-gQn" eventType="editingDidEndOnExit" id="ONh-DI-Xnj"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dPD-iV-A0I">
                                 <rect key="frame" x="198" y="143" width="120" height="34"/>
@@ -520,7 +528,10 @@
                                     <constraint firstAttribute="width" constant="120" id="rjn-5O-TPJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="amountSpentEditingEnd:" destination="B4D-IW-gQn" eventType="editingDidEndOnExit" id="nVE-W4-yJs"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwd-Za-9Zl">
                                 <rect key="frame" x="198" y="185" width="120" height="34"/>
@@ -528,7 +539,10 @@
                                     <constraint firstAttribute="width" constant="120" id="Tmg-GK-eHB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="amountLeftEditingEnd:" destination="B4D-IW-gQn" eventType="editingDidEndOnExit" id="kJn-sJ-VgS"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWK-wi-Jdl">
                                 <rect key="frame" x="173" y="108" width="20" height="22"/>
@@ -610,10 +624,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="accomodationButton" destination="knb-lC-wTk" id="fWe-Ha-kdl"/>
+                        <outlet property="amountLeftTextField" destination="xwd-Za-9Zl" id="mVD-tg-Uxp"/>
+                        <outlet property="amountSpentTextField" destination="dPD-iV-A0I" id="JYM-td-w21"/>
                         <outlet property="foodButton" destination="bTO-vu-guR" id="uIt-hl-QUp"/>
                         <outlet property="otherButton" destination="GRu-Jg-Kp6" id="Xgq-Vc-CTc"/>
                         <outlet property="shoppingButton" destination="Uck-IT-FhW" id="Dan-Dc-cPs"/>
                         <outlet property="tapGestureRecognizer" destination="nN6-rz-GEL" id="ISK-vT-0G1"/>
+                        <outlet property="totalBudgetTextField" destination="27G-Yw-Hu2" id="PCC-Y0-N9Q"/>
                         <outlet property="travelButton" destination="Eed-Q0-UmU" id="UnT-UJ-huE"/>
                     </connections>
                 </viewController>
@@ -710,7 +727,7 @@
             <objects>
                 <tableViewController id="Vb8-iI-wjc" customClass="AddSpendingViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0ap-IX-Jnq">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
@@ -824,7 +841,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Notes" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-uv-VPl">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-uv-VPl">
                                                     <rect key="frame" x="20" y="11" width="388" height="380"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <color key="textColor" systemColor="labelColor"/>
@@ -834,12 +851,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Szj-JZ-qpm" firstAttribute="leading" secondItem="Ls7-WX-qKK" secondAttribute="leading" constant="10" id="4Xt-3l-DGj"/>
-                                                <constraint firstItem="g9h-uv-VPl" firstAttribute="leading" secondItem="Ls7-WX-qKK" secondAttribute="leadingMargin" constant="10" id="Fme-ja-DiN"/>
-                                                <constraint firstItem="g9h-uv-VPl" firstAttribute="trailing" secondItem="Ls7-WX-qKK" secondAttribute="trailingMargin" constant="10" id="OXM-1z-PEl"/>
+                                                <constraint firstItem="g9h-uv-VPl" firstAttribute="trailing" secondItem="Ls7-WX-qKK" secondAttribute="trailingMargin" id="L0s-zn-TNU"/>
+                                                <constraint firstItem="g9h-uv-VPl" firstAttribute="bottom" secondItem="Ls7-WX-qKK" secondAttribute="bottomMargin" id="NKZ-Ia-lkm"/>
                                                 <constraint firstItem="Szj-JZ-qpm" firstAttribute="top" secondItem="Ls7-WX-qKK" secondAttribute="top" id="axH-Pv-YVo"/>
                                                 <constraint firstAttribute="bottom" secondItem="Szj-JZ-qpm" secondAttribute="bottom" id="doH-8L-gXS"/>
-                                                <constraint firstItem="g9h-uv-VPl" firstAttribute="top" secondItem="Ls7-WX-qKK" secondAttribute="topMargin" constant="10" id="ek6-E5-G7M"/>
-                                                <constraint firstItem="g9h-uv-VPl" firstAttribute="bottom" secondItem="Ls7-WX-qKK" secondAttribute="bottomMargin" constant="10" id="gc3-VS-oAb"/>
+                                                <constraint firstItem="g9h-uv-VPl" firstAttribute="leading" secondItem="Ls7-WX-qKK" secondAttribute="leadingMargin" id="hx5-pb-Iek"/>
+                                                <constraint firstItem="g9h-uv-VPl" firstAttribute="top" secondItem="Ls7-WX-qKK" secondAttribute="topMargin" id="nfD-Iv-aXI"/>
                                                 <constraint firstAttribute="trailing" secondItem="Szj-JZ-qpm" secondAttribute="trailing" constant="10" id="qHs-a1-DzL"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -877,11 +894,6 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdN-QK-d2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Al6-i0-v08">
-                    <connections>
-                        <action selector="screenTapped:" destination="Vb8-iI-wjc" id="pAa-xj-xc6"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <exit id="BpJ-ii-8D7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3473.8317757009345" y="2333.9092872570195"/>
@@ -1075,7 +1087,10 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZy-iC-ca4">
                                         <rect key="frame" x="0.0" y="37" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="destinationEditingEnd:" destination="8D9-0X-1rg" eventType="editingDidEndOnExit" id="KZY-dy-ldx"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rb-rK-45T">
                                         <rect key="frame" x="0.0" y="78" width="388" height="30"/>
@@ -1089,7 +1104,10 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SiS-mu-Yib">
                                         <rect key="frame" x="0.0" y="115" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="startTimeEditingEnd:" destination="8D9-0X-1rg" eventType="editingDidEndOnExit" id="Rpf-Mg-fyW"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOG-6J-aCj">
                                         <rect key="frame" x="0.0" y="156" width="388" height="30"/>
@@ -1103,7 +1121,10 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aww-5V-JVH">
                                         <rect key="frame" x="0.0" y="193" width="388" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="endTimeEditingEnd:" destination="8D9-0X-1rg" eventType="editingDidEndOnExit" id="foY-I6-sL5"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hg-Oz-qpP">
                                         <rect key="frame" x="0.0" y="234" width="388" height="30"/>
@@ -1479,7 +1500,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="yM2-Kt-IKT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NjQ-fi-xAD">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1493,7 +1514,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Njr-Wn-zfu"/>
+        <segue reference="Hh4-Dq-Rge"/>
         <segue reference="Efb-Ot-7g8"/>
         <segue reference="NkC-N2-2CM"/>
     </inferredMetricsTieBreakers>
