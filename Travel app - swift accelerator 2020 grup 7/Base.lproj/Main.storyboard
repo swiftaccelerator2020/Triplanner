@@ -773,9 +773,6 @@
                                                     <rect key="frame" x="10" y="0.0" width="408" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
-                                                    <connections>
-                                                        <action selector="spendingCostTextfieldUpdated:" destination="Vb8-iI-wjc" eventType="editingDidEnd" id="tbv-N2-afg"/>
-                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>

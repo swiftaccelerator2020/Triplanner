@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
@@ -63,7 +63,7 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
     
         //--- add UIToolBar on keyboard and Done button on UIToolBar ---//
                 self.addDoneButtonOnKeyboard()
-        
+        self.spendingCostTextField.delegate = self
     }
     
     
