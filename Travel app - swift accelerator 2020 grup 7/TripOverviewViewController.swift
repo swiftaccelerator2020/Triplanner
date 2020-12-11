@@ -75,6 +75,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     var tripNo: Int = 0
     var trip: Trip!
     var newTrip: Bool = true
+    var generalTripsStorageList: Array<Trip> = []
     
   //MARK: Itinerary overview variables
     @IBOutlet weak var newItineraryItem: UIButton!
@@ -104,15 +105,21 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     
     override func viewDidLoad() {
+        print("tripNo:", tripNo)
         super.viewDidLoad()
         packingListCheckCircle.isHidden = true
         let formatter = DateFormatter()
         formatter.dateFormat = "MM dd, yyyy"
+        locationTextField.text = trip.destination //MARK: to be resolved just a bit later
+        if self.newTrip != nil{
         start = formatter.string(from: trip.startDate)
         end = formatter.string(from: trip.endDate)
         itinEventsDict = trip.itinerary
         budgetItemsStorageDict = trip.budget
         packingItemsStorateList = trip.packingList
+            overviewStartDatePicker.setDate(trip.startDate, animated: true)
+            overviewEndDatePicker.setDate(trip.endDate, animated: true)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -167,8 +174,17 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         
         if let navigationVC = segue.destination as? UINavigationController{
             if let dest = navigationVC.topViewController as? HomeTableViewController{
-                self.trip = Trip(destination: self.locationTextField.text ?? "", startDate: self.overviewStartDatePicker.date, endDate: self.overviewStartDatePicker.date, itinerary: self.itinEventsDict, budget: self.budgetItemsStorageDict, packingList: self.packingItemsStorateList)
-                dest.trips[tripNo] = trip
+                self.trip = Trip(destination: self.locationTextField.text ?? "", startDate: self.overviewStartDatePicker.date, endDate: self.overviewEndDatePicker.date, itinerary: self.itinEventsDict, budget: self.budgetItemsStorageDict, packingList: self.packingItemsStorateList)
+                if generalTripsStorageList.count < tripNo{
+                    generalTripsStorageList.append(trip)
+                    dest.trips = generalTripsStorageList
+                    print("generalTripsStorageList", generalTripsStorageList[0].endDate)
+                }else{
+                    generalTripsStorageList[tripNo] = trip
+                    dest.trips = generalTripsStorageList
+                    print("generalTripsStorageList", generalTripsStorageList[0].endDate)
+                }
+                print("dest.trips", dest.trips)
             }
         }
     }

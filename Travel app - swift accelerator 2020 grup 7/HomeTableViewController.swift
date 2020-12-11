@@ -8,9 +8,9 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
-    
-    
     var trips: Array<Trip> = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,13 +26,21 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return trips.count
+        if trips.isEmpty == true{
+            return 1
+        }else{return trips.count}
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        if trips.isEmpty == false{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM dd, yyyy"
         cell.textLabel?.text = trips[indexPath.row].destination
-        cell.detailTextLabel?.text = "\(trips[indexPath.row].startDate) - \(trips[indexPath.row].endDate)"
+            let sDate = formatter.string(from: trips[indexPath.row].startDate)
+            let eDate = formatter.string(from: trips[indexPath.row].endDate)
+        cell.detailTextLabel?.text = "\(sDate) - \(eDate)"
+        }
 
         return cell
     }
@@ -80,8 +88,11 @@ class HomeTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navigationVC = segue.destination as? UINavigationController{
             if let dest = navigationVC.topViewController as? TripOverviewViewController{
+                if self.trips.isEmpty == false{
                 dest.tripNo = tableView.indexPathForSelectedRow!.row
                 dest.trip = trips[tableView.indexPathForSelectedRow!.row]
+                    dest.generalTripsStorageList = trips
+                }
             }
         }
     }
@@ -89,6 +100,7 @@ class HomeTableViewController: UITableViewController {
     @IBAction func backFromNewTrip(for segue: UIStoryboardSegue){
         if let source = segue.source as? NewTripTableViewController{
             trips.append(source.trip)
+            print("backFromNewTrip", trips)
             tableView.reloadData()
         }
         

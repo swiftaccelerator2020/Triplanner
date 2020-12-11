@@ -69,10 +69,8 @@ class NewTripTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is HomeTableViewController{
-//            let emptyItinerary = [DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: "")]
-//            let emptyBudget = BudgetItem(name: "", cost: 0, category: "", notes: "")
-            
-            trip = Trip(destination: self.destinationTextField.text ?? "", startDate: self.startDatePicker.date, endDate: self.endDatePicker.date, itinerary: ["Not Existing ": []], budget: [:], packingList: [])
+
+            trip = Trip(destination: self.destinationTextField.text ?? "" , startDate: self.startDatePicker.date, endDate: self.endDatePicker.date, itinerary: [:], budget: [:], packingList: [])
         }
     }
 

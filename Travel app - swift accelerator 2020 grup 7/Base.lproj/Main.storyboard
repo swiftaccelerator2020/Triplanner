@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ooB-w0-dZB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="76h-IX-RFd">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -9,68 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Trips-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UITableView">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="z0W-v4-c9B">
-                                <rect key="frame" x="0.0" y="88" width="428" height="804"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="BIE-dR-zdO" detailTextLabel="xAh-ce-77E" style="IBUITableViewCellStyleSubtitle" id="UfP-kv-HqM" customClass="tripCell">
-                                        <rect key="frame" x="20" y="55.333332061767578" width="388" height="55.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UfP-kv-HqM" id="IDw-ZZ-uTF">
-                                            <rect key="frame" x="0.0" y="0.0" width="356.66666666666669" height="55.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BIE-dR-zdO">
-                                                    <rect key="frame" x="20" y="8.9999999999999982" width="65.333333333333329" height="20.333333333333332"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Start Date - End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xAh-ce-77E">
-                                                    <rect key="frame" x="20.000000000000007" y="31.333333333333332" width="121.66666666666667" height="14.333333333333334"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="ZXM-39-g3k" kind="presentation" modalPresentationStyle="fullScreen" id="j2k-QF-Q2y"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z0W-v4-c9B" secondAttribute="bottom" id="LSP-Bk-XSF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z0W-v4-c9B" secondAttribute="trailing" id="RfS-ey-zfK"/>
-                            <constraint firstItem="z0W-v4-c9B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TSN-ix-W9t"/>
-                            <constraint firstItem="z0W-v4-c9B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UQK-WH-NgU"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="My Trips" id="7eS-rm-Ve5">
-                        <barButtonItem key="rightBarButtonItem" title="New Trip" id="rwX-xn-uoz">
-                            <connections>
-                                <segue destination="yrM-pG-xlO" kind="presentation" modalPresentationStyle="fullScreen" id="DyJ-zE-OaG"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="147" y="91"/>
-        </scene>
         <!--Trip Overview-->
         <scene sceneID="Pcs-eH-cXz">
             <objects>
@@ -262,7 +200,7 @@
                     <navigationItem key="navigationItem" title="Trip Overview" id="cwZ-ul-Zx6">
                         <barButtonItem key="leftBarButtonItem" title="All Trips" style="plain" id="HS3-sb-PV9">
                             <connections>
-                                <segue destination="ooB-w0-dZB" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="1ik-bz-7Ju"/>
+                                <segue destination="ez6-os-fcW" kind="presentation" modalPresentationStyle="fullScreen" id="dPy-MC-DZm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -283,26 +221,64 @@
             </objects>
             <point key="canvasLocation" x="408" y="954"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="VBt-PD-duK">
+        <!--My Trips-->
+        <scene sceneID="TR9-vo-dpS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ooB-w0-dZB" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ghP-xf-DZk">
-                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="37"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pHi-ab-i5J"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C4i-64-HbO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tableViewController id="neQ-4Z-rzp" customClass="HomeTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="6Sj-dV-mwy">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="mJx-4Y-Qye" detailTextLabel="xD3-2e-Uce" imageView="ELM-dg-O8G" style="IBUITableViewCellStyleSubtitle" id="aJ5-GC-nor">
+                                <rect key="frame" x="20" y="55.333332061767578" width="388" height="55.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aJ5-GC-nor" id="w6k-id-E35">
+                                    <rect key="frame" x="0.0" y="0.0" width="388" height="55.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mJx-4Y-Qye">
+                                            <rect key="frame" x="59" y="8.9999999999999982" width="33" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xD3-2e-Uce">
+                                            <rect key="frame" x="59" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="calendar.circle" catalog="system" id="ELM-dg-O8G">
+                                            <rect key="frame" x="22.166666666666668" y="18.333333333333332" width="19.666666666666664" height="19"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ZXM-39-g3k" kind="presentation" modalPresentationStyle="fullScreen" id="rqO-kM-rH2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="neQ-4Z-rzp" id="TLs-tf-mMe"/>
+                            <outlet property="delegate" destination="neQ-4Z-rzp" id="d8a-0S-CJU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Trips" id="htp-zs-Cte">
+                        <barButtonItem key="rightBarButtonItem" title="New Trip" id="lqE-2I-a2t">
+                            <connections>
+                                <segue destination="yrM-pG-xlO" kind="presentation" id="7Nf-EQ-4nn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R9h-Il-l1n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-562" y="92"/>
+            <point key="canvasLocation" x="509" y="163"/>
         </scene>
         <!--Packing List-->
         <scene sceneID="34t-mT-LoP">
@@ -371,7 +347,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95b-5t-poC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="6GX-a6-lqB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3687" y="91"/>
+            <point key="canvasLocation" x="4586.9158878504668" y="90.712742980561558"/>
         </scene>
         <!--Budget-->
         <scene sceneID="wXZ-Dl-wc1">
@@ -992,7 +968,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sOl-au-qtX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="hVv-oS-fzS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5194" y="91"/>
+            <point key="canvasLocation" x="6093.9252336448599" y="90.712742980561558"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7oO-Av-LjB">
@@ -1008,7 +984,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fES-5d-0dK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2948" y="91"/>
+            <point key="canvasLocation" x="3846.7289719626165" y="90.712742980561558"/>
         </scene>
         <!--Events-->
         <scene sceneID="Ht3-9C-iUR">
@@ -1221,7 +1197,7 @@
             <objects>
                 <tableViewController id="eHB-eO-kz1" customClass="NewTripTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="7E0-lX-qdd">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <sections>
                             <tableViewSection headerTitle="Destination" id="yuR-NI-Nlr">
@@ -1239,7 +1215,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y9o-yw-A4W">
-                                                    <rect key="frame" x="0.0" y="10" width="388" height="24"/>
+                                                    <rect key="frame" x="20" y="10" width="348" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -1247,11 +1223,11 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="y9o-yw-A4W" secondAttribute="bottom" constant="10" id="5UB-9f-cHs"/>
                                                 <constraint firstAttribute="trailing" secondItem="eLT-Jq-jyz" secondAttribute="trailing" id="5xA-5u-NB9"/>
-                                                <constraint firstItem="y9o-yw-A4W" firstAttribute="leading" secondItem="WHC-aB-MaZ" secondAttribute="leading" id="ARK-o9-0Bb"/>
+                                                <constraint firstItem="y9o-yw-A4W" firstAttribute="leading" secondItem="WHC-aB-MaZ" secondAttribute="leading" constant="20" id="ARK-o9-0Bb"/>
                                                 <constraint firstItem="y9o-yw-A4W" firstAttribute="top" secondItem="WHC-aB-MaZ" secondAttribute="top" constant="10" id="UL4-1u-KX8"/>
                                                 <constraint firstAttribute="bottom" secondItem="eLT-Jq-jyz" secondAttribute="bottom" id="elN-3o-xNx"/>
                                                 <constraint firstItem="eLT-Jq-jyz" firstAttribute="leading" secondItem="WHC-aB-MaZ" secondAttribute="leading" id="gC3-ku-m1L"/>
-                                                <constraint firstAttribute="trailing" secondItem="y9o-yw-A4W" secondAttribute="trailing" id="oUV-Af-edL"/>
+                                                <constraint firstAttribute="trailing" secondItem="y9o-yw-A4W" secondAttribute="trailing" constant="20" id="oUV-Af-edL"/>
                                                 <constraint firstItem="eLT-Jq-jyz" firstAttribute="top" secondItem="WHC-aB-MaZ" secondAttribute="top" id="xRs-DV-ohG"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1346,14 +1322,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIv-ar-91B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="hWD-Qh-b9O" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1943" y="91"/>
+            <point key="canvasLocation" x="2842.9906542056074" y="90.712742980561558"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WFb-TL-cs8">
             <objects>
                 <navigationController id="yrM-pG-xlO" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="owz-eG-HEI">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1362,7 +1338,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47k-0O-fHJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="91"/>
+            <point key="canvasLocation" x="1935.9813084112147" y="90.712742980561558"/>
         </scene>
         <!--Itinerary-->
         <scene sceneID="rE9-1f-jGy">
@@ -1475,7 +1451,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xf-j5-y9f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4423" y="91"/>
+            <point key="canvasLocation" x="5322.8971962616815" y="90.712742980561558"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="htv-cP-gPk">
@@ -1532,6 +1508,24 @@
             </objects>
             <point key="canvasLocation" x="3207" y="1829"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tpM-0E-J1o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ez6-os-fcW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6oe-Qy-AEJ">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="neQ-4Z-rzp" kind="relationship" relationship="rootViewController" id="xcO-1X-MvO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvI-32-pDY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="163"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="7Pu-JD-XA4"/>
@@ -1540,6 +1534,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="calendar.circle" catalog="system" width="128" height="121"/>
         <image name="checkmark.circle" width="13" height="13"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
