@@ -62,13 +62,13 @@ class ItinEventViewController: UIViewController {
         if segue.identifier == "unwindSave"{
             switch isAnExistingEvent {
             case true:
-                if let dest = segue.destination as? ItinEventsTableViewController{
+                if segue.destination is ItinEventsTableViewController{
                     event.destination = destinationTextField.text ?? ""
                     event.timeStart = startTimeTextField.text ?? ""
                     event.timeEnd = endTimeTextField.text ?? ""
                     event.notes = eventNoteView.text ?? "Notes!"
                     event.date = formatter.string(from: dateDatePicker.date)
-                    print("event:",event)
+                    print("event:",event as Any)
                         }
             default:
                 event = DayEvent(destination:destinationTextField.text ?? "", timeStart: startTimeTextField.text ?? "", timeEnd: endTimeTextField.text ?? "", date: formatter.string(from: dateDatePicker.date), notes: eventNoteView.text ?? "Notes")

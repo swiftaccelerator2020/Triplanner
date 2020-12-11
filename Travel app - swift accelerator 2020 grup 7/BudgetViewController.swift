@@ -7,13 +7,14 @@
 
 import UIKit
 
-class BudgetViewController: UIViewController {
+class BudgetViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var foodButton: UIButton!
     @IBOutlet weak var accomodationButton: UIButton!
     @IBOutlet weak var shoppingButton: UIButton!
     @IBOutlet weak var travelButton: UIButton!
     @IBOutlet weak var otherButton: UIButton!
+    
     @IBOutlet weak var totalBudgetTextField: UITextField!
     @IBOutlet weak var amountSpentTextField: UITextField!
     @IBOutlet weak var amountLeftTextField: UITextField!
@@ -43,6 +44,10 @@ class BudgetViewController: UIViewController {
         shoppingButton.layer.cornerRadius = 25
         travelButton.layer.cornerRadius = 25
         otherButton.layer.cornerRadius = 25
+        self.totalBudgetTextField.delegate = self
+        self.amountSpentTextField.delegate = self
+        self.amountLeftTextField.delegate = self
+        
         
     }
     
@@ -55,18 +60,30 @@ class BudgetViewController: UIViewController {
     
     
     @IBAction func totalBudgetEdited(_ sender: Any) {
-//        editIndicator1 = true
-//        total = Int(totalBudgetTextField.text ?? "0")
-//        left = total ?? 0 - spent!
-//        amountLeftTextField.text = String(left ?? 0)
+        editIndicator1 = true
+        total = Int(totalBudgetTextField.text ?? "0")
+        left = total ?? 0 - spent!
+        amountLeftTextField.text = String(left ?? 0)
         
     }
     
  
 
 
+    @IBAction func totalBudgetFinishedEditing(_ sender: Any) {
+    }
+    
+    
+    
+    @IBAction func amountSpentFinishedEditing(_ sender: UITextField) {
+    }
+    
+    
 
-
+    @IBAction func amountLeftFinishedEditing(_ sender: UITextField) {
+        print("amountLeftFinishedEditing")
+    }
+    
     //        editIndicator2 = true
 //        spent = Int(amountSpentTextField.text ?? "0")
 //        left = total ?? 0 - spent!
@@ -144,7 +161,6 @@ class BudgetViewController: UIViewController {
     
     func returnName(string: String) -> String{
         var result: String = ""
-        let categories: Array<String> = ["Food", "Accomodation", "Shopping", "Travel", "Other"]
         switch string {
         case "foodSpending":
             result = "Food"
@@ -177,5 +193,10 @@ class BudgetViewController: UIViewController {
     }
     
     
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        self.view.endEditing(true)
+        return false
+    }
 }

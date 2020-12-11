@@ -10,7 +10,7 @@ struct DayEvent: Codable, Equatable{
 //    static func == (lhs: DayEvent, rhs: DayEvent) -> Bool {
 //        return true
 //    }
-//
+//MARK: That is so weird, class gives me problems
     
     var destination: String
     var timeStart: String

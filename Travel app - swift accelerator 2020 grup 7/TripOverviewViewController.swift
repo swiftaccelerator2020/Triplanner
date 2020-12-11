@@ -179,6 +179,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                         if intervalForDeleting == key{
                         self.itinEventsDict[i] = []
                             print("intervalForDeleting", intervalForDeleting)
+                            //MARK: This is where the problem is. Should be date format!!
                         }
                         }
                     }
