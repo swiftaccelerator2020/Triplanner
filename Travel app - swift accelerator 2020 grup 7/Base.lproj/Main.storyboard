@@ -134,20 +134,20 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packing List:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdL-eL-vYd">
-                                <rect key="frame" x="20" y="409" width="120" height="24"/>
+                                <rect key="frame" x="20" y="499" width="120" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szO-6c-E7v">
-                                <rect key="frame" x="190" y="409" width="218" height="22"/>
+                                <rect key="frame" x="190" y="499" width="218" height="22"/>
                                 <state key="normal" image="chevron.right" catalog="system"/>
                                 <connections>
                                     <segue destination="76h-IX-RFd" kind="presentation" modalPresentationStyle="fullScreen" id="V3D-iR-acR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packing list item!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vG7-P9-HFP">
-                                <rect key="frame" x="20" y="443" width="128.66666666666666" height="20.333333333333314"/>
+                                <rect key="frame" x="20" y="533" width="128.66666666666666" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -165,11 +165,36 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uma-p5-jm2">
-                                <rect key="frame" x="395" y="441" width="13" height="24"/>
+                                <rect key="frame" x="395" y="531" width="13" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" image="checkmark.circle"/>
                                 <connections>
                                     <action selector="checkCircle1Tapped:" destination="QSK-vV-qtH" eventType="touchUpInside" id="VM1-Gt-rox"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vny-LJ-8so">
+                                <rect key="frame" x="20" y="399" width="388" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="UNY-hT-Lky"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Packing list item!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfG-Ml-IwK">
+                                <rect key="frame" x="44" y="565" width="128.66666666666666" height="20.333333333333371"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXz-2n-nPY">
+                                <rect key="frame" x="392" y="568" width="13" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" image="checkmark.circle"/>
+                                <connections>
+                                    <action selector="checkCircle1Tapped:" destination="QSK-vV-qtH" eventType="touchUpInside" id="DHD-y3-XKB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -181,27 +206,30 @@
                             <constraint firstItem="yjY-we-KAb" firstAttribute="top" secondItem="g4M-w7-Zfh" secondAttribute="bottom" constant="21" id="6Nn-Ky-YaM"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="Z2X-mR-mVl" secondAttribute="trailing" constant="20" id="6Xb-Fs-Ou9"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="H0X-wm-ChJ" secondAttribute="trailing" constant="50" id="8yA-uk-7L8"/>
-                            <constraint firstItem="szO-6c-E7v" firstAttribute="top" secondItem="H0X-wm-ChJ" secondAttribute="bottom" constant="20" id="9B9-cI-wx0"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="M0L-8B-bIg" secondAttribute="trailing" constant="40" id="C47-FJ-QaD"/>
                             <constraint firstItem="szO-6c-E7v" firstAttribute="leading" secondItem="UdL-eL-vYd" secondAttribute="trailing" constant="50" id="FKQ-d6-6GV"/>
                             <constraint firstItem="k2K-ac-Zqd" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="Gib-8t-lDV"/>
                             <constraint firstItem="uma-p5-jm2" firstAttribute="top" secondItem="szO-6c-E7v" secondAttribute="bottom" constant="10" id="Jcd-wd-MzC"/>
-                            <constraint firstItem="vG7-P9-HFP" firstAttribute="top" secondItem="UdL-eL-vYd" secondAttribute="bottom" constant="10" id="Jp4-rZ-DYf"/>
+                            <constraint firstItem="UdL-eL-vYd" firstAttribute="top" secondItem="Vny-LJ-8so" secondAttribute="bottom" constant="20" id="L70-EV-40q"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="g4M-w7-Zfh" secondAttribute="trailing" constant="20" id="LvV-Xx-brE"/>
                             <constraint firstItem="UdL-eL-vYd" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="N43-e0-q12"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="uma-p5-jm2" secondAttribute="trailing" constant="20" id="OsJ-Ko-Rwn"/>
                             <constraint firstItem="4t0-sh-nqF" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="QRL-Ks-gML"/>
+                            <constraint firstItem="vG7-P9-HFP" firstAttribute="top" secondItem="UdL-eL-vYd" secondAttribute="bottom" constant="10" id="Qk9-zD-c3g"/>
+                            <constraint firstItem="Vny-LJ-8so" firstAttribute="top" secondItem="H0X-wm-ChJ" secondAttribute="bottom" constant="10" id="UY7-HL-9ex"/>
                             <constraint firstItem="g4M-w7-Zfh" firstAttribute="top" secondItem="M0L-8B-bIg" secondAttribute="bottom" constant="10" id="Utd-BR-ELP"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="yjY-we-KAb" secondAttribute="trailing" constant="20" id="VLB-Rk-JgO"/>
                             <constraint firstItem="M0L-8B-bIg" firstAttribute="top" secondItem="Z2X-mR-mVl" secondAttribute="bottom" constant="20" id="WJt-Dv-nab"/>
                             <constraint firstItem="vG7-P9-HFP" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="ZA1-Xj-Nr7"/>
                             <constraint firstItem="vmo-Jo-RHU" firstAttribute="top" secondItem="Z2X-mR-mVl" secondAttribute="bottom" constant="20" id="ZIC-XQ-NH9"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="szO-6c-E7v" secondAttribute="trailing" constant="20" id="csI-jD-b6z"/>
-                            <constraint firstItem="UdL-eL-vYd" firstAttribute="top" secondItem="H0X-wm-ChJ" secondAttribute="bottom" constant="20" id="d3d-t2-uhZ"/>
                             <constraint firstItem="Z2X-mR-mVl" firstAttribute="top" secondItem="XON-X7-oLZ" secondAttribute="top" constant="20" id="dfG-fh-ny5"/>
-                            <constraint firstItem="H0X-wm-ChJ" firstAttribute="top" secondItem="g4M-w7-Zfh" secondAttribute="bottom" constant="20" id="dzn-CS-czH"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="k2K-ac-Zqd" secondAttribute="trailing" constant="20" id="eVG-Qw-GTp"/>
+                            <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="Vny-LJ-8so" secondAttribute="trailing" constant="20" id="fK1-xL-HnQ"/>
+                            <constraint firstItem="szO-6c-E7v" firstAttribute="top" secondItem="Vny-LJ-8so" secondAttribute="bottom" constant="20" id="oNP-o6-Q2y"/>
                             <constraint firstItem="4t0-sh-nqF" firstAttribute="top" secondItem="XON-X7-oLZ" secondAttribute="top" constant="27" id="ool-d3-zmo"/>
+                            <constraint firstItem="Vny-LJ-8so" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="rRJ-mR-L50"/>
+                            <constraint firstItem="H0X-wm-ChJ" firstAttribute="top" secondItem="k2K-ac-Zqd" secondAttribute="bottom" constant="20.666666666666686" id="rW2-Wq-Km5"/>
                             <constraint firstItem="k2K-ac-Zqd" firstAttribute="top" secondItem="M0L-8B-bIg" secondAttribute="bottom" constant="10" id="uus-43-9G2"/>
                             <constraint firstItem="H0X-wm-ChJ" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="w2L-6x-dUj"/>
                             <constraint firstItem="M0L-8B-bIg" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="z1s-2h-iJr"/>
@@ -215,6 +243,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="budgetOverviewLabel" destination="Vny-LJ-8so" id="feu-Yt-7ZI"/>
                         <outlet property="itinOverviewLabel" destination="k2K-ac-Zqd" id="0eo-WL-7xs"/>
                         <outlet property="locationTextField" destination="6Y2-eC-gP5" id="QoG-3z-kgQ"/>
                         <outlet property="newItineraryItem" destination="g4M-w7-Zfh" id="F2Z-EX-cIr"/>
@@ -607,7 +636,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+ Spending" id="Hm3-Nh-X0l">
                             <connections>
-                                <segue destination="fdx-GQ-ORf" kind="show" identifier="addNewSpending" id="Hh4-Dq-Rge"/>
+                                <segue destination="fdx-GQ-ORf" kind="presentation" identifier="addNewSpending" modalPresentationStyle="fullScreen" id="Hh4-Dq-Rge"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -729,7 +758,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ogh-4U-g3M">
-                                                    <rect key="frame" x="10" y="0.0" width="408" height="44"/>
+                                                    <rect key="frame" x="10" y="0.0" width="368" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
@@ -758,7 +787,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YzW-c5-W2l">
-                                                    <rect key="frame" x="10" y="0.0" width="408" height="44"/>
+                                                    <rect key="frame" x="10" y="0.0" width="368" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                                 </textField>
@@ -783,10 +812,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chE-w1-5Ux">
-                                                    <rect key="frame" x="19" y="-59" width="336" height="162"/>
+                                                    <rect key="frame" x="19" y="-59" width="296" height="162"/>
                                                 </pickerView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6P1-5H-CWU">
-                                                    <rect key="frame" x="349" y="5" width="59" height="34"/>
+                                                    <rect key="frame" x="309" y="5" width="59" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="59" id="sLq-5J-4VH"/>
                                                     </constraints>
@@ -830,12 +859,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Szj-JZ-qpm">
-                                                    <rect key="frame" x="10" y="0.0" width="408" height="402"/>
+                                                    <rect key="frame" x="10" y="0.0" width="368" height="402"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-uv-VPl">
-                                                    <rect key="frame" x="20" y="11" width="388" height="380"/>
+                                                    <rect key="frame" x="20" y="11" width="348" height="380"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -924,7 +953,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eGy-SJ-w9Y">
-                                                    <rect key="frame" x="20" y="0.0" width="388" height="43.666666666666664"/>
+                                                    <rect key="frame" x="20" y="0.0" width="348" height="43.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
@@ -953,7 +982,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="K9N-08-kWk">
-                                                    <rect key="frame" x="20" y="0.0" width="388" height="600"/>
+                                                    <rect key="frame" x="20" y="0.0" width="348" height="600"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
@@ -962,7 +991,7 @@
                                                     </connections>
                                                 </textField>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jRO-bI-bdA">
-                                                    <rect key="frame" x="20" y="11" width="388" height="578"/>
+                                                    <rect key="frame" x="20" y="11" width="348" height="578"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
