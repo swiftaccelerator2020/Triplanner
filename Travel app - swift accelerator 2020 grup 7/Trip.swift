@@ -9,16 +9,20 @@ import Foundation
 
 
 class Trip{
+    static func == (lhs: Trip, rhs: Trip) -> Bool {
+        return true
+    }
+    
     
     var destination: String
-    var startDate: String
-    var endDate: String
+    var startDate: Date
+    var endDate: Date
     var itinerary: Dictionary<String, Array<DayEvent>>
     var budget: Dictionary<String, Array<BudgetItem>>
     var packingList: Array<packingItem>
     
     
-    init(destination: String, startDate: String, endDate: String, itinerary: Dictionary<String, Array<DayEvent>>, budget: Dictionary<String, Array<BudgetItem>>, packingList: Array<packingItem> ){
+    init(destination: String, startDate: Date, endDate: Date, itinerary: Dictionary<String, Array<DayEvent>>, budget: Dictionary<String, Array<BudgetItem>>, packingList: Array<packingItem> ){
         
         self.destination = destination
         self.startDate = startDate

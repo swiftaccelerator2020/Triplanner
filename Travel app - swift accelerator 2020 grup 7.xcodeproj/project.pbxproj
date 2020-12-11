@@ -13,7 +13,7 @@
 		7E6A37B625723CDF00547549 /* PackingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A37B525723CDF00547549 /* PackingItem.swift */; };
 		7E6A37EE257258F200547549 /* EditPackingItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A37ED257258F200547549 /* EditPackingItemTableViewController.swift */; };
 		7E7392C12573C05E00EFFCFF /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7392C02573C05E00EFFCFF /* BudgetViewController.swift */; };
-		7E9BD520258389BD00D60CC0 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9BD51F258389BD00D60CC0 /* HomeTableViewController.swift */; };
+		7E9BD520258389BD00D60CC0 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9BD51F258389BD00D60CC0 /* AddTripViewController.swift */; };
 		AF3814732581CC00002BE597 /* BudgetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3814722581CC00002BE597 /* BudgetItem.swift */; };
 		AF83206325709AF600487326 /* ItinEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83206225709AF600487326 /* ItinEventsTableViewController.swift */; };
 		AF83206D25709B9900487326 /* ItinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83206C25709B9900487326 /* ItinTableViewController.swift */; };
@@ -28,6 +28,7 @@
 		AFACB253256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB252256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7UITests.swift */; };
 		AFC916632574D881003F10EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC916612574D881003F10EC /* Main.storyboard */; };
 		AFE869F62583944100403FCE /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE869F52583944100403FCE /* Trip.swift */; };
+		AFE86A072583A62D00403FCE /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE86A062583A62D00403FCE /* HomeTableViewController.swift */; };
 		BB3DE9BF25807C1700248131 /* AddSpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3DE9BE25807C1700248131 /* AddSpendingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +56,7 @@
 		7E6A37B525723CDF00547549 /* PackingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItem.swift; sourceTree = "<group>"; };
 		7E6A37ED257258F200547549 /* EditPackingItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPackingItemTableViewController.swift; sourceTree = "<group>"; };
 		7E7392C02573C05E00EFFCFF /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
-		7E9BD51F258389BD00D60CC0 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		7E9BD51F258389BD00D60CC0 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		AF3814722581CC00002BE597 /* BudgetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetItem.swift; sourceTree = "<group>"; };
 		AF83206225709AF600487326 /* ItinEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinEventsTableViewController.swift; sourceTree = "<group>"; };
 		AF83206C25709B9900487326 /* ItinTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinTableViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		AFACB254256CAA0E00EACAFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFC916622574D881003F10EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFE869F52583944100403FCE /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		AFE86A062583A62D00403FCE /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		BB3DE9BE25807C1700248131 /* AddSpendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpendingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,8 +132,9 @@
 				AFC916612574D881003F10EC /* Main.storyboard */,
 				AFACB230256CAA0B00EACAFF /* AppDelegate.swift */,
 				AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */,
+				AFE86A062583A62D00403FCE /* HomeTableViewController.swift */,
+				7E9BD51F258389BD00D60CC0 /* AddTripViewController.swift */,
 				AFE869F52583944100403FCE /* Trip.swift */,
-				7E9BD51F258389BD00D60CC0 /* HomeTableViewController.swift */,
 				AF9599162579FBCF002EE58A /* TripOverviewViewController.swift */,
 				AF83206225709AF600487326 /* ItinEventsTableViewController.swift */,
 				AF83206C25709B9900487326 /* ItinTableViewController.swift */,
@@ -303,7 +306,8 @@
 				AFACB231256CAA0B00EACAFF /* AppDelegate.swift in Sources */,
 				AF83206D25709B9900487326 /* ItinTableViewController.swift in Sources */,
 				AF8320782571EE0100487326 /* ItinEventViewController.swift in Sources */,
-				7E9BD520258389BD00D60CC0 /* HomeTableViewController.swift in Sources */,
+				7E9BD520258389BD00D60CC0 /* AddTripViewController.swift in Sources */,
+				AFE86A072583A62D00403FCE /* HomeTableViewController.swift in Sources */,
 				AF8320832573778500487326 /* ItinDayEvents.swift in Sources */,
 				7E6A37EE257258F200547549 /* EditPackingItemTableViewController.swift in Sources */,
 				7E6A37AB25723C6B00547549 /* PackingListTableViewController.swift in Sources */,

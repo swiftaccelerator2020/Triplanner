@@ -72,6 +72,9 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     var start: String = ""
     var end: String = ""
     @IBOutlet weak var locationTextField: UITextField!
+    var tripNo: Int = 0
+    var trip: Trip!
+    var newTrip: Bool = true
     
   //MARK: Itinerary overview variables
     @IBOutlet weak var newItineraryItem: UIButton!
@@ -81,7 +84,6 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     @IBOutlet weak var overviewEndDatePicker: UIDatePicker!
     
     var itinOverviewText: String = "itinOverviewText"
-//    var storedItinEvents: Array<DayEvent> = []
     var itinEventsDict: Dictionary<String, Array<DayEvent>> = [:]
     var dateStorageList: Array<String> = ["start", "end"]
     
@@ -91,7 +93,8 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     @IBOutlet weak var packingListCheckCircle: UIButton!
     var packingItemsStorateList: Array<packingItem> = []
     
-    
+    @IBOutlet weak var packingListOverviewLabel2: UILabel!
+    @IBOutlet weak var packingListCheckCircle2: UIButton!
     
 
 //MARK: Budget overview variables
@@ -103,6 +106,13 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     override func viewDidLoad() {
         super.viewDidLoad()
         packingListCheckCircle.isHidden = true
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM dd, yyyy"
+        start = formatter.string(from: trip.startDate)
+        end = formatter.string(from: trip.endDate)
+        itinEventsDict = trip.itinerary
+        budgetItemsStorageDict = trip.budget
+        packingItemsStorateList = trip.packingList
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -139,20 +149,27 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
             dest.creatingItemFromOverview = true
             
         }
-        if let navigationVC2 = segue.destination as? UINavigationController{
-            if let dest = navigationVC2.topViewController as? PackingListTableViewController{
+        if let navigationVC = segue.destination as? UINavigationController{
+            if let dest = navigationVC.topViewController as? PackingListTableViewController{
                 dest.delegate = self
                 dest.packingItems = self.packingItemsStorateList
             }
         }
         
-        if let navigationVC3 = segue.destination as? UINavigationController{
-            if let dest = navigationVC3.topViewController as? BudgetViewController{
+        if let navigationVC = segue.destination as? UINavigationController{
+            if let dest = navigationVC.topViewController as? BudgetViewController{
                 dest.budgetItemsDict = self.budgetItemsStorageDict
                 dest.total = self.budgetTotal
                 dest.delegate = self
             }
             
+        }
+        
+        if let navigationVC = segue.destination as? UINavigationController{
+            if let dest = navigationVC.topViewController as? HomeTableViewController{
+                self.trip = Trip(destination: self.locationTextField.text ?? "", startDate: self.overviewStartDatePicker.date, endDate: self.overviewStartDatePicker.date, itinerary: self.itinEventsDict, budget: self.budgetItemsStorageDict, packingList: self.packingItemsStorateList)
+                dest.trips[tripNo] = trip
+            }
         }
     }
     
