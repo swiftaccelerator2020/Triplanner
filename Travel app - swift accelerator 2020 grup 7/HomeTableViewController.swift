@@ -9,12 +9,34 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     var trips: Array<Trip> = []
-    
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//         self.navigationItem.rightBarButtonItem = self.editButtonItem
+//  self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        // Create a gradient layer.
+                let gradientLayer = CAGradientLayer()
+                // Set the size of the layer to be equal to size of the display.
+        gradientLayer.frame = view.frame
+        //cgcolor array
+        //using a colour literal
+        gradientLayer.colors = [#colorLiteral(red: 0.5921568627, green: 0.6666666667, blue: 0.7803921569, alpha: 1).cgColor, #colorLiteral(red: 0.5333333333, green: 0.5921568627, blue: 0.7450980392, alpha: 1).cgColor]
+                // Rasterize this static layer to improve app performance.
+                gradientLayer.shouldRasterize = false
+                // Apply the gradient to the backgroundGradientView.
+              //  view.layer.addSublayer(gradientLayer)
+        
+        view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        
+        // Diagonal: top left to bottom corner.
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0) // Top left corner.
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1) // Bottom right corner.
+
+        
     }
 
     // MARK: - Table view data source
@@ -35,7 +57,7 @@ class HomeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         if trips.isEmpty == false{
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/mm/yyyy"
+        formatter.dateFormat = "MMM dd,yyyy"
         cell.textLabel?.text = trips[indexPath.row].destination
             let sDate = formatter.string(from: trips[indexPath.row].startDate)
             let eDate = formatter.string(from: trips[indexPath.row].endDate)
