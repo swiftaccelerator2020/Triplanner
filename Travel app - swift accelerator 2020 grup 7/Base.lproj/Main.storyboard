@@ -484,7 +484,7 @@
                                     <constraint firstAttribute="width" constant="120" id="nTM-YN-EQq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                 <connections>
                                     <action selector="totalBudgetFinishedEditing:" destination="B4D-IW-gQn" eventType="editingDidEnd" id="NX7-tv-8yZ"/>
                                 </connections>
@@ -1213,17 +1213,20 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y9o-yw-A4W">
-                                                    <rect key="frame" x="20" y="10" width="348" height="24"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y9o-yw-A4W">
+                                                    <rect key="frame" x="20" y="5" width="348" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <action selector="destinationEditingEnd:" destination="eHB-eO-kz1" eventType="editingDidEndOnExit" id="1L4-YE-Lgw"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="y9o-yw-A4W" secondAttribute="bottom" constant="10" id="5UB-9f-cHs"/>
+                                                <constraint firstAttribute="bottom" secondItem="y9o-yw-A4W" secondAttribute="bottom" constant="5" id="5UB-9f-cHs"/>
                                                 <constraint firstAttribute="trailing" secondItem="eLT-Jq-jyz" secondAttribute="trailing" id="5xA-5u-NB9"/>
                                                 <constraint firstItem="y9o-yw-A4W" firstAttribute="leading" secondItem="WHC-aB-MaZ" secondAttribute="leading" constant="20" id="ARK-o9-0Bb"/>
-                                                <constraint firstItem="y9o-yw-A4W" firstAttribute="top" secondItem="WHC-aB-MaZ" secondAttribute="top" constant="10" id="UL4-1u-KX8"/>
+                                                <constraint firstItem="y9o-yw-A4W" firstAttribute="top" secondItem="WHC-aB-MaZ" secondAttribute="top" constant="5" id="UL4-1u-KX8"/>
                                                 <constraint firstAttribute="bottom" secondItem="eLT-Jq-jyz" secondAttribute="bottom" id="elN-3o-xNx"/>
                                                 <constraint firstItem="eLT-Jq-jyz" firstAttribute="leading" secondItem="WHC-aB-MaZ" secondAttribute="leading" id="gC3-ku-m1L"/>
                                                 <constraint firstAttribute="trailing" secondItem="y9o-yw-A4W" secondAttribute="trailing" constant="20" id="oUV-Af-edL"/>
@@ -1235,7 +1238,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="start date" id="Cwa-mi-ovJ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripCell" id="AZh-Sa-CFE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripCell" rowHeight="43.666667938232422" id="AZh-Sa-CFE">
                                         <rect key="frame" x="20" y="155" width="388" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AZh-Sa-CFE" id="CAK-Ad-0b6">
@@ -1243,23 +1246,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KqW-Ag-Rfs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="43.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="DpK-EA-N7y">
-                                                    <rect key="frame" x="100" y="10" width="288" height="24"/>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="DpK-EA-N7y">
+                                                    <rect key="frame" x="20" y="5" width="368" height="33.666666666666664"/>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="DpK-EA-N7y" secondAttribute="trailing" id="9SM-PI-Fmn"/>
-                                                <constraint firstItem="DpK-EA-N7y" firstAttribute="top" secondItem="CAK-Ad-0b6" secondAttribute="top" constant="10" id="AuZ-Lo-khe"/>
+                                                <constraint firstItem="DpK-EA-N7y" firstAttribute="top" secondItem="CAK-Ad-0b6" secondAttribute="top" constant="5" id="AuZ-Lo-khe"/>
                                                 <constraint firstItem="KqW-Ag-Rfs" firstAttribute="top" secondItem="CAK-Ad-0b6" secondAttribute="top" id="DQA-ZR-0qp"/>
-                                                <constraint firstItem="DpK-EA-N7y" firstAttribute="leading" secondItem="CAK-Ad-0b6" secondAttribute="leading" constant="100" id="IzI-9m-fPU"/>
+                                                <constraint firstItem="DpK-EA-N7y" firstAttribute="leading" secondItem="CAK-Ad-0b6" secondAttribute="leading" constant="20" id="IzI-9m-fPU"/>
                                                 <constraint firstAttribute="bottom" secondItem="KqW-Ag-Rfs" secondAttribute="bottom" id="St6-QQ-f8i"/>
                                                 <constraint firstAttribute="trailing" secondItem="KqW-Ag-Rfs" secondAttribute="trailing" id="UKk-PF-Cry"/>
                                                 <constraint firstItem="KqW-Ag-Rfs" firstAttribute="leading" secondItem="CAK-Ad-0b6" secondAttribute="leading" id="ezY-ax-vx0"/>
-                                                <constraint firstAttribute="bottom" secondItem="DpK-EA-N7y" secondAttribute="bottom" constant="10" id="yCT-SO-U3F"/>
+                                                <constraint firstAttribute="bottom" secondItem="DpK-EA-N7y" secondAttribute="bottom" constant="5" id="yCT-SO-U3F"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1267,7 +1270,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="End date" id="yWw-GR-qIx">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripCell" id="Izm-Ev-rDL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripCell" rowHeight="43.666667938232422" id="Izm-Ev-rDL">
                                         <rect key="frame" x="20" y="254.66666793823242" width="388" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Izm-Ev-rDL" id="b6O-rJ-XjK">
@@ -1275,20 +1278,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9U-3Z-sGd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="43.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="1Pz-gY-Gso">
-                                                    <rect key="frame" x="100" y="10" width="288" height="24"/>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="1Pz-gY-Gso">
+                                                    <rect key="frame" x="20" y="5" width="368" height="33.666666666666664"/>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="1Pz-gY-Gso" secondAttribute="trailing" id="298-Zb-8BI"/>
                                                 <constraint firstAttribute="trailing" secondItem="I9U-3Z-sGd" secondAttribute="trailing" id="2bb-DM-ww8"/>
-                                                <constraint firstAttribute="bottom" secondItem="1Pz-gY-Gso" secondAttribute="bottom" constant="10" id="KmF-EY-Hsv"/>
-                                                <constraint firstItem="1Pz-gY-Gso" firstAttribute="leading" secondItem="b6O-rJ-XjK" secondAttribute="leading" constant="100" id="U6D-AW-bgu"/>
-                                                <constraint firstItem="1Pz-gY-Gso" firstAttribute="top" secondItem="b6O-rJ-XjK" secondAttribute="top" constant="10" id="cNt-1V-AsR"/>
+                                                <constraint firstAttribute="bottom" secondItem="1Pz-gY-Gso" secondAttribute="bottom" constant="5" id="KmF-EY-Hsv"/>
+                                                <constraint firstItem="1Pz-gY-Gso" firstAttribute="leading" secondItem="b6O-rJ-XjK" secondAttribute="leading" constant="20" id="U6D-AW-bgu"/>
+                                                <constraint firstItem="1Pz-gY-Gso" firstAttribute="top" secondItem="b6O-rJ-XjK" secondAttribute="top" constant="5" id="cNt-1V-AsR"/>
                                                 <constraint firstItem="I9U-3Z-sGd" firstAttribute="leading" secondItem="b6O-rJ-XjK" secondAttribute="leading" id="rJI-yT-IZv"/>
                                                 <constraint firstItem="I9U-3Z-sGd" firstAttribute="top" secondItem="b6O-rJ-XjK" secondAttribute="top" id="uSX-wu-tJ8"/>
                                                 <constraint firstAttribute="bottom" secondItem="I9U-3Z-sGd" secondAttribute="bottom" id="xgc-LT-Gs2"/>
@@ -1527,7 +1530,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7Pu-JD-XA4"/>
+        <segue reference="Hh4-Dq-Rge"/>
         <segue reference="Efb-Ot-7g8"/>
         <segue reference="7WP-ZI-Diq"/>
     </inferredMetricsTieBreakers>

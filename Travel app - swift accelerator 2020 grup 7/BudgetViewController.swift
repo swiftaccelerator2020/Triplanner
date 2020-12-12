@@ -67,7 +67,7 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         print(spendingAddedUp)
         amountSpentTextField.text = String(spendingAddedUp)
         spent = spendingAddedUp
-        amountLeftTextField.text = String(total! - spendingAddedUp)
+        amountLeftTextField.text = String(total ?? 0.0 - spendingAddedUp)
     }
     }
     
