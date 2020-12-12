@@ -67,7 +67,7 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         print(spendingAddedUp)
         amountSpentTextField.text = String(spendingAddedUp)
         spent = spendingAddedUp
-        amountLeftTextField.text = String(total! - spendingAddedUp)
+        amountLeftTextField.text = String(total ?? 0.0 - spendingAddedUp)
     }
     }
     
@@ -189,12 +189,13 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         
         
         if let dest = segue.destination as? TripOverviewViewController{
-            let string1 = "total budget $\(total!), spent $\(spendingAddedUp), \(spendingAddedUp/(total ?? 1.0)*100)% of total"
+            let string1 = "total budget $\(total ?? 0.0), spent $\(spendingAddedUp), \(spendingAddedUp/(total ?? 0.0)*100)% of total"
             //MARK: the percentage needs rounding up
             
             var string2 = ""
             for (key,value) in self.calculatingDict{
-                let percentage = (value/total!) * 100
+                //old: let percentage = (value/total!) * 100
+                let percentage = Double(round(value/total!)) * 100
                 let tempString = "\(percentage)% of total   $\(value)  \(key) spent\n"
                 string2.append(tempString)
             }
