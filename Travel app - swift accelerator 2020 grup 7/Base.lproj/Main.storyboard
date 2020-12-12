@@ -90,6 +90,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="rdq-Ux-nQu"/>
                                 </constraints>
+                                <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="chevron.right" catalog="system"/>
                                 <connections>
                                     <segue destination="7e1-aL-Zyg" kind="presentation" modalPresentationStyle="fullScreen" id="vRj-Qb-i9G"/>
@@ -106,6 +107,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="wWX-36-lGS"/>
                                 </constraints>
+                                <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="chevron.right" catalog="system"/>
                                 <connections>
                                     <segue destination="oIt-E2-qJO" kind="presentation" modalPresentationStyle="fullScreen" id="PNi-Vg-4gm"/>
@@ -122,6 +124,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="he0-0b-16W"/>
                                 </constraints>
+                                <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="chevron.right" catalog="system"/>
                                 <connections>
                                     <segue destination="76h-IX-RFd" kind="presentation" modalPresentationStyle="fullScreen" id="V3D-iR-acR"/>
@@ -154,6 +157,7 @@
                                     <constraint firstAttribute="height" constant="20" id="Mbd-k2-H1F"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="checkmark.circle"/>
                                 <connections>
                                     <action selector="checkCircle1Tapped:" destination="QSK-vV-qtH" eventType="touchUpInside" id="VM1-Gt-rox"/>
@@ -183,6 +187,7 @@
                                     <constraint firstAttribute="height" constant="20" id="s7L-F1-E6Q"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="checkmark.circle"/>
                                 <connections>
                                     <action selector="checkCircle1Tapped:" destination="QSK-vV-qtH" eventType="touchUpInside" id="DHD-y3-XKB"/>
@@ -195,6 +200,7 @@
                                     <constraint firstAttribute="height" constant="24" id="YAn-L1-0Ji"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="plus" catalog="system">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
@@ -210,7 +216,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XON-X7-oLZ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="yjY-we-KAb" secondAttribute="trailing" constant="20" id="0vG-K4-I9i"/>
                             <constraint firstItem="vmo-Jo-RHU" firstAttribute="top" secondItem="jqd-Sa-5ZT" secondAttribute="bottom" constant="20" id="1aS-BE-1Vf"/>
@@ -249,7 +255,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Trip Overview" id="cwZ-ul-Zx6">
                         <barButtonItem key="leftBarButtonItem" title="All Trips" style="plain" id="HS3-sb-PV9">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="ez6-os-fcW" kind="presentation" modalPresentationStyle="fullScreen" id="dPy-MC-DZm"/>
                             </connections>
@@ -279,6 +285,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="6Sj-dV-mwy" userLabel="tableview">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="mJx-4Y-Qye" detailTextLabel="xD3-2e-Uce" imageView="ELM-dg-O8G" style="IBUITableViewCellStyleSubtitle" id="aJ5-GC-nor">
                                 <rect key="frame" x="20" y="55.333332061767578" width="388" height="55.666667938232422"/>
@@ -321,7 +328,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="My Trips ✈️" id="htp-zs-Cte">
                         <barButtonItem key="rightBarButtonItem" title="New Trip" id="lqE-2I-a2t">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.51566594290000001" blue="0.91173273320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="yrM-pG-xlO" kind="presentation" id="7Nf-EQ-4nn"/>
                             </connections>
@@ -382,13 +389,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Packing List" id="AuU-9p-Zug">
                         <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="xun-GP-6aJ">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.51566594290000001" blue="0.91173273320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="6GX-a6-lqB" kind="unwind" identifier="backToOverViewController" unwindAction="backToOverViewControllerWith:" id="6eb-aH-Q2o"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="59q-bd-lFw">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.51566594290000001" blue="0.91173273320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="plusButtonTapped:" destination="vkL-IT-nB3" id="aDB-Iu-Usg"/>
                             </connections>
@@ -583,7 +590,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A7c-7P-y38"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wgr-bl-7m2" firstAttribute="leading" secondItem="A7c-7P-y38" secondAttribute="leading" constant="20" id="2xb-yg-DQk"/>
@@ -616,13 +623,13 @@
                     <navigationItem key="navigationItem" title="Budget" id="vE4-QP-8Ig">
                         <barButtonItem key="leftBarButtonItem" style="done" id="w6u-ut-MrQ">
                             <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="OH6-1C-FbL" kind="unwind" unwindAction="backToOverViewControllerWith:" id="s46-W0-2PZ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+ Spending" id="Hm3-Nh-X0l">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="fdx-GQ-ORf" kind="presentation" identifier="addNewSpending" modalPresentationStyle="fullScreen" id="Hh4-Dq-Rge"/>
                             </connections>
@@ -657,6 +664,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="kGS-pB-aup">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="budgetCell" textLabel="Fth-0b-ad2" detailTextLabel="udm-BB-Unq" style="IBUITableViewCellStyleSubtitle" id="Bdb-nN-EEK">
@@ -696,13 +704,13 @@
                         <barButtonItem key="backBarButtonItem" title="back" id="XuG-tI-JSw"/>
                         <barButtonItem key="leftBarButtonItem" style="done" id="gTn-tB-dbb">
                             <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="WTh-UA-Loo" kind="unwind" unwindAction="backToBudgetViewControllerWith:" id="EZ9-fM-e1O"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="bbL-NH-aEa">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="fdx-GQ-ORf" kind="presentation" identifier="catagoryAddNewSpending" id="Njr-Wn-zfu"/>
                             </connections>
@@ -735,8 +743,9 @@
             <objects>
                 <tableViewController id="Vb8-iI-wjc" customClass="AddSpendingViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0ap-IX-Jnq">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Name" id="qO6-bb-mY9">
@@ -885,13 +894,13 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add Spending" id="RF4-B7-J4P">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" image="chevron.left" catalog="system" id="WN6-bX-ptS">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="BpJ-ii-8D7" kind="unwind" identifier="unwindCancel" unwindAction="backToBudgetTableViewControllerWith:" id="PcL-SA-Ywx"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="ca3-Zi-g9e">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="BpJ-ii-8D7" kind="unwind" identifier="unwindSave" unwindAction="backToBudgetTableViewControllerWith:" id="8RY-ts-Wuj"/>
                             </connections>
@@ -920,6 +929,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Hkd-Ox-GLX">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Destination" id="6da-cG-3nG">
@@ -1068,16 +1078,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Edit Event" id="k5v-Fe-Sab">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="1er-9s-55U">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="MHv-tC-Hjb" kind="unwind" identifier="unwindCancel" unwindAction="backToItinEventsTableViewControllerWith:" id="LoH-bO-hVZ"/>
-                            </connections>
+                            <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="dNV-ys-DLx">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="MHv-tC-Hjb" kind="unwind" identifier="unwindSave" unwindAction="backToItinEventsTableViewControllerWith:" id="iga-I5-cFO"/>
-                            </connections>
+                            <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1115,7 +1119,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Iz7-lA-f4c">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.84347485845443471" green="0.88607045352201597" blue="0.93213969529277141" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" red="0.8604438468460951" green="0.90389637813529899" blue="0.95089243879221907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Item Name" id="Ixa-Jc-2lp">
                                 <cells>
@@ -1194,13 +1199,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="l12-N3-vLq">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="ZeT-Du-P4Z">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="cancelButtonTapped:" destination="oav-sS-Ai6" id="9p7-U7-g6M"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="QxB-04-2vR">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.51566594290000001" blue="0.91173273320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="saveButtonTapped:" destination="oav-sS-Ai6" id="Vul-eq-dfp"/>
                                 <segue destination="hVv-oS-fzS" kind="unwind" identifier="unwindFromDetail" unwindAction="unwindToPackingItemsWithSegue:" id="weJ-tX-6U0"/>
@@ -1241,6 +1246,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="RTE-Dc-e8V">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="itinEventCell" textLabel="gUC-vV-HYb" detailTextLabel="l28-T9-5BE" style="IBUITableViewCellStyleSubtitle" id="wdz-Zz-QKg">
@@ -1278,13 +1284,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Events" id="4zV-7o-sKH">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="lGp-12-lkp">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="aXL-kk-OyQ" kind="unwind" identifier="backToItineraryTableViewController" unwindAction="backToItineraryTableViewControllerWith:" id="54B-KQ-SQP"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Am6-Tg-JPa">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="gQ5-aD-fHW" kind="presentation" identifier="eventsToNewEvent" id="p3w-sM-0OX"/>
                             </connections>
@@ -1296,91 +1302,6 @@
             </objects>
             <point key="canvasLocation" x="3981" y="955"/>
         </scene>
-        <!--Title-->
-        <scene sceneID="Nji-5f-k1F">
-            <objects>
-                <viewController id="8D9-0X-1rg" customClass="ItinEventViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wPK-kY-Mbe">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIK-1O-prE">
-                                <rect key="frame" x="0.0" y="44" width="428" height="44"/>
-                                <items>
-                                    <navigationItem title="Edit Event" id="mvn-0c-jHm"/>
-                                </items>
-                            </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="NHf-dE-wEz">
-                                <rect key="frame" x="20" y="108" width="388" height="141"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acr-1u-ALI">
-                                        <rect key="frame" x="0.0" y="0.0" width="388" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="HzQ-vo-ySk"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rb-rK-45T">
-                                        <rect key="frame" x="0.0" y="37" width="388" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="jM8-sI-3Mu"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOG-6J-aCj">
-                                        <rect key="frame" x="0.0" y="74" width="388" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Xjy-jc-XSH"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hg-Oz-qpP">
-                                        <rect key="frame" x="0.0" y="111" width="388" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="A8G-8B-hCw"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsq-YV-gtn">
-                                <rect key="frame" x="20" y="269" width="388" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="dfE-nn-pVW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="DIK-1O-prE" firstAttribute="trailing" secondItem="dfE-nn-pVW" secondAttribute="trailing" id="2Rn-o0-8Kq"/>
-                            <constraint firstItem="NHf-dE-wEz" firstAttribute="leading" secondItem="dfE-nn-pVW" secondAttribute="leading" constant="20" id="56T-Gb-QXP"/>
-                            <constraint firstItem="dfE-nn-pVW" firstAttribute="trailing" secondItem="NHf-dE-wEz" secondAttribute="trailing" constant="20" id="A08-C3-zAL"/>
-                            <constraint firstItem="NHf-dE-wEz" firstAttribute="top" secondItem="DIK-1O-prE" secondAttribute="bottom" constant="20" id="KMB-64-ttf"/>
-                            <constraint firstItem="Fsq-YV-gtn" firstAttribute="leading" secondItem="dfE-nn-pVW" secondAttribute="leading" constant="20" id="Yci-09-Kch"/>
-                            <constraint firstItem="DIK-1O-prE" firstAttribute="leading" secondItem="dfE-nn-pVW" secondAttribute="leading" id="Yew-Rz-lmj"/>
-                            <constraint firstItem="Fsq-YV-gtn" firstAttribute="top" secondItem="NHf-dE-wEz" secondAttribute="bottom" constant="20" id="sfb-Sa-LPd"/>
-                            <constraint firstItem="dfE-nn-pVW" firstAttribute="trailing" secondItem="Fsq-YV-gtn" secondAttribute="trailing" constant="20" id="xbd-9f-J6e"/>
-                            <constraint firstItem="DIK-1O-prE" firstAttribute="top" secondItem="dfE-nn-pVW" secondAttribute="top" id="yR1-CU-Sgt"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="SeQ-Rr-1wq"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <exit id="MHv-tC-Hjb" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ovc-s8-1uU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4918" y="1792"/>
-        </scene>
         <!--New Trip-->
         <scene sceneID="GDs-dR-Fwm">
             <objects>
@@ -1388,6 +1309,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="7E0-lX-qdd">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Destination" id="yuR-NI-Nlr">
@@ -1497,13 +1419,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="New Trip" largeTitleDisplayMode="always" id="jRS-af-hyr">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="vTX-lB-Hez">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.51566594290000001" blue="0.91173273320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="hWD-Qh-b9O" kind="unwind" identifier="unwindCancel" unwindAction="backFromNewTripFor:" id="F2Y-K0-qdX"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="HmF-MS-m7V">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.51566594286607781" blue="0.91173273320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="hWD-Qh-b9O" kind="unwind" identifier="unwindSave" unwindAction="backFromNewTripFor:" id="W49-Wb-SoO"/>
                             </connections>
@@ -1544,6 +1466,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="uD5-zT-ScV">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="itineraryCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="itineraryCell" textLabel="K0u-wK-Fkm" detailTextLabel="GXw-9o-d7b" style="IBUITableViewCellStyleSubtitle" id="DQQ-aK-UCe">
@@ -1578,7 +1501,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Itinerary" id="UQn-gc-Lwe">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="Z8n-2n-GYV">
-                            <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="bh3-6N-4ii" kind="unwind" unwindAction="backToOverViewControllerWith:" id="Iqz-NM-4kG"/>
                             </connections>
@@ -1695,7 +1618,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="yM2-Kt-IKT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NjQ-fi-xAD">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1727,7 +1650,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Hh4-Dq-Rge"/>
+        <segue reference="Njr-Wn-zfu"/>
         <segue reference="gXD-BP-cAu"/>
         <segue reference="7WP-ZI-Diq"/>
     </inferredMetricsTieBreakers>
