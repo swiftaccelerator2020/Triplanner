@@ -199,9 +199,11 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
             }
             
         }
-        if let dest = segue.destination as? ItinEventTableViewController{
+        if let navigationVC = segue.destination as? UINavigationController{
+            if let dest = navigationVC.topViewController as? ItinEventTableViewController{
             dest.creatingItemFromOverview = true
             
+        }
         }
         if let navigationVC = segue.destination as? UINavigationController{
             if let dest = navigationVC.topViewController as? PackingListTableViewController{
