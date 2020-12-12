@@ -27,7 +27,7 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if trips.isEmpty == true{
-            return 1
+            return 0
         }else{return trips.count}
     }
 
