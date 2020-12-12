@@ -911,7 +911,7 @@
             <objects>
                 <tableViewController id="alL-dY-rrf" customClass="ItinEventTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Hkd-Ox-GLX">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1063,6 +1063,9 @@
                     <navigationItem key="navigationItem" title="Edit Event" id="k5v-Fe-Sab">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="1er-9s-55U">
                             <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="06x-Cc-kEF" kind="unwind" unwindAction="backToItinEventsTableViewControllerWith:" id="opW-ft-rr7"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="dNV-ys-DLx">
                             <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1089,7 +1092,7 @@
             <objects>
                 <navigationController id="gQ5-aD-fHW" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ysE-Nd-544">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1624,7 +1627,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ez6-os-fcW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" largeTitles="YES" id="6oe-Qy-AEJ">
-                        <rect key="frame" x="0.0" y="44" width="428" height="104.33333333333334"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1639,7 +1642,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Hh4-Dq-Rge"/>
-        <segue reference="gXD-BP-cAu"/>
+        <segue reference="6K0-FQ-Zcw"/>
         <segue reference="nAW-aR-8pe"/>
     </inferredMetricsTieBreakers>
     <resources>
