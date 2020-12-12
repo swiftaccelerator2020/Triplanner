@@ -68,10 +68,12 @@ class NewTripTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "unwindSave"{
         if segue.destination is HomeTableViewController{
 
             trip = Trip(destination: self.destinationTextField.text ?? "" , startDate: self.startDatePicker.date, endDate: self.endDatePicker.date, itinerary: [:], budget: [:], packingList: [])
         }
+    }
     }
 
     
