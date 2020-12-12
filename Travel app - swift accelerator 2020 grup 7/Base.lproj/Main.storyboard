@@ -1033,28 +1033,18 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Notes" id="AZK-cq-wa4">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="urR-bj-7yZ">
-                                        <rect key="frame" x="20" y="454.00000381469727" width="388" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="400" id="urR-bj-7yZ">
+                                        <rect key="frame" x="20" y="454.00000381469727" width="388" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="urR-bj-7yZ" id="0Kx-CG-Nyz">
-                                            <rect key="frame" x="0.0" y="0.0" width="388" height="44"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="urR-bj-7yZ" id="0Kx-CG-Nyz">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="400"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l0o-8Q-gKJ">
-                                                    <rect key="frame" x="53" y="-42" width="240" height="128"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="128" id="0jg-fh-l0K"/>
-                                                    </constraints>
-                                                    <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="92J-4R-P8x">
-                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="300"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="400"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="300" id="fGD-pE-6TC"/>
+                                                        <constraint firstAttribute="height" constant="400" id="fGD-pE-6TC"/>
                                                     </constraints>
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1062,13 +1052,8 @@
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="92J-4R-P8x" secondAttribute="bottom" id="6KY-rH-R3F"/>
-                                                <constraint firstItem="l0o-8Q-gKJ" firstAttribute="leading" secondItem="0Kx-CG-Nyz" secondAttribute="leading" id="CLF-Qn-E9K"/>
-                                                <constraint firstAttribute="bottom" secondItem="l0o-8Q-gKJ" secondAttribute="bottom" id="JoK-zb-ioY"/>
-                                                <constraint firstAttribute="trailing" secondItem="l0o-8Q-gKJ" secondAttribute="trailing" id="Z5V-F5-gt3"/>
                                                 <constraint firstAttribute="trailing" secondItem="92J-4R-P8x" secondAttribute="trailing" id="cVl-Vt-CvY"/>
                                                 <constraint firstItem="92J-4R-P8x" firstAttribute="leading" secondItem="0Kx-CG-Nyz" secondAttribute="leading" id="ckD-D4-kEM"/>
-                                                <constraint firstItem="l0o-8Q-gKJ" firstAttribute="top" secondItem="0Kx-CG-Nyz" secondAttribute="top" id="jRz-f7-dfO"/>
                                                 <constraint firstItem="92J-4R-P8x" firstAttribute="top" secondItem="0Kx-CG-Nyz" secondAttribute="top" id="mBw-iI-71c"/>
                                             </constraints>
                                         </tableViewCellContentView>
