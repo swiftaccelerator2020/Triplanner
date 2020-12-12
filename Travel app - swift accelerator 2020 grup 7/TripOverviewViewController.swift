@@ -199,7 +199,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
             }
             
         }
-        if let dest = segue.destination as? ItinEventViewController{
+        if let dest = segue.destination as? ItinEventTableViewController{
             dest.creatingItemFromOverview = true
             
         }
@@ -246,7 +246,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
 
         
     @IBAction func backToItinEventsTableViewController (with segue: UIStoryboardSegue){
-        if let source = segue.source as? ItinEventViewController{
+        if let source = segue.source as? ItinEventTableViewController{
             if segue.identifier == "unwindSave"{
             print("backToOverviewViewController segue result:", source.event)
                 if itinEventsDict[source.event.date] == nil{
