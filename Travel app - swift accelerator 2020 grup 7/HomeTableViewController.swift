@@ -60,7 +60,7 @@ class HomeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         if trips.isEmpty == false{
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMM dd,yyyy"
+        formatter.dateFormat = "MMM dd, yyyy"
         cell.textLabel?.text = trips[indexPath.row].destination
             let sDate = formatter.string(from: trips[indexPath.row].startDate)
             let eDate = formatter.string(from: trips[indexPath.row].endDate)
