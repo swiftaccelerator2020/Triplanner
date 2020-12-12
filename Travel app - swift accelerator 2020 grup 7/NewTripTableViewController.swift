@@ -74,5 +74,10 @@ class NewTripTableViewController: UITableViewController {
         }
     }
 
+    
+    @IBAction func destinationEditingEnd(_ sender: Any) {
+        destinationTextField.resignFirstResponder()
+    }
+    
 
 }
