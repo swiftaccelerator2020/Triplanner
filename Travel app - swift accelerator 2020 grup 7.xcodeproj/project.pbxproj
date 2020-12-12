@@ -132,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				AFC916612574D881003F10EC /* Main.storyboard */,
-				7EFD0FC22584BD1E004A5E23 /* ItinEventTableViewController.swift */,
 				AFACB230256CAA0B00EACAFF /* AppDelegate.swift */,
 				AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */,
 				AFE86A062583A62D00403FCE /* HomeTableViewController.swift */,
@@ -141,6 +140,7 @@
 				AF9599162579FBCF002EE58A /* TripOverviewViewController.swift */,
 				AF83206225709AF600487326 /* ItinEventsTableViewController.swift */,
 				AF83206C25709B9900487326 /* ItinTableViewController.swift */,
+				7EFD0FC22584BD1E004A5E23 /* ItinEventTableViewController.swift */,
 				AF8320772571EE0100487326 /* ItinEventViewController.swift */,
 				AF8320822573778500487326 /* ItinDayEvents.swift */,
 				7E6A37AA25723C6B00547549 /* PackingListTableViewController.swift */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gQ5-aD-fHW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ez6-os-fcW">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -72,7 +72,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fdx-GQ-ORf" kind="presentation" identifier="overViewToItinEvent" id="5Ca-r5-OL9"/>
+                                    <segue destination="gQ5-aD-fHW" kind="presentation" identifier="overViewToItinEvent" id="gXD-BP-cAu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmo-Jo-RHU" userLabel="itinerary">
@@ -890,7 +890,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
-                                                        <action selector="destinationEditingEnd:" destination="8D9-0X-1rg" eventType="editingDidEndOnExit" id="KZY-dy-ldx"/>
+                                                        <action selector="destinationEditingEnd:" destination="alL-dY-rrf" eventType="editingDidEndOnExit" id="hJ9-vV-eHc"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -918,7 +918,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
-                                                        <action selector="startTimeEditingEnd:" destination="8D9-0X-1rg" eventType="editingDidEndOnExit" id="Rpf-Mg-fyW"/>
+                                                        <action selector="startTimeEditingEnd:" destination="alL-dY-rrf" eventType="editingDidEndOnExit" id="k0s-fd-oRx"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -946,7 +946,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
-                                                        <action selector="endTimeEditingEnd:" destination="8D9-0X-1rg" eventType="editingDidEndOnExit" id="foY-I6-sL5"/>
+                                                        <action selector="endTimeEditingEnd:" destination="alL-dY-rrf" eventType="editingDidEndOnExit" id="41n-hX-qKq"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -1046,6 +1046,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateDatePicker" destination="Wz7-Xg-XEs" id="app-ox-4CN"/>
+                        <outlet property="destinationTextField" destination="YZy-iC-ca4" id="8dR-Fr-fJY"/>
+                        <outlet property="endTimeTextField" destination="Aww-5V-JVH" id="NhO-Tm-PC5"/>
+                        <outlet property="eventNoteView" destination="92J-4R-P8x" id="xqi-u1-8nG"/>
+                        <outlet property="startTimeTextField" destination="SiS-mu-Yib" id="mt6-Ss-chE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w2L-5D-gRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1334,13 +1341,6 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="SeQ-Rr-1wq"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="dateDatePicker" destination="Wz7-Xg-XEs" id="R6J-uB-2Yc"/>
-                        <outlet property="destinationTextField" destination="YZy-iC-ca4" id="bFQ-Ti-6Su"/>
-                        <outlet property="endTimeTextField" destination="Aww-5V-JVH" id="Rhl-w0-fcu"/>
-                        <outlet property="eventNoteView" destination="92J-4R-P8x" id="hLt-0F-Okc"/>
-                        <outlet property="startTimeTextField" destination="SiS-mu-Yib" id="721-KY-WnE"/>
-                    </connections>
                 </viewController>
                 <exit id="MHv-tC-Hjb" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovc-s8-1uU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1693,7 +1693,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dPy-MC-DZm"/>
         <segue reference="Hh4-Dq-Rge"/>
         <segue reference="p3w-sM-0OX"/>
         <segue reference="7WP-ZI-Diq"/>
