@@ -168,7 +168,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         packingListCheckCircle.isHidden = true
         packingListCheckCircle2.isHidden = true
         
-        packingListOverviewLabel2.isHidden = true
+        packingListOverviewLabel2.text = "..."
         packingListCheckCircle2.isEnabled = false
         
         let formatter = DateFormatter()
