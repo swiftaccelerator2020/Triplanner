@@ -8,7 +8,6 @@
 import UIKit
 
 class PackingListTableViewCell: UITableViewCell {
-    var delegate: PackingListCheckedDelegate?
 
     
     @IBOutlet weak var circleButton: UIButton!

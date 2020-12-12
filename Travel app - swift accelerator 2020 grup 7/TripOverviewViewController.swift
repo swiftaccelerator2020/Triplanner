@@ -33,65 +33,76 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
    
     
-    func printPackingListItem(titleArray: Array<packingItem>, isChecked: Bool) {
-        print("delegate titleArray:", titleArray)
-        if titleArray.isEmpty == false{
-            packingListOverviewLabel.text = (titleArray[0]).name
-            packingListCheckCircle.isHidden = false
-//            if titleArray[0].checked{
-//                packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
-//                    }else{
-//                        packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
-//                    }
-        }else{
-            packingListOverviewLabel.text = "Packing List Preview!"
+    fileprivate func packingListCircleChecking(_ item: packingItem) {
+        packingListOverviewLabel.text = item.name
+        packingListCheckCircle.isHidden = false
+        for i in packingItemsStorateList{
+            if i.name == packingListOverviewLabel.text{
+                if i.checked{
+                    packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
+                }else{
+                    packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
+                }
+            }
         }
+    }
+    
+    fileprivate func packingListCircleChecking2(_ item: packingItem) {
+        packingListOverviewLabel2.text = item.name
+        packingListCheckCircle2.isHidden = false
+        for i in packingItemsStorateList{
+            if i.name == packingListOverviewLabel2.text{
+                if i.checked{
+                    packingListCheckCircle2.setImage(UIImage(named: "checkmark.circle"), for: .normal)
+                }else{
+                    packingListCheckCircle2.setImage(UIImage(named: "circle"), for: .normal)
+                }
+            }
+        }
+    }
+    
+    func printPackingListItem(titleArray: Array<packingItem>, isChecked: Bool) {
         
-//            var tempPackingPreviewList: Array<packingItem> = []
-//            for i in titleArray{
-//                if i.checked == false{
-//                    tempPackingPreviewList.append(i)
-//                }
-//            }
-//        if tempPackingPreviewList.count == 1{
-//            packingListOverviewLabel2.isHidden = true
-//            packingListOverviewLabel.text = tempPackingPreviewList[0].name
-//        }else if tempPackingPreviewList.count == 2{
-//            packingListOverviewLabel2.isHidden = false
-//            packingListCheckCircle2.isHidden = false
-//            packingListOverviewLabel.text = tempPackingPreviewList[0].name
-//            packingListOverviewLabel2.text = tempPackingPreviewList[1].name
-//        }
-        var count = 0
-        var tempTitleArray: Array<packingItem> = []
+        var tempArray: Array<packingItem> = []
         for i in titleArray{
             if i.checked == false{
-                count += 1
-                tempTitleArray.append(i)
+                tempArray.append(i)
             }
         }
         
-        if count == 1{
-            packingListOverviewLabel.text = tempTitleArray[0].name
-            packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
-            packingListOverviewLabel2.isHidden = true
-            packingListCheckCircle2.isHidden = true
+        
+        if tempArray.count >= 1 {
+            packingListCircleChecking(tempArray.randomElement() ?? tempArray[0])
+//MARK: I WONDER WHY? IS THAT HOW A DELEGATE WORKS
+//            packingListCircleChecking2(tempArray[1])
         }
-
-        if count == 2{
-            packingListOverviewLabel2.isHidden = false
-            packingListCheckCircle2.isHidden = false
-            
-            packingListOverviewLabel.text = tempTitleArray[1].name
-            packingListOverviewLabel2.text = tempTitleArray[0].name
-
-            packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
-            packingListCheckCircle2.setImage(UIImage(named: "circle"), for: .normal)
-                
-        }else if count == 0{
-            packingListOverviewLabel.text = titleArray.randomElement()?.name
-            packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
+        if tempArray.isEmpty == false{
+            packingListCircleChecking(tempArray[0])
+        }else{
+            if titleArray.isEmpty == true{
+                packingListOverviewLabel.text = "Packing List Preview!"
+            }else{
+                packingListCircleChecking(packingItemsStorateList.randomElement() ?? packingItemsStorateList[0])
+            }
         }
+        
+        
+//        if count == 1{
+//            packingListOverviewLabel.text = tempTitleArray[0].name
+//            packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
+//        }
+//
+//        if count == 2{
+//
+//
+//            packingListOverviewLabel.text = tempTitleArray[1].name
+//
+//            packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
+//
+//        }else if count == 0{
+//            packingListOverviewLabel.text = titleArray.randomElement()?.name
+//            packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
+//        }
         packingItemsStorateList = titleArray
     }
     
@@ -138,10 +149,11 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     //MARK: Packing list overview variables
     @IBOutlet weak var packingListOverviewLabel: UILabel!
     @IBOutlet weak var packingListCheckCircle: UIButton!
-    var packingItemsStorateList: Array<packingItem> = []
     
     @IBOutlet weak var packingListOverviewLabel2: UILabel!
     @IBOutlet weak var packingListCheckCircle2: UIButton!
+    
+    var packingItemsStorateList: Array<packingItem> = []
     
 
 //MARK: Budget overview variables
@@ -155,6 +167,10 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         super.viewDidLoad()
         packingListCheckCircle.isHidden = true
         packingListCheckCircle2.isHidden = true
+        
+        packingListOverviewLabel2.isHidden = true
+        packingListCheckCircle2.isEnabled = false
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "MM dd, yyyy"
         locationTextField.text = trip.destination //MARK: to be resolved just a bit later
@@ -303,6 +319,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     }
 
     @IBAction func checkCircle1Tapped(_ sender: Any) {
+        print("newest testing!", packingItemsStorateList)
         for i in packingItemsStorateList{
             if packingListOverviewLabel.text == i.name{
                 if i.checked{
@@ -322,11 +339,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     @IBAction func checkCircle2Tapped(_ sender: Any) {
         for i in packingItemsStorateList{
-//            if packingListOverviewLabel.text == i.name{
-//                let a = i.checked
-//            }
-            
-            if packingListOverviewLabel2.text == i.name{
+            if i.name == packingListOverviewLabel2.text{
                 if i.checked{
                     i.checked = false
                     packingListCheckCircle2.setImage(UIImage(named: "circle"), for: .normal)
@@ -334,10 +347,12 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                     i.checked = true
                     packingListCheckCircle2.setImage(UIImage(named: "checkmark.circle"), for: .normal)
                 }
+                
             }
+            
+            
         }
-        
-        
+        packingListCheckCircle2.setImage(UIImage(named: "circle"), for: .normal)
     }
     
     class TextFieldWithReturn: UITextField, UITextFieldDelegate

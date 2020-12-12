@@ -127,8 +127,8 @@
                                     <segue destination="76h-IX-RFd" kind="presentation" modalPresentationStyle="fullScreen" id="V3D-iR-acR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packing list item!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vG7-P9-HFP">
-                                <rect key="frame" x="20" y="670" width="128.66666666666666" height="20.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packing List Preview!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vG7-P9-HFP">
+                                <rect key="frame" x="20" y="670" width="160.66666666666666" height="20.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="t5a-eQ-Mmx"/>
                                 </constraints>
@@ -149,12 +149,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uma-p5-jm2">
-                                <rect key="frame" x="395" y="670" width="13" height="20"/>
+                                <rect key="frame" x="388" y="670" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Mbd-k2-H1F"/>
+                                    <constraint firstAttribute="width" constant="20" id="qg7-cw-zIz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" image="checkmark.circle"/>
+                                <state key="normal" image="circle"/>
                                 <connections>
                                     <action selector="checkCircle1Tapped:" destination="QSK-vV-qtH" eventType="touchUpInside" id="VM1-Gt-rox"/>
                                 </connections>
@@ -168,8 +169,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packing list item!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfG-Ml-IwK">
-                                <rect key="frame" x="20" y="700.33333333333337" width="128.66666666666666" height="20.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packing List Preview!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfG-Ml-IwK">
+                                <rect key="frame" x="20" y="700.33333333333337" width="160.66666666666666" height="20.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="FPC-Ir-jX5"/>
                                 </constraints>
@@ -177,18 +178,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXz-2n-nPY">
-                                <rect key="frame" x="395" y="700" width="13" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="s7L-F1-E6Q"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" image="checkmark.circle"/>
-                                <connections>
-                                    <action selector="checkCircle1Tapped:" destination="QSK-vV-qtH" eventType="touchUpInside" id="DHD-y3-XKB"/>
-                                    <action selector="checkCircle2Tapped:" destination="QSK-vV-qtH" eventType="touchUpInside" id="dty-et-c3i"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4M-w7-Zfh">
                                 <rect key="frame" x="316" y="403" width="92" height="24"/>
                                 <constraints>
@@ -208,6 +197,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghQ-2H-41c">
+                                <rect key="frame" x="388" y="700" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Gnb-Ry-HLX"/>
+                                    <constraint firstAttribute="height" constant="20" id="hfE-an-BzC"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="circle"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XON-X7-oLZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -217,7 +214,7 @@
                             <constraint firstItem="vG7-P9-HFP" firstAttribute="top" secondItem="UdL-eL-vYd" secondAttribute="bottom" constant="10" id="44C-my-9xr"/>
                             <constraint firstItem="Re3-v2-Q8d" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="4AF-g4-Pjd"/>
                             <constraint firstItem="yjY-we-KAb" firstAttribute="top" secondItem="g4M-w7-Zfh" secondAttribute="bottom" constant="20" id="4Vw-7h-4l0"/>
-                            <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="aXz-2n-nPY" secondAttribute="trailing" constant="20" id="9QI-FL-s1x"/>
+                            <constraint firstItem="ghQ-2H-41c" firstAttribute="top" secondItem="uma-p5-jm2" secondAttribute="bottom" constant="10" id="AUc-3z-o54"/>
                             <constraint firstItem="H0X-wm-ChJ" firstAttribute="top" secondItem="g4M-w7-Zfh" secondAttribute="bottom" constant="20" id="BjS-qA-Xgv"/>
                             <constraint firstItem="Vny-LJ-8so" firstAttribute="top" secondItem="yjY-we-KAb" secondAttribute="bottom" constant="10" id="GO2-YO-Lvs"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="uma-p5-jm2" secondAttribute="trailing" constant="20" id="HJL-cY-yWt"/>
@@ -238,12 +235,12 @@
                             <constraint firstItem="UdL-eL-vYd" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="iLR-B4-e1h"/>
                             <constraint firstItem="M0L-8B-bIg" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="jFe-os-vOX"/>
                             <constraint firstItem="uma-p5-jm2" firstAttribute="top" secondItem="szO-6c-E7v" secondAttribute="bottom" constant="10" id="mm0-sQ-IAf"/>
-                            <constraint firstItem="aXz-2n-nPY" firstAttribute="top" secondItem="uma-p5-jm2" secondAttribute="bottom" constant="10" id="nxP-p8-ELM"/>
                             <constraint firstItem="UdL-eL-vYd" firstAttribute="top" secondItem="Vny-LJ-8so" secondAttribute="bottom" constant="20" id="o0d-Si-dDr"/>
                             <constraint firstItem="M0L-8B-bIg" firstAttribute="top" secondItem="jqd-Sa-5ZT" secondAttribute="bottom" constant="20" id="r9T-2E-BP9"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="jqd-Sa-5ZT" secondAttribute="trailing" constant="20" id="rcG-nM-qhc"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="szO-6c-E7v" secondAttribute="trailing" constant="20" id="ruO-VB-E3s"/>
                             <constraint firstItem="k2K-ac-Zqd" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="shU-dC-LrK"/>
+                            <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="ghQ-2H-41c" secondAttribute="trailing" constant="20" id="tgR-sh-HLP"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="Vny-LJ-8so" secondAttribute="trailing" constant="20" id="wAS-TH-vZZ"/>
                         </constraints>
                     </view>
@@ -263,7 +260,7 @@
                         <outlet property="overviewEndDatePicker" destination="jWE-Yl-VQc" id="Bfr-n6-dR4"/>
                         <outlet property="overviewStartDatePicker" destination="3mu-Vj-3y5" id="Vyp-24-Ark"/>
                         <outlet property="packingListCheckCircle" destination="uma-p5-jm2" id="hzh-nF-c5b"/>
-                        <outlet property="packingListCheckCircle2" destination="aXz-2n-nPY" id="D2m-Y7-GH6"/>
+                        <outlet property="packingListCheckCircle2" destination="ghQ-2H-41c" id="Ntu-kT-A2l"/>
                         <outlet property="packingListOverviewLabel" destination="vG7-P9-HFP" id="XO5-I8-57m"/>
                         <outlet property="packingListOverviewLabel2" destination="sfG-Ml-IwK" id="TXV-qc-rod"/>
                     </connections>
@@ -349,7 +346,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ow-PS-kTI">
-                                            <rect key="frame" x="320" y="0.0" width="66" height="50.333333333333336"/>
+                                            <rect key="frame" x="300" y="0.0" width="66" height="50.333333333333336"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="Gd5-gM-KY9"/>
                                                 <constraint firstAttribute="width" constant="66" id="SE5-ea-SJ2"/>
@@ -367,7 +364,7 @@
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="4Ow-PS-kTI" secondAttribute="bottom" id="33k-3W-3cZ"/>
                                         <constraint firstItem="4Ow-PS-kTI" firstAttribute="top" secondItem="gUh-N4-dfz" secondAttribute="top" id="Amy-zK-tdj"/>
-                                        <constraint firstItem="4Ow-PS-kTI" firstAttribute="leading" secondItem="gUh-N4-dfz" secondAttribute="leading" constant="320" id="Weh-AF-U3w"/>
+                                        <constraint firstItem="4Ow-PS-kTI" firstAttribute="leading" secondItem="gUh-N4-dfz" secondAttribute="leading" constant="300" id="Weh-AF-U3w"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -1713,7 +1710,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ez6-os-fcW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" largeTitles="YES" id="6oe-Qy-AEJ">
-                        <rect key="frame" x="0.0" y="44" width="428" height="104.33333333333334"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1734,7 +1731,6 @@
     <resources>
         <image name="airplane" catalog="system" width="128" height="115"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="checkmark.circle" width="13" height="13"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
