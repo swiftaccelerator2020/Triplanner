@@ -27,9 +27,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6Y2-eC-gP5">
-                                        <rect key="frame" x="0.0" y="31" width="230" height="34"/>
+                                        <rect key="frame" x="0.0" y="31" width="300" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="230" id="T2D-bv-XoC"/>
+                                            <constraint firstAttribute="width" constant="300" id="T2D-bv-XoC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -272,7 +272,7 @@
             </objects>
             <point key="canvasLocation" x="407.94392523364485" y="953.77969762419013"/>
         </scene>
-        <!--My Trips-->
+        <!--My Trips ✈️-->
         <scene sceneID="TR9-vo-dpS">
             <objects>
                 <tableViewController id="neQ-4Z-rzp" customClass="HomeTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
@@ -319,7 +319,7 @@
                             <outlet property="delegate" destination="neQ-4Z-rzp" id="d8a-0S-CJU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Trips" id="htp-zs-Cte">
+                    <navigationItem key="navigationItem" title="My Trips ✈️" id="htp-zs-Cte">
                         <barButtonItem key="rightBarButtonItem" title="New Trip" id="lqE-2I-a2t">
                             <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -349,7 +349,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ow-PS-kTI">
-                                            <rect key="frame" x="315" y="0.0" width="66" height="50.333333333333336"/>
+                                            <rect key="frame" x="320" y="0.0" width="66" height="50.333333333333336"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="Gd5-gM-KY9"/>
                                                 <constraint firstAttribute="width" constant="66" id="SE5-ea-SJ2"/>
@@ -367,7 +367,7 @@
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="4Ow-PS-kTI" secondAttribute="bottom" id="33k-3W-3cZ"/>
                                         <constraint firstItem="4Ow-PS-kTI" firstAttribute="top" secondItem="gUh-N4-dfz" secondAttribute="top" id="Amy-zK-tdj"/>
-                                        <constraint firstItem="4Ow-PS-kTI" firstAttribute="leading" secondItem="gUh-N4-dfz" secondAttribute="leading" constant="315" id="Weh-AF-U3w"/>
+                                        <constraint firstItem="4Ow-PS-kTI" firstAttribute="leading" secondItem="gUh-N4-dfz" secondAttribute="leading" constant="320" id="Weh-AF-U3w"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -918,7 +918,7 @@
             <objects>
                 <tableViewController id="alL-dY-rrf" customClass="ItinEventTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Hkd-Ox-GLX">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
@@ -1112,7 +1112,7 @@
             <objects>
                 <navigationController id="gQ5-aD-fHW" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ysE-Nd-544">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1419,7 +1419,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y9o-yw-A4W">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="y9o-yw-A4W">
                                                     <rect key="frame" x="20" y="5" width="348" height="33.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -1728,7 +1728,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ez6-os-fcW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" largeTitles="YES" id="6oe-Qy-AEJ">
-                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="104.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1743,7 +1743,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Hh4-Dq-Rge"/>
-        <segue reference="6K0-FQ-Zcw"/>
+        <segue reference="gXD-BP-cAu"/>
         <segue reference="7WP-ZI-Diq"/>
     </inferredMetricsTieBreakers>
     <resources>
