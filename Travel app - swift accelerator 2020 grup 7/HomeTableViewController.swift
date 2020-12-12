@@ -99,7 +99,8 @@ class HomeTableViewController: UITableViewController {
     
     @IBAction func backFromNewTrip(for segue: UIStoryboardSegue){
         if let source = segue.source as? NewTripTableViewController{
-            trips.append(source.trip)
+//            trips.append(source.trip)
+            trips.insert(source.trip, at: 0)
             print("backFromNewTrip", trips)
             tableView.reloadData()
         }

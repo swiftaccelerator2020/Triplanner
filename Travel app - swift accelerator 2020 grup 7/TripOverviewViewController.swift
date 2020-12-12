@@ -38,13 +38,59 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         if titleArray.isEmpty == false{
             packingListOverviewLabel.text = (titleArray[0]).name
             packingListCheckCircle.isHidden = false
-            if titleArray[0].checked{
-                packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
-                    }else{
-                        packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
-                    }
+//            if titleArray[0].checked{
+//                packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
+//                    }else{
+//                        packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
+//                    }
         }else{
             packingListOverviewLabel.text = "Packing List Preview!"
+        }
+        
+//            var tempPackingPreviewList: Array<packingItem> = []
+//            for i in titleArray{
+//                if i.checked == false{
+//                    tempPackingPreviewList.append(i)
+//                }
+//            }
+//        if tempPackingPreviewList.count == 1{
+//            packingListOverviewLabel2.isHidden = true
+//            packingListOverviewLabel.text = tempPackingPreviewList[0].name
+//        }else if tempPackingPreviewList.count == 2{
+//            packingListOverviewLabel2.isHidden = false
+//            packingListCheckCircle2.isHidden = false
+//            packingListOverviewLabel.text = tempPackingPreviewList[0].name
+//            packingListOverviewLabel2.text = tempPackingPreviewList[1].name
+//        }
+        var count = 0
+        var tempTitleArray: Array<packingItem> = []
+        for i in titleArray{
+            if i.checked == false{
+                count += 1
+                tempTitleArray.append(i)
+            }
+        }
+        
+        if count == 1{
+            packingListOverviewLabel.text = tempTitleArray[0].name
+            packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
+            packingListOverviewLabel2.isHidden = true
+            packingListCheckCircle2.isHidden = true
+        }
+
+        if count == 2{
+            packingListOverviewLabel2.isHidden = false
+            packingListCheckCircle2.isHidden = false
+            
+            packingListOverviewLabel.text = tempTitleArray[1].name
+            packingListOverviewLabel2.text = tempTitleArray[0].name
+
+            packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
+            packingListCheckCircle2.setImage(UIImage(named: "circle"), for: .normal)
+                
+        }else if count == 0{
+            packingListOverviewLabel.text = titleArray.randomElement()?.name
+            packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
         }
         packingItemsStorateList = titleArray
     }
@@ -108,6 +154,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         print("tripNo:", tripNo)
         super.viewDidLoad()
         packingListCheckCircle.isHidden = true
+        packingListCheckCircle2.isHidden = true
         let formatter = DateFormatter()
         formatter.dateFormat = "MM dd, yyyy"
         locationTextField.text = trip.destination //MARK: to be resolved just a bit later
@@ -237,7 +284,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         
         if let source = segue.source as? BudgetViewController{
             self.budgetItemsStorageDict = source.budgetItemsDict
-            self.budgetTotal = source.total!
+            self.budgetTotal = source.total ?? 0
         }
         
     }
@@ -267,6 +314,28 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 
             }
         }
+    }
+    
+    
+    
+    @IBAction func checkCircle2Tapped(_ sender: Any) {
+        for i in packingItemsStorateList{
+//            if packingListOverviewLabel.text == i.name{
+//                let a = i.checked
+//            }
+            
+            if packingListOverviewLabel2.text == i.name{
+                if i.checked{
+                    i.checked = false
+                    packingListCheckCircle2.setImage(UIImage(named: "circle"), for: .normal)
+                }else{
+                    i.checked = true
+                    packingListCheckCircle2.setImage(UIImage(named: "checkmark.circle"), for: .normal)
+                }
+            }
+        }
+        
+        
     }
     
     class TextFieldWithReturn: UITextField, UITextFieldDelegate

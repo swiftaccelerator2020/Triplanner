@@ -189,6 +189,7 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         
         
         if let dest = segue.destination as? TripOverviewViewController{
+            if total != nil{
             let string1 = "total budget $\(total!), spent $\(spendingAddedUp), \(spendingAddedUp/(total ?? 1.0)*100)% of total"
             //MARK: the percentage needs rounding up
             
@@ -203,6 +204,7 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
             print("string1, string2", string1, string2)
             delegate?.calculateBudget(string1: string1, string2: string2)
             
+        }
         }
         }
     
