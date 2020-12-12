@@ -98,18 +98,23 @@ class ItinEventsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "eventsToEventDetail"{
             eventNo = tableView.indexPathForSelectedRow!.row
-            if let dest = segue.destination as? ItinEventTableViewController{
+            if let navigationVC = segue.destination as? UINavigationController{
+                if let dest = navigationVC.topViewController as? ItinEventTableViewController{
                 dest.eventNo = eventNo
                 dest.event = events[eventNo]
                 dest.dateArray = self.dateArray
             }
+            }
         }
+        
         if segue.identifier == "eventsToNewEvent"{
-            if let dest = segue.destination as? ItinEventTableViewController{
+            if let navigationVC = segue.destination as? UINavigationController{
+                if let dest = navigationVC.topViewController as? ItinEventTableViewController{
                 dest.isAnExistingEvent = false
                 dest.dateArray = self.dateArray
                 dest.eventNo = anotherEventNoForPassingDate
         }
+            }
     }
         if segue.identifier == "backToItineraryTableViewController"{
             if let dest = segue.destination as? ItinTableViewController{

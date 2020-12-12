@@ -49,6 +49,7 @@ class ItinTableViewController:
         cell.textLabel?.text = "Day \(String(indexPath.row+1))"
         cell.detailTextLabel?.text = generateDate(schedule: self.schedule, dayNumber: indexPath.row)
         self.dateArray.append(cell.detailTextLabel?.text ?? "")
+        print("newest testing:", dateArray)
         // Configure the cell...
 
         return cell
