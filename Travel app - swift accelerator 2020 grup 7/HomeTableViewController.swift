@@ -15,6 +15,9 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let topInset = 20
+                tableView.contentInset.top = CGFloat(topInset)
+        
 //  self.navigationItem.rightBarButtonItem = self.editButtonItem
         
 //        // Create a gradient layer.
