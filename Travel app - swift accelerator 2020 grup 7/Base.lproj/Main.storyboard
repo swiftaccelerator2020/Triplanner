@@ -870,7 +870,7 @@
         <!--Edit Event-->
         <scene sceneID="HW6-4k-b5p">
             <objects>
-                <tableViewController id="alL-dY-rrf" sceneMemberID="viewController">
+                <tableViewController id="alL-dY-rrf" customClass="ItinEventTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Hkd-Ox-GLX">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

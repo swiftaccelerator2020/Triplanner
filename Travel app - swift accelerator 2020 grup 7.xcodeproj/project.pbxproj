@@ -13,6 +13,7 @@
 		7E6A37B625723CDF00547549 /* PackingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A37B525723CDF00547549 /* PackingItem.swift */; };
 		7E6A37EE257258F200547549 /* EditPackingItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A37ED257258F200547549 /* EditPackingItemTableViewController.swift */; };
 		7E7392C12573C05E00EFFCFF /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7392C02573C05E00EFFCFF /* BudgetViewController.swift */; };
+		7EFD0FC32584BD1F004A5E23 /* ItinEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFD0FC22584BD1E004A5E23 /* ItinEventTableViewController.swift */; };
 		AF3814732581CC00002BE597 /* BudgetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3814722581CC00002BE597 /* BudgetItem.swift */; };
 		AF83206325709AF600487326 /* ItinEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83206225709AF600487326 /* ItinEventsTableViewController.swift */; };
 		AF83206D25709B9900487326 /* ItinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83206C25709B9900487326 /* ItinTableViewController.swift */; };
@@ -56,6 +57,7 @@
 		7E6A37B525723CDF00547549 /* PackingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItem.swift; sourceTree = "<group>"; };
 		7E6A37ED257258F200547549 /* EditPackingItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPackingItemTableViewController.swift; sourceTree = "<group>"; };
 		7E7392C02573C05E00EFFCFF /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
+		7EFD0FC22584BD1E004A5E23 /* ItinEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinEventTableViewController.swift; sourceTree = "<group>"; };
 		AF3814722581CC00002BE597 /* BudgetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetItem.swift; sourceTree = "<group>"; };
 		AF83206225709AF600487326 /* ItinEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinEventsTableViewController.swift; sourceTree = "<group>"; };
 		AF83206C25709B9900487326 /* ItinTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinTableViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				AFC916612574D881003F10EC /* Main.storyboard */,
+				7EFD0FC22584BD1E004A5E23 /* ItinEventTableViewController.swift */,
 				AFACB230256CAA0B00EACAFF /* AppDelegate.swift */,
 				AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */,
 				AFE86A062583A62D00403FCE /* HomeTableViewController.swift */,
@@ -311,6 +314,7 @@
 				7E6A37EE257258F200547549 /* EditPackingItemTableViewController.swift in Sources */,
 				7E6A37AB25723C6B00547549 /* PackingListTableViewController.swift in Sources */,
 				BB3DE9BF25807C1700248131 /* AddSpendingViewController.swift in Sources */,
+				7EFD0FC32584BD1F004A5E23 /* ItinEventTableViewController.swift in Sources */,
 				3A9C318F257F496500512AD1 /* PackingListTableViewCell.swift in Sources */,
 				7E5DF8F32579E40700B42C9B /* BudgetTableViewController.swift in Sources */,
 				7E6A37B625723CDF00547549 /* PackingItem.swift in Sources */,
