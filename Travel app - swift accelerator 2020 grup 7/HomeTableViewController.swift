@@ -18,6 +18,14 @@ class HomeTableViewController: UITableViewController {
         let topInset = 20
                 tableView.contentInset.top = CGFloat(topInset)
         
+        if let loadedTrips = Trip.loadFromFile(){
+            print("File founded. Loading friends.")
+            trips = loadedTrips
+        }else{
+            print("No friends! Make some.")
+            trips = Trip.loadSampleData()
+        }
+        
 //  self.navigationItem.rightBarButtonItem = self.editButtonItem
         
 //        // Create a gradient layer.
@@ -83,6 +91,7 @@ class HomeTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            Trip.saveToFile(trips: trips)
             trips.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
@@ -116,7 +125,7 @@ class HomeTableViewController: UITableViewController {
                 if self.trips.isEmpty == false{
                 dest.tripNo = tableView.indexPathForSelectedRow!.row
                 dest.trip = trips[tableView.indexPathForSelectedRow!.row]
-                    dest.generalTripsStorageList = trips
+                    dest.trips = trips
                 }
             }
         }
@@ -130,6 +139,7 @@ class HomeTableViewController: UITableViewController {
             print("backFromNewTrip", trips)
             tableView.reloadData()
             }
+            Trip.saveToFile(trips: trips)
         
     }
     

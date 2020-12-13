@@ -8,7 +8,7 @@
 import Foundation
 
 
-class Trip{
+struct Trip: Codable{
     static func == (lhs: Trip, rhs: Trip) -> Bool {
         return true
     }
@@ -22,14 +22,40 @@ class Trip{
     var packingList: Array<packingItem>
     
     
-    init(destination: String, startDate: Date, endDate: Date, itinerary: Dictionary<String, Array<DayEvent>>, budget: Dictionary<String, Array<BudgetItem>>, packingList: Array<packingItem> ){
-        
-        self.destination = destination
-        self.startDate = startDate
-        self.endDate = endDate
-        self.itinerary = itinerary
-        self.budget = budget
-        self.packingList = packingList
+//    init(destination: String, startDate: Date, endDate: Date, itinerary: Dictionary<String, Array<DayEvent>>, budget: Dictionary<String, Array<BudgetItem>>, packingList: Array<packingItem> ){
+//
+//        self.destination = destination
+//        self.startDate = startDate
+//        self.endDate = endDate
+//        self.itinerary = itinerary
+//        self.budget = budget
+//        self.packingList = packingList
+//    }
+    
+    static func loadSampleData() -> [Trip]{
+        let trips = [Trip(destination: "", startDate: Date(), endDate: Date(), itinerary: [:], budget: [:], packingList: [])]
+        return trips
+}
+    
+    static func getArchiveURL() -> URL {
+        let plistName = "trips"
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        return documentsDirectory.appendingPathComponent(plistName).appendingPathExtension("plist")
+    }
+
+    static func saveToFile(trips: [Trip]) {
+        let archiveURL = getArchiveURL()
+        let propertyListEncoder = PropertyListEncoder()
+        let encodedFriends = try? propertyListEncoder.encode(trips)
+        try? encodedFriends?.write(to: archiveURL, options: .noFileProtection)
+    }
+
+    static func loadFromFile() -> [Trip]? {
+        let archiveURL = getArchiveURL()
+        let propertyListDecoder = PropertyListDecoder()
+        guard let retrievedFriendsData = try? Data(contentsOf: archiveURL) else { return nil }
+        guard let decodedTrips = try? propertyListDecoder.decode(Array<Trip>.self, from: retrievedFriendsData) else { return nil }
+        return decodedTrips
     }
     
 }

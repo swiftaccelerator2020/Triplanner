@@ -132,7 +132,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     var tripNo: Int = 0
     var trip: Trip!
     var newTrip: Bool = true
-    var generalTripsStorageList: Array<Trip> = []
+    var trips: Array<Trip> = []
     
   //MARK: Itinerary overview variables
     @IBOutlet weak var newItineraryItem: UIButton!
@@ -183,6 +183,10 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
             overviewStartDatePicker.setDate(trip.startDate, animated: true)
             overviewEndDatePicker.setDate(trip.endDate, animated: true)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        Trip.saveToFile(trips: trips)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -240,16 +244,17 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         if let navigationVC = segue.destination as? UINavigationController{
             if let dest = navigationVC.topViewController as? HomeTableViewController{
                 self.trip = Trip(destination: self.locationTextField.text ?? "", startDate: self.overviewStartDatePicker.date, endDate: self.overviewEndDatePicker.date, itinerary: self.itinEventsDict, budget: self.budgetItemsStorageDict, packingList: self.packingItemsStorateList)
-                if generalTripsStorageList.count < tripNo{
-                    generalTripsStorageList.append(trip)
-                    dest.trips = generalTripsStorageList
-                    print("generalTripsStorageList", generalTripsStorageList[0].endDate)
+                if trips.count < tripNo{
+                    trips.append(trip)
+                    dest.trips = trips
+                    print("generalTripsStorageList", trips[0].endDate)
                 }else{
-                    generalTripsStorageList[tripNo] = trip
-                    dest.trips = generalTripsStorageList
-                    print("generalTripsStorageList", generalTripsStorageList[0].endDate)
+                    trips[tripNo] = trip
+                    dest.trips = trips
+                    print("generalTripsStorageList", trips[0].endDate)
                 }
                 print("dest.trips", dest.trips)
+                Trip.saveToFile(trips: trips)
             }
         }
     }
