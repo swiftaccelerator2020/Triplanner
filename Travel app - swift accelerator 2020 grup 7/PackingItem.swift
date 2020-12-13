@@ -7,7 +7,7 @@
 
 import Foundation
 
-class packingItem {
+class packingItem: Codable {
     
     var name: String
     var checked = false

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BudgetItem {
+class BudgetItem: Codable {
     var name: String = ""
     var cost: Int
     var notes: String
