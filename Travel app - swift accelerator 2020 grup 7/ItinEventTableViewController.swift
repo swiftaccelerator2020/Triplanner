@@ -29,7 +29,7 @@ class ItinEventTableViewController: UITableViewController, UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        eventNoteView.backgroundColor = .init(red: 0, green: 0, blue: 1, alpha: 0.1)
+        //eventNoteView.backgroundColor = .init(red: 0, green: 0, blue: 1, alpha: 0.1)
         eventNoteView.text = ""
         formatter.dateFormat = "MMM dd, yyyy"
         
