@@ -19,10 +19,10 @@ class HomeTableViewController: UITableViewController {
                 tableView.contentInset.top = CGFloat(topInset)
         
         if let loadedTrips = Trip.loadFromFile(){
-            print("File founded. Loading friends.")
+            print("File founded. Loading trips.")
             trips = loadedTrips
         }else{
-            print("No friends! Make some.")
+            print("No trips! Make some.")
             trips = Trip.loadSampleData()
         }
         

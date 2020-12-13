@@ -19,7 +19,7 @@ struct Trip: Codable{
     var endDate: Date
     var itinerary: Dictionary<String, Array<DayEvent>>
     var budget: Dictionary<String, Array<BudgetItem>>
-    var packingList: Array<PackingItem>
+    var packingList: Array<packingItem>
     
     
 //    init(destination: String, startDate: Date, endDate: Date, itinerary: Dictionary<String, Array<DayEvent>>, budget: Dictionary<String, Array<BudgetItem>>, packingList: Array<packingItem> ){
