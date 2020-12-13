@@ -430,91 +430,57 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WYR-kv-Reg">
                                 <rect key="frame" x="20" y="237" width="388" height="635"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTO-vu-guR">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bTO-vu-guR">
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="115"/>
                                         <color key="backgroundColor" red="0.53333333329999999" green="0.59215686270000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                         <state key="normal" title="Food">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Food">
-                                                    <attributes>
-                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" size="30" name="Helvetica-Bold"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="foodButtonPressed:" destination="B4D-IW-gQn" eventType="touchUpInside" id="ate-cB-8Cp"/>
                                             <segue destination="9Dy-jb-usU" kind="presentation" identifier="foodSpending" destinationCreationSelector="food:" modalPresentationStyle="fullScreen" id="NkC-N2-2CM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="knb-lC-wTk" userLabel="Accomodation">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knb-lC-wTk" userLabel="Accomodation">
                                         <rect key="frame" x="0.0" y="130" width="388" height="115"/>
                                         <color key="backgroundColor" red="0.59215686270000001" green="0.66666666669999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Food">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Accomodation">
-                                                    <attributes>
-                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" size="30" name="Helvetica-Bold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                        <state key="normal" title="Accomodation">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <segue destination="9Dy-jb-usU" kind="presentation" identifier="accomodationSpending" modalPresentationStyle="fullScreen" id="RgN-4F-5BY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uck-IT-FhW" userLabel="Shopping">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uck-IT-FhW" userLabel="Shopping">
                                         <rect key="frame" x="0.0" y="260" width="388" height="115"/>
                                         <color key="backgroundColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Food">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Shopping">
-                                                    <attributes>
-                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" size="30" name="Helvetica-Bold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                        <state key="normal" title="Shopping">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <segue destination="9Dy-jb-usU" kind="presentation" identifier="shoppingSpending" modalPresentationStyle="fullScreen" id="CIV-VY-UOx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eed-Q0-UmU" userLabel="Travel">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eed-Q0-UmU" userLabel="Travel">
                                         <rect key="frame" x="0.0" y="390" width="388" height="115"/>
                                         <color key="backgroundColor" red="0.53333333329999999" green="0.59215686270000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Food">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Travel">
-                                                    <attributes>
-                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" size="30" name="Helvetica-Bold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                        <state key="normal" title="Travel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <segue destination="9Dy-jb-usU" kind="presentation" identifier="travelSpending" modalPresentationStyle="fullScreen" id="nAW-aR-8pe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GRu-Jg-Kp6" userLabel="Other">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRu-Jg-Kp6" userLabel="Other">
                                         <rect key="frame" x="0.0" y="520" width="388" height="115"/>
                                         <color key="backgroundColor" red="0.59215686270000001" green="0.66666666669999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Food">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Other">
-                                                    <attributes>
-                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" size="30" name="Helvetica-Bold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                        <state key="normal" title="Other">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <segue destination="9Dy-jb-usU" kind="presentation" identifier="otherSpending" modalPresentationStyle="fullScreen" id="7WP-ZI-Diq"/>
@@ -532,11 +498,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="27G-Yw-Hu2">
-                                <rect key="frame" x="213" y="101" width="120" height="34"/>
+                                <rect key="frame" x="203" y="101" width="175" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="nTM-YN-EQq"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                 <connections>
@@ -544,11 +507,8 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dPD-iV-A0I">
-                                <rect key="frame" x="213" y="143" width="120" height="34"/>
+                                <rect key="frame" x="203" y="143" width="175" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="3GT-BA-NWx"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
@@ -556,11 +516,8 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwd-Za-9Zl">
-                                <rect key="frame" x="213" y="185" width="120" height="34"/>
+                                <rect key="frame" x="203" y="185" width="175" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="76x-aY-2IT"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
@@ -568,17 +525,17 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWK-wi-Jdl">
-                                <rect key="frame" x="188" y="108" width="19.666666666666657" height="22"/>
+                                <rect key="frame" x="178" y="108" width="19.666666666666657" height="22"/>
                                 <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="dollarsign.circle" catalog="system"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwk-AC-VZp">
-                                <rect key="frame" x="188" y="150" width="19.666666666666657" height="22"/>
+                                <rect key="frame" x="178" y="150" width="19.666666666666657" height="22"/>
                                 <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="dollarsign.circle" catalog="system"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiQ-Eo-ab2">
-                                <rect key="frame" x="188" y="192" width="19.666666666666657" height="22"/>
+                                <rect key="frame" x="178" y="192" width="19.666666666666657" height="22"/>
                                 <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="dollarsign.circle" catalog="system"/>
                             </button>
@@ -592,23 +549,26 @@
                             <constraint firstItem="uiQ-Eo-ab2" firstAttribute="top" secondItem="jwk-AC-VZp" secondAttribute="bottom" constant="20" id="3fk-DF-qY9"/>
                             <constraint firstItem="B71-qd-IkG" firstAttribute="leading" secondItem="A7c-7P-y38" secondAttribute="leading" constant="20" id="4gc-6w-nb2"/>
                             <constraint firstItem="wgr-bl-7m2" firstAttribute="top" secondItem="A7c-7P-y38" secondAttribute="top" constant="20" id="7pP-Vp-DNH"/>
+                            <constraint firstItem="A7c-7P-y38" firstAttribute="trailing" secondItem="xwd-Za-9Zl" secondAttribute="trailing" constant="50" id="93e-HG-w1y"/>
                             <constraint firstItem="B71-qd-IkG" firstAttribute="top" secondItem="wgr-bl-7m2" secondAttribute="bottom" constant="22" id="DSw-CY-QPh"/>
                             <constraint firstItem="dPD-iV-A0I" firstAttribute="top" secondItem="27G-Yw-Hu2" secondAttribute="bottom" constant="8" symbolic="YES" id="EV6-G6-gez"/>
                             <constraint firstItem="xwd-Za-9Zl" firstAttribute="top" secondItem="dPD-iV-A0I" secondAttribute="bottom" constant="8" symbolic="YES" id="FU9-K0-dbx"/>
+                            <constraint firstItem="A7c-7P-y38" firstAttribute="trailing" secondItem="27G-Yw-Hu2" secondAttribute="trailing" constant="50" id="Fdd-yf-7L3"/>
                             <constraint firstItem="DWK-wi-Jdl" firstAttribute="top" secondItem="A7c-7P-y38" secondAttribute="top" constant="20" id="P76-YK-AjC"/>
                             <constraint firstItem="WYR-kv-Reg" firstAttribute="leading" secondItem="A7c-7P-y38" secondAttribute="leading" constant="20" id="SJI-Yb-cxh"/>
-                            <constraint firstItem="dPD-iV-A0I" firstAttribute="leading" secondItem="B71-qd-IkG" secondAttribute="trailing" constant="51.670000000000002" id="Uv1-Hf-dVO"/>
+                            <constraint firstItem="dPD-iV-A0I" firstAttribute="leading" secondItem="B71-qd-IkG" secondAttribute="trailing" constant="41.670000000000002" id="Uv1-Hf-dVO"/>
+                            <constraint firstItem="A7c-7P-y38" firstAttribute="trailing" secondItem="dPD-iV-A0I" secondAttribute="trailing" constant="50" id="YNx-UA-WmR"/>
                             <constraint firstItem="27G-Yw-Hu2" firstAttribute="top" secondItem="A7c-7P-y38" secondAttribute="top" constant="13" id="ajD-e4-qvP"/>
-                            <constraint firstItem="27G-Yw-Hu2" firstAttribute="leading" secondItem="wgr-bl-7m2" secondAttribute="trailing" constant="68" id="b3n-Sw-ghe"/>
+                            <constraint firstItem="27G-Yw-Hu2" firstAttribute="leading" secondItem="wgr-bl-7m2" secondAttribute="trailing" constant="58" id="b3n-Sw-ghe"/>
                             <constraint firstItem="jwk-AC-VZp" firstAttribute="top" secondItem="DWK-wi-Jdl" secondAttribute="bottom" constant="20" id="d1j-Uo-4v4"/>
                             <constraint firstItem="A7c-7P-y38" firstAttribute="trailing" secondItem="WYR-kv-Reg" secondAttribute="trailing" constant="20" id="efY-Ln-IU3"/>
-                            <constraint firstItem="DWK-wi-Jdl" firstAttribute="leading" secondItem="wgr-bl-7m2" secondAttribute="trailing" constant="43" id="gFd-kQ-lSa"/>
+                            <constraint firstItem="DWK-wi-Jdl" firstAttribute="leading" secondItem="wgr-bl-7m2" secondAttribute="trailing" constant="33" id="gFd-kQ-lSa"/>
                             <constraint firstItem="A7c-7P-y38" firstAttribute="bottom" secondItem="WYR-kv-Reg" secondAttribute="bottom" constant="20" id="i3O-A3-J8v"/>
-                            <constraint firstItem="uiQ-Eo-ab2" firstAttribute="leading" secondItem="amH-YE-D38" secondAttribute="trailing" constant="45.329999999999998" id="pHr-z4-91y"/>
-                            <constraint firstItem="xwd-Za-9Zl" firstAttribute="leading" secondItem="amH-YE-D38" secondAttribute="trailing" constant="70.329999999999998" id="tBb-ej-nOb"/>
+                            <constraint firstItem="uiQ-Eo-ab2" firstAttribute="leading" secondItem="amH-YE-D38" secondAttribute="trailing" constant="35.329999999999998" id="pHr-z4-91y"/>
+                            <constraint firstItem="xwd-Za-9Zl" firstAttribute="leading" secondItem="amH-YE-D38" secondAttribute="trailing" constant="60.329999999999998" id="tBb-ej-nOb"/>
                             <constraint firstItem="amH-YE-D38" firstAttribute="leading" secondItem="A7c-7P-y38" secondAttribute="leading" constant="20" id="uk6-uQ-Qgx"/>
                             <constraint firstItem="WYR-kv-Reg" firstAttribute="top" secondItem="amH-YE-D38" secondAttribute="bottom" constant="25" id="yhC-B3-xEf"/>
-                            <constraint firstItem="jwk-AC-VZp" firstAttribute="leading" secondItem="B71-qd-IkG" secondAttribute="trailing" constant="26.670000000000002" id="zap-T5-SIJ"/>
+                            <constraint firstItem="jwk-AC-VZp" firstAttribute="leading" secondItem="B71-qd-IkG" secondAttribute="trailing" constant="16.670000000000002" id="zap-T5-SIJ"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="nN6-rz-GEL" appends="YES" id="tfZ-Uf-sm0"/>
@@ -1629,7 +1589,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ez6-os-fcW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" largeTitles="YES" id="6oe-Qy-AEJ">
-                        <rect key="frame" x="0.0" y="44" width="428" height="104.33333333333334"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
