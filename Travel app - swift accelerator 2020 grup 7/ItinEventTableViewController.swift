@@ -54,6 +54,7 @@ class ItinEventTableViewController: UITableViewController, UITextViewDelegate {
             }
         }
         
+        
         //trying to make textview dismissible
         eventNoteView.delegate = self
         
@@ -63,12 +64,14 @@ class ItinEventTableViewController: UITableViewController, UITextViewDelegate {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("newest testing:", event)
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "eventToEventsTable"{
-                print("eventToEventsTable segue performed")
-            }
+        
         if segue.identifier == "unwindSave"{
             switch isAnExistingEvent {
             case true:
@@ -82,6 +85,8 @@ class ItinEventTableViewController: UITableViewController, UITextViewDelegate {
                         }
             default:
                 event = DayEvent(destination:destinationTextField.text ?? "", timeStart: startTimeTextField.text ?? "", timeEnd: endTimeTextField.text ?? "", date: formatter.string(from: dateDatePicker.date), notes: eventNoteView.text ?? "Notes")
+                print(destinationTextField.text ?? "not working")
+                print("newest testing default:", event)
             }
             }
             
