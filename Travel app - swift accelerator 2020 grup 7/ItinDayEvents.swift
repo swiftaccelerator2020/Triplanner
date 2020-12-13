@@ -27,7 +27,7 @@ struct DayEvent: Codable, Equatable{
 //        self.notes = notes
 //    }
     static func loadSampleData() -> [DayEvent]{
-        let dayEvents = [DayEvent(destination: "Insert your event here", timeStart: "", timeEnd: "", date: "", notes: "")]
+        let dayEvents = [DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: "")]
         return dayEvents
 }
 

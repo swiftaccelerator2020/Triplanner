@@ -40,7 +40,7 @@ class EditPackingItemTableViewController: UITableViewController, UITextViewDeleg
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "unwindFromDetail"{
         if self.newPackingItem == true{
-            self.packingItem = PackingItem(name: nameTextField.text ?? "", note: notesTextView.text ?? "")
+            self.packingItem = PackingItem(name: nameTextField.text ?? "", checked: false, note: notesTextView.text ?? "")
             print("created item here", self.packingItem)
             } else {
                 self.packingItem?.name = nameTextField.text ?? ""

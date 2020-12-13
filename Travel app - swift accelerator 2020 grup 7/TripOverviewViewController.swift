@@ -82,7 +82,9 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
             if titleArray.isEmpty == true{
                 packingListOverviewLabel.text = "Packing List Preview!"
             }else{
+                if packingItemsStorateList.isEmpty == false{
                 packingListCircleChecking(packingItemsStorateList.randomElement() ?? packingItemsStorateList[0])
+                }
             }
         }
         
@@ -340,6 +342,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 
             }
         }
+        PackingItem.saveToFile(packingItems: packingItemsStorateList)
     }
     
     

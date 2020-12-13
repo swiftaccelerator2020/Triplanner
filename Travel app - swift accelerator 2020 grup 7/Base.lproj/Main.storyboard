@@ -347,7 +347,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ow-PS-kTI">
-                                            <rect key="frame" x="320" y="0.0" width="66" height="50.333333333333336"/>
+                                            <rect key="frame" x="300" y="0.0" width="66" height="50.333333333333336"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="Gd5-gM-KY9"/>
                                                 <constraint firstAttribute="width" constant="66" id="SE5-ea-SJ2"/>
@@ -365,7 +365,7 @@
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="4Ow-PS-kTI" secondAttribute="bottom" id="33k-3W-3cZ"/>
                                         <constraint firstItem="4Ow-PS-kTI" firstAttribute="top" secondItem="gUh-N4-dfz" secondAttribute="top" id="Amy-zK-tdj"/>
-                                        <constraint firstItem="4Ow-PS-kTI" firstAttribute="leading" secondItem="gUh-N4-dfz" secondAttribute="leading" constant="320" id="Weh-AF-U3w"/>
+                                        <constraint firstItem="4Ow-PS-kTI" firstAttribute="leading" secondItem="gUh-N4-dfz" secondAttribute="leading" constant="300" id="Weh-AF-U3w"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

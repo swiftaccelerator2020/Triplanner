@@ -6,15 +6,15 @@
 //
 
 import Foundation
-
 struct PackingItem: Codable {
     
     var name: String
     var checked = false
     var note: String
     
-//    init(name: String, note: String) {
+//    init(name: String, checked: Bool, note: String) {
 //        self.name = name
+//        self.checked = checked
 //        self.note = note
 //    }
     

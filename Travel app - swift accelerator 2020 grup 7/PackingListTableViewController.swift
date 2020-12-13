@@ -23,8 +23,8 @@ class PackingListTableViewController: UITableViewController {
         super.viewDidLoad()
         
         if let loadedPackingItems = PackingItem.loadFromFile(){
-            print("File founded. Loading packingItems.")
             packingItems = loadedPackingItems
+            print("File founded. Loading packingItems.")
         }else{
             print("No packingItems! Make some.")
             packingItems = []
@@ -178,6 +178,7 @@ class PackingListTableViewController: UITableViewController {
     //    }))
     //
         self.present(alert, animated: true)
+        PackingItem.saveToFile(packingItems: packingItems)
     //    self.present(alert, animated: true)
     }
      
