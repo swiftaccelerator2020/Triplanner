@@ -1275,11 +1275,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLT-Jq-jyz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="43.666666666666664"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="y9o-yw-A4W">
                                                     <rect key="frame" x="20" y="5" width="348" height="33.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1291,13 +1286,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="y9o-yw-A4W" secondAttribute="bottom" constant="5" id="5UB-9f-cHs"/>
-                                                <constraint firstAttribute="trailing" secondItem="eLT-Jq-jyz" secondAttribute="trailing" id="5xA-5u-NB9"/>
                                                 <constraint firstItem="y9o-yw-A4W" firstAttribute="leading" secondItem="WHC-aB-MaZ" secondAttribute="leading" constant="20" id="ARK-o9-0Bb"/>
                                                 <constraint firstItem="y9o-yw-A4W" firstAttribute="top" secondItem="WHC-aB-MaZ" secondAttribute="top" constant="5" id="UL4-1u-KX8"/>
-                                                <constraint firstAttribute="bottom" secondItem="eLT-Jq-jyz" secondAttribute="bottom" id="elN-3o-xNx"/>
-                                                <constraint firstItem="eLT-Jq-jyz" firstAttribute="leading" secondItem="WHC-aB-MaZ" secondAttribute="leading" id="gC3-ku-m1L"/>
                                                 <constraint firstAttribute="trailing" secondItem="y9o-yw-A4W" secondAttribute="trailing" constant="20" id="oUV-Af-edL"/>
-                                                <constraint firstItem="eLT-Jq-jyz" firstAttribute="top" secondItem="WHC-aB-MaZ" secondAttribute="top" id="xRs-DV-ohG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
