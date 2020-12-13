@@ -123,7 +123,7 @@ class ItinTableViewController:
     
     func getDateInterval(shedule: [String]) -> Int{
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM dd, yyyy"
+        formatter.dateFormat = "MMM dd, yyyy"
         let dateStart = formatter.date(from: schedule[0])!
         let dateEndTemp = formatter.date(from: schedule[1])!
         let dateEnd = dateEndTemp.addingTimeInterval(TimeInterval(60 * 60 * 24))
@@ -134,7 +134,7 @@ class ItinTableViewController:
     
     func generateDate(schedule: [String], dayNumber: Int) -> String{
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM dd, yyyy"
+        formatter.dateFormat = "MMM dd, yyyy"
         let dateStart = formatter.date(from: schedule[0])!
         let dateMiddle = dateStart.addingTimeInterval(TimeInterval(dayNumber * 60 * 60 * 24))
         let formatter2 = DateFormatter()

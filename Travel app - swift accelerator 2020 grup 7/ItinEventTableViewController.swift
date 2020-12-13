@@ -31,7 +31,7 @@ class ItinEventTableViewController: UITableViewController, UITextViewDelegate {
         super.viewDidLoad()
         eventNoteView.backgroundColor = .init(red: 0, green: 0, blue: 1, alpha: 0.1)
         eventNoteView.text = ""
-        formatter.dateFormat = "MM dd, yyyy"
+        formatter.dateFormat = "MMM dd, yyyy"
         
         eventNoteView.layer.cornerRadius = 10
 

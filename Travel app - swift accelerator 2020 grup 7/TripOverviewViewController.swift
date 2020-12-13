@@ -172,7 +172,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         packingListCheckCircle2.isEnabled = false
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM dd, yyyy"
+        formatter.dateFormat = "MMM dd, yyyy"
         locationTextField.text = trip.destination //MARK: to be resolved just a bit later
         if self.newTrip != nil{
         start = formatter.string(from: trip.startDate)
@@ -190,7 +190,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
             if let dest = navigationVC.topViewController as? ItinTableViewController{
                 dest.delegate = self
                 let formatter = DateFormatter()
-                formatter.dateFormat = "MM dd, yyyy"
+                formatter.dateFormat = "MMM dd, yyyy"
                 self.start = formatter.string(from: overviewStartDatePicker.date)
                 self.end = formatter.string(from: overviewEndDatePicker.date)
                 dateStorageList[0] = start
@@ -309,7 +309,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     func getDateInterval(startDate: String, date: String) -> Int{
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM dd, yyyy"
+        formatter.dateFormat = "MMM dd, yyyy"
         let dateStart = formatter.date(from: startDate)!
         let dateEndTemp = formatter.date(from: date)!
         let dateEnd = dateEndTemp.addingTimeInterval(TimeInterval(60 * 60 * 24))

@@ -734,7 +734,7 @@
             <objects>
                 <tableViewController id="Vb8-iI-wjc" customClass="AddSpendingViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0ap-IX-Jnq">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1608,7 +1608,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="yM2-Kt-IKT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NjQ-fi-xAD">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1640,7 +1640,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Njr-Wn-zfu"/>
+        <segue reference="Hh4-Dq-Rge"/>
         <segue reference="gXD-BP-cAu"/>
         <segue reference="nAW-aR-8pe"/>
     </inferredMetricsTieBreakers>

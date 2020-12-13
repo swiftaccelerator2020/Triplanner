@@ -274,7 +274,7 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
 //            \n\(randomChoice!.name): $\(randomChoice!.cost)"
             
         returnButtonName(string: category).setAttributedTitle(foodAttributedTitle, for: .normal)
-        returnButtonName(string: category).titleLabel?.font = UIFont(name: "system", size: 4)
+            returnButtonName(string: category).titleLabel?.font = UIFont(name: "System Bold", size: 30)
             foodButton.titleLabel?.textAlignment = .left
             categorizedSpending = tSpending
         }
