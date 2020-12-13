@@ -192,7 +192,6 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
             if total != nil{
             //let string1 = "total budget $\(total!), spent $\(spendingAddedUp), \(spendingAddedUp/(total ?? 1.0)*100)% of total"
             let string1 = "spent $\(spendingAddedUp) of $\(total!), $\((total!) - (spendingAddedUp)) left"
-            
             var string2 = ""
             for (key,value) in self.calculatingDict{
                 let percentage = ((value/spendingAddedUp) * 100)
