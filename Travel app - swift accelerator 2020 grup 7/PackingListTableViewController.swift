@@ -178,7 +178,6 @@ class PackingListTableViewController: UITableViewController {
     //    }))
     //
         self.present(alert, animated: true)
-        PackingItem.saveToFile(packingItems: packingItems)
     //    self.present(alert, animated: true)
     }
      

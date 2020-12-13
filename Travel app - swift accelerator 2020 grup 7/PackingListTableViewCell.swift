@@ -41,6 +41,7 @@ class PackingListTableViewCell: UITableViewCell {
                 }
             }
             circleButton.setImage(UIImage(named: "circle"), for: .normal)
+            PackingItem.saveToFile(packingItems: PackingListvc?.packingItems ?? [])
         }
          
     }

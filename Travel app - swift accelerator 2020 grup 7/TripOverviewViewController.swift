@@ -34,13 +34,16 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
    
     
     fileprivate func packingListCircleChecking(_ item: PackingItem) {
+        print("circle checking")
         packingListOverviewLabel.text = item.name
         packingListCheckCircle.isHidden = false
         for i in packingItemsStorateList{
             if i.name == packingListOverviewLabel.text{
                 if i.checked{
+                    print("circle checking 1")
                     packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
                 }else{
+                    print("circle checking 2")
                     packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
                 }
             }
@@ -63,30 +66,33 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     func printPackingListItem(titleArray: Array<PackingItem>, isChecked: Bool) {
         
-        var tempArray: Array<PackingItem> = []
-        for i in titleArray{
-            if i.checked == false{
-                tempArray.append(i)
-            }
-        }
-        
-        
-        if tempArray.count >= 1 {
-            packingListCircleChecking(tempArray.randomElement() ?? tempArray[0])
-//MARK: I WONDER WHY? IS THAT HOW A DELEGATE WORKS
-//            packingListCircleChecking2(tempArray[1])
-        }
-        if tempArray.isEmpty == false{
-            packingListCircleChecking(tempArray[0])
-        }else{
-            if titleArray.isEmpty == true{
-                packingListOverviewLabel.text = "Packing List Preview!"
-            }else{
-                if packingItemsStorateList.isEmpty == false{
-                packingListCircleChecking(packingItemsStorateList.randomElement() ?? packingItemsStorateList[0])
-                }
-            }
-        }
+//        var tempArray: Array<PackingItem> = []
+//        let titleArray = PackingItem.loadFromFile()
+//        print("data saving not working", titleArray)
+//        for i in titleArray ?? []{
+//            if i.checked == false{
+//                tempArray.append(i)
+//            }
+//        }
+//        print(tempArray)
+//
+//
+//        if tempArray.count >= 1 {
+//            packingListCircleChecking(tempArray.randomElement() ?? tempArray[0])
+////MARK: I WONDER WHY? IS THAT HOW A DELEGATE WORKS
+////            packingListCircleChecking2(tempArray[1])
+//        }
+//        if tempArray.isEmpty == false{
+//            packingListCircleChecking(tempArray[0])
+//        }else{
+//            if (titleArray ?? []).isEmpty == true{
+//                packingListOverviewLabel.text = "Packing List Preview!"
+//            }else{
+//                if packingItemsStorateList.isEmpty == false{
+//                packingListCircleChecking(packingItemsStorateList.randomElement() ?? packingItemsStorateList[0])
+//                }
+//            }
+//        }
         
         
 //        if count == 1{
@@ -105,7 +111,11 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
 //            packingListOverviewLabel.text = titleArray.randomElement()?.name
 //            packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
 //        }
-        packingItemsStorateList = titleArray
+        
+        
+        
+//        packingItemsStorateList = titleArray ?? []
+//        PackingItem.saveToFile(packingItems: titleArray ?? [])
     }
     
     
@@ -189,6 +199,41 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     override func viewDidAppear(_ animated: Bool) {
         Trip.saveToFile(trips: trips)
+        
+        //MARK: ***************************
+        var tempArray: Array<PackingItem> = []
+        let titleArray = PackingItem.loadFromFile()
+        packingItemsStorateList = titleArray ?? []
+        print("data saving not working", titleArray)
+        for i in titleArray ?? []{
+            if i.checked == false{
+                tempArray.append(i)
+            }
+        }
+        print(tempArray)
+        
+        
+        if tempArray.count >= 1 {
+            packingListCircleChecking(tempArray.randomElement() ?? tempArray[0])
+//MARK: I WONDER WHY? IS THAT HOW A DELEGATE WORKS
+//            packingListCircleChecking2(tempArray[1])
+        }
+        if tempArray.isEmpty == false{
+            packingListCircleChecking(tempArray[0])
+        }else{
+            if (titleArray ?? []).isEmpty == true{
+                packingListOverviewLabel.text = "Packing List Preview!"
+            }else{
+                if packingItemsStorateList.isEmpty == false{
+                packingListCircleChecking(packingItemsStorateList.randomElement() ?? packingItemsStorateList[0])
+                }
+            }
+        }
+        packingItemsStorateList = titleArray ?? []
+        PackingItem.saveToFile(packingItems: titleArray ?? [])
+        //MARK: *****
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
