@@ -18,6 +18,7 @@ struct PackingItem: Codable {
 //        self.note = note
 //    }
     
+    
     static func loadSampleData() -> [PackingItem]{
         let packingItems = [PackingItem(name: "", checked: false, note: "")]
         return packingItems
