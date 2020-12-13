@@ -14,13 +14,21 @@ class PackingListTableViewController: UITableViewController {
    
     
     var packingItems = [
-        packingItem(name: "Add in the things you wish to pack!", note: "")
+        PackingItem(name: "Add in the things you wish to pack!", checked: false, note: "")
     ]
    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let loadedPackingItems = PackingItem.loadFromFile(){
+            print("File founded. Loading packingItems.")
+            packingItems = loadedPackingItems
+        }else{
+            print("No packingItems! Make some.")
+            packingItems = []
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,10 +37,13 @@ class PackingListTableViewController: UITableViewController {
         //self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        PackingItem.saveToFile(packingItems: packingItems)
+    }
     override func viewDidDisappear(_ animated: Bool) {
         delegate?.printPackingListItem(titleArray: packingItems, isChecked: isChecked)
         print("what is checked", isChecked)
+        PackingItem.saveToFile(packingItems: packingItems)
     }
 
        // MARK: - Table view data source
@@ -129,7 +140,7 @@ class PackingListTableViewController: UITableViewController {
             let dest = nav.viewControllers.first as! EditPackingItemTableViewController
             
             if tableView.indexPathForSelectedRow != nil {
-            dest.PackingItem = packingItems[tableView.indexPathForSelectedRow!.row]
+            dest.packingItem = packingItems[tableView.indexPathForSelectedRow!.row]
             } else {
                 dest.newPackingItem = true
             }
@@ -174,7 +185,8 @@ class PackingListTableViewController: UITableViewController {
         if segue.identifier == "unwindFromDetail" {
             let source = segue.source as! EditPackingItemTableViewController
             if source.newPackingItem {
-                packingItems.append(source.PackingItem)
+                packingItems.append(source.packingItem)
+                PackingItem.saveToFile(packingItems: packingItems)
             }
         }
 
