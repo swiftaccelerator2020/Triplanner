@@ -1303,11 +1303,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KqW-Ag-Rfs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="43.666666666666664"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="DpK-EA-N7y">
                                                     <rect key="frame" x="20" y="5" width="368" height="33.666666666666664"/>
                                                     <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1316,11 +1311,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="DpK-EA-N7y" secondAttribute="trailing" id="9SM-PI-Fmn"/>
                                                 <constraint firstItem="DpK-EA-N7y" firstAttribute="top" secondItem="CAK-Ad-0b6" secondAttribute="top" constant="5" id="AuZ-Lo-khe"/>
-                                                <constraint firstItem="KqW-Ag-Rfs" firstAttribute="top" secondItem="CAK-Ad-0b6" secondAttribute="top" id="DQA-ZR-0qp"/>
                                                 <constraint firstItem="DpK-EA-N7y" firstAttribute="leading" secondItem="CAK-Ad-0b6" secondAttribute="leading" constant="20" id="IzI-9m-fPU"/>
-                                                <constraint firstAttribute="bottom" secondItem="KqW-Ag-Rfs" secondAttribute="bottom" id="St6-QQ-f8i"/>
-                                                <constraint firstAttribute="trailing" secondItem="KqW-Ag-Rfs" secondAttribute="trailing" id="UKk-PF-Cry"/>
-                                                <constraint firstItem="KqW-Ag-Rfs" firstAttribute="leading" secondItem="CAK-Ad-0b6" secondAttribute="leading" id="ezY-ax-vx0"/>
                                                 <constraint firstAttribute="bottom" secondItem="DpK-EA-N7y" secondAttribute="bottom" constant="5" id="yCT-SO-U3F"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1336,11 +1327,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9U-3Z-sGd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="43.666666666666664"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="1Pz-gY-Gso">
                                                     <rect key="frame" x="20" y="5" width="368" height="33.666666666666664"/>
                                                     <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1348,13 +1334,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="1Pz-gY-Gso" secondAttribute="trailing" id="298-Zb-8BI"/>
-                                                <constraint firstAttribute="trailing" secondItem="I9U-3Z-sGd" secondAttribute="trailing" id="2bb-DM-ww8"/>
                                                 <constraint firstAttribute="bottom" secondItem="1Pz-gY-Gso" secondAttribute="bottom" constant="5" id="KmF-EY-Hsv"/>
                                                 <constraint firstItem="1Pz-gY-Gso" firstAttribute="leading" secondItem="b6O-rJ-XjK" secondAttribute="leading" constant="20" id="U6D-AW-bgu"/>
                                                 <constraint firstItem="1Pz-gY-Gso" firstAttribute="top" secondItem="b6O-rJ-XjK" secondAttribute="top" constant="5" id="cNt-1V-AsR"/>
-                                                <constraint firstItem="I9U-3Z-sGd" firstAttribute="leading" secondItem="b6O-rJ-XjK" secondAttribute="leading" id="rJI-yT-IZv"/>
-                                                <constraint firstItem="I9U-3Z-sGd" firstAttribute="top" secondItem="b6O-rJ-XjK" secondAttribute="top" id="uSX-wu-tJ8"/>
-                                                <constraint firstAttribute="bottom" secondItem="I9U-3Z-sGd" secondAttribute="bottom" id="xgc-LT-Gs2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
