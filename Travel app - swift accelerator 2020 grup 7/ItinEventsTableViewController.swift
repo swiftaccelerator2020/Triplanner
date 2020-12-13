@@ -18,6 +18,14 @@ class ItinEventsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        if let loadedEvents = Trip.loadFromFile(){
+//            print("File founded. Loading friends.")
+//            trips = loadedTrips
+//        }else{
+//            print("No friends! Make some.")
+//            trips = Trip.loadSampleData()
+//        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -26,6 +34,10 @@ class ItinEventsTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        DayEvent.saveToFile(dayEvents: events)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        DayEvent.saveToFile(dayEvents: events)
     }
     
     override func viewWillLayoutSubviews() {
@@ -119,8 +131,7 @@ class ItinEventsTableViewController: UITableViewController {
         if segue.identifier == "backToItineraryTableViewController"{
             if let dest = segue.destination as? ItinTableViewController{
                 dest.dayDictionary[dayNo] = events
-                print("newest testing", events)
-                print("dest.dayDictionary", dest.dayDictionary)
+                DayEvent.saveToFile(dayEvents: events)
             }
         }
     }
@@ -130,11 +141,12 @@ class ItinEventsTableViewController: UITableViewController {
         if let source = segue.source as? ItinEventTableViewController{
             if source.isAnExistingEvent == true{
                 events[eventNo] = source.event
-
+                DayEvent.saveToFile(dayEvents: events)
                 tableView.reloadData()
             }else{
                 if source.event != nil {
                     events.append(source.event)
+                    DayEvent.saveToFile(dayEvents: events)
                     tableView.reloadData()
                 }
             }

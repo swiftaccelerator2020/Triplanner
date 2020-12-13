@@ -9,7 +9,7 @@ import UIKit
 
 class EditPackingItemTableViewController: UITableViewController, UITextViewDelegate {
 
-    var PackingItem: packingItem!
+    var packingItem: PackingItem!
     var newPackingItem = false
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -18,11 +18,11 @@ class EditPackingItemTableViewController: UITableViewController, UITextViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if PackingItem != nil {
-            nameTextField.text = PackingItem.name
-            notesTextView.text = PackingItem?.note
+        if packingItem != nil {
+            nameTextField.text = packingItem.name
+            notesTextView.text = packingItem?.note
         } else {
-            PackingItem = packingItem(name: "", note: notesTextView.text ?? "")
+            packingItem = PackingItem(name: "", checked: false, note: notesTextView.text ?? "")
             notesTextView.delegate = self
         }
         //trying to make textview dismissible
@@ -40,11 +40,11 @@ class EditPackingItemTableViewController: UITableViewController, UITextViewDeleg
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "unwindFromDetail"{
         if self.newPackingItem == true{
-            self.PackingItem = packingItem(name: nameTextField.text ?? "", note: notesTextView.text ?? "")
-            print("created item here", self.PackingItem)
+            self.packingItem = PackingItem(name: nameTextField.text ?? "", note: notesTextView.text ?? "")
+            print("created item here", self.packingItem)
             } else {
-                self.PackingItem?.name = nameTextField.text ?? ""
-                self.PackingItem?.note = notesTextView.text ?? ""
+                self.packingItem?.name = nameTextField.text ?? ""
+                self.packingItem?.note = notesTextView.text ?? ""
             
         }
     }
@@ -52,7 +52,7 @@ class EditPackingItemTableViewController: UITableViewController, UITextViewDeleg
     
     
     @IBAction func textFieldUpdated(_ sender: UITextField) {
-        PackingItem.name =  sender.text ?? ""
+        packingItem.name =  sender.text ?? ""
     }
     
     @IBOutlet weak var notesTextFieldUpdated: UITextView!

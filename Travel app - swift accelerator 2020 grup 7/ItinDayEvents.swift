@@ -26,6 +26,10 @@ struct DayEvent: Codable, Equatable{
 //        self.date = date
 //        self.notes = notes
 //    }
+    static func loadSampleData() -> [DayEvent]{
+        let dayEvents = [DayEvent(destination: "Insert your event here", timeStart: "", timeEnd: "", date: "", notes: "")]
+        return dayEvents
+}
 
     
     static func getArchiveURL() -> URL {

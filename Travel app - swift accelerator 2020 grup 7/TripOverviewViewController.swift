@@ -12,7 +12,7 @@ protocol ItinDataDelegate {
 }
 
 protocol PackingListDataDelegate {
-    func printPackingListItem(titleArray: Array<packingItem>, isChecked: Bool)
+    func printPackingListItem(titleArray: Array<PackingItem>, isChecked: Bool)
 }
 
 protocol PackingListCheckedDelegate {
@@ -33,7 +33,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
    
     
-    fileprivate func packingListCircleChecking(_ item: packingItem) {
+    fileprivate func packingListCircleChecking(_ item: PackingItem) {
         packingListOverviewLabel.text = item.name
         packingListCheckCircle.isHidden = false
         for i in packingItemsStorateList{
@@ -47,7 +47,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         }
     }
     
-    fileprivate func packingListCircleChecking2(_ item: packingItem) {
+    fileprivate func packingListCircleChecking2(_ item: PackingItem) {
         packingListOverviewLabel2.text = item.name
         packingListCheckCircle2.isHidden = false
         for i in packingItemsStorateList{
@@ -61,9 +61,9 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         }
     }
     
-    func printPackingListItem(titleArray: Array<packingItem>, isChecked: Bool) {
+    func printPackingListItem(titleArray: Array<PackingItem>, isChecked: Bool) {
         
-        var tempArray: Array<packingItem> = []
+        var tempArray: Array<PackingItem> = []
         for i in titleArray{
             if i.checked == false{
                 tempArray.append(i)
@@ -153,7 +153,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     @IBOutlet weak var packingListOverviewLabel2: UILabel!
     @IBOutlet weak var packingListCheckCircle2: UIButton!
     
-    var packingItemsStorateList: Array<packingItem> = []
+    var packingItemsStorateList: Array<PackingItem> = []
     
 
 //MARK: Budget overview variables
@@ -325,13 +325,15 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
 
     @IBAction func checkCircle1Tapped(_ sender: Any) {
         print("newest testing!", packingItemsStorateList)
+        var count = -1
         for i in packingItemsStorateList{
+            count += 1
             if packingListOverviewLabel.text == i.name{
                 if i.checked{
-                    i.checked = false
+                    packingItemsStorateList[count].checked = false
                     packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
                 }else{
-                    i.checked = true
+                    packingItemsStorateList[count].checked = true
                     packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
                 }
                 
@@ -343,13 +345,15 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     
     @IBAction func checkCircle2Tapped(_ sender: Any) {
+        var count = -1
         for i in packingItemsStorateList{
             if i.name == packingListOverviewLabel2.text{
+                count += 1
                 if i.checked{
-                    i.checked = false
+                    packingItemsStorateList[count].checked = false
                     packingListCheckCircle2.setImage(UIImage(named: "circle"), for: .normal)
                 }else{
-                    i.checked = true
+                    packingItemsStorateList[count].checked = true
                     packingListCheckCircle2.setImage(UIImage(named: "checkmark.circle"), for: .normal)
                 }
                 

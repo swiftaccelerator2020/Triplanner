@@ -25,15 +25,19 @@ class PackingListTableViewCell: UITableViewCell {
         
         if isChecked {
             circleButton.setImage(UIImage(named: "checkmark.circle"), for: .normal)
-            for i in PackingListvc?.packingItems as! Array<packingItem>{
+            var count = -1
+            for i in PackingListvc?.packingItems as! Array<PackingItem>{
+                count += 1
                 if i.name == self.textLabel?.text{
-                    i.checked = true
+                    PackingListvc?.packingItems[count].checked = true
                 }
             }
         } else {
-            for i in PackingListvc?.packingItems as! Array<packingItem>{
+            var count = -1
+            for i in PackingListvc?.packingItems as! Array<PackingItem>{
+                count += 1
                 if i.name == self.textLabel?.text{
-                    i.checked = false
+                    PackingListvc?.packingItems[count].checked = false
                 }
             }
             circleButton.setImage(UIImage(named: "circle"), for: .normal)
