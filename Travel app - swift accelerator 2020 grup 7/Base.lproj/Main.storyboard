@@ -1563,7 +1563,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ez6-os-fcW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" largeTitles="YES" id="6oe-Qy-AEJ">
-                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="104.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
