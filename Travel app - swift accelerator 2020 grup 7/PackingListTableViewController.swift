@@ -187,6 +187,9 @@ class PackingListTableViewController: UITableViewController {
             if source.newPackingItem {
                 packingItems.append(source.packingItem)
                 PackingItem.saveToFile(packingItems: packingItems)
+            }else{
+                packingItems[tableView.indexPathForSelectedRow!.row] = source.packingItem
+                PackingItem.saveToFile(packingItems: packingItems)
             }
         }
 

@@ -195,6 +195,8 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         packingItemsStorateList = trip.packingList
             overviewStartDatePicker.setDate(trip.startDate, animated: true)
             overviewEndDatePicker.setDate(trip.endDate, animated: true)
+            
+            PackingItem.saveToFile(packingItems: trip.packingList)
         }
     }
     
