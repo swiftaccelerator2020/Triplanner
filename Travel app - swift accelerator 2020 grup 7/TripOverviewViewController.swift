@@ -198,6 +198,8 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        trip = Trip(destination: locationTextField.text ?? "", startDate: overviewStartDatePicker.date, endDate: overviewEndDatePicker.date, itinerary: itinEventsDict, budget: budgetItemsStorageDict, packingList: packingItemsStorateList)
+        trips[tripNo] = trip
         Trip.saveToFile(trips: trips)
         
         //MARK: ***************************
@@ -231,7 +233,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         }
         packingItemsStorateList = titleArray ?? []
         PackingItem.saveToFile(packingItems: titleArray ?? [])
-        //MARK: *****
+        //MARK: *********************
         
         
     }
@@ -294,11 +296,9 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 if trips.count < tripNo{
                     trips.append(trip)
                     dest.trips = trips
-                    print("generalTripsStorageList", trips[0].endDate)
                 }else{
                     trips[tripNo] = trip
                     dest.trips = trips
-                    print("generalTripsStorageList", trips[0].endDate)
                 }
                 print("dest.trips", dest.trips)
                 Trip.saveToFile(trips: trips)
