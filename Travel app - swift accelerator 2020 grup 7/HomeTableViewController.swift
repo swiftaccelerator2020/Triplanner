@@ -23,7 +23,7 @@ class HomeTableViewController: UITableViewController {
             trips = loadedTrips
         }else{
             print("No trips! Make some.")
-            trips = Trip.loadSampleData()
+       //     trips = Trip.loadSampleData()
         }
         
 //  self.navigationItem.rightBarButtonItem = self.editButtonItem
