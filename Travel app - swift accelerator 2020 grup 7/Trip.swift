@@ -70,10 +70,11 @@ struct Trip: Codable{
     var endDate: Date
     var itinerary: Dictionary<String, Array<DayEvent>>
     var budget: Dictionary<String, Array<BudgetItem>>
+    var totalBudget: Double
     var packingList: Array<PackingItem>
     
     static func loadSampleData() -> [Trip]{
-        let trips = [Trip(destination: "", startDate: Date(), endDate: Date(), itinerary: [:], budget: [:], packingList: [])]
+        let trips = [Trip(destination: "", startDate: Date(), endDate: Date(), itinerary: [:], budget: [:], totalBudget: 0.0, packingList: [])]
        return trips
         
     }

@@ -191,6 +191,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         end = formatter.string(from: trip.endDate)
         itinEventsDict = trip.itinerary
         budgetItemsStorageDict = trip.budget
+            budgetTotal = trip.totalBudget
         packingItemsStorateList = trip.packingList
             overviewStartDatePicker.setDate(trip.startDate, animated: true)
             overviewEndDatePicker.setDate(trip.endDate, animated: true)
@@ -198,7 +199,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        trip = Trip(destination: locationTextField.text ?? "", startDate: overviewStartDatePicker.date, endDate: overviewEndDatePicker.date, itinerary: itinEventsDict, budget: budgetItemsStorageDict, packingList: packingItemsStorateList)
+        trip = Trip(destination: locationTextField.text ?? "", startDate: overviewStartDatePicker.date, endDate: overviewEndDatePicker.date, itinerary: itinEventsDict, budget: budgetItemsStorageDict, totalBudget: self.budgetTotal, packingList: packingItemsStorateList)
         trips[tripNo] = trip
         Trip.saveToFile(trips: trips)
         
@@ -206,7 +207,6 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         var tempArray: Array<PackingItem> = []
         let titleArray = PackingItem.loadFromFile()
         packingItemsStorateList = titleArray ?? []
-        print("data saving not working", titleArray)
         for i in titleArray ?? []{
             if i.checked == false{
                 tempArray.append(i)
@@ -292,7 +292,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         
         if let navigationVC = segue.destination as? UINavigationController{
             if let dest = navigationVC.topViewController as? HomeTableViewController{
-                self.trip = Trip(destination: self.locationTextField.text ?? "", startDate: self.overviewStartDatePicker.date, endDate: self.overviewEndDatePicker.date, itinerary: self.itinEventsDict, budget: self.budgetItemsStorageDict, packingList: self.packingItemsStorateList)
+                self.trip = Trip(destination: self.locationTextField.text ?? "", startDate: self.overviewStartDatePicker.date, endDate: self.overviewEndDatePicker.date, itinerary: self.itinEventsDict, budget: self.budgetItemsStorageDict, totalBudget: self.budgetTotal, packingList: self.packingItemsStorateList)
                 if trips.count < tripNo{
                     trips.append(trip)
                     dest.trips = trips

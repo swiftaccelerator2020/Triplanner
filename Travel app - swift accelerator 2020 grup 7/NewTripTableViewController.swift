@@ -71,7 +71,7 @@ class NewTripTableViewController: UITableViewController {
         if segue.identifier == "unwindSave"{
         if segue.destination is HomeTableViewController{
 
-            trip = Trip(destination: self.destinationTextField.text ?? "" , startDate: self.startDatePicker.date, endDate: self.endDatePicker.date, itinerary: [:], budget: [:], packingList: [])
+            trip = Trip(destination: self.destinationTextField.text ?? "" , startDate: self.startDatePicker.date, endDate: self.endDatePicker.date, itinerary: [:], budget: [:], totalBudget: 0.0, packingList: [])
         }
     }
     }
