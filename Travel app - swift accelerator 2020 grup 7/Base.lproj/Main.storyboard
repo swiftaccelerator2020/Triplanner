@@ -247,7 +247,7 @@
                         <barButtonItem key="leftBarButtonItem" title="All Trips" style="plain" id="HS3-sb-PV9">
                             <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="ez6-os-fcW" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="dPy-MC-DZm"/>
+                                <segue destination="ez6-os-fcW" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="dPy-MC-DZm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -306,7 +306,7 @@
                                 </tableViewCellContentView>
                                 <color key="tintColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="ZXM-39-g3k" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="rqO-kM-rH2"/>
+                                    <segue destination="ZXM-39-g3k" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="rqO-kM-rH2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1563,7 +1563,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ez6-os-fcW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" largeTitles="YES" id="6oe-Qy-AEJ">
-                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="104.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

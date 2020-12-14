@@ -269,8 +269,7 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
             }
             let randomChoice = self.budgetItemsDict[category]?.randomElement()
             
-            let foodAttributedTitle = NSAttributedString(string: "\(category): $\(tSpending)", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
-//            \n\(randomChoice!.name): $\(randomChoice!.cost)"
+            let foodAttributedTitle = NSAttributedString(string: "\(category): $\(tSpending)", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 27, weight: UIFont.Weight(0.5))])
             
         returnButtonName(string: category).setAttributedTitle(foodAttributedTitle, for: .normal)
             returnButtonName(string: category).titleLabel?.font = UIFont(name: "System Bold", size: 30)
