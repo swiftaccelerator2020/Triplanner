@@ -86,8 +86,8 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         print("total budget done editing")
         total = Double(totalBudgetTextField.text ?? "")
         print(total as Any)
-        left = (total ?? 0.0 - spent!)
-//        amountLeftTextField.text = String(total! - spent!)
+        left = (total ?? 0.0) - spent!
+        amountLeftTextField.text = String(total! - spent!)
 //        if total == nil{
 //            totalBudgetTextField.text = "0.0"
 //        }else{
