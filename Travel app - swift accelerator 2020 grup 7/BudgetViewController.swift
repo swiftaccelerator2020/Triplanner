@@ -87,7 +87,7 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         total = Double(totalBudgetTextField.text ?? "")
         print(total as Any)
         left = (total ?? 0.0) - spent!
-        amountLeftTextField.text = String(total! - spent!)
+        amountLeftTextField.text = String((total ?? 0.0) - (spent ?? 0.0))
 //        if total == nil{
 //            totalBudgetTextField.text = "0.0"
 //        }else{
@@ -198,7 +198,6 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
                 let tempString = "\(round(percentage))% of spendings (\(key))\n"
                 string2.append(tempString)
             }
-            //MARK: the percentage here needs rounding up
             
             print("string1, string2", string1, string2)
             delegate?.calculateBudget(string1: string1, string2: string2)
