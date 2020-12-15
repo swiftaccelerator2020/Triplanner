@@ -85,9 +85,10 @@
                                     <constraint firstItem="zLt-UA-xGq" firstAttribute="top" secondItem="3mu-Vj-3y5" secondAttribute="bottom" constant="7" id="ls8-zI-QS5"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmo-Jo-RHU" userLabel="itinerary">
-                                <rect key="frame" x="395.33333333333331" y="369" width="12.666666666666686" height="24"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmo-Jo-RHU" userLabel="itinerary">
+                                <rect key="frame" x="378" y="369" width="30" height="24"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="cKA-vV-TsX"/>
                                     <constraint firstAttribute="height" constant="24" id="rdq-Ux-nQu"/>
                                 </constraints>
                                 <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -103,8 +104,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjY-we-KAb">
-                                <rect key="frame" x="395.33333333333331" y="447" width="12.666666666666686" height="24"/>
+                                <rect key="frame" x="378" y="447" width="30" height="24"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="7n9-K9-0Cv"/>
                                     <constraint firstAttribute="height" constant="24" id="wWX-36-lGS"/>
                                 </constraints>
                                 <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -120,9 +122,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szO-6c-E7v">
-                                <rect key="frame" x="395.33333333333331" y="651" width="12.666666666666686" height="24"/>
+                                <rect key="frame" x="378" y="651" width="30" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="he0-0b-16W"/>
+                                    <constraint firstAttribute="width" constant="30" id="tru-Ib-Lyj"/>
                                 </constraints>
                                 <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="chevron.right" catalog="system"/>
@@ -203,7 +206,7 @@
                                     <constraint firstAttribute="height" constant="20" id="hfE-an-BzC"/>
                                 </constraints>
                                 <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button" image="circle"/>
+                                <state key="normal" image="circle"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XON-X7-oLZ"/>
