@@ -174,6 +174,8 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     @IBOutlet weak var budgetOverviewLabel: UILabel!
     
     
+    
+    
     override func viewDidLoad() {
         print("tripNo:", tripNo)
         super.viewDidLoad()
@@ -203,7 +205,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     override func viewDidAppear(_ animated: Bool) {
         print("newest newest testing:", itinEventsDict)
-        DayEvent.saveToFile(dayEvents: itinEventsDict)
+//        DayEvent.saveToFile(dayEvents: itinEventsDict)
         
         trip = Trip(destination: locationTextField.text ?? "", startDate: overviewStartDatePicker.date, endDate: overviewEndDatePicker.date, itinerary: itinEventsDict, budget: budgetItemsStorageDict, totalBudget: self.budgetTotal, packingList: packingItemsStorateList)
         

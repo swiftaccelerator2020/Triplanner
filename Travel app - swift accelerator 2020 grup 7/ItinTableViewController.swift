@@ -61,8 +61,6 @@ class ItinTableViewController:
         Trip.saveToFile(trips: trips)
         
         
- 
-        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -102,6 +100,9 @@ class ItinTableViewController:
             let dest = destinationNavigationController?.topViewController as? ItinEventsTableViewController
             dest?.dateArray = dateArray
             dest?.anotherEventNoForPassingDate = dayNo
+            dest?.trips = trips
+            dest?.tripNo = tripNo
+            dest?.itinEventsDict = itinEventsDict
             switch dayDictionary[dayNo] {
             case nil:
                 dest?.events = []

@@ -10,27 +10,17 @@ import UIKit
 class ItinEventsTableViewController: UITableViewController {
     var dayNo: Int = 0
     var events: Array<DayEvent> = [DayEvent(destination: "add in the day's events!", timeStart: "swipe left to delete an event", timeEnd: "enjoy!!", date: "", notes:"")]
-    var eventsDict: Dictionary<Int,Array<DayEvent>> = [:]
     var eventNo: Int = 0
     var anotherEventNoForPassingDate: Int = 0
     var delegate: ItinDataDelegate?
     var dateArray: Array<Any> = []
+    var itinEventsDict: Dictionary<String,Array<DayEvent>> = [:]
+    var trips: [Trip] = []
+    var tripNo: Int = 0
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        if let loadedEvents = Trip.loadFromFile(){
-//            print("File founded. Loading friends.")
-//            trips = loadedTrips
-//        }else{
-//            print("No friends! Make some.")
-//            trips = Trip.loadSampleData()
-//        }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-//        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -145,6 +135,16 @@ class ItinEventsTableViewController: UITableViewController {
                     tableView.reloadData()
                 }
             }
+        }
+        
+        print("view did appear datearray:", dateArray)
+        if dateArray.count >= dayNo{
+        let str = dateArray[dayNo]
+        print(events)
+        itinEventsDict[str as? String ?? ""] = events
+            print(itinEventsDict)
+        trips[tripNo].itinerary = itinEventsDict
+            Trip.saveToFile(trips: trips)
         }
     }
 
