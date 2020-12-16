@@ -26,8 +26,8 @@ struct DayEvent: Codable, Equatable{
 //        self.date = date
 //        self.notes = notes
 //    }
-    static func loadSampleData() -> [DayEvent]{
-        let dayEvents = [DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: "")]
+    static func loadSampleData() -> Dictionary<String, Array<DayEvent>>{
+        let dayEvents = ["":[DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: "")]]
         return dayEvents
 }
 
@@ -38,18 +38,18 @@ struct DayEvent: Codable, Equatable{
         return documentsDirectory.appendingPathComponent(plistName).appendingPathExtension("plist")
     }
 
-    static func saveToFile(dayEvents:[DayEvent]) {
+    static func saveToFile(dayEvents:Dictionary<String, Array<DayEvent>>) {
         let archiveURL = getArchiveURL()
         let propertyListEncoder = PropertyListEncoder()
         let encodedEvents = try? propertyListEncoder.encode(dayEvents)
         try? encodedEvents?.write(to: archiveURL, options: .noFileProtection)
     }
     
-    static func loadFromFile() -> [DayEvent]? {
+    static func loadFromFile() -> Dictionary<String, Array<DayEvent>>? {
         let archiveURL = getArchiveURL()
         let propertyListDecoder = PropertyListDecoder()
         guard let retrievedDayEventsData = try? Data(contentsOf: archiveURL) else { return nil }
-        guard let decodedDayEvents = try? propertyListDecoder.decode(Array<DayEvent>.self, from: retrievedDayEventsData) else { return nil }
+        guard let decodedDayEvents = try? propertyListDecoder.decode(Dictionary<String, Array<DayEvent>>.self, from: retrievedDayEventsData) else { return nil }
         return decodedDayEvents
     }
 }

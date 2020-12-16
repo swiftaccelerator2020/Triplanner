@@ -197,11 +197,16 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
             overviewEndDatePicker.setDate(trip.endDate, animated: true)
             
             PackingItem.saveToFile(packingItems: trip.packingList)
+            
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        print("newest newest testing:", itinEventsDict)
+        DayEvent.saveToFile(dayEvents: itinEventsDict)
+        
         trip = Trip(destination: locationTextField.text ?? "", startDate: overviewStartDatePicker.date, endDate: overviewEndDatePicker.date, itinerary: itinEventsDict, budget: budgetItemsStorageDict, totalBudget: self.budgetTotal, packingList: packingItemsStorateList)
+        
         trips[tripNo] = trip
         Trip.saveToFile(trips: trips)
         
@@ -251,6 +256,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 dateStorageList[0] = start
                 dateStorageList[1] = end
                 dest.schedule = dateStorageList
+                dest.itinEventsDict = self.itinEventsDict
                 
                 for (_,value) in itinEventsDict{
                 for i in value{
@@ -329,6 +335,12 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 itinOverviewLabel.text = source.event.destination
             }
             print("newitinEvents:", itinEventsDict)
+            DayEvent.saveToFile(dayEvents: itinEventsDict)
+            
+            trip = Trip(destination: locationTextField.text ?? "", startDate: overviewStartDatePicker.date, endDate: overviewEndDatePicker.date, itinerary: itinEventsDict, budget: budgetItemsStorageDict, totalBudget: self.budgetTotal, packingList: packingItemsStorateList)
+            
+            trips[tripNo] = trip
+            Trip.saveToFile(trips: trips)
     }
 }
     

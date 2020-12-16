@@ -16,6 +16,7 @@ class ItinTableViewController:
     var schedule = ["Mar 22, 2020", "Mar 27, 2020"]
     var interval: Int = 0
     var dayDictionary: Dictionary<Int, Array<DayEvent>> = [:]
+    var itinEventsDict: Dictionary<String, Array<DayEvent>> = [:]
     var tempEvent: Array<DayEvent> = []
     var itinOverviewList: Array<String> = []
     var dateArray: Array<String> = []
@@ -25,10 +26,26 @@ class ItinTableViewController:
         self.title = "Itinerary"
         interval = getDateInterval(shedule: self.schedule)
         dateArray = []
+        print("viewDidLoad")
+        print(dayDictionary)
+        
+        if let loadedDayEvent = DayEvent.loadFromFile(){
+            print("dayEvent file loading", loadedDayEvent)
+            tempDayDictToEventsDict()
+            DayEvent.saveToFile(dayEvents: itinEventsDict)
+            print("File founded. Loading DayEvent.")
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         delegate?.printItinEvent(titleDict: dayDictionary)
+        
+        
+ 
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
         
     }
 
@@ -49,7 +66,6 @@ class ItinTableViewController:
         cell.textLabel?.text = "Day \(String(indexPath.row+1))"
         cell.detailTextLabel?.text = generateDate(schedule: self.schedule, dayNumber: indexPath.row)
         self.dateArray.append(cell.detailTextLabel?.text ?? "")
-        print("newest testing:", dateArray)
         // Configure the cell...
 
         return cell
@@ -143,6 +159,21 @@ class ItinTableViewController:
         let day = formatter2.string(from: dateMiddle)
         
         return day
+    }
+    
+    func tempDayDictToEventsDict(){
+        for (key,_) in itinEventsDict{
+            let dayNo = getDateInterval(shedule: [schedule[0], key])
+            for (k,_) in self.dayDictionary{
+                if dayNo == k{
+                    itinEventsDict[key] = dayDictionary[k]
+                }
+            }
+        }
+    }
+    
+    func tempEventsDictToDayDict(){
+        
     }
     
     @IBAction func backToItineraryTableViewController(with segue: UIStoryboardSegue){

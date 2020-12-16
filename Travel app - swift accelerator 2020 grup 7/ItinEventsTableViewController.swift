@@ -34,10 +34,8 @@ class ItinEventsTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        DayEvent.saveToFile(dayEvents: events)
     }
     override func viewDidDisappear(_ animated: Bool) {
-        DayEvent.saveToFile(dayEvents: events)
     }
     
     override func viewWillLayoutSubviews() {
@@ -131,7 +129,6 @@ class ItinEventsTableViewController: UITableViewController {
         if segue.identifier == "backToItineraryTableViewController"{
             if let dest = segue.destination as? ItinTableViewController{
                 dest.dayDictionary[dayNo] = events
-                DayEvent.saveToFile(dayEvents: events)
             }
         }
     }
@@ -141,12 +138,10 @@ class ItinEventsTableViewController: UITableViewController {
         if let source = segue.source as? ItinEventTableViewController{
             if source.isAnExistingEvent == true{
                 events[eventNo] = source.event
-                DayEvent.saveToFile(dayEvents: events)
                 tableView.reloadData()
             }else{
                 if source.event != nil {
                     events.append(source.event)
-                    DayEvent.saveToFile(dayEvents: events)
                     tableView.reloadData()
                 }
             }
