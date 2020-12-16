@@ -258,6 +258,9 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 dest.schedule = dateStorageList
                 dest.itinEventsDict = self.itinEventsDict
                 
+                dest.trips = trips
+                dest.tripNo = tripNo
+                
                 for (_,value) in itinEventsDict{
                 for i in value{
                     if i.date != ""{

@@ -21,24 +21,44 @@ class ItinTableViewController:
     var itinOverviewList: Array<String> = []
     var dateArray: Array<String> = []
     
+    
+    var trips: [Trip] = []
+    var tripNo: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Itinerary"
-        interval = getDateInterval(shedule: self.schedule)
+        interval = getDateInterval(timeTable: self.schedule)
         dateArray = []
-        print("viewDidLoad")
-        print(dayDictionary)
         
-        if let loadedDayEvent = DayEvent.loadFromFile(){
-            print("dayEvent file loading", loadedDayEvent)
-            tempDayDictToEventsDict()
-            DayEvent.saveToFile(dayEvents: itinEventsDict)
-            print("File founded. Loading DayEvent.")
-        }
+//        if let loadedDayEvent = DayEvent.loadFromFile(){
+//            print("dayEvent file loading", loadedDayEvent)
+//            itinEventsDict = loadedDayEvent
+//            print("File founded. Loading DayEvent.")
+//        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         delegate?.printItinEvent(titleDict: dayDictionary)
+        
+        
+        print("viewDidAppear")
+        print(dayDictionary)
+        print("dateArray", dateArray)
+        
+        for i in dateArray{
+            let day = getDateInterval(timeTable: [dateArray[0], i])
+            for (k,_) in self.dayDictionary{
+                print("ikik", day, k)
+                if (day-1) == k{
+                    itinEventsDict[i] = dayDictionary[k]
+                }
+            }
+        }
+        print("itinEventsDict", itinEventsDict)
+        trips[tripNo].itinerary = itinEventsDict
+        Trip.saveToFile(trips: trips)
         
         
  
@@ -137,11 +157,11 @@ class ItinTableViewController:
     
 
     
-    func getDateInterval(shedule: [String]) -> Int{
+    func getDateInterval(timeTable: [String]) -> Int{
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM dd, yyyy"
-        let dateStart = formatter.date(from: schedule[0])!
-        let dateEndTemp = formatter.date(from: schedule[1])!
+        let dateStart = formatter.date(from: timeTable[0])!
+        let dateEndTemp = formatter.date(from: timeTable[1])!
         let dateEnd = dateEndTemp.addingTimeInterval(TimeInterval(60 * 60 * 24))
         let interval = Int( dateEnd.timeIntervalSince(dateStart)/(24.0*60.0*60.0))
         print("old interval:", interval)
@@ -162,14 +182,7 @@ class ItinTableViewController:
     }
     
     func tempDayDictToEventsDict(){
-        for (key,_) in itinEventsDict{
-            let dayNo = getDateInterval(shedule: [schedule[0], key])
-            for (k,_) in self.dayDictionary{
-                if dayNo == k{
-                    itinEventsDict[key] = dayDictionary[k]
-                }
-            }
-        }
+        
     }
     
     func tempEventsDictToDayDict(){
