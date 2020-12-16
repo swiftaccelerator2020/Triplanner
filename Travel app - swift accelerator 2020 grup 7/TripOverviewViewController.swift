@@ -301,6 +301,8 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 dest.budgetItemsDict = self.budgetItemsStorageDict
                 dest.total = self.budgetTotal
                 dest.delegate = self
+                dest.trips = trips
+                dest.tripNo = tripNo
             }
             
         }

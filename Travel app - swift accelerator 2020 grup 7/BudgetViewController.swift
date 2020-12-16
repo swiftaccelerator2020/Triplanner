@@ -10,7 +10,7 @@ import UIKit
 class BudgetViewController: UIViewController, UITextFieldDelegate {
     
     
-
+    
     @IBOutlet weak var foodButton: UIButton!
     @IBOutlet weak var accomodationButton: UIButton!
     @IBOutlet weak var shoppingButton: UIButton!
@@ -20,7 +20,7 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var totalBudgetTextField: UITextField!
     @IBOutlet weak var amountSpentTextField: UITextField!
     @IBOutlet weak var amountLeftTextField: UITextField!
-
+    
     var total: Double? = 0.0
     var spent: Double? = 0.0
     var left: Double? = 0.0
@@ -30,6 +30,9 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     var calculatingDict: Dictionary<String, Double> = [:]
     var spendingAddedUp = 0.0
     var delegate: BudgetDataDelegate?
+    
+    var trips: [Trip] = []
+    var tripNo: Int = 0
     
     
     
@@ -52,7 +55,7 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         self.totalBudgetTextField.text = String(total ?? 0.0)
         
         //--- add UIToolBar on keyboard and Done button on UIToolBar ---//
-                self.addDoneButtonOnKeyboard()
+        self.addDoneButtonOnKeyboard()
         self.totalBudgetTextField.delegate = self
     }
     
@@ -64,23 +67,17 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
             spendingAddedUp += tempCategorizedBudget
             calculatingDict[i] = tempCategorizedBudget
             
-        print(spendingAddedUp)
-        amountSpentTextField.text = String(spendingAddedUp)
-        spent = spendingAddedUp
-        amountLeftTextField.text = String(total! - spendingAddedUp)
-    }
+            print(spendingAddedUp)
+            amountSpentTextField.text = String(spendingAddedUp)
+            spent = spendingAddedUp
+            amountLeftTextField.text = String(total! - spendingAddedUp)
+        }
     }
     
     
     @IBAction func screenTapped(_ sender: Any) {
         print("tapped")
-        }
-    
-    
-    
-    
- 
-
+    }
 
     @IBAction func totalBudgetFinishedEditing(_ sender: Any) {
         print("total budget done editing")
@@ -88,44 +85,25 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         print(total as Any)
         left = (total ?? 0.0) - spent!
         amountLeftTextField.text = String((total ?? 0.0) - (spent ?? 0.0))
-//        if total == nil{
-//            totalBudgetTextField.text = "0.0"
-//        }else{
-//            if amountLeftTextField.text != ""{
-//            left = total ?? 0.0 - (spent ?? 0.0)
-//            amountLeftTextField.text = String(left!)
-//            }
-//        }
+    
+        
+        trips[tripNo].totalBudget = total ?? 0.0
+        trips[tripNo].budget = budgetItemsDict
+        Trip.saveToFile(trips: trips)
+        print(total)
     }
     
     
     
     @IBAction func amountSpentFinishedEditing(_ sender: Any) {
-//         spent =  Double(amountSpentTextField.text ?? "")
-//        if spent == nil{
-//
-//        }else{
-//            left = total ?? 0.0 - (spent ?? 0.0)
-//            print("left:",left)
-//            amountLeftTextField.text = String(left!)
-//        }
-        
     }
     
     
-
+    
     @IBAction func amountLeftFinishedEditing(_ sender: Any) {
-//        print("amountLeftFinishedEditing")
-//        left = Double(amountLeftTextField.text ?? "")
-//        if left == nil{
-//
-//        }else{
-//            spent = total ?? 0.0 - (left ?? 0.0)
-//            amountSpentTextField.text = String(spent!)
-//        }
     }
     
-
+    
     
     
     
@@ -139,17 +117,19 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        print("received dict", self.budgetItemsDict)
-}
+        print("received dict", budgetItemsDict)
+        trips[tripNo].budget = budgetItemsDict
+        Trip.saveToFile(trips: trips)
+    }
     
     @IBAction func backToBudgetTableViewController(with segue: UIStoryboardSegue){
         if let source = segue.source as? AddSpendingViewController{
             if segue.identifier == "unwindSave"{
                 var newlyCreatedItem = self.budgetItemsDict[source.budgetItem?.category ?? "Other"]
                 if newlyCreatedItem != nil{
-                newlyCreatedItem?.append(source.budgetItem!)
-                self.budgetItemsDict[source.budgetItem?.category ?? "Other"] = newlyCreatedItem
-                print(self.budgetItemsDict)
+                    newlyCreatedItem?.append(source.budgetItem!)
+                    self.budgetItemsDict[source.budgetItem?.category ?? "Other"] = newlyCreatedItem
+                    print(self.budgetItemsDict)
                 }else{
                     self.budgetItemsDict[source.budgetItem?.category ?? "Other"] = [source.budgetItem!]
                 }
@@ -164,47 +144,41 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-            if let navigationVC = segue.destination as? UINavigationController{
-                if let dest = navigationVC.topViewController as? BudgetTableViewController{
-                    let viewTitle = returnName(string: segue.identifier!)
-                    dest.viewTitle = viewTitle
-                    print("viewTitle", viewTitle)
-                    if budgetItemsDict.isEmpty == false{
+        if let navigationVC = segue.destination as? UINavigationController{
+            if let dest = navigationVC.topViewController as? BudgetTableViewController{
+                let viewTitle = returnName(string: segue.identifier!)
+                dest.viewTitle = viewTitle
+                print("viewTitle", viewTitle)
+                if budgetItemsDict.isEmpty == false{
                     for i in categories{
                         let name =  returnName(string: segue.identifier!)
                         if i == name{
                             dest.spendingItemsArray = self.budgetItemsDict[i] ?? []
                         }
                     }
-                    
-            
-                        
-                        
+                }
             }
-                
-            }
-                
-            }
+        }
         
         
         
         if let dest = segue.destination as? TripOverviewViewController{
             if total != nil{
-            //let string1 = "total budget $\(total!), spent $\(spendingAddedUp), \(spendingAddedUp/(total ?? 1.0)*100)% of total"
-            let string1 = "spent $\(spendingAddedUp) of $\(total!), $\((total!) - (spendingAddedUp)) left"
-            var string2 = ""
-            for (key,value) in self.calculatingDict{
-                let percentage = ((value/spendingAddedUp) * 100)
-                let tempString = "\(round(percentage))% of spendings (\(key))\n"
-                string2.append(tempString)
+                //let string1 = "total budget $\(total!), spent $\(spendingAddedUp), \(spendingAddedUp/(total ?? 1.0)*100)% of total"
+                let string1 = "spent $\(spendingAddedUp) of $\(total!), $\((total!) - (spendingAddedUp)) left"
+                var string2 = ""
+                for (key,value) in self.calculatingDict{
+                    let percentage = ((value/spendingAddedUp) * 100)
+                    let tempString = "\(round(percentage))% of spendings (\(key))\n"
+                    string2.append(tempString)
+                }
+                
+                print("string1, string2", string1, string2)
+                delegate?.calculateBudget(string1: string1, string2: string2)
+                
             }
-            
-            print("string1, string2", string1, string2)
-            delegate?.calculateBudget(string1: string1, string2: string2)
-            
         }
-        }
-        }
+    }
     
     
     
@@ -241,7 +215,7 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
             result = otherButton
         }
         return result
-    
+        
     }
     
     @IBAction func foodButtonPressed(_ sender: UIButton) {
@@ -270,7 +244,7 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
             
             let foodAttributedTitle = NSAttributedString(string: "\(category): $\(tSpending)", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: UIFont.Weight(0.5))])
             
-        returnButtonName(string: category).setAttributedTitle(foodAttributedTitle, for: .normal)
+            returnButtonName(string: category).setAttributedTitle(foodAttributedTitle, for: .normal)
             returnButtonName(string: category).titleLabel?.font = UIFont(name: "System Bold", size: 30)
             foodButton.titleLabel?.textAlignment = .left
             categorizedSpending = tSpending
@@ -280,7 +254,7 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
     
     
     func addDoneButtonOnKeyboard()
-      {
+    {
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
         doneToolbar.barStyle = UIBarStyle.default
         
@@ -297,12 +271,12 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         
         self.totalBudgetTextField.inputAccessoryView = doneToolbar
         
-      }
-      
-      @objc func doneButtonAction()
-      {
+    }
+    
+    @objc func doneButtonAction()
+    {
         self.totalBudgetTextField.resignFirstResponder()
-      }
     
 }
 
+}
