@@ -286,6 +286,8 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
             if let dest = navigationVC.topViewController as? PackingListTableViewController{
                 dest.delegate = self
                 dest.packingItems = self.packingItemsStorateList
+                dest.trips = self.trips
+                dest.tripNo = self.tripNo
             }
         }
         

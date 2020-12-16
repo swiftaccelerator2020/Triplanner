@@ -10,6 +10,9 @@ import UIKit
 class PackingListTableViewController: UITableViewController {
     var delegate: PackingListDataDelegate?
     var isChecked: Bool = false
+    
+    var trips: [Trip] = []
+    var tripNo: Int = 0
 
    
     
@@ -39,6 +42,9 @@ class PackingListTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         PackingItem.saveToFile(packingItems: packingItems)
+        trips[tripNo].packingList = packingItems
+        Trip.saveToFile(trips: trips)
+        print(trips)
     }
     override func viewDidDisappear(_ animated: Bool) {
         delegate?.printPackingListItem(titleArray: packingItems, isChecked: isChecked)
