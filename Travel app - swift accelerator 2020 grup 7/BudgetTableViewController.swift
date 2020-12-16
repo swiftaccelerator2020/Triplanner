@@ -13,10 +13,20 @@ class BudgetTableViewController: UITableViewController {
     var spendingItemsDict: Dictionary<String, Array<BudgetItem>> = [:]
     var currentSpendingNo: Int = 0
     var viewTitle: String = "default"
+    
+    var storageSpendingItemsDict: Dictionary<String, Array<BudgetItem>> = [:]
+    
+    var trips: [Trip] = []
+    var tripNo: Int = 0
         
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = viewTitle
+        
+        if let tempTrips = Trip.loadFromFile(){
+            storageSpendingItemsDict = tempTrips[tripNo].budget
+        }
+        
     }
 
     // MARK: - Table view data source
@@ -56,7 +66,24 @@ class BudgetTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
+        
+//        for (key, value) in storageSpendingItemsDict{
+//            if spendingItemsArray.count > indexPath.row{
+//                if key == spendingItemsArray[indexPath.row].category{
+//                    storageSpendingItemsDict[key] = []
+//                    for i in spendingItemsArray{
+//                        if i.category == key{
+//                            storageSpendingItemsDict[key]?.append(i)
+//                        }
+//                    }
+//                }
+//            }else{
+//                storageSpendingItemsDict[key]?.removeLast()
+//            }
+//            trips[tripNo].budget = storageSpendingItemsDict
+//            Trip.saveToFile(trips: trips)
+//        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -105,7 +132,6 @@ class BudgetTableViewController: UITableViewController {
                     spendingItemsDict[i.category]?.append(i)
                 }
             }
-            print("subview dict", spendingItemsDict)
         }
     }
     
@@ -121,10 +147,22 @@ class BudgetTableViewController: UITableViewController {
                     self.spendingItemsArray.append( source.budgetItem!)
                     print(spendingItemsArray)
                 }
+
+                for i in self.spendingItemsArray{
+                    if self.storageSpendingItemsDict[i.category] == nil{
+                        storageSpendingItemsDict[i.category] = [i]
+                    }else{
+                        storageSpendingItemsDict[i.category]?.append(i)
+                    }
+                }
+                trips[tripNo].budget = storageSpendingItemsDict
+                Trip.saveToFile(trips: trips)
+                
             }
             tableView.reloadData()
         }
     }
     }
     
+
 

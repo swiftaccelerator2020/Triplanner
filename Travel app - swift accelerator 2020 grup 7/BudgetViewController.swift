@@ -146,6 +146,10 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         
         if let navigationVC = segue.destination as? UINavigationController{
             if let dest = navigationVC.topViewController as? BudgetTableViewController{
+                
+                dest.trips = trips
+                dest.tripNo = tripNo
+                
                 let viewTitle = returnName(string: segue.identifier!)
                 dest.viewTitle = viewTitle
                 print("viewTitle", viewTitle)
