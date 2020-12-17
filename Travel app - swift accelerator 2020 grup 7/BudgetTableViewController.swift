@@ -125,13 +125,15 @@ class BudgetTableViewController: UITableViewController {
         }
         
         if segue.destination is BudgetViewController{
-            for i in self.spendingItemsArray{
-                if self.spendingItemsDict[i.category] == nil{
-                    spendingItemsDict[i.category] = [i]
-                }else{
-                    spendingItemsDict[i.category]?.append(i)
-                }
-            }
+//            for i in self.spendingItemsArray{
+//                if self.spendingItemsDict[i.category] == nil{
+//                    spendingItemsDict[i.category] = [i]
+//                }else{
+//                    spendingItemsDict[i.category]?.append(i)
+//                }
+//                print("this is thing", spendingItemsDict)
+//            }
+            spendingItemsDict = storageSpendingItemsDict
         }
     }
     
