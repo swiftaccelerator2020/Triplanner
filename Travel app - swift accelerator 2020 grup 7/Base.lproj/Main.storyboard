@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ez6-os-fcW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ez6-os-fcW">
     <device id="retina6_7" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -210,7 +211,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XON-X7-oLZ"/>
-                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
                         <constraints>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="yjY-we-KAb" secondAttribute="trailing" constant="20" id="0vG-K4-I9i"/>
                             <constraint firstItem="vmo-Jo-RHU" firstAttribute="top" secondItem="jqd-Sa-5ZT" secondAttribute="bottom" constant="20" id="1aS-BE-1Vf"/>
@@ -277,7 +278,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="6Sj-dV-mwy" userLabel="tableview">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <color key="separatorColor" name="Color"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="mJx-4Y-Qye" detailTextLabel="xD3-2e-Uce" imageView="ELM-dg-O8G" style="IBUITableViewCellStyleSubtitle" id="aJ5-GC-nor">
                                 <rect key="frame" x="20" y="55.333332061767578" width="388" height="55.666667938232422"/>
@@ -338,8 +340,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="3So-ij-v8r">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <color key="separatorColor" name="Color"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" reuseIdentifier="packingListItem" id="NzE-tP-xbD" customClass="PackingListTableViewCell" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target">
                                 <rect key="frame" x="20" y="55.333332061767578" width="388" height="50.333332061767578"/>
@@ -541,7 +543,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A7c-7P-y38"/>
-                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wgr-bl-7m2" firstAttribute="leading" secondItem="A7c-7P-y38" secondAttribute="leading" constant="20" id="2xb-yg-DQk"/>
@@ -618,8 +620,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="kGS-pB-aup">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <color key="separatorColor" name="Color"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="budgetCell" textLabel="Fth-0b-ad2" detailTextLabel="udm-BB-Unq" style="IBUITableViewCellStyleSubtitle" id="Bdb-nN-EEK">
                                 <rect key="frame" x="20" y="55.333332061767578" width="388" height="55.666667938232422"/>
@@ -697,10 +699,10 @@
             <objects>
                 <tableViewController id="Vb8-iI-wjc" customClass="AddSpendingViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0ap-IX-Jnq">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <color key="separatorColor" name="Color"/>
                         <sections>
                             <tableViewSection headerTitle="Name" id="qO6-bb-mY9">
                                 <cells>
@@ -874,8 +876,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Hkd-Ox-GLX">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <color key="separatorColor" name="Color"/>
                         <sections>
                             <tableViewSection headerTitle="Destination" id="6da-cG-3nG">
                                 <cells>
@@ -1070,8 +1072,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Iz7-lA-f4c">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <color key="separatorColor" name="Color"/>
                         <sections>
                             <tableViewSection headerTitle="Item Name" id="Ixa-Jc-2lp">
                                 <cells>
@@ -1183,8 +1185,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="RTE-Dc-e8V">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <color key="separatorColor" name="Color"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="itinEventCell" textLabel="gUC-vV-HYb" detailTextLabel="l28-T9-5BE" style="IBUITableViewCellStyleSubtitle" id="wdz-Zz-QKg">
                                 <rect key="frame" x="20" y="55.333332061767578" width="388" height="55.666667938232422"/>
@@ -1246,8 +1248,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="7E0-lX-qdd">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <color key="separatorColor" name="Color"/>
                         <sections>
                             <tableViewSection headerTitle="Destination" id="yuR-NI-Nlr">
                                 <cells>
@@ -1376,8 +1378,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="uD5-zT-ScV">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.86044384679999997" green="0.90389637810000001" blue="0.95089243879999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" red="0.43137254899999999" green="0.5450980392" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <color key="separatorColor" name="Color"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="itineraryCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="itineraryCell" textLabel="K0u-wK-Fkm" detailTextLabel="GXw-9o-d7b" style="IBUITableViewCellStyleSubtitle" id="DQQ-aK-UCe">
                                 <rect key="frame" x="20" y="55.333332061767578" width="388" height="55.666667938232422"/>
@@ -1528,7 +1530,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="yM2-Kt-IKT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NjQ-fi-xAD">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1546,7 +1548,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ez6-os-fcW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" largeTitles="YES" id="6oe-Qy-AEJ">
-                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="104.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1563,8 +1565,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7Pu-JD-XA4"/>
-        <segue reference="gXD-BP-cAu"/>
+        <segue reference="Njr-Wn-zfu"/>
+        <segue reference="p3w-sM-0OX"/>
         <segue reference="nAW-aR-8pe"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -1576,6 +1578,9 @@
         <image name="circle" width="13" height="13"/>
         <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="Color">
+            <color red="0.86464858060000005" green="0.90323299170000004" blue="0.94380855559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
