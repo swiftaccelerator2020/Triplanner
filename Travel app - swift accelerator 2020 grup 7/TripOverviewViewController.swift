@@ -384,12 +384,15 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     func getDateInterval(startDate: String, date: String) -> Int{
         let formatter = DateFormatter()
+        var interval = 0
         formatter.dateFormat = "MMM dd, yyyy"
-        let dateStart = formatter.date(from: startDate)!
-        let dateEndTemp = formatter.date(from: date)!
-        let dateEnd = dateEndTemp.addingTimeInterval(TimeInterval(60 * 60 * 24))
-        let interval = Int( dateEnd.timeIntervalSince(dateStart)/(24.0*60.0*60.0)) - 1
-        print("interval:", interval)
+        if (startDate != "") && (date != ""){
+            let dateStart = formatter.date(from: startDate)!
+            let dateEndTemp = formatter.date(from: date)
+            let dateEnd = dateEndTemp?.addingTimeInterval(TimeInterval(60 * 60 * 24))
+            interval = Int( (dateEnd?.timeIntervalSince(dateStart))!/(24.0*60.0*60.0)) - 1
+            print("interval:", interval)
+        }
         return interval
     }
 
@@ -457,6 +460,22 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     @IBAction func locationEditingEnd(_ sender: Any) {
         locationTextField.resignFirstResponder()
+        trips[tripNo].destination = locationTextField.text ?? ""
+        Trip.saveToFile(trips: trips)
     }
     
+    
+    
+    @IBAction func startDatePickerChanged(_ sender: Any) {
+        trips[tripNo].startDate = overviewStartDatePicker.date
+        Trip.saveToFile(trips: trips)
+    }
+    
+    
+    
+    @IBAction func endDatePickerChanged(_ sender: Any) {
+        
+        trips[tripNo].endDate = overviewEndDatePicker.date
+        Trip.saveToFile(trips: trips)
+    }
 }
