@@ -83,7 +83,14 @@ class ItinTableViewController:
         let cell = tableView.dequeueReusableCell(withIdentifier: "itineraryCell", for: indexPath)
         cell.textLabel?.text = "Day \(String(indexPath.row+1))"
         cell.detailTextLabel?.text = generateDate(schedule: self.schedule, dayNumber: indexPath.row)
-        self.dateArray.append(cell.detailTextLabel?.text ?? "")
+        let cellLabelFormatter = DateFormatter()
+        cellLabelFormatter.dateFormat = "dd MM yyyy"
+        let cellLabelFormatter2 = DateFormatter()
+        cellLabelFormatter2.dateFormat = "MMM dd, yyyy"
+        let tempDate = cellLabelFormatter2.string(from: cellLabelFormatter.date(from: (cell.detailTextLabel?.text)!) ?? Date())
+        
+        
+        self.dateArray.append(tempDate ?? "")
         // Configure the cell...
 
         return cell
@@ -159,6 +166,8 @@ class ItinTableViewController:
 
     
     func getDateInterval(timeTable: [String]) -> Int{
+        print("itinTableVC startDate, date:", timeTable)
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM dd, yyyy"
         let dateStart = formatter.date(from: timeTable[0])!

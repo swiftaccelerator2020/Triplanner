@@ -188,19 +188,16 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM dd, yyyy"
         locationTextField.text = trip.destination //MARK: to be resolved just a bit later
-        if self.newTrip != nil{
         start = formatter.string(from: trip.startDate)
         end = formatter.string(from: trip.endDate)
         itinEventsDict = trip.itinerary
         budgetItemsStorageDict = trip.budget
-            budgetTotal = trip.totalBudget
+        budgetTotal = trip.totalBudget
         packingItemsStorateList = trip.packingList
-            overviewStartDatePicker.setDate(trip.startDate, animated: true)
-            overviewEndDatePicker.setDate(trip.endDate, animated: true)
+        overviewStartDatePicker.setDate(trip.startDate, animated: true)
+        overviewEndDatePicker.setDate(trip.endDate, animated: true)
+        PackingItem.saveToFile(packingItems: trip.packingList)
             
-            PackingItem.saveToFile(packingItems: trip.packingList)
-            
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -363,7 +360,16 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 }else{
                     
                     for i in source.dateArray{
-                        var intervalForDeleting = getDateInterval(startDate: self.start, date: i)
+                        print("Overview i, start:", i, self.start)
+//                        let formatter = DateFormatter()
+//                        formatter.dateFormat = "MMM dd, yyyy"
+//                        let formatter2 = DateFormatter()
+//                        formatter2.dateFormat = "MMM dd, yyyy"
+//                        let start = formatter.date(from: self.start)
+//                        let end = formatter.date(from: i)
+//                        print("Overview startDate, end:", start, end)
+                        
+                        let intervalForDeleting = getDateInterval(startDate: self.start, date: end)
                         if intervalForDeleting == key{
                         self.itinEventsDict[i] = []
                             print("intervalForDeleting", intervalForDeleting)
@@ -383,16 +389,18 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     }
     
     func getDateInterval(startDate: String, date: String) -> Int{
+        print("startDate, date:", startDate,date)
+        
+        //stimulator: startDate, date: Dec 18, 2020 Dec 19, 2020
+        
         let formatter = DateFormatter()
         var interval = 0
         formatter.dateFormat = "MMM dd, yyyy"
-        if (startDate != "") && (date != ""){
-            let dateStart = formatter.date(from: startDate)!
-            let dateEndTemp = formatter.date(from: date)
-            let dateEnd = dateEndTemp?.addingTimeInterval(TimeInterval(60 * 60 * 24))
-            interval = Int( (dateEnd?.timeIntervalSince(dateStart))!/(24.0*60.0*60.0)) - 1
-            print("interval:", interval)
-        }
+        let dateStart = formatter.date(from: startDate)!
+        let dateEndTemp = formatter.date(from: date)
+        let dateEnd = dateEndTemp?.addingTimeInterval(TimeInterval(60 * 60 * 24))
+        interval = Int( (dateEnd?.timeIntervalSince(dateStart))!/(24.0*60.0*60.0)) - 1
+        print("interval:", interval)
         return interval
     }
 
