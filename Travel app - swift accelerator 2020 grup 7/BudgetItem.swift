@@ -1,6 +1,6 @@
 import Foundation
 
-struct BudgetItem: Codable {
+struct BudgetItem: Codable, Equatable {
     var name: String = ""
     var cost: Int
     var notes: String

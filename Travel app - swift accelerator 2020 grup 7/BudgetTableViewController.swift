@@ -137,19 +137,20 @@ class BudgetTableViewController: UITableViewController {
             if let source = segue.source as? AddSpendingViewController{
                 if source.isExistingItem == true{
                     self.spendingItemsArray[currentSpendingNo] = source.budgetItem!
-                    
+                    storageSpendingItemsDict[source.budgetItem!.category]![currentSpendingNo] = source.budgetItem!
                 }else{
                     self.spendingItemsArray.append( source.budgetItem!)
+                    storageSpendingItemsDict[source.budgetItem!.category]!.append(source.budgetItem!)
                     print(spendingItemsArray)
                 }
 
-                for i in self.spendingItemsArray{
-                    if self.storageSpendingItemsDict[i.category] == nil{
-                        storageSpendingItemsDict[i.category] = [i]
-                    }else{
-                        storageSpendingItemsDict[i.category]?.append(i)
-                    }
-                }
+//                for i in self.spendingItemsArray{
+//                    if self.storageSpendingItemsDict[i.category] == nil{
+//                        storageSpendingItemsDict[i.category] = [i]
+//                    }else{
+//                        storageSpendingItemsDict[i.category]?.append(i)
+//                    }
+//                }
                 trips[tripNo].budget = storageSpendingItemsDict
                 Trip.saveToFile(trips: trips)
                 
