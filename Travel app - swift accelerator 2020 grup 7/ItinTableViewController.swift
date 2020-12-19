@@ -1,10 +1,3 @@
-//
-//  ItinTableViewController.swift
-//  Travel app - swift accelerator 2020 grup 7
-//
-//  Created by Yu Youyou on 27/11/20.
-//
-
 import UIKit
 
 class ItinTableViewController:
@@ -155,7 +148,6 @@ class ItinTableViewController:
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    
 
     
     func getDateInterval(timeTable: [String]) -> Int{

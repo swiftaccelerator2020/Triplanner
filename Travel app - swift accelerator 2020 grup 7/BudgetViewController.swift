@@ -1,10 +1,3 @@
-//
-//  BudgetViewController.swift
-//  Travel app - swift accelerator 2020 grup 7
-//
-//  Created by rochelletxy on 29/11/20.
-//
-
 import UIKit
 
 class BudgetViewController: UIViewController, UITextFieldDelegate {

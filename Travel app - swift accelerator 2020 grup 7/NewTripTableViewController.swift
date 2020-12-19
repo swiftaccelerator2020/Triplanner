@@ -1,10 +1,3 @@
-//
-//  NewTripTableViewController.swift
-//  Travel app - swift accelerator 2020 grup 7
-//
-//  Created by Yu Youyou on 11/12/20.
-//
-
 import UIKit
 
 class NewTripTableViewController: UITableViewController {

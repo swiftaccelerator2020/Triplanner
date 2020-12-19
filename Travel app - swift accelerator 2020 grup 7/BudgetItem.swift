@@ -1,10 +1,3 @@
-//
-//  BudgetItem.swift
-//  Travel app - swift accelerator 2020 grup 7
-//
-//  Created by Yu Youyou on 10/12/20.
-//
-
 import Foundation
 
 struct BudgetItem: Codable {

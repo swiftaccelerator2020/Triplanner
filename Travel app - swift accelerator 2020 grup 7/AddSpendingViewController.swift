@@ -1,10 +1,3 @@
-//
-//  AddSpendingViewController.swift
-//  Travel app - swift accelerator 2020 grup 7
-//
-//  Created by nicole on 9/12/20.
-//
-
 import UIKit
 
 class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UITextViewDelegate {
