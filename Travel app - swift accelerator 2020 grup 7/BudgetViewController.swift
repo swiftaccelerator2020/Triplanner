@@ -170,10 +170,19 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
             if total != nil{
                 //let string1 = "total budget $\(total!), spent $\(spendingAddedUp), \(spendingAddedUp/(total ?? 1.0)*100)% of total"
                 let string1 = "spent $\(spendingAddedUp) of $\(total!), $\((total!) - (spendingAddedUp)) left"
+//                var string2 = ""
+//                for (key,value) in self.calculatingDict{
+//                    let percentage = ((value/spendingAddedUp) * 100)
+//                    let tempString = "\(round(percentage))% of spendings (\(key))\n"
+//                    string2.append(tempString)
+//                }
+                //^old version that returns "NaN"
+                
                 var string2 = ""
                 for (key,value) in self.calculatingDict{
                     let percentage = ((value/spendingAddedUp) * 100)
-                    let tempString = "\(round(percentage))% of spendings (\(key))\n"
+                    let rounded = round(percentage)
+                    let tempString = "\(rounded.isNaN ? 0 : rounded)% of spendings (\(key))\n"
                     string2.append(tempString)
                 }
                 
