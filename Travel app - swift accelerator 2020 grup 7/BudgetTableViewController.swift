@@ -1,10 +1,3 @@
-//
-//  BudgetCatTableViewController.swift
-//  Travel app - swift accelerator 2020 grup 7
-//
-//  Created by rochelletxy on 4/12/20.
-//
-
 import UIKit
 
 class BudgetTableViewController: UITableViewController {

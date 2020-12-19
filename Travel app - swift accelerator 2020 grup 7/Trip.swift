@@ -1,14 +1,4 @@
-//
-//  Trip.swift
-//  Travel app - swift accelerator 2020 grup 7
-//
-//  Created by Yu Youyou on 11/12/20.
-//
-/*
-import Foundation
-
-
-struct Trip: Codable{
+/*struct Trip: Codable{
     
     /*static func == (lhs: Trip, rhs: Trip) -> Bool {
         return true

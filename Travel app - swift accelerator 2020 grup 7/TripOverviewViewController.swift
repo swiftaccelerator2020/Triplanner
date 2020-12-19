@@ -1,10 +1,3 @@
-//
-//  TripOverviewViewController.swift
-//  Travel app - swift accelerator 2020 grup 7
-//
-//  Created by Yu Youyou on 4/12/20.
-//
-
 import UIKit
 
 protocol ItinDataDelegate {

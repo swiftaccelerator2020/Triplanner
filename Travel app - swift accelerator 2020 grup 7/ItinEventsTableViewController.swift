@@ -1,10 +1,3 @@
-//
-//  ItinTableViewController.swift
-//  Travel app - swift accelerator 2020 grup 7
-//
-//  Created by Yu Youyou on 27/11/20.
-//
-
 import UIKit
 
 class ItinEventsTableViewController: UITableViewController {

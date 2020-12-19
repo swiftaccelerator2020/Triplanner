@@ -1,10 +1,3 @@
-//
-//  ItinDayEvents.swift
-//  Travel app - swift accelerator 2020 grup 7
-//
-//  Created by Yu Youyou on 29/11/20.
-//
-
 import Foundation
 struct DayEvent: Codable, Equatable{
 //    static func == (lhs: DayEvent, rhs: DayEvent) -> Bool {
