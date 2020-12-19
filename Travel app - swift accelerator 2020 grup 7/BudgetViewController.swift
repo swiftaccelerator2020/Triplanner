@@ -126,7 +126,8 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
                 }else{
                     self.budgetItemsDict[source.budgetItem?.category ?? "Other"] = [source.budgetItem!]
                 }
-                
+                trips[tripNo].budget = budgetItemsDict
+                Trip.saveToFile(trips: trips)
                 print("newly created item", newlyCreatedItem)
                 
             }
