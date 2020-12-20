@@ -22,7 +22,6 @@
 		AFACB231256CAA0B00EACAFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB230256CAA0B00EACAFF /* AppDelegate.swift */; };
 		AFACB233256CAA0B00EACAFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */; };
 		AFACB23A256CAA0E00EACAFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFACB239256CAA0E00EACAFF /* Assets.xcassets */; };
-		AFACB23D256CAA0E00EACAFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFACB23B256CAA0E00EACAFF /* LaunchScreen.storyboard */; };
 		AFACB248256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB247256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7Tests.swift */; };
 		AFACB253256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACB252256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7UITests.swift */; };
 		AFC916632574D881003F10EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC916612574D881003F10EC /* Main.storyboard */; };
@@ -56,7 +55,6 @@
 		7E6A37B525723CDF00547549 /* PackingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItem.swift; sourceTree = "<group>"; };
 		7E6A37ED257258F200547549 /* EditPackingItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPackingItemTableViewController.swift; sourceTree = "<group>"; };
 		7E7392C02573C05E00EFFCFF /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
-		7EF159F3258E3EFE00BBDB23 /* Travel app - swift accelerator 2020 grup 7.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Travel app - swift accelerator 2020 grup 7.entitlements"; sourceTree = "<group>"; };
 		7EFD0FC22584BD1E004A5E23 /* ItinEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinEventTableViewController.swift; sourceTree = "<group>"; };
 		AF3814722581CC00002BE597 /* BudgetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetItem.swift; sourceTree = "<group>"; };
 		AF83206225709AF600487326 /* ItinEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinEventsTableViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 		AFACB230256CAA0B00EACAFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AFACB239256CAA0E00EACAFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AFACB23C256CAA0E00EACAFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFACB23E256CAA0E00EACAFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFACB243256CAA0E00EACAFF /* Travel app - swift accelerator 2020 grup 7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Travel app - swift accelerator 2020 grup 7Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFACB247256CAA0E00EACAFF /* Travel_app___swift_accelerator_2020_grup_7Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Travel_app___swift_accelerator_2020_grup_7Tests.swift"; sourceTree = "<group>"; };
@@ -130,7 +127,6 @@
 		AFACB22F256CAA0B00EACAFF /* Travel app - swift accelerator 2020 grup 7 */ = {
 			isa = PBXGroup;
 			children = (
-				7EF159F3258E3EFE00BBDB23 /* Travel app - swift accelerator 2020 grup 7.entitlements */,
 				AFC916612574D881003F10EC /* Main.storyboard */,
 				AFACB230256CAA0B00EACAFF /* AppDelegate.swift */,
 				AFACB232256CAA0B00EACAFF /* SceneDelegate.swift */,
@@ -151,7 +147,6 @@
 				BB3DE9BE25807C1700248131 /* AddSpendingViewController.swift */,
 				AF3814722581CC00002BE597 /* BudgetItem.swift */,
 				AFACB239256CAA0E00EACAFF /* Assets.xcassets */,
-				AFACB23B256CAA0E00EACAFF /* LaunchScreen.storyboard */,
 				AFACB23E256CAA0E00EACAFF /* Info.plist */,
 			);
 			path = "Travel app - swift accelerator 2020 grup 7";
@@ -279,7 +274,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFC916632574D881003F10EC /* Main.storyboard in Resources */,
-				AFACB23D256CAA0E00EACAFF /* LaunchScreen.storyboard in Resources */,
 				AFACB23A256CAA0E00EACAFF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,14 +354,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AFACB23B256CAA0E00EACAFF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AFACB23C256CAA0E00EACAFF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		AFC916612574D881003F10EC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -510,7 +496,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sg.tk.2020.triplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -531,7 +517,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sg.tk.2020.triplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
