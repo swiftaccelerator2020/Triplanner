@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A9C318F257F496500512AD1 /* PackingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C318E257F496500512AD1 /* PackingListTableViewCell.swift */; };
+		7E2E77E4258F220D003ED884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E2E77E3258F220D003ED884 /* LaunchScreen.storyboard */; };
 		7E5DF8F32579E40700B42C9B /* BudgetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5DF8F22579E40700B42C9B /* BudgetTableViewController.swift */; };
 		7E6A37AB25723C6B00547549 /* PackingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A37AA25723C6B00547549 /* PackingListTableViewController.swift */; };
 		7E6A37B625723CDF00547549 /* PackingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A37B525723CDF00547549 /* PackingItem.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		3A9C318E257F496500512AD1 /* PackingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingListTableViewCell.swift; sourceTree = "<group>"; };
+		7E2E77E3258F220D003ED884 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E5DF8F22579E40700B42C9B /* BudgetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTableViewController.swift; sourceTree = "<group>"; };
 		7E6A37AA25723C6B00547549 /* PackingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingListTableViewController.swift; sourceTree = "<group>"; };
 		7E6A37B525723CDF00547549 /* PackingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItem.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				BB3DE9BE25807C1700248131 /* AddSpendingViewController.swift */,
 				AF3814722581CC00002BE597 /* BudgetItem.swift */,
 				AFACB239256CAA0E00EACAFF /* Assets.xcassets */,
+				7E2E77E3258F220D003ED884 /* LaunchScreen.storyboard */,
 				AFACB23E256CAA0E00EACAFF /* Info.plist */,
 			);
 			path = "Travel app - swift accelerator 2020 grup 7";
@@ -273,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E2E77E4258F220D003ED884 /* LaunchScreen.storyboard in Resources */,
 				AFC916632574D881003F10EC /* Main.storyboard in Resources */,
 				AFACB23A256CAA0E00EACAFF /* Assets.xcassets in Resources */,
 			);
