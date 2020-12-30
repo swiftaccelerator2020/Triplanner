@@ -247,7 +247,6 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
             for i in (self.budgetItemsDict[category]!){
                 tSpending += Double(i.cost)
             }
-            let randomChoice = self.budgetItemsDict[category]?.randomElement()
             
             let foodAttributedTitle = NSAttributedString(string: "\(category): $\(tSpending)", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: UIFont.Weight(0.5))])
             

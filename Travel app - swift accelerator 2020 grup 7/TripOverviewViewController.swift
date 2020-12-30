@@ -19,8 +19,7 @@ protocol BudgetDataDelegate {
 class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingListDataDelegate, BudgetDataDelegate{
     
     func calculateBudget(string1: String, string2: String) {
-        budgetOverviewLabel.text = "\(string1)\n\(string2)"
-        print("delegate working")
+//        budgetOverviewLabel.text = "\(string1)\n\(string2)"
     }
     
     
@@ -115,19 +114,19 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
 
     
     func printItinEvent(titleDict: Dictionary<Int, Any>) {
-        print("delegate titleDict:", titleDict)
-        for (_, value) in titleDict{
-            print("value", value)
-            if (value as! Array<DayEvent>).isEmpty == false{
-            switch (value as! Array<DayEvent>)[0] {
-            case nil:
-                itinOverviewLabel.text = "You have no trip at the moment! Create some"
-                itinOverviewLabel2.text = ""
-            default:
-                itinOverviewLabel.text = (value as!Array<DayEvent>)[0].destination
-            }
-        }
-    }
+//        print("delegate titleDict:", titleDict)
+//        for (_, value) in titleDict{
+//            print("value", value)
+//            if (value as! Array<DayEvent>).isEmpty == false{
+//            switch (value as! Array<DayEvent>)[0] {
+//            case nil:
+//                itinOverviewLabel.text = "You have no trip at the moment! Create some"
+//                itinOverviewLabel2.text = ""
+//            default:
+//                itinOverviewLabel.text = (value as!Array<DayEvent>)[0].destination
+//            }
+//        }
+//    }
     }
     
     //MARK: general overview variables
@@ -202,7 +201,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         trips[tripNo] = trip
         Trip.saveToFile(trips: trips)
         
-        //MARK: ***************************
+        //MARK: *********************************************************************
         var tempArray: Array<PackingItem> = []
         let titleArray = PackingItem.loadFromFile()
         packingItemsStorateList = titleArray ?? []
@@ -232,7 +231,34 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         }
         packingItemsStorateList = titleArray ?? []
         PackingItem.saveToFile(packingItems: titleArray ?? [])
-        //MARK: *********************
+        //MARK: **********************************************************************
+        
+        if let tempText = itinEventsDict.values.randomElement()?.randomElement()?.destination{
+            itinOverviewLabel.text = tempText
+        }
+        else{itinOverviewLabel.text = "You have no trips, create some!"
+        }
+        
+        //MARK: **********************************************************************
+        
+        var spendingAddedUp: Double = 0.0
+        for i in self.budgetItemsStorageDict.values{
+            spendingAddedUp += Double(i.reduce(0,{x,y in x + y.cost}))
+        }
+        let string1 = "spent $\(spendingAddedUp) of $\(self.budgetTotal), $\((self.budgetTotal) - (spendingAddedUp)) left"
+        print("this is string1:", string1)
+        
+        var string2 = ""
+        for (key,value) in self.budgetItemsStorageDict{
+            let tempCategorizedSpending = Double(value.reduce(0, {x,y in x + y.cost}))
+            let percentage = ((tempCategorizedSpending/spendingAddedUp) * 100)
+            let rounded = round(percentage)
+            let tempString = "\(rounded)% of spendings (\(key))\n"
+            string2.append(tempString)
+            print("this is string2:", string2)
+        }
+        self.budgetOverviewLabel.text = "\(string1)\n\(string2)"
+        
         
         
     }
