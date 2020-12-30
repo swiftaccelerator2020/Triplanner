@@ -888,7 +888,7 @@
             <objects>
                 <tableViewController id="alL-dY-rrf" customClass="ItinEventTableViewController" customModule="Travel_app___swift_accelerator_2020_grup_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Hkd-Ox-GLX">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="Color"/>
                         <color key="separatorColor" name="Color"/>
@@ -939,7 +939,7 @@
                                                     </connections>
                                                 </textField>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="YRW-sp-4lC">
-                                                    <rect key="frame" x="20" y="0.0" width="348" height="44"/>
+                                                    <rect key="frame" x="20" y="0.0" width="348" height="43.666666666666664"/>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -974,7 +974,7 @@
                                                     </connections>
                                                 </textField>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HNn-Wn-CMj">
-                                                    <rect key="frame" x="20" y="0.0" width="348" height="43"/>
+                                                    <rect key="frame" x="20" y="0.0" width="348" height="43.666666666666664"/>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -1067,8 +1067,10 @@
                     <connections>
                         <outlet property="dateDatePicker" destination="Wz7-Xg-XEs" id="app-ox-4CN"/>
                         <outlet property="destinationTextField" destination="YZy-iC-ca4" id="8dR-Fr-fJY"/>
+                        <outlet property="endTimePicker" destination="HNn-Wn-CMj" id="IdX-yQ-og2"/>
                         <outlet property="endTimeTextField" destination="Aww-5V-JVH" id="NhO-Tm-PC5"/>
                         <outlet property="eventNoteView" destination="92J-4R-P8x" id="xqi-u1-8nG"/>
+                        <outlet property="startTimePicker" destination="YRW-sp-4lC" id="Bjc-xm-nME"/>
                         <outlet property="startTimeTextField" destination="SiS-mu-Yib" id="mt6-Ss-chE"/>
                     </connections>
                 </tableViewController>
@@ -1082,7 +1084,7 @@
             <objects>
                 <navigationController id="gQ5-aD-fHW" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ysE-Nd-544">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1592,7 +1594,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Hh4-Dq-Rge"/>
-        <segue reference="gXD-BP-cAu"/>
+        <segue reference="6K0-FQ-Zcw"/>
         <segue reference="nAW-aR-8pe"/>
     </inferredMetricsTieBreakers>
     <resources>

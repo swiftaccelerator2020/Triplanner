@@ -76,14 +76,15 @@ class ItinTableViewController:
         let cell = tableView.dequeueReusableCell(withIdentifier: "itineraryCell", for: indexPath)
         cell.textLabel?.text = "Day \(String(indexPath.row+1))"
         cell.detailTextLabel?.text = generateDate(schedule: self.schedule, dayNumber: indexPath.row)
-        let cellLabelFormatter = DateFormatter()
-        cellLabelFormatter.dateFormat = "dd MM yyyy"
-        let cellLabelFormatter2 = DateFormatter()
-        cellLabelFormatter2.dateFormat = "MMM dd, yyyy"
-        let tempDate = cellLabelFormatter2.string(from: cellLabelFormatter.date(from: (cell.detailTextLabel?.text)!) ?? Date())
+//        let cellLabelFormatter = DateFormatter()
+//        cellLabelFormatter.dateFormat = "dd MM yyyy"
+//        let cellLabelFormatter2 = DateFormatter()
+//        cellLabelFormatter2.dateFormat = "MMM dd, yyyy"
+//        let tempDate = cellLabelFormatter2.string(from: cellLabelFormatter.date(from: (cell.detailTextLabel?.text)!) ?? Date())
         
-        
-        self.dateArray.append(tempDate ?? "")
+        //tempDate ?? ""
+        self.dateArray.append(generateDate(schedule: self.schedule, dayNumber: indexPath.row))
+        print("newestnewest:", dateArray)
         // Configure the cell...
 
         return cell
