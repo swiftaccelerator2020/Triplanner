@@ -931,18 +931,25 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SiS-mu-Yib">
-                                                    <rect key="frame" x="20" y="0.0" width="348" height="43.666666666666664"/>
+                                                    <rect key="frame" x="200" y="0.0" width="168" height="43.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
                                                         <action selector="startTimeEditingEnd:" destination="alL-dY-rrf" eventType="editingDidEndOnExit" id="k0s-fd-oRx"/>
                                                     </connections>
                                                 </textField>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="YRW-sp-4lC">
+                                                    <rect key="frame" x="20" y="0.0" width="348" height="44"/>
+                                                </datePicker>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="SiS-mu-Yib" secondAttribute="trailing" constant="20" id="0aE-s3-VnG"/>
-                                                <constraint firstItem="SiS-mu-Yib" firstAttribute="leading" secondItem="0ZC-CI-Mao" secondAttribute="leading" constant="20" id="Mg8-kb-L8q"/>
+                                                <constraint firstAttribute="bottom" secondItem="YRW-sp-4lC" secondAttribute="bottom" id="LNy-g3-gJ8"/>
+                                                <constraint firstItem="SiS-mu-Yib" firstAttribute="leading" secondItem="0ZC-CI-Mao" secondAttribute="leading" constant="200" id="Mg8-kb-L8q"/>
+                                                <constraint firstItem="YRW-sp-4lC" firstAttribute="top" secondItem="0ZC-CI-Mao" secondAttribute="top" id="RWC-th-nOS"/>
                                                 <constraint firstAttribute="bottom" secondItem="SiS-mu-Yib" secondAttribute="bottom" id="bly-eD-ztG"/>
+                                                <constraint firstItem="YRW-sp-4lC" firstAttribute="leading" secondItem="0ZC-CI-Mao" secondAttribute="leading" constant="20" id="dja-bE-1v6"/>
+                                                <constraint firstAttribute="trailing" secondItem="YRW-sp-4lC" secondAttribute="trailing" constant="20" id="fwv-Sm-vqA"/>
                                                 <constraint firstItem="SiS-mu-Yib" firstAttribute="top" secondItem="0ZC-CI-Mao" secondAttribute="top" id="n5u-YT-5uK"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -966,12 +973,19 @@
                                                         <action selector="endTimeEditingEnd:" destination="alL-dY-rrf" eventType="editingDidEndOnExit" id="41n-hX-qKq"/>
                                                     </connections>
                                                 </textField>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HNn-Wn-CMj">
+                                                    <rect key="frame" x="20" y="0.0" width="348" height="43"/>
+                                                </datePicker>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Aww-5V-JVH" firstAttribute="top" secondItem="NbA-Ex-3xi" secondAttribute="top" id="DcP-Q3-O5u"/>
                                                 <constraint firstAttribute="bottom" secondItem="Aww-5V-JVH" secondAttribute="bottom" id="KYQ-GP-75d"/>
                                                 <constraint firstAttribute="trailing" secondItem="Aww-5V-JVH" secondAttribute="trailing" constant="20" id="NFF-0V-hSG"/>
+                                                <constraint firstAttribute="trailing" secondItem="HNn-Wn-CMj" secondAttribute="trailing" constant="20" id="P6M-Iw-gbk"/>
+                                                <constraint firstItem="HNn-Wn-CMj" firstAttribute="leading" secondItem="NbA-Ex-3xi" secondAttribute="leading" constant="20" id="fdl-WB-S6E"/>
+                                                <constraint firstAttribute="bottom" secondItem="HNn-Wn-CMj" secondAttribute="bottom" id="kqY-06-iMT"/>
                                                 <constraint firstItem="Aww-5V-JVH" firstAttribute="leading" secondItem="NbA-Ex-3xi" secondAttribute="leading" constant="20" id="mnP-MV-jzH"/>
+                                                <constraint firstItem="HNn-Wn-CMj" firstAttribute="top" secondItem="NbA-Ex-3xi" secondAttribute="top" id="rZK-gB-Xpc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1303,12 +1317,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="DpK-EA-N7y">
-                                                    <rect key="frame" x="20" y="5" width="368" height="33.666666666666664"/>
+                                                    <rect key="frame" x="20" y="5" width="348" height="33.666666666666664"/>
                                                     <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="DpK-EA-N7y" secondAttribute="trailing" id="9SM-PI-Fmn"/>
+                                                <constraint firstAttribute="trailing" secondItem="DpK-EA-N7y" secondAttribute="trailing" constant="20" id="9SM-PI-Fmn"/>
                                                 <constraint firstItem="DpK-EA-N7y" firstAttribute="top" secondItem="CAK-Ad-0b6" secondAttribute="top" constant="5" id="AuZ-Lo-khe"/>
                                                 <constraint firstItem="DpK-EA-N7y" firstAttribute="leading" secondItem="CAK-Ad-0b6" secondAttribute="leading" constant="20" id="IzI-9m-fPU"/>
                                                 <constraint firstAttribute="bottom" secondItem="DpK-EA-N7y" secondAttribute="bottom" constant="5" id="yCT-SO-U3F"/>
@@ -1327,12 +1341,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="1Pz-gY-Gso">
-                                                    <rect key="frame" x="20" y="5" width="368" height="33.666666666666664"/>
+                                                    <rect key="frame" x="20" y="5" width="348" height="33.666666666666664"/>
                                                     <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="1Pz-gY-Gso" secondAttribute="trailing" id="298-Zb-8BI"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Pz-gY-Gso" secondAttribute="trailing" constant="20" id="298-Zb-8BI"/>
                                                 <constraint firstAttribute="bottom" secondItem="1Pz-gY-Gso" secondAttribute="bottom" constant="5" id="KmF-EY-Hsv"/>
                                                 <constraint firstItem="1Pz-gY-Gso" firstAttribute="leading" secondItem="b6O-rJ-XjK" secondAttribute="leading" constant="20" id="U6D-AW-bgu"/>
                                                 <constraint firstItem="1Pz-gY-Gso" firstAttribute="top" secondItem="b6O-rJ-XjK" secondAttribute="top" constant="5" id="cNt-1V-AsR"/>
