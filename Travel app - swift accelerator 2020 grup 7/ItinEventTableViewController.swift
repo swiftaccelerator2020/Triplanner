@@ -81,7 +81,7 @@ class ItinEventTableViewController: UITableViewController, UITextViewDelegate {
 //                    event.timeEnd = endTimeTextField.text ?? ""
                     let endTP = formatter2.string(from: endTimePicker.date)
                     event.timeEnd = endTP
-                    event.notes = eventNoteView.text ?? "Notes!"
+                    event.notes = eventNoteView.text ?? "Notes"
                     event.date = formatter.string(from: dateDatePicker.date)
                     print("event:",event as Any)
                         }
@@ -189,13 +189,16 @@ class ItinEventTableViewController: UITableViewController, UITextViewDelegate {
             return true
         }
     func convertStringToTime(string: String) -> Date{
-        let formatter1 = DateFormatter()
-        formatter1.dateFormat = "MMM dd, yyyy"
+        print("dtst:", string)
+//        let formatter1 = DateFormatter()
+//        formatter1.dateFormat = "MMM dd, yyyy"
         let formatter2 = DateFormatter()
-        formatter2.dateFormat = "HH:mm:ss"
-        let dte = formatter1.date(from: string) ?? Date()
-        let str = formatter2.string(from: dte)
-        return formatter2.date(from: str) ?? Date()
+        formatter2.dateFormat = "HH:mm"
+//        let dte = formatter1.date(from: string) ?? Date()
+//        print("dte:", dte)
+//        let str = formatter2.string(from: dte)
+//        print("str:", str)
+        return formatter2.date(from: string) ?? Date()
         
     }
 
