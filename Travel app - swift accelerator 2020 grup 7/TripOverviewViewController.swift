@@ -19,11 +19,11 @@ protocol BudgetDataDelegate {
 class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingListDataDelegate, BudgetDataDelegate{
     
     func calculateBudget(string1: String, string2: String) {
-//        budgetOverviewLabel.text = "\(string1)\n\(string2)"
+        //        budgetOverviewLabel.text = "\(string1)\n\(string2)"
     }
     
     
-   
+    
     
     fileprivate func packingListCircleChecking(_ item: PackingItem) {
         print("circle checking")
@@ -58,75 +58,75 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     func printPackingListItem(titleArray: Array<PackingItem>, isChecked: Bool) {
         
-//        var tempArray: Array<PackingItem> = []
-//        let titleArray = PackingItem.loadFromFile()
-//        print("data saving not working", titleArray)
-//        for i in titleArray ?? []{
-//            if i.checked == false{
-//                tempArray.append(i)
-//            }
-//        }
-//        print(tempArray)
-//
-//
-//        if tempArray.count >= 1 {
-//            packingListCircleChecking(tempArray.randomElement() ?? tempArray[0])
-////MARK: I WONDER WHY? IS THAT HOW A DELEGATE WORKS
-////            packingListCircleChecking2(tempArray[1])
-//        }
-//        if tempArray.isEmpty == false{
-//            packingListCircleChecking(tempArray[0])
-//        }else{
-//            if (titleArray ?? []).isEmpty == true{
-//                packingListOverviewLabel.text = "Packing List Preview!"
-//            }else{
-//                if packingItemsStorateList.isEmpty == false{
-//                packingListCircleChecking(packingItemsStorateList.randomElement() ?? packingItemsStorateList[0])
-//                }
-//            }
-//        }
+        //        var tempArray: Array<PackingItem> = []
+        //        let titleArray = PackingItem.loadFromFile()
+        //        print("data saving not working", titleArray)
+        //        for i in titleArray ?? []{
+        //            if i.checked == false{
+        //                tempArray.append(i)
+        //            }
+        //        }
+        //        print(tempArray)
+        //
+        //
+        //        if tempArray.count >= 1 {
+        //            packingListCircleChecking(tempArray.randomElement() ?? tempArray[0])
+        ////MARK: I WONDER WHY? IS THAT HOW A DELEGATE WORKS
+        ////            packingListCircleChecking2(tempArray[1])
+        //        }
+        //        if tempArray.isEmpty == false{
+        //            packingListCircleChecking(tempArray[0])
+        //        }else{
+        //            if (titleArray ?? []).isEmpty == true{
+        //                packingListOverviewLabel.text = "Packing List Preview!"
+        //            }else{
+        //                if packingItemsStorateList.isEmpty == false{
+        //                packingListCircleChecking(packingItemsStorateList.randomElement() ?? packingItemsStorateList[0])
+        //                }
+        //            }
+        //        }
         
         
-//        if count == 1{
-//            packingListOverviewLabel.text = tempTitleArray[0].name
-//            packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
-//        }
-//
-//        if count == 2{
-//
-//
-//            packingListOverviewLabel.text = tempTitleArray[1].name
-//
-//            packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
-//
-//        }else if count == 0{
-//            packingListOverviewLabel.text = titleArray.randomElement()?.name
-//            packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
-//        }
+        //        if count == 1{
+        //            packingListOverviewLabel.text = tempTitleArray[0].name
+        //            packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
+        //        }
+        //
+        //        if count == 2{
+        //
+        //
+        //            packingListOverviewLabel.text = tempTitleArray[1].name
+        //
+        //            packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
+        //
+        //        }else if count == 0{
+        //            packingListOverviewLabel.text = titleArray.randomElement()?.name
+        //            packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
+        //        }
         
         
         
-//        packingItemsStorateList = titleArray ?? []
-//        PackingItem.saveToFile(packingItems: titleArray ?? [])
+        //        packingItemsStorateList = titleArray ?? []
+        //        PackingItem.saveToFile(packingItems: titleArray ?? [])
     }
     
     
-
+    
     
     func printItinEvent(titleDict: Dictionary<Int, Any>) {
-//        print("delegate titleDict:", titleDict)
-//        for (_, value) in titleDict{
-//            print("value", value)
-//            if (value as! Array<DayEvent>).isEmpty == false{
-//            switch (value as! Array<DayEvent>)[0] {
-//            case nil:
-//                itinOverviewLabel.text = "You have no trip at the moment! Create some"
-//                itinOverviewLabel2.text = ""
-//            default:
-//                itinOverviewLabel.text = (value as!Array<DayEvent>)[0].destination
-//            }
-//        }
-//    }
+        //        print("delegate titleDict:", titleDict)
+        //        for (_, value) in titleDict{
+        //            print("value", value)
+        //            if (value as! Array<DayEvent>).isEmpty == false{
+        //            switch (value as! Array<DayEvent>)[0] {
+        //            case nil:
+        //                itinOverviewLabel.text = "You have no trip at the moment! Create some"
+        //                itinOverviewLabel2.text = ""
+        //            default:
+        //                itinOverviewLabel.text = (value as!Array<DayEvent>)[0].destination
+        //            }
+        //        }
+        //    }
     }
     
     //MARK: general overview variables
@@ -138,7 +138,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     var newTrip: Bool = true
     var trips: Array<Trip> = []
     
-  //MARK: Itinerary overview variables
+    //MARK: Itinerary overview variables
     @IBOutlet weak var newItineraryItem: UIButton!
     @IBOutlet weak var itinOverviewLabel: UILabel!
     @IBOutlet weak var itinOverviewLabel2: UILabel!
@@ -159,8 +159,8 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     var packingItemsStorateList: Array<PackingItem> = []
     
-
-//MARK: Budget overview variables
+    
+    //MARK: Budget overview variables
     var budgetItemsStorageDict: Dictionary<String, Array<BudgetItem>> = [:]
     var budgetTotal: Double = 0.0
     @IBOutlet weak var budgetOverviewLabel: UILabel!
@@ -189,12 +189,12 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         overviewStartDatePicker.setDate(trip.startDate, animated: true)
         overviewEndDatePicker.setDate(trip.endDate, animated: true)
         PackingItem.saveToFile(packingItems: trip.packingList)
-            
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         print("newest newest testing:", itinEventsDict)
-//        DayEvent.saveToFile(dayEvents: itinEventsDict)
+        //        DayEvent.saveToFile(dayEvents: itinEventsDict)
         
         trip = Trip(destination: locationTextField.text ?? "", startDate: overviewStartDatePicker.date, endDate: overviewEndDatePicker.date, itinerary: itinEventsDict, budget: budgetItemsStorageDict, totalBudget: self.budgetTotal, packingList: packingItemsStorateList)
         
@@ -232,46 +232,12 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         
         //MARK: itinerary **************************************************************
         
-        func findUpComing() -> DayEvent{
-            var interv: Double? = 0.0
-            var upComingEvent = DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: "")
-            
-            for (_,value) in self.itinEventsDict{
-                for i in value{
-                    let tempFormatter = DateFormatter()
-                    tempFormatter.dateFormat = "MMM dd, yyyy, HH:mm"
-                    let tempStartTime = tempFormatter.date(from: "\(i.date), \(i.timeStart)")
-                    let tempInterval = tempStartTime?.timeIntervalSinceNow
-                    print("tempInterval",tempInterval)
-                    if tempStartTime ?? Date() >= Date(){
-                        if interv == 0.0{
-                            interv = tempInterval
-                            upComingEvent = i
-                            print("upcomingevent if:", upComingEvent)
-                        }else{
-                            if tempInterval ?? 0.0 <= interv ?? 0.0 {
-                                interv = tempInterval
-                                upComingEvent = i
-                                print("upcomingevent else:", upComingEvent)
-                            }
-                        }
-                    }
-                }
-                print("this is interv!:", interv!, upComingEvent)
-                
-            }
-            return upComingEvent
-                }
-                
+        
         if findUpComing() != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
-            let tempText = findUpComing().destination
+            let tempText = "\(findUpComing().destination) at \(findUpComing().timeStart)"
             itinOverviewLabel.text = tempText
         }else{
-            itinOverviewLabel.text = "You have no more itineraries!"
-            //663030105.533322
-            //663033485.204986
-            //663037098.541511
-            
+            itinOverviewLabel.text = "You have no upcoming itineraries!"
         }
         
         //MARK: budget *****************************************************************
@@ -315,28 +281,28 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 dest.tripNo = tripNo
                 
                 for (_,value) in itinEventsDict{
-                for i in value{
-                    if i.date != ""{
-                    print("iiiii", i)
-                    let interval = getDateInterval(startDate: start, date: i.date)
-                        if ((dest.dayDictionary[interval]?.isEmpty) == nil){
-                    dest.dayDictionary[interval] = [i]
-                    print("vc.dayDictionary",dest.dayDictionary)
-                    }else{
-                        dest.dayDictionary[interval]?.append(i)
-                        print("vc.dayDictionary else",dest.dayDictionary)
+                    for i in value{
+                        if i.date != ""{
+                            print("iiiii", i)
+                            let interval = getDateInterval(startDate: start, date: i.date)
+                            if ((dest.dayDictionary[interval]?.isEmpty) == nil){
+                                dest.dayDictionary[interval] = [i]
+                                print("vc.dayDictionary",dest.dayDictionary)
+                            }else{
+                                dest.dayDictionary[interval]?.append(i)
+                                print("vc.dayDictionary else",dest.dayDictionary)
+                            }
+                        }
                     }
                 }
-            }
-        }
             }
             
         }
         if let navigationVC = segue.destination as? UINavigationController{
             if let dest = navigationVC.topViewController as? ItinEventTableViewController{
-            dest.creatingItemFromOverview = true
-            
-        }
+                dest.creatingItemFromOverview = true
+                
+            }
         }
         if let navigationVC = segue.destination as? UINavigationController{
             if let dest = navigationVC.topViewController as? PackingListTableViewController{
@@ -374,25 +340,33 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         }
     }
     
-
+    
     // MARK: - Navigation
-
-
-
-
-
-
-        
+    
+    
+    
+    
+    
+    
+    
     @IBAction func backToItinEventsTableViewController (with segue: UIStoryboardSegue){
         if let source = segue.source as? ItinEventTableViewController{
             if segue.identifier == "unwindSave"{
-            print("backToOverviewViewController segue result:", source.event)
                 if itinEventsDict[source.event.date] == nil{
                     itinEventsDict[source.event.date] = [source.event]
-               }else{
-                itinEventsDict[source.event.date]?.append(source.event)
+                }else{
+                    itinEventsDict[source.event.date]?.append(source.event)
                 }
-                itinOverviewLabel.text = source.event.destination
+                
+                
+                if findUpComing() != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
+                    let tempText = "\(findUpComing().destination) at \(findUpComing().timeStart)"
+                    itinOverviewLabel.text = tempText
+                }else{
+                    itinOverviewLabel.text = "You have no upcoming itineraries!"
+                }
+
+                
             }
             print("newitinEvents:", itinEventsDict)
             DayEvent.saveToFile(dayEvents: itinEventsDict)
@@ -401,39 +375,38 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
             
             trips[tripNo] = trip
             Trip.saveToFile(trips: trips)
+        }
     }
-}
     
     @IBAction func backToOverViewController(with segue: UIStoryboardSegue){
         if let source = segue.source as? ItinTableViewController{
-
+            
             for (key, value) in source.dayDictionary{
                 if value.isEmpty == false{
-//                    let isContained =  itinEventsDict.keys.contains(value[0].date)
+                    //                    let isContained =  itinEventsDict.keys.contains(value[0].date)
                     self.itinEventsDict[value[0].date] = value
                 }else{
                     
                     for i in source.dateArray{
                         print("Overview i, start:", i, self.start)
-//                        let formatter = DateFormatter()
-//                        formatter.dateFormat = "MMM dd, yyyy"
-//                        let formatter2 = DateFormatter()
-//                        formatter2.dateFormat = "MMM dd, yyyy"
-//                        let start = formatter.date(from: self.start)
-//                        let end = formatter.date(from: i)
-//                        print("Overview startDate, end:", start, end)
+                        //                        let formatter = DateFormatter()
+                        //                        formatter.dateFormat = "MMM dd, yyyy"
+                        //                        let formatter2 = DateFormatter()
+                        //                        formatter2.dateFormat = "MMM dd, yyyy"
+                        //                        let start = formatter.date(from: self.start)
+                        //                        let end = formatter.date(from: i)
+                        //                        print("Overview startDate, end:", start, end)
                         
                         let intervalForDeleting = getDateInterval(startDate: self.start, date: end)
                         if intervalForDeleting == key{
-                        self.itinEventsDict[i] = []
+                            self.itinEventsDict[i] = []
                             print("intervalForDeleting", intervalForDeleting)
-                            //MARK: This is where the problem is. Should be date format!!
-                        }
                         }
                     }
                 }
             }
-            print("list passed:", itinEventsDict)
+        }
+        print("list passed:", itinEventsDict)
         
         if let source = segue.source as? BudgetViewController{
             self.budgetItemsStorageDict = source.budgetItemsDict
@@ -457,7 +430,36 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         print("interval:", interval)
         return interval
     }
-
+    
+    func findUpComing() -> DayEvent{
+        var interv: Double? = 0.0
+        var upComingEvent = DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: "")
+        
+        for (_,value) in self.itinEventsDict{
+            for i in value{
+                let tempFormatter = DateFormatter()
+                tempFormatter.dateFormat = "MMM dd, yyyy, HH:mm"
+                let tempStartTime = tempFormatter.date(from: "\(i.date), \(i.timeStart)")
+                let tempInterval = tempStartTime?.timeIntervalSinceNow
+                if tempStartTime ?? Date() >= Date(){
+                    //
+                    if interv == 0.0{
+                        interv = tempInterval
+                        upComingEvent = i
+                    }else{
+                        if tempInterval ?? 0.0 <= interv ?? 0.0 {
+                            interv = tempInterval
+                            upComingEvent = i
+                        }
+                    }
+                    //can actually just use the first element of the list since its already sorted but i FORGOT so never mind
+                }
+            }
+            
+        }
+        return upComingEvent
+    }
+    
     @IBAction func checkCircle1Tapped(_ sender: Any) {
         print("newest testing!", packingItemsStorateList)
         var count = -1
@@ -502,22 +504,22 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     class TextFieldWithReturn: UITextField, UITextFieldDelegate
     {
-
+        
         required init?(coder aDecoder: NSCoder)
         {
             super.init(coder: aDecoder)
             self.delegate = self
         }
-
+        
         func textFieldShouldReturn(_ textField: UITextField) -> Bool
         {
             textField.resignFirstResponder()
             return true
         }
-
+        
     }
     
-
+    
     
     
     @IBAction func locationEditingEnd(_ sender: Any) {
