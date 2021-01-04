@@ -201,7 +201,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         trips[tripNo] = trip
         Trip.saveToFile(trips: trips)
         
-        //MARK: *********************************************************************
+        //MARK: packing list ***********************************************************
         var tempArray: Array<PackingItem> = []
         let titleArray = PackingItem.loadFromFile()
         packingItemsStorateList = titleArray ?? []
@@ -215,8 +215,6 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         
         if tempArray.count >= 1 {
             packingListCircleChecking(tempArray.randomElement() ?? tempArray[0])
-//MARK: I WONDER WHY? IS THAT HOW A DELEGATE WORKS
-//            packingListCircleChecking2(tempArray[1])
         }
         if tempArray.isEmpty == false{
             packingListCircleChecking(tempArray[0])
@@ -225,21 +223,58 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 packingListOverviewLabel.text = "Packing List Preview!"
             }else{
                 if packingItemsStorateList.isEmpty == false{
-                packingListCircleChecking(packingItemsStorateList.randomElement() ?? packingItemsStorateList[0])
+                    packingListCircleChecking(packingItemsStorateList.randomElement() ?? packingItemsStorateList[0])
                 }
             }
         }
         packingItemsStorateList = titleArray ?? []
         PackingItem.saveToFile(packingItems: titleArray ?? [])
-        //MARK: **********************************************************************
         
-        if let tempText = itinEventsDict.values.randomElement()?.randomElement()?.destination{
+        //MARK: itinerary **************************************************************
+        
+        func findUpComing() -> DayEvent{
+            var interv: Double? = 0.0
+            var upComingEvent = DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: "")
+            
+            for (_,value) in self.itinEventsDict{
+                for i in value{
+                    let tempFormatter = DateFormatter()
+                    tempFormatter.dateFormat = "MMM dd, yyyy, HH:mm"
+                    let tempStartTime = tempFormatter.date(from: "\(i.date), \(i.timeStart)")
+                    let tempInterval = tempStartTime?.timeIntervalSinceNow
+                    print("tempInterval",tempInterval)
+                    if tempStartTime ?? Date() >= Date(){
+                        if interv == 0.0{
+                            interv = tempInterval
+                            upComingEvent = i
+                            print("upcomingevent if:", upComingEvent)
+                        }else{
+                            if tempInterval ?? 0.0 <= interv ?? 0.0 {
+                                interv = tempInterval
+                                upComingEvent = i
+                                print("upcomingevent else:", upComingEvent)
+                            }
+                        }
+                    }
+                }
+                print("this is interv!:", interv!, upComingEvent)
+                
+            }
+            return upComingEvent
+                }
+                
+        if findUpComing() != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
+            let tempText = findUpComing().destination
             itinOverviewLabel.text = tempText
-        }
-        else{itinOverviewLabel.text = "You have no trips, create some!"
+        }else{
+            itinOverviewLabel.text = "You have no more itineraries!"
+            //663030105.533322
+            //663033485.204986
+            //663037098.541511
+            
         }
         
-        //MARK: **********************************************************************
+        //MARK: budget *****************************************************************
         
         var spendingAddedUp: Double = 0.0
         for i in self.budgetItemsStorageDict.values{
