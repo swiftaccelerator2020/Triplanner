@@ -70,7 +70,7 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
             spendingCostTextField.text = "\(String(budgetItem?.cost ?? 0))"
             categoryLabel.text = budgetItem?.category
             spendingNotesTextView.text = budgetItem?.notes
-            budgetDateAndTimePickerView.setDate(dateAndTime, animated: true)
+            budgetDateAndTimePickerView.setDate(budgetItem?.dateAndTime ?? dateAndTime, animated: true)
         }else{
             categoryLabel.text = "Food"
         }
@@ -90,10 +90,10 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
                 self.budgetItem?.cost = Int(spendingCostTextField.text ?? "") ?? 0
                 self.budgetItem?.category = categoryLabel.text ?? "Other"
                 self.budgetItem?.notes = spendingNotesTextView.text ?? ""
-                self.budgetItem?.dateAndTimte = dateAndTime
+                self.budgetItem?.dateAndTime = dateAndTime
                 
             }else{
-                self.budgetItem = BudgetItem(name: spendingNameTextField.text ?? "", cost: Int(spendingCostTextField.text ?? "") ?? 0, notes: spendingNotesTextView.text ?? "", category: categoryLabel.text ?? "Other", dateAndTimte: dateAndTime)
+                self.budgetItem = BudgetItem(name: spendingNameTextField.text ?? "", cost: Int(spendingCostTextField.text ?? "") ?? 0, notes: spendingNotesTextView.text ?? "", category: categoryLabel.text ?? "Other", dateAndTime: dateAndTime)
                 
             }
         }

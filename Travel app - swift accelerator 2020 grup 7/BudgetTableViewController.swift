@@ -20,6 +20,13 @@ class BudgetTableViewController: UITableViewController {
             storageSpendingItemsDict = tempTrips[tripNo].budget
         }
         
+        for (key,value) in storageSpendingItemsDict{
+            let tempValue = value.sorted{
+                $0.dateAndTime < $1.dateAndTime
+            }
+            storageSpendingItemsDict[key] = tempValue
+        }
+        
     }
     
     // MARK: - Table view data source
@@ -82,10 +89,6 @@ class BudgetTableViewController: UITableViewController {
         //        }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        
-    }
-    
     /*
      // Override to support rearranging the table view.
      override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -145,17 +148,14 @@ class BudgetTableViewController: UITableViewController {
                 }else{
                     self.spendingItemsArray.append(source.budgetItem!)
                     if storageSpendingItemsDict[source.budgetItem!.category] == nil{
-                        print("what the heck:",source.budgetItem!.category)
                         let tempCat = source.budgetItem!.category
                         storageSpendingItemsDict[tempCat] = [source.budgetItem!]
-                        print("else if", storageSpendingItemsDict)
                     }else{
                         storageSpendingItemsDict[source.budgetItem!.category]?.append(source.budgetItem!)
-                        print("else else", storageSpendingItemsDict)
                     }
-                    print("spendingItemsArray:", spendingItemsArray)
-                    print("storageDict:", storageSpendingItemsDict)
                 }
+                
+                print("dateTimeTesting:", storageSpendingItemsDict)
                 trips[tripNo].budget = storageSpendingItemsDict
                 Trip.saveToFile(trips: trips)
                 
