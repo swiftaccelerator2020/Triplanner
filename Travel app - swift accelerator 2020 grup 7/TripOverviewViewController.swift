@@ -190,11 +190,26 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         overviewEndDatePicker.setDate(trip.endDate, animated: true)
         PackingItem.saveToFile(packingItems: trip.packingList)
         
+        
+        var updateItineraryPreviewTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(sayHello), userInfo: nil, repeats: true)
+        RunLoop.main.add(updateItineraryPreviewTimer, forMode: RunLoop.Mode.common)
+
+    }
+    
+    @objc func sayHello()
+    {
+        print("this is itinPreviewUpdate")
+        if findUpComing() != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
+            let tempText = "\(findUpComing().destination) at \(findUpComing().timeStart)"
+            itinOverviewLabel.text = tempText
+        }else{
+            itinOverviewLabel.text = "You have no upcoming itineraries!"
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         print("newest newest testing:", itinEventsDict)
-        //        DayEvent.saveToFile(dayEvents: itinEventsDict)
         
         trip = Trip(destination: locationTextField.text ?? "", startDate: overviewStartDatePicker.date, endDate: overviewEndDatePicker.date, itinerary: itinEventsDict, budget: budgetItemsStorageDict, totalBudget: self.budgetTotal, packingList: packingItemsStorateList)
         
@@ -246,7 +261,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         for i in self.budgetItemsStorageDict.values{
             spendingAddedUp += Double(i.reduce(0,{x,y in x + y.cost}))
         }
-        let string1 = "spent $\(spendingAddedUp) of $\(self.budgetTotal), $\((self.budgetTotal) - (spendingAddedUp)) left"
+        let string1 = "Spent $\(spendingAddedUp) of $\(self.budgetTotal), $\((self.budgetTotal) - (spendingAddedUp)) left"
         print("this is string1:", string1)
         
         var string2 = ""
