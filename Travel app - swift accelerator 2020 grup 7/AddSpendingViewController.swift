@@ -25,7 +25,7 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         }
         pickerLabel?.text = categories[row]
         pickerLabel?.textColor = UIColor.blue
-
+        
         return pickerLabel!
     }
     
@@ -34,6 +34,7 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
     var isExistingItem: Bool = false
     var categories: Array<String> = ["Food", "Accomodation", "Shopping", "Travel", "Other"]
     var setToPickerView: Bool = false
+    var dateAndTime: Date = Date()
     
     @IBOutlet weak var spendingNameTextField: UITextField!
     @IBOutlet weak var spendingCostTextField: UITextField!
@@ -41,38 +42,41 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var categoryPickerView: UIPickerView!
     @IBOutlet weak var categoryPickerViewButton: UIButton!
+    @IBOutlet weak var budgetDateAndTimePickerView: UIDatePicker!
+    
     
     
     @IBAction func spendingNameTextfieldUpdated(_ sender: Any) {
-
+        
     }
     @IBAction func spendingCostTextfieldUpdated(_ sender: Any) {
         
     }
     @IBOutlet var spendingNotesTextViewUpdated: UITextView!
     
-   
+    
     
     
     override func viewDidLoad() {
-
+        
         
         super.viewDidLoad()
         self.categoryPickerView.delegate = self
         self.categoryPickerView.dataSource = self
         self.categoryPickerView.isHidden = true
-
+        
         if isExistingItem == true{
             spendingNameTextField.text = budgetItem?.name
             spendingCostTextField.text = "\(String(budgetItem?.cost ?? 0))"
             categoryLabel.text = budgetItem?.category
             spendingNotesTextView.text = budgetItem?.notes
+            budgetDateAndTimePickerView.setDate(dateAndTime, animated: true)
         }else{
             categoryLabel.text = "Food"
         }
-    
+        
         //--- add UIToolBar on keyboard and Done button on UIToolBar ---//
-                self.addDoneButtonOnKeyboard()
+        self.addDoneButtonOnKeyboard()
         self.spendingCostTextField.delegate = self
         //trying to make textview dismissible
         spendingNotesTextView.delegate = self
@@ -81,23 +85,23 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "unwindSave"{
-        if self.isExistingItem == true{
-        self.budgetItem?.name = spendingNameTextField.text ?? ""
-            self.budgetItem?.cost = Int(spendingCostTextField.text ?? "") ?? 0
-            self.budgetItem?.category = categoryLabel.text ?? "Other"
-            self.budgetItem?.notes = spendingNotesTextView.text ?? ""
-            
+            if self.isExistingItem == true{
+                self.budgetItem?.name = spendingNameTextField.text ?? ""
+                self.budgetItem?.cost = Int(spendingCostTextField.text ?? "") ?? 0
+                self.budgetItem?.category = categoryLabel.text ?? "Other"
+                self.budgetItem?.notes = spendingNotesTextView.text ?? ""
+                self.budgetItem?.dateAndTimte = dateAndTime
+                
             }else{
-                self.budgetItem = BudgetItem(name: spendingNameTextField.text ?? "", cost: Int(spendingCostTextField.text ?? "") ?? 0, notes: spendingNotesTextView.text ?? "", category: categoryLabel.text ?? "Other")
-                print("created item here", self.budgetItem)
-            
+                self.budgetItem = BudgetItem(name: spendingNameTextField.text ?? "", cost: Int(spendingCostTextField.text ?? "") ?? 0, notes: spendingNotesTextView.text ?? "", category: categoryLabel.text ?? "Other", dateAndTimte: dateAndTime)
+                
+            }
         }
     }
-}
-
     
     
-
+    
+    
     @IBAction func enableAndDisablePickerView(_ sender: Any) {
         setToPickerView.toggle()
         switch categoryPickerView.isHidden {
@@ -105,19 +109,26 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
             categoryPickerView.isHidden = false
             categoryLabel.isHidden = true
             categoryPickerViewButton.setImage(UIImage(named: ""), for: .normal)
-           categoryPickerViewButton.setTitle("Done", for: .normal)
+            categoryPickerViewButton.setTitle("Done", for: .normal)
             categoryPickerViewButton.setTitleColor(UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0), for: .normal)
-
-
+            
+            
         case false:
             categoryPickerView.isHidden = true
             categoryLabel.isHidden = false
             categoryPickerViewButton.setImage(UIImage(named: ""), for: .normal)
-           categoryPickerViewButton.setTitle("Edit", for: .normal)
+            categoryPickerViewButton.setTitle("Edit", for: .normal)
             categoryPickerViewButton.setTitleColor(UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0), for: .normal)
         }
         
     }
+    
+    @IBAction func budgetDateAndTimePickerViewDoneEditing(_ sender: Any) {
+        dateAndTime = budgetDateAndTimePickerView.date
+        
+        
+    }
+    
     
     
     @IBAction func spendingNameEditingEnd(_ sender: Any) {
@@ -125,7 +136,7 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
     }
     
     func addDoneButtonOnKeyboard()
-      {
+    {
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
         doneToolbar.barStyle = UIBarStyle.default
         
@@ -142,36 +153,36 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         
         self.spendingCostTextField.inputAccessoryView = doneToolbar
         
-      }
-      
-      @objc func doneButtonAction()
-      {
+    }
+    
+    @objc func doneButtonAction()
+    {
         self.spendingCostTextField.resignFirstResponder()
-      }
+    }
     
     //trying to make the textview dismissible
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-            if(text == "\n") {
-                spendingNotesTextView.resignFirstResponder()
-                return false
-            }
-            return true
+        if(text == "\n") {
+            spendingNotesTextView.resignFirstResponder()
+            return false
         }
+        return true
+    }
     
     
 }
 
 extension UITextField {
-func addDoneButtonOnKeyBoardWithControl() {
-    let keyboardToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
-keyboardToolbar.sizeToFit()
-keyboardToolbar.barStyle = .default
-let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.endEditing(_:)))
-keyboardToolbar.items = [flexBarButton, doneBarButton]
-self.inputAccessoryView = keyboardToolbar
-}
+    func addDoneButtonOnKeyBoardWithControl() {
+        let keyboardToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
+        keyboardToolbar.sizeToFit()
+        keyboardToolbar.barStyle = .default
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.endEditing(_:)))
+        keyboardToolbar.items = [flexBarButton, doneBarButton]
+        self.inputAccessoryView = keyboardToolbar
+    }
     
- 
+    
     
 }

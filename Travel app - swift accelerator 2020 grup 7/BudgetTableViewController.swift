@@ -156,14 +156,6 @@ class BudgetTableViewController: UITableViewController {
                     print("spendingItemsArray:", spendingItemsArray)
                     print("storageDict:", storageSpendingItemsDict)
                 }
-                
-                //                for i in self.spendingItemsArray{
-                //                    if self.storageSpendingItemsDict[i.category] == nil{
-                //                        storageSpendingItemsDict[i.category] = [i]
-                //                    }else{
-                //                        storageSpendingItemsDict[i.category]?.append(i)
-                //                    }
-                //                }
                 trips[tripNo].budget = storageSpendingItemsDict
                 Trip.saveToFile(trips: trips)
                 
