@@ -63,9 +63,6 @@ class ItinEventTableViewController: UITableViewController, UITextViewDelegate {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        print("newest testing:", event)
-    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

@@ -25,6 +25,10 @@ class PackingListTableViewController: UITableViewController {
             print("No packingItems! Make some.")
             packingItems = []
         }
+        
+        packingItems = packingItems.sorted{
+            (!$0.checked && $1.checked)
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -151,7 +155,7 @@ class PackingListTableViewController: UITableViewController {
     @IBAction func plusButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "showDetail", sender: self)
         
-        var alert = UIAlertController(title: "Hello", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Hello", message: nil, preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         

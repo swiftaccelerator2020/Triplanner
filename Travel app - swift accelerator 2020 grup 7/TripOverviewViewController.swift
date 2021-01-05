@@ -352,7 +352,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     @IBAction func backToItinEventsTableViewController (with segue: UIStoryboardSegue){
         if let source = segue.source as? ItinEventTableViewController{
             if segue.identifier == "unwindSave"{
-                if itinEventsDict[source.event.date] == nil{
+                if itinEventsDict[source.event.date]?.isEmpty == true{
                     itinEventsDict[source.event.date] = [source.event]
                 }else{
                     itinEventsDict[source.event.date]?.append(source.event)

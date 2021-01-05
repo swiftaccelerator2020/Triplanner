@@ -83,7 +83,6 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
         trips[tripNo].totalBudget = total ?? 0.0
         trips[tripNo].budget = budgetItemsDict
         Trip.saveToFile(trips: trips)
-        print(total)
     }
     
     
@@ -128,7 +127,6 @@ class BudgetViewController: UIViewController, UITextFieldDelegate {
                 }
                 trips[tripNo].budget = budgetItemsDict
                 Trip.saveToFile(trips: trips)
-                print("newly created item", newlyCreatedItem)
                 
             }
         }

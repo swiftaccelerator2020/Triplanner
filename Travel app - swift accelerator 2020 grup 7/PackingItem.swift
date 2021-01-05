@@ -1,5 +1,10 @@
 import Foundation
-struct PackingItem: Codable {
+struct PackingItem: Codable, Comparable{
+    
+    static func < (lhs: PackingItem, rhs: PackingItem) -> Bool {
+        return true
+    }
+    
     
     var name: String
     var checked = false
