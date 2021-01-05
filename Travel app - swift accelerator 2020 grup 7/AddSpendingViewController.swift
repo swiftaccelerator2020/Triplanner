@@ -87,13 +87,13 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         if segue.identifier == "unwindSave"{
             if self.isExistingItem == true{
                 self.budgetItem?.name = spendingNameTextField.text ?? ""
-                self.budgetItem?.cost = Int(spendingCostTextField.text ?? "") ?? 0
+                self.budgetItem?.cost = Double(spendingCostTextField.text ?? "") ?? 0.0
                 self.budgetItem?.category = categoryLabel.text ?? "Other"
                 self.budgetItem?.notes = spendingNotesTextView.text ?? ""
                 self.budgetItem?.dateAndTime = dateAndTime
                 
             }else{
-                self.budgetItem = BudgetItem(name: spendingNameTextField.text ?? "", cost: Int(spendingCostTextField.text ?? "") ?? 0, notes: spendingNotesTextView.text ?? "", category: categoryLabel.text ?? "Other", dateAndTime: dateAndTime)
+                self.budgetItem = BudgetItem(name: spendingNameTextField.text ?? "", cost: Double(spendingCostTextField.text ?? "") ?? 0.0, notes: spendingNotesTextView.text ?? "", category: categoryLabel.text ?? "Other", dateAndTime: dateAndTime)
                 
             }
         }

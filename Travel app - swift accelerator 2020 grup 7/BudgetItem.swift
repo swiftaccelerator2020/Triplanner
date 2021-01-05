@@ -2,7 +2,7 @@ import Foundation
 
 struct BudgetItem: Codable, Equatable {
     var name: String = ""
-    var cost: Int
+    var cost: Double
     var notes: String
     var category: String
     var dateAndTime: Date
