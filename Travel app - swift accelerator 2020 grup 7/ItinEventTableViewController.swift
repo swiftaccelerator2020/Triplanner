@@ -72,10 +72,8 @@ class ItinEventTableViewController: UITableViewController, UITextViewDelegate {
             case true:
                 if segue.destination is ItinEventsTableViewController{
                     event.destination = destinationTextField.text ?? ""
-//                    event.timeStart = startTimeTextField.text ?? ""
                     let startTP = formatter2.string(from: startTimePicker.date)
                     event.timeStart = startTP
-//                    event.timeEnd = endTimeTextField.text ?? ""
                     let endTP = formatter2.string(from: endTimePicker.date)
                     event.timeEnd = endTP
                     event.notes = eventNoteView.text ?? "Notes"

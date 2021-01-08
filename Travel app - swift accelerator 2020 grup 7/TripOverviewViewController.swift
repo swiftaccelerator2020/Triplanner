@@ -191,7 +191,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         PackingItem.saveToFile(packingItems: trip.packingList)
         
         
-        var updateItineraryPreviewTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(sayHello), userInfo: nil, repeats: true)
+        let updateItineraryPreviewTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(sayHello), userInfo: nil, repeats: true)
         RunLoop.main.add(updateItineraryPreviewTimer, forMode: RunLoop.Mode.common)
 
     }
@@ -199,8 +199,9 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     @objc func sayHello()
     {
         print("this is itinPreviewUpdate")
-        if findUpComing() != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
-            let tempText = "\(findUpComing().destination) at \(findUpComing().timeStart)"
+        let upComing = findUpComing()
+        if upComing != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
+            let tempText = "\(upComing.destination) at \(upComing.timeStart), \(upComing.date)"
             itinOverviewLabel.text = tempText
         }else{
             itinOverviewLabel.text = "You have no upcoming itineraries!"
@@ -367,11 +368,13 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     @IBAction func backToItinEventsTableViewController (with segue: UIStoryboardSegue){
         if let source = segue.source as? ItinEventTableViewController{
             if segue.identifier == "unwindSave"{
-                if itinEventsDict[source.event.date]?.isEmpty == true{
-                    itinEventsDict[source.event.date] = [source.event]
+                if var oldValue = itinEventsDict.updateValue([source.event], forKey: source.event.date){
+                    oldValue.append(source.event)
+                    itinEventsDict[source.event.date] = oldValue
                 }else{
-                    itinEventsDict[source.event.date]?.append(source.event)
+                    itinEventsDict[source.event.date] = [source.event]
                 }
+                print("back from overview add:", source.event, itinEventsDict)
                 
                 
                 if findUpComing() != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
