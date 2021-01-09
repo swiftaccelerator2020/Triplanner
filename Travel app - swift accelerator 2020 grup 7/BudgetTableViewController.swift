@@ -43,8 +43,11 @@ class BudgetTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "budgetCell", for: indexPath)
-        cell.textLabel?.text = "\(String(spendingItemsArray[indexPath.row].cost))"
-        cell.detailTextLabel?.text = spendingItemsArray[indexPath.row].name
+        let spendingItem = spendingItemsArray[indexPath.row]
+        cell.textLabel?.text = "\(String(spendingItem.cost))"
+        let tempFormatter = DateFormatter()
+        tempFormatter.dateFormat = "dd MMM, HH:mm"
+        cell.detailTextLabel?.text = "\(tempFormatter.string(from: spendingItem.dateAndTime)) | \(spendingItem.name)"
         
         
         return cell
