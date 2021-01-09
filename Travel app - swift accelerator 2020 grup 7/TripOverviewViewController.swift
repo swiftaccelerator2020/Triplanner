@@ -136,7 +136,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         print("this is itinPreviewUpdate")
         let upComing = findUpComing()
         if upComing != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
-            let tempText = "\(upComing.destination) at \(upComing.timeStart), \(upComing.date)"
+            let tempText = "\(upComing.destination) | \(upComing.timeStart), \(upComing.date)"
             itinOverviewLabel.text = tempText
         }else{
             itinOverviewLabel.text = "You have no upcoming itineraries!"
@@ -184,9 +184,9 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         
         //MARK: itinerary **************************************************************
         
-        
-        if findUpComing() != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
-            let tempText = "\(findUpComing().destination) at \(findUpComing().timeStart)"
+        let upComing = findUpComing()
+        if upComing != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
+        let tempText = "\(upComing.destination) | \(upComing.timeStart), \(upComing.date)"
             itinOverviewLabel.text = tempText
         }else{
             itinOverviewLabel.text = "You have no upcoming itineraries!"
@@ -310,11 +310,10 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 }else{
                     itinEventsDict[source.event.date] = [source.event]
                 }
-                print("back from overview add:", source.event, itinEventsDict)
                 
-                
-                if findUpComing() != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
-                    let tempText = "\(findUpComing().destination) at \(findUpComing().timeStart)"
+                let upComing = findUpComing()
+                if upComing != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
+                    let tempText = "\(upComing.destination) | \(upComing.timeStart), \(upComing.date)"
                     itinOverviewLabel.text = tempText
                 }else{
                     itinOverviewLabel.text = "You have no upcoming itineraries!"
