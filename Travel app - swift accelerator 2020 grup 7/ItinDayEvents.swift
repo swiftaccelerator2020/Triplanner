@@ -1,9 +1,6 @@
 import Foundation
 struct DayEvent: Codable, Equatable{
-//    static func == (lhs: DayEvent, rhs: DayEvent) -> Bool {
-//        return true
-//    }
-//MARK: That is so weird, class gives me problems
+
     
     var destination: String
     var timeStart: String
@@ -11,14 +8,7 @@ struct DayEvent: Codable, Equatable{
     var date: String
     var notes: String
     
-//    init(destination: String, timeStart: String, timeEnd: String, date: String, notes: String) {
-//        self.destination = destination
-//        self.date = date
-//        self.timeStart = timeStart
-//        self.timeEnd = timeEnd
-//        self.date = date
-//        self.notes = notes
-//    }
+    
     static func loadSampleData() -> Dictionary<String, Array<DayEvent>>{
         let dayEvents = ["":[DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: "")]]
         return dayEvents

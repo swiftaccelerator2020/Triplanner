@@ -23,7 +23,6 @@ class ItinEventTableViewController: UITableViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //eventNoteView.backgroundColor = .init(red: 0, green: 0, blue: 1, alpha: 0.1)
         eventNoteView.text = ""
         formatter.dateFormat = "MMM dd, yyyy"
         formatter2.dateFormat = "HH:mm"
@@ -84,7 +83,6 @@ class ItinEventTableViewController: UITableViewController, UITextViewDelegate {
                 let startTP = formatter2.string(from: startTimePicker.date)
                 let endTP = formatter2.string(from: endTimePicker.date)
                 event = DayEvent(destination:destinationTextField.text ?? "", timeStart: startTP, timeEnd: endTP, date: formatter.string(from: dateDatePicker.date), notes: eventNoteView.text ?? "Notes")
-                print("newest testing default:", event)
             }
             }
             
@@ -185,14 +183,8 @@ class ItinEventTableViewController: UITableViewController, UITextViewDelegate {
         }
     func convertStringToTime(string: String) -> Date{
         print("dtst:", string)
-//        let formatter1 = DateFormatter()
-//        formatter1.dateFormat = "MMM dd, yyyy"
         let formatter2 = DateFormatter()
         formatter2.dateFormat = "HH:mm"
-//        let dte = formatter1.date(from: string) ?? Date()
-//        print("dte:", dte)
-//        let str = formatter2.string(from: dte)
-//        print("str:", str)
         return formatter2.date(from: string) ?? Date()
         
     }

@@ -73,23 +73,6 @@ class BudgetTableViewController: UITableViewController {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
-        
-        //        for (key, value) in storageSpendingItemsDict{
-        //            if spendingItemsArray.count > indexPath.row{
-        //                if key == spendingItemsArray[indexPath.row].category{
-        //                    storageSpendingItemsDict[key] = []
-        //                    for i in spendingItemsArray{
-        //                        if i.category == key{
-        //                            storageSpendingItemsDict[key]?.append(i)
-        //                        }
-        //                    }
-        //                }
-        //            }else{
-        //                storageSpendingItemsDict[key]?.removeLast()
-        //            }
-        //            trips[tripNo].budget = storageSpendingItemsDict
-        //            Trip.saveToFile(trips: trips)
-        //        }
     }
     
     /*
@@ -127,14 +110,6 @@ class BudgetTableViewController: UITableViewController {
         }
         
         if segue.destination is BudgetViewController{
-            //            for i in self.spendingItemsArray{
-            //                if self.spendingItemsDict[i.category] == nil{
-            //                    spendingItemsDict[i.category] = [i]
-            //                }else{
-            //                    spendingItemsDict[i.category]?.append(i)
-            //                }
-            //                print("this is thing", spendingItemsDict)
-            //            }
             spendingItemsDict = storageSpendingItemsDict
         }
     }

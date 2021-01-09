@@ -19,7 +19,6 @@ protocol BudgetDataDelegate {
 class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingListDataDelegate, BudgetDataDelegate{
     
     func calculateBudget(string1: String, string2: String) {
-        //        budgetOverviewLabel.text = "\(string1)\n\(string2)"
     }
     
     
@@ -57,76 +56,12 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     }
     
     func printPackingListItem(titleArray: Array<PackingItem>, isChecked: Bool) {
-        
-        //        var tempArray: Array<PackingItem> = []
-        //        let titleArray = PackingItem.loadFromFile()
-        //        print("data saving not working", titleArray)
-        //        for i in titleArray ?? []{
-        //            if i.checked == false{
-        //                tempArray.append(i)
-        //            }
-        //        }
-        //        print(tempArray)
-        //
-        //
-        //        if tempArray.count >= 1 {
-        //            packingListCircleChecking(tempArray.randomElement() ?? tempArray[0])
-        ////MARK: I WONDER WHY? IS THAT HOW A DELEGATE WORKS
-        ////            packingListCircleChecking2(tempArray[1])
-        //        }
-        //        if tempArray.isEmpty == false{
-        //            packingListCircleChecking(tempArray[0])
-        //        }else{
-        //            if (titleArray ?? []).isEmpty == true{
-        //                packingListOverviewLabel.text = "Packing List Preview!"
-        //            }else{
-        //                if packingItemsStorateList.isEmpty == false{
-        //                packingListCircleChecking(packingItemsStorateList.randomElement() ?? packingItemsStorateList[0])
-        //                }
-        //            }
-        //        }
-        
-        
-        //        if count == 1{
-        //            packingListOverviewLabel.text = tempTitleArray[0].name
-        //            packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
-        //        }
-        //
-        //        if count == 2{
-        //
-        //
-        //            packingListOverviewLabel.text = tempTitleArray[1].name
-        //
-        //            packingListCheckCircle.setImage(UIImage(named: "circle"), for: .normal)
-        //
-        //        }else if count == 0{
-        //            packingListOverviewLabel.text = titleArray.randomElement()?.name
-        //            packingListCheckCircle.setImage(UIImage(named: "checkmark.circle"), for: .normal)
-        //        }
-        
-        
-        
-        //        packingItemsStorateList = titleArray ?? []
-        //        PackingItem.saveToFile(packingItems: titleArray ?? [])
     }
     
     
     
     
     func printItinEvent(titleDict: Dictionary<Int, Any>) {
-        //        print("delegate titleDict:", titleDict)
-        //        for (_, value) in titleDict{
-        //            print("value", value)
-        //            if (value as! Array<DayEvent>).isEmpty == false{
-        //            switch (value as! Array<DayEvent>)[0] {
-        //            case nil:
-        //                itinOverviewLabel.text = "You have no trip at the moment! Create some"
-        //                itinOverviewLabel2.text = ""
-        //            default:
-        //                itinOverviewLabel.text = (value as!Array<DayEvent>)[0].destination
-        //            }
-        //        }
-        //    }
     }
     
     //MARK: general overview variables
@@ -218,6 +153,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         Trip.saveToFile(trips: trips)
         
         //MARK: packing list ***********************************************************
+        
         var tempArray: Array<PackingItem> = []
         let titleArray = PackingItem.loadFromFile()
         packingItemsStorateList = titleArray ?? []
@@ -407,14 +343,6 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                     
                     for i in source.dateArray{
                         print("Overview i, start:", i, self.start)
-                        //                        let formatter = DateFormatter()
-                        //                        formatter.dateFormat = "MMM dd, yyyy"
-                        //                        let formatter2 = DateFormatter()
-                        //                        formatter2.dateFormat = "MMM dd, yyyy"
-                        //                        let start = formatter.date(from: self.start)
-                        //                        let end = formatter.date(from: i)
-                        //                        print("Overview startDate, end:", start, end)
-                        
                         let intervalForDeleting = getDateInterval(startDate: self.start, date: end)
                         if intervalForDeleting == key{
                             self.itinEventsDict[i] = []
@@ -434,9 +362,6 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     }
     
     func getDateInterval(startDate: String, date: String) -> Int{
-        print("startDate, date:", startDate,date)
-        
-        //stimulator: startDate, date: Dec 18, 2020 Dec 19, 2020
         
         let formatter = DateFormatter()
         var interval = 0
@@ -445,7 +370,6 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         let dateEndTemp = formatter.date(from: date)
         let dateEnd = dateEndTemp?.addingTimeInterval(TimeInterval(60 * 60 * 24))
         interval = Int( (dateEnd?.timeIntervalSince(dateStart))!/(24.0*60.0*60.0)) - 1
-        print("interval:", interval)
         return interval
     }
     
@@ -470,7 +394,6 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                             upComingEvent = i
                         }
                     }
-                    //can actually just use the first element of the list since its already sorted but i FORGOT so never mind
                 }
             }
             

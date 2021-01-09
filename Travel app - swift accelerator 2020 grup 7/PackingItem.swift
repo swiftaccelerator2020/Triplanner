@@ -10,11 +10,6 @@ struct PackingItem: Codable, Comparable{
     var checked = false
     var note: String
     
-//    init(name: String, checked: Bool, note: String) {
-//        self.name = name
-//        self.checked = checked
-//        self.note = note
-//    }
     
     
     static func loadSampleData() -> [PackingItem]{

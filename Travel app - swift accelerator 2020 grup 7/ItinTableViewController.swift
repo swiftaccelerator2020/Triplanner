@@ -11,7 +11,6 @@ class ItinTableViewController:
     var dayDictionary: Dictionary<Int, Array<DayEvent>> = [:]
     var itinEventsDict: Dictionary<String, Array<DayEvent>> = [:]
     var tempEvent: Array<DayEvent> = []
-    var itinOverviewList: Array<String> = []
     var dateArray: Array<String> = []
     
     
@@ -24,11 +23,6 @@ class ItinTableViewController:
         interval = getDateInterval(timeTable: self.schedule)
         dateArray = []
         
-//        if let loadedDayEvent = DayEvent.loadFromFile(){
-//            print("dayEvent file loading", loadedDayEvent)
-//            itinEventsDict = loadedDayEvent
-//            print("File founded. Loading DayEvent.")
-//        }
         
     }
     
@@ -75,7 +69,8 @@ class ItinTableViewController:
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "itineraryCell", for: indexPath)
         cell.textLabel?.text = "Day \(String(indexPath.row+1))"
-        cell.detailTextLabel?.text = generateDate(schedule: self.schedule, dayNumber: indexPath.row)
+        let tempDayNo = generateDate(schedule: self.schedule, dayNumber: indexPath.row)
+        cell.detailTextLabel?.text = tempDayNo
         let cellLabelFormatter = DateFormatter()
         cellLabelFormatter.dateFormat = "dd MM yyyy"
         let cellLabelFormatter2 = DateFormatter()
@@ -83,7 +78,6 @@ class ItinTableViewController:
         let tempDate = cellLabelFormatter2.string(from: cellLabelFormatter.date(from: (cell.detailTextLabel?.text)!) ?? Date())
         
         self.dateArray.append(tempDate)
-        print("newestnewest:", dateArray)
         // Configure the cell...
 
         return cell
@@ -183,13 +177,6 @@ class ItinTableViewController:
         return day
     }
     
-    func tempDayDictToEventsDict(){
-        
-    }
-    
-    func tempEventsDictToDayDict(){
-        
-    }
     
     @IBAction func backToItineraryTableViewController(with segue: UIStoryboardSegue){
         

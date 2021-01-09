@@ -6,13 +6,6 @@ struct BudgetItem: Codable, Equatable {
     var notes: String
     var category: String
     var dateAndTime: Date
-
-//    init(name: String, cost: Int, category: String, notes: String) {
-//        self.name = name
-//        self.cost = cost
-//        self.category = category
-//        self.notes = notes
-//    }
     
     static func loadSampleData() -> [BudgetItem]{
         let budgetItems = [BudgetItem(cost: 0, notes: "", category: "Food", dateAndTime: Date())]
