@@ -139,7 +139,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
             let tempText = "\(upComing.destination) | \(upComing.timeStart), \(upComing.date)"
             itinOverviewLabel.text = tempText
         }else{
-            itinOverviewLabel.text = "You have no upcoming itineraries!"
+            itinOverviewLabel.text = "You have no upcoming events!"
         }
         
     }
@@ -189,7 +189,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         let tempText = "\(upComing.destination) | \(upComing.timeStart), \(upComing.date)"
             itinOverviewLabel.text = tempText
         }else{
-            itinOverviewLabel.text = "You have no upcoming itineraries!"
+            itinOverviewLabel.text = "You have no upcoming events!"
         }
         
         //MARK: budget *****************************************************************
@@ -316,7 +316,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                     let tempText = "\(upComing.destination) | \(upComing.timeStart), \(upComing.date)"
                     itinOverviewLabel.text = tempText
                 }else{
-                    itinOverviewLabel.text = "You have no upcoming itineraries!"
+                    itinOverviewLabel.text = "You have no upcoming events!"
                 }
 
                 
