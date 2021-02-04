@@ -121,8 +121,28 @@ class BudgetTableViewController: UITableViewController {
             if let source = segue.source as? AddSpendingViewController{
                 if source.isExistingItem == true{
                     self.spendingItemsArray[currentSpendingNo] = source.budgetItem!
-                    storageSpendingItemsDict[source.budgetItem!.category]?[currentSpendingNo] = source.budgetItem!
+                    print("3 this is trying to change category:", self.spendingItemsArray)
+                    
+                    let current = spendingItemsArray[currentSpendingNo]
+                    
+                    if storageSpendingItemsDict.keys.contains(current.category) && storageSpendingItemsDict[current.category]?.isEmpty == false{
+                    storageSpendingItemsDict[current.category]![currentSpendingNo] = current
+                    }else{
+                        storageSpendingItemsDict[current.category] = [current]
+                    }
+                    for (key,value) in storageSpendingItemsDict{
+                        for i in value{
+                            if i != current && i.name == current.name && i.cost==current.cost {
+                                print("go to hell:", i)
+                                storageSpendingItemsDict[key]?.remove(at: value.firstIndex(of: i)!)
+                            }
+                        }
+                    }
+                    
+                    
                     print("if", storageSpendingItemsDict)
+                    
+                    
                 }else{
                     self.spendingItemsArray.append(source.budgetItem!)
                     if storageSpendingItemsDict[source.budgetItem!.category] == nil{
