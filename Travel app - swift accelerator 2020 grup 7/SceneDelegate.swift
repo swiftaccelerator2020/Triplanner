@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  Travel app - swift accelerator 2020 grup 7
-//
-//  Created by Yu Youyou on 24/11/20.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
