@@ -80,6 +80,10 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     @IBOutlet weak var overviewStartDatePicker: UIDatePicker!
     @IBOutlet weak var overviewEndDatePicker: UIDatePicker!
     
+    @IBOutlet weak var itineraryView: UIView!
+    
+    
+    
     var itinOverviewText: String = "itinOverviewText"
     var itinEventsDict: Dictionary<String, Array<DayEvent>> = [:]
     var dateStorageList: Array<String> = ["start", "end"]
@@ -104,6 +108,8 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     
     override func viewDidLoad() {
+        itineraryView.layer.cornerRadius=20
+        
         print("tripNo:", tripNo)
         super.viewDidLoad()
         packingListCheckCircle.isHidden = true
