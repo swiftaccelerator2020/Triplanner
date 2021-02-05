@@ -41,19 +41,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         }
     }
     
-    fileprivate func packingListCircleChecking2(_ item: PackingItem) {
-        packingListOverviewLabel2.text = item.name
-        packingListCheckCircle2.isHidden = false
-        for i in packingItemsStorateList{
-            if i.name == packingListOverviewLabel2.text{
-                if i.checked{
-                    packingListCheckCircle2.setImage(UIImage(named: "checkmark.circle"), for: .normal)
-                }else{
-                    packingListCheckCircle2.setImage(UIImage(named: "circle"), for: .normal)
-                }
-            }
-        }
-    }
+
     
     func printPackingListItem(titleArray: Array<PackingItem>, isChecked: Bool) {
     }
@@ -76,13 +64,12 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     //MARK: Itinerary overview variables
     @IBOutlet weak var newItineraryItem: UIButton!
     @IBOutlet weak var itinOverviewLabel: UILabel!
-    @IBOutlet weak var itinOverviewLabel2: UILabel!
     @IBOutlet weak var overviewStartDatePicker: UIDatePicker!
     @IBOutlet weak var overviewEndDatePicker: UIDatePicker!
     
     @IBOutlet weak var itineraryView: UIView!
-    
-    
+    @IBOutlet weak var budgetView: UIView!
+    @IBOutlet weak var packingListView: UIView!
     
     var itinOverviewText: String = "itinOverviewText"
     var itinEventsDict: Dictionary<String, Array<DayEvent>> = [:]
@@ -93,8 +80,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     @IBOutlet weak var packingListOverviewLabel: UILabel!
     @IBOutlet weak var packingListCheckCircle: UIButton!
     
-    @IBOutlet weak var packingListOverviewLabel2: UILabel!
-    @IBOutlet weak var packingListCheckCircle2: UIButton!
+
     
     var packingItemsStorateList: Array<PackingItem> = []
     
@@ -109,14 +95,21 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     override func viewDidLoad() {
         itineraryView.layer.cornerRadius=20
+        itineraryView.layer.borderWidth=5
+        itineraryView.layer.borderColor = CGColor(red: 255, green: 255, blue: 255, alpha: 1.0)
+        
+        budgetView.layer.cornerRadius=20
+        budgetView.layer.borderWidth=5
+        budgetView.layer.borderColor = CGColor(red: 173, green: 200, blue: 230, alpha: 1.0)
+        
+        packingListView.layer.cornerRadius=20
+        packingListView.layer.borderWidth=5
+        packingListView.layer.borderColor=CGColor(red: 255, green: 255, blue: 255, alpha: 1.0)
         
         print("tripNo:", tripNo)
         super.viewDidLoad()
         packingListCheckCircle.isHidden = true
-        packingListCheckCircle2.isHidden = true
         
-        packingListOverviewLabel2.text = "..."
-        packingListCheckCircle2.isEnabled = false
         
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM dd, yyyy"
@@ -428,25 +421,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     
     
-    @IBAction func checkCircle2Tapped(_ sender: Any) {
-        var count = -1
-        for i in packingItemsStorateList{
-            if i.name == packingListOverviewLabel2.text{
-                count += 1
-                if i.checked{
-                    packingItemsStorateList[count].checked = false
-                    packingListCheckCircle2.setImage(UIImage(named: "circle"), for: .normal)
-                }else{
-                    packingItemsStorateList[count].checked = true
-                    packingListCheckCircle2.setImage(UIImage(named: "checkmark.circle"), for: .normal)
-                }
-                
-            }
-            
-            
-        }
-        packingListCheckCircle2.setImage(UIImage(named: "circle"), for: .normal)
-    }
+
     
     class TextFieldWithReturn: UITextField, UITextFieldDelegate
     {

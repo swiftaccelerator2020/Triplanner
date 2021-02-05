@@ -18,63 +18,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="jqd-Sa-5ZT">
-                                <rect key="frame" x="20" y="108" width="388" height="224"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViE-4C-wk8">
-                                        <rect key="frame" x="0.0" y="0.0" width="81" height="7"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6Y2-eC-gP5">
-                                        <rect key="frame" x="0.0" y="14" width="300" height="34"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="T2D-bv-XoC"/>
-                                        </constraints>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                        <connections>
-                                            <action selector="locationEditingEnd:" destination="QSK-vV-qtH" eventType="editingDidEndOnExit" id="FMg-yG-YZu"/>
-                                            <outlet property="delegate" destination="BI3-6z-lZ6" id="G8o-dq-7zs"/>
-                                        </connections>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJe-lm-VEH">
-                                        <rect key="frame" x="0.0" y="55" width="96" height="24"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <datePicker clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="3mu-Vj-3y5">
-                                        <rect key="frame" x="0.0" y="86" width="124" height="50"/>
-                                        <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="RFR-WR-rDx"/>
-                                        </constraints>
-                                        <connections>
-                                            <action selector="startDatePickerChanged:" destination="QSK-vV-qtH" eventType="valueChanged" id="DJG-xz-td7"/>
-                                        </connections>
-                                    </datePicker>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLt-UA-xGq">
-                                        <rect key="frame" x="0.0" y="143" width="84.666666666666671" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="fSk-uT-bgE"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="jWE-Yl-VQc">
-                                        <rect key="frame" x="0.0" y="174" width="388" height="50"/>
-                                        <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <action selector="endDatePickerChanged:" destination="QSK-vV-qtH" eventType="valueChanged" id="wWL-Zv-3Cf"/>
-                                        </connections>
-                                    </datePicker>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViE-4C-wk8">
+                                <rect key="frame" x="46" y="112" width="81" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJe-lm-VEH">
+                                <rect key="frame" x="166" y="260" width="96" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="3mu-Vj-3y5">
+                                <rect key="frame" x="173" y="198" width="124" height="50"/>
+                                <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RFR-WR-rDx"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="startDatePickerChanged:" destination="QSK-vV-qtH" eventType="valueChanged" id="DJG-xz-td7"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLt-UA-xGq">
+                                <rect key="frame" x="46" y="211" width="84.666666666666671" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="fSk-uT-bgE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="jWE-Yl-VQc">
+                                <rect key="frame" x="30" y="234" width="388" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="endDatePickerChanged:" destination="QSK-vV-qtH" eventType="valueChanged" id="wWL-Zv-3Cf"/>
+                                </connections>
+                            </datePicker>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YoB-og-JM0">
                                 <rect key="frame" x="10" y="357" width="408" height="101"/>
                                 <subviews>
@@ -127,8 +111,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fn3-RL-6SN">
                                 <rect key="frame" x="10" y="483" width="408" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0X-wm-ChJ">
-                                        <rect key="frame" x="10" y="10" width="76.666666666666671" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0X-wm-ChJ">
+                                        <rect key="frame" x="10" y="10" width="68.666666666666671" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -145,8 +129,8 @@
                                             <segue destination="oIt-E2-qJO" kind="presentation" modalPresentationStyle="fullScreen" id="PNi-Vg-4gm"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Budget Overview" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vny-LJ-8so">
-                                        <rect key="frame" x="10" y="54" width="388" height="20.333333333333343"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Budget Overview" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vny-LJ-8so">
+                                        <rect key="frame" x="10" y="54" width="388" height="136"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -162,7 +146,6 @@
                                     <constraint firstAttribute="trailing" secondItem="yjY-we-KAb" secondAttribute="trailing" constant="10" id="T3I-qG-1SK"/>
                                     <constraint firstItem="H0X-wm-ChJ" firstAttribute="leading" secondItem="fn3-RL-6SN" secondAttribute="leading" constant="10" id="dvc-Qe-3YQ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="hM0-7M-HfX"/>
-                                    <constraint firstAttribute="trailing" secondItem="H0X-wm-ChJ" secondAttribute="trailing" constant="321.32999999999998" id="jHh-7L-fvs"/>
                                     <constraint firstItem="H0X-wm-ChJ" firstAttribute="top" secondItem="fn3-RL-6SN" secondAttribute="top" constant="10" id="uNm-LC-iLU"/>
                                 </constraints>
                             </view>
@@ -175,24 +158,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Packing List Preview!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfG-Ml-IwK">
-                                        <rect key="frame" x="90" y="91" width="160.66666666666666" height="20.333333333333371"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="FPC-Ir-jX5"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghQ-2H-41c">
-                                        <rect key="frame" x="388" y="92" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="Gnb-Ry-HLX"/>
-                                            <constraint firstAttribute="height" constant="20" id="hfE-an-BzC"/>
-                                        </constraints>
-                                        <color key="tintColor" red="0.23024576899999999" green="0.54647713899999995" blue="0.87383675579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="circle"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uma-p5-jm2">
                                         <rect key="frame" x="318" y="49" width="80" height="20"/>
                                         <constraints>
@@ -240,6 +205,19 @@
                                     <constraint firstItem="vG7-P9-HFP" firstAttribute="top" secondItem="UdL-eL-vYd" secondAttribute="bottom" constant="15" id="gT2-77-fAc"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Location" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6Y2-eC-gP5">
+                                <rect key="frame" x="56" y="156" width="300" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="T2D-bv-XoC"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="locationEditingEnd:" destination="QSK-vV-qtH" eventType="editingDidEndOnExit" id="FMg-yG-YZu"/>
+                                    <outlet property="delegate" destination="BI3-6z-lZ6" id="G8o-dq-7zs"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XON-X7-oLZ"/>
                         <color key="backgroundColor" name="Color"/>
@@ -248,14 +226,12 @@
                             <constraint firstItem="fn3-RL-6SN" firstAttribute="top" secondItem="YoB-og-JM0" secondAttribute="bottom" constant="25" id="OrA-bD-HhU"/>
                             <constraint firstItem="YoB-og-JM0" firstAttribute="top" secondItem="BI3-6z-lZ6" secondAttribute="top" constant="357" id="VrR-NJ-qH6"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="st7-O2-Vir" secondAttribute="trailing" constant="10" id="Y1R-Rh-CTu"/>
-                            <constraint firstItem="jqd-Sa-5ZT" firstAttribute="top" secondItem="XON-X7-oLZ" secondAttribute="top" constant="20" id="aBQ-rm-i5y"/>
+                            <constraint firstItem="6Y2-eC-gP5" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="56" id="Y6o-77-Tjc"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="bottom" secondItem="st7-O2-Vir" secondAttribute="bottom" constant="72" id="aBT-8l-p6a"/>
                             <constraint firstItem="fn3-RL-6SN" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="10" id="eQO-IK-ss1"/>
-                            <constraint firstItem="jqd-Sa-5ZT" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="h5m-qD-tAn"/>
-                            <constraint firstItem="YoB-og-JM0" firstAttribute="top" secondItem="jqd-Sa-5ZT" secondAttribute="bottom" constant="25" id="iKj-ag-ho8"/>
+                            <constraint firstItem="6Y2-eC-gP5" firstAttribute="top" secondItem="BI3-6z-lZ6" secondAttribute="topMargin" constant="68" id="hgz-UQ-YIj"/>
                             <constraint firstItem="YoB-og-JM0" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="10" id="jl5-c1-5Si"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="fn3-RL-6SN" secondAttribute="trailing" constant="10" id="kQG-jO-mSJ"/>
-                            <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="jqd-Sa-5ZT" secondAttribute="trailing" constant="20" id="rcG-nM-qhc"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="YoB-og-JM0" secondAttribute="trailing" constant="10" id="uDu-hM-aZj"/>
                             <constraint firstItem="st7-O2-Vir" firstAttribute="top" secondItem="fn3-RL-6SN" secondAttribute="bottom" constant="25" id="xvy-SS-xQh"/>
                         </constraints>
@@ -270,6 +246,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="budgetOverviewLabel" destination="Vny-LJ-8so" id="feu-Yt-7ZI"/>
+                        <outlet property="budgetView" destination="fn3-RL-6SN" id="p0d-aN-9PB"/>
                         <outlet property="itinOverviewLabel" destination="k2K-ac-Zqd" id="0eo-WL-7xs"/>
                         <outlet property="itineraryView" destination="YoB-og-JM0" id="PQh-Ya-kk8"/>
                         <outlet property="locationTextField" destination="6Y2-eC-gP5" id="QoG-3z-kgQ"/>
@@ -277,9 +254,8 @@
                         <outlet property="overviewEndDatePicker" destination="jWE-Yl-VQc" id="Bfr-n6-dR4"/>
                         <outlet property="overviewStartDatePicker" destination="3mu-Vj-3y5" id="Vyp-24-Ark"/>
                         <outlet property="packingListCheckCircle" destination="uma-p5-jm2" id="hzh-nF-c5b"/>
-                        <outlet property="packingListCheckCircle2" destination="ghQ-2H-41c" id="Ntu-kT-A2l"/>
                         <outlet property="packingListOverviewLabel" destination="vG7-P9-HFP" id="XO5-I8-57m"/>
-                        <outlet property="packingListOverviewLabel2" destination="sfG-Ml-IwK" id="TXV-qc-rod"/>
+                        <outlet property="packingListView" destination="st7-O2-Vir" id="NP4-QO-B5y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgr-0G-NbY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
