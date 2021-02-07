@@ -176,11 +176,12 @@ class ItinEventTableViewController: UITableViewController, UITextViewDelegate {
     //trying to make the textview dismissible
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
             if(text == "\n") {
-                eventNoteView.resignFirstResponder()
+//                eventNoteView.resignFirstResponder()
                 return false
             }
             return true
         }
+    
     func convertStringToTime(string: String) -> Date{
         print("dtst:", string)
         let formatter2 = DateFormatter()
