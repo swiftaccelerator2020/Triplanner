@@ -61,17 +61,17 @@ class EditPackingItemTableViewController: UITableViewController, UITextViewDeleg
 
     @IBAction func packingItemEditingEnded(_ sender: Any) {
         nameTextField.resignFirstResponder()
-        notesTextView.resignFirstResponder()
+//        notesTextView.resignFirstResponder()
     }
  
-    //trying to make the textview dismissible
-    func textView(_textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-            if(text == "\n") {
-                notesTextView.resignFirstResponder()
-                return false
-            }
-            return true
-        }
+//    //trying to make the textview dismissible
+//    func textView(_textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+//            if(text == "\n") {
+//                notesTextView.resignFirstResponder()
+//                return false
+//            }
+//            return true
+//        }
     
     
 }

@@ -161,14 +161,14 @@ class AddSpendingViewController: UITableViewController, UIPickerViewDelegate, UI
         self.spendingCostTextField.resignFirstResponder()
     }
     
-    //trying to make the textview dismissible
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if(text == "\n") {
-            spendingNotesTextView.resignFirstResponder()
-            return false
-        }
-        return true
-    }
+//    //trying to make the textview dismissible
+//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+//        if(text == "\n") {
+//            spendingNotesTextView.resignFirstResponder()
+//            return false
+//        }
+//        return true
+//    }
     
     
 }

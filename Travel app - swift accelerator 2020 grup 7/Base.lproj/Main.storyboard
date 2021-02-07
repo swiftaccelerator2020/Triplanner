@@ -39,7 +39,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Itinerary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0L-8B-bIg">
-                                                <rect key="frame" x="15" y="15" width="123" height="24"/>
+                                                <rect key="frame" x="15" y="15" width="173" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                                             <constraint firstItem="M0L-8B-bIg" firstAttribute="leading" secondItem="YoB-og-JM0" secondAttribute="leading" constant="15" id="FUf-oC-st7"/>
                                             <constraint firstItem="k2K-ac-Zqd" firstAttribute="top" secondItem="M0L-8B-bIg" secondAttribute="bottom" constant="20" id="QFS-Ym-3oA"/>
                                             <constraint firstItem="k2K-ac-Zqd" firstAttribute="leading" secondItem="YoB-og-JM0" secondAttribute="leading" constant="15" id="V1V-wz-SXz"/>
-                                            <constraint firstAttribute="trailing" secondItem="M0L-8B-bIg" secondAttribute="trailing" constant="250" id="WYg-Ox-shv"/>
+                                            <constraint firstAttribute="trailing" secondItem="M0L-8B-bIg" secondAttribute="trailing" constant="200" id="WYg-Ox-shv"/>
                                             <constraint firstItem="M0L-8B-bIg" firstAttribute="top" secondItem="YoB-og-JM0" secondAttribute="top" constant="15" id="b6G-MG-iPK"/>
                                             <constraint firstItem="g4M-w7-Zfh" firstAttribute="bottom" secondItem="k2K-ac-Zqd" secondAttribute="bottom" id="hy2-DN-pl4"/>
                                             <constraint firstAttribute="trailing" secondItem="g4M-w7-Zfh" secondAttribute="trailing" constant="18" id="uMw-pM-K0m"/>
@@ -1615,7 +1615,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ez6-os-fcW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" largeTitles="YES" id="6oe-Qy-AEJ">
-                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="104.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.2709889412" green="0.52914750580000003" blue="0.88631838559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>

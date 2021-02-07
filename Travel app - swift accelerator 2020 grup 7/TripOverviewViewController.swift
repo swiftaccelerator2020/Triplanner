@@ -144,7 +144,6 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("newest newest testing:", itinEventsDict)
         
         trip = Trip(destination: locationTextField.text ?? "", startDate: overviewStartDatePicker.date, endDate: overviewEndDatePicker.date, itinerary: itinEventsDict, budget: budgetItemsStorageDict, totalBudget: self.budgetTotal, packingList: packingItemsStorateList)
         
@@ -203,11 +202,15 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         var string2 = ""
         for (key,value) in self.budgetItemsStorageDict{
             let tempCategorizedSpending = Double(value.reduce(0, {x,y in x + y.cost}))
-            let percentage = ((tempCategorizedSpending/spendingAddedUp) * 100)
-            let rounded = round(percentage)
+            var rounded = 0.0
+            var percentage = 0.0
+            if spendingAddedUp != 0{
+            percentage = ((tempCategorizedSpending/spendingAddedUp) * 100)
+            rounded = round(percentage)
+            }
             let tempString = "\(rounded)% of spendings (\(key))\n"
             string2.append(tempString)
-            print("this is string2:", string2)
+            print("this is string2:", rounded, percentage)
         }
         self.budgetOverviewLabel.text = "\(string1)\n\(string2)"
         
