@@ -22,13 +22,13 @@ class EditPackingItemTableViewController: UITableViewController, UITextViewDeleg
         notesTextView.delegate = self
     }
     
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-            if(text == "\n") {
-                notesTextView.resignFirstResponder()
-                return false
-            }
-            return true
-        }
+//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+//            if(text == "\n") {
+//                notesTextView.resignFirstResponder()
+//                return false
+//            }
+//            return true
+//        }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "unwindFromDetail"{
@@ -66,11 +66,12 @@ class EditPackingItemTableViewController: UITableViewController, UITextViewDeleg
  
 //    //trying to make the textview dismissible
 //    func textView(_textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-//            if(text == "\n") {
-//                notesTextView.resignFirstResponder()
-//                return false
-//            }
-//            return true
+//        notesTextView.returnKeyType = UIReturnKeyType.continue
+////            if(text == "\n") {
+////                notesTextView.resignFirstResponder()
+////                return true
+////            }
+//            return false
 //        }
     
     
