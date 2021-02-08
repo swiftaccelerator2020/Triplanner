@@ -173,7 +173,7 @@
                                 </constraints>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Location" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6Y2-eC-gP5">
-                                <rect key="frame" x="20" y="128" width="300" height="34"/>
+                                <rect key="frame" x="20" y="136" width="300" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="LUC-zi-Qja"/>
@@ -187,14 +187,14 @@
                                 </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5G-lm-Jc3">
-                                <rect key="frame" x="20" y="192" width="308" height="70.666666666666686"/>
+                                <rect key="frame" x="20" y="190" width="308" height="70.666666666666686"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iT2-AD-zKG">
                                         <rect key="frame" x="0.0" y="0.0" width="137.33333333333334" height="70.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJe-lm-VEH">
                                                 <rect key="frame" x="0.0" y="0.0" width="137.33333333333334" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -213,7 +213,10 @@
                                                     </datePicker>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWx-4R-h69">
                                                         <rect key="frame" x="115" y="0.0" width="22.333333333333343" height="52.666666666666664"/>
-                                                        <state key="normal" image="calendar.badge.plus" catalog="system"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal">
+                                                            <imageReference key="image" image="arrow.right" catalog="system" symbolScale="small"/>
+                                                        </state>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -224,7 +227,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLt-UA-xGq">
                                                 <rect key="frame" x="0.0" y="0.0" width="170.66666666666666" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -239,19 +242,27 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiv-dl-xW7">
+                                <rect key="frame" x="20" y="108" width="63" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XON-X7-oLZ"/>
                         <color key="backgroundColor" name="Color"/>
                         <constraints>
-                            <constraint firstItem="W5G-lm-Jc3" firstAttribute="top" secondItem="6Y2-eC-gP5" secondAttribute="bottom" constant="30" id="61F-jY-cjY"/>
+                            <constraint firstItem="W5G-lm-Jc3" firstAttribute="top" secondItem="6Y2-eC-gP5" secondAttribute="bottom" constant="20" id="61F-jY-cjY"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="trailing" secondItem="W5G-lm-Jc3" secondAttribute="trailing" constant="100" id="Fm5-2W-DHv"/>
                             <constraint firstItem="GI7-zI-zi3" firstAttribute="top" secondItem="XON-X7-oLZ" secondAttribute="top" constant="180" id="IN2-kq-I7g"/>
                             <constraint firstItem="GI7-zI-zi3" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="Pgx-FQ-gfK"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="bottom" secondItem="GI7-zI-zi3" secondAttribute="bottom" constant="15" id="XZf-AD-9ec"/>
                             <constraint firstItem="6Y2-eC-gP5" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="Y6o-77-Tjc"/>
+                            <constraint firstItem="xiv-dl-xW7" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="aNY-aP-H69"/>
+                            <constraint firstItem="xiv-dl-xW7" firstAttribute="top" secondItem="XON-X7-oLZ" secondAttribute="top" constant="20" id="fda-pn-EmB"/>
                             <constraint firstAttribute="trailing" secondItem="GI7-zI-zi3" secondAttribute="trailing" constant="20" id="hdT-Fr-QKt"/>
                             <constraint firstItem="W5G-lm-Jc3" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="kzf-kj-IUd"/>
-                            <constraint firstItem="6Y2-eC-gP5" firstAttribute="top" secondItem="XON-X7-oLZ" secondAttribute="top" constant="40" id="uqN-dz-3IR"/>
+                            <constraint firstItem="6Y2-eC-gP5" firstAttribute="top" secondItem="xiv-dl-xW7" secondAttribute="bottom" constant="10" id="uqN-dz-3IR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Trip Overview" id="cwZ-ul-Zx6">
@@ -1636,8 +1647,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="airplane" catalog="system" width="128" height="115"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="calendar.badge.plus" catalog="system" width="128" height="108"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
