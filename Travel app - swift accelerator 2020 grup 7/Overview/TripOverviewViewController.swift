@@ -135,7 +135,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         print("this is itinPreviewUpdate")
         let upComing = findUpComing()
         if upComing != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
-            let tempText = "\(upComing.destination) | \(upComing.timeStart), \(upComing.date)"
+            let tempText = "\(upComing.destination) ( \(upComing.timeStart), \(upComing.date))"
             itinOverviewLabel.text = tempText
         }else{
             itinOverviewLabel.text = "You have no upcoming events!"
@@ -184,7 +184,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
         
         let upComing = findUpComing()
         if upComing != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
-        let tempText = "\(upComing.destination) | \(upComing.timeStart), \(upComing.date)"
+        let tempText = "\(upComing.destination) (\(upComing.timeStart), \(upComing.date))"
             itinOverviewLabel.text = tempText
         }else{
             itinOverviewLabel.text = "You have no upcoming events!"
@@ -315,7 +315,7 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
                 
                 let upComing = findUpComing()
                 if upComing != DayEvent(destination: "", timeStart: "", timeEnd: "", date: "", notes: ""){
-                    let tempText = "\(upComing.destination) | \(upComing.timeStart), \(upComing.date)"
+                    let tempText = "\(upComing.destination) (\(upComing.timeStart), \(upComing.date))"
                     itinOverviewLabel.text = tempText
                 }else{
                     itinOverviewLabel.text = "You have no upcoming events!"
