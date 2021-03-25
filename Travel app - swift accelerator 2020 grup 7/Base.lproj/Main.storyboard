@@ -223,8 +223,8 @@
                                     <outlet property="delegate" destination="BI3-6z-lZ6" id="G8o-dq-7zs"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLt-UA-xGq">
-                                <rect key="frame" x="188.33333333333334" y="183.66666666666666" width="75.000000000000028" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLt-UA-xGq">
+                                <rect key="frame" x="180.33333333333334" y="183.66666666666666" width="75" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="vEX-ag-Xh5"/>
                                     <constraint firstAttribute="height" constant="18" id="zpQ-7A-TC5"/>
@@ -249,7 +249,7 @@
                             <constraint firstItem="GI7-zI-zi3" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="XG9-4K-1Sw"/>
                             <constraint firstItem="iWx-4R-h69" firstAttribute="top" secondItem="EJe-lm-VEH" secondAttribute="bottom" constant="5" id="YLh-lY-vdh"/>
                             <constraint firstItem="3mu-Vj-3y5" firstAttribute="leading" secondItem="XON-X7-oLZ" secondAttribute="leading" constant="20" id="Zq0-eW-QgA"/>
-                            <constraint firstItem="zLt-UA-xGq" firstAttribute="leading" secondItem="EJe-lm-VEH" secondAttribute="trailing" constant="85" id="fat-p0-5oB"/>
+                            <constraint firstItem="zLt-UA-xGq" firstAttribute="leading" secondItem="EJe-lm-VEH" secondAttribute="trailing" constant="77" id="fat-p0-5oB"/>
                             <constraint firstItem="jWE-Yl-VQc" firstAttribute="leading" secondItem="iWx-4R-h69" secondAttribute="trailing" constant="10" id="jAC-4v-K4K"/>
                             <constraint firstItem="zLt-UA-xGq" firstAttribute="top" secondItem="6Y2-eC-gP5" secondAttribute="bottom" constant="15" id="krX-M9-wi7"/>
                             <constraint firstItem="XON-X7-oLZ" firstAttribute="bottom" secondItem="GI7-zI-zi3" secondAttribute="bottom" constant="20" id="o8g-W7-ED0"/>
