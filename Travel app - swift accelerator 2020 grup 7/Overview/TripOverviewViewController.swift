@@ -95,15 +95,15 @@ class TripOverviewViewController: UIViewController, ItinDataDelegate, PackingLis
     
     override func viewDidLoad() {
         itineraryView.layer.cornerRadius=20
-        itineraryView.layer.borderWidth=5
+        itineraryView.layer.borderWidth=4
         itineraryView.layer.borderColor = CGColor(red: 255, green: 255, blue: 255, alpha: 1.0)
         
         budgetView.layer.cornerRadius=20
-        budgetView.layer.borderWidth=5
+        budgetView.layer.borderWidth=4
         budgetView.layer.borderColor = CGColor(red: 173, green: 200, blue: 230, alpha: 1.0)
         
         packingListView.layer.cornerRadius=20
-        packingListView.layer.borderWidth=5
+        packingListView.layer.borderWidth=4
         packingListView.layer.borderColor=CGColor(red: 255, green: 255, blue: 255, alpha: 1.0)
         
         print("tripNo:", tripNo)
